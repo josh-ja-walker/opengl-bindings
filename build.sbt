@@ -1,22 +1,42 @@
 import bindgen.plugin.BindgenMode
-import com.indoorvivants.detective.Platform.OS.*
-import com.indoorvivants.detective.Platform
 import bindgen.interface.Binding
+
+//TODO: support different OSes by modifying linkflags
+import com.indoorvivants.detective.Platform
+import com.indoorvivants.detective.Platform.OS.* 
 
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
 ThisBuild / resolvers += Resolver.sonatypeCentralSnapshots
 
-scalaVersion := "3.8.0"
+lazy val Versions = new {
+    val OpenGLBindings = "0.1.0"
+    // val GLAD = "0.7.0" 
+    // val GLFW3 = "0.7.0"
+    val Scala = "3.8.1"
+}
 
-val opengl = project
-    .in(file("opengl"))
+/* Global project settings */
+inThisBuild(List(
+    scalaVersion := Versions.Scala,
+    version := Versions.OpenGLBindings,
+    versionScheme := Some("early-semver"),
+    organization := "com.github.josh-ja-walker",
+    organizationName := "Josh Walker",
+    startYear := Some(2026),
+    developers := List(
+        Developer("josh-ja-walker", "Josh Walker", "", url("https://github.com/josh-ja-walker")),
+    ),
+    licenses := List("BSD-3-Clause" -> url("https://opensource.org/licenses/BSD-3-Clause")),
+))
+
+
+lazy val openglBindings = project
+    .in(file("."))
     .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
     .settings(
-        scalaVersion := "3.8.0",
-        vcpkgDependencies := VcpkgDependencies("glfw3"),
-
+        name := "opengl-bindings",
         bindgenBindings += {
             val include = (Compile / resourceDirectory).value / "scala-native" / "glad" / "include"
             Binding(include / "glad" / "gl.h", "glad")
@@ -24,6 +44,7 @@ val opengl = project
                 .withClangFlags(List("-I" + include))
         },
 
+        vcpkgDependencies := VcpkgDependencies("glfw3"),
         bindgenBindings += {
             val include = vcpkgConfigurator.value.includes("glfw3")
             Binding(include / "GLFW" / "glfw3.h", "glfw")
@@ -56,20 +77,3 @@ val opengl = project
                 .withLinkingOptions(_ ++ linkflags)
         },
     )
-    .settings(configurePlatform())
-
-
-
-def configurePlatform(rename: String => String = identity) = Seq(
-    nativeConfig := {
-        val arch64 =
-            if (Platform.arch == Platform.Arch.Arm && Platform.bits == Platform.Bits.x64) 
-                List("-arch", "arm64")
-            else 
-                Nil
-
-        nativeConfig.value
-            .withLinkingOptions(_ ++ arch64)
-            .withCompileOptions(_ ++ arch64)
-    }
-)
