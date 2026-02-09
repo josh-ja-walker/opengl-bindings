@@ -5,7 +5,7 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-opaque type GLADapiproc = CFuncPtr0[Unit]
+type GLADapiproc = CFuncPtr0[Unit]
 object GLADapiproc:
   given _tag: Tag[GLADapiproc] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLADapiproc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -14,7 +14,7 @@ object GLADapiproc:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLADloadfunc = CFuncPtr1[CString, GLADapiproc]
+type GLADloadfunc = CFuncPtr1[CString, GLADapiproc]
 object GLADloadfunc:
   given _tag: Tag[GLADloadfunc] = Tag.materializeCFuncPtr1[CString, GLADapiproc]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLADloadfunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -23,7 +23,7 @@ object GLADloadfunc:
     inline def value: CFuncPtr1[CString, GLADapiproc] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLADpostcallback = CFuncPtr4[Ptr[Byte], CString, GLADapiproc, CInt, Unit]
+type GLADpostcallback = CFuncPtr4[Ptr[Byte], CString, GLADapiproc, CInt, Unit]
 object GLADpostcallback:
   given _tag: Tag[GLADpostcallback] = Tag.materializeCFuncPtr4[Ptr[Byte], CString, GLADapiproc, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLADpostcallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -32,7 +32,7 @@ object GLADpostcallback:
     inline def value: CFuncPtr4[Ptr[Byte], CString, GLADapiproc, CInt, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLADprecallback = CFuncPtr3[CString, GLADapiproc, CInt, Unit]
+type GLADprecallback = CFuncPtr3[CString, GLADapiproc, CInt, Unit]
 object GLADprecallback:
   given _tag: Tag[GLADprecallback] = Tag.materializeCFuncPtr3[CString, GLADapiproc, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLADprecallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -41,7 +41,7 @@ object GLADprecallback:
     inline def value: CFuncPtr3[CString, GLADapiproc, CInt, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLADuserptrloadfunc = CFuncPtr2[Ptr[Byte], CString, GLADapiproc]
+type GLADuserptrloadfunc = CFuncPtr2[Ptr[Byte], CString, GLADapiproc]
 object GLADuserptrloadfunc:
   given _tag: Tag[GLADuserptrloadfunc] = Tag.materializeCFuncPtr2[Ptr[Byte], CString, GLADapiproc]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLADuserptrloadfunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -50,7 +50,7 @@ object GLADuserptrloadfunc:
     inline def value: CFuncPtr2[Ptr[Byte], CString, GLADapiproc] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLDEBUGPROC = CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
+type GLDEBUGPROC = CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
 object GLDEBUGPROC:
   given _tag: Tag[GLDEBUGPROC] = Tag.materializeCFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLDEBUGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -59,7 +59,7 @@ object GLDEBUGPROC:
     inline def value: CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLDEBUGPROCAMD = CFuncPtr6[GLuint, GLenum, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
+type GLDEBUGPROCAMD = CFuncPtr6[GLuint, GLenum, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
 object GLDEBUGPROCAMD:
   given _tag: Tag[GLDEBUGPROCAMD] = Tag.materializeCFuncPtr6[GLuint, GLenum, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLDEBUGPROCAMD = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -68,7 +68,7 @@ object GLDEBUGPROCAMD:
     inline def value: CFuncPtr6[GLuint, GLenum, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLDEBUGPROCARB = CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
+type GLDEBUGPROCARB = CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
 object GLDEBUGPROCARB:
   given _tag: Tag[GLDEBUGPROCARB] = Tag.materializeCFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLDEBUGPROCARB = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -77,7 +77,7 @@ object GLDEBUGPROCARB:
     inline def value: CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLDEBUGPROCKHR = CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
+type GLDEBUGPROCKHR = CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
 object GLDEBUGPROCKHR:
   given _tag: Tag[GLDEBUGPROCKHR] = Tag.materializeCFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLDEBUGPROCKHR = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -86,7 +86,7 @@ object GLDEBUGPROCKHR:
     inline def value: CFuncPtr7[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLVULKANPROCNV = CFuncPtr0[Unit]
+type GLVULKANPROCNV = CFuncPtr0[Unit]
 object GLVULKANPROCNV:
   given _tag: Tag[GLVULKANPROCNV] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLVULKANPROCNV = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -95,14 +95,14 @@ object GLVULKANPROCNV:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type GLbitfield = CUnsignedInt
+type GLbitfield = CUnsignedInt
 object GLbitfield:
   given _tag: Tag[GLbitfield] = Tag.UInt
   inline def apply(inline o: CUnsignedInt): GLbitfield = o
   extension (v: GLbitfield)
     inline def value: CUnsignedInt = v
 
-opaque type GLboolean = CUnsignedChar
+type GLboolean = CUnsignedChar
 object GLboolean:
   given _tag: Tag[GLboolean] = Tag.UByte
   inline def apply(inline o: CUnsignedChar): GLboolean = o
@@ -123,14 +123,14 @@ object GLchar:
   extension (v: GLchar)
     inline def value: CChar = v
 
-opaque type GLcharARB = CChar
+type GLcharARB = CChar
 object GLcharARB:
   given _tag: Tag[GLcharARB] = Tag.Byte
   inline def apply(inline o: CChar): GLcharARB = o
   extension (v: GLcharARB)
     inline def value: CChar = v
 
-opaque type GLclampd = Double
+type GLclampd = Double
 object GLclampd:
   given _tag: Tag[GLclampd] = Tag.Double
   inline def apply(inline o: Double): GLclampd = o
@@ -151,28 +151,28 @@ object GLclampx:
   extension (v: GLclampx)
     inline def value: khronos_int32_t = v
 
-opaque type GLdouble = Double
+type GLdouble = Double
 object GLdouble:
   given _tag: Tag[GLdouble] = Tag.Double
   inline def apply(inline o: Double): GLdouble = o
   extension (v: GLdouble)
     inline def value: Double = v
 
-opaque type GLeglClientBufferEXT = Ptr[Byte]
+type GLeglClientBufferEXT = Ptr[Byte]
 object GLeglClientBufferEXT:
   given _tag: Tag[GLeglClientBufferEXT] = Tag.Ptr(Tag.Byte)
   inline def apply(inline o: Ptr[Byte]): GLeglClientBufferEXT = o
   extension (v: GLeglClientBufferEXT)
     inline def value: Ptr[Byte] = v
 
-opaque type GLeglImageOES = Ptr[Byte]
+type GLeglImageOES = Ptr[Byte]
 object GLeglImageOES:
   given _tag: Tag[GLeglImageOES] = Tag.Ptr(Tag.Byte)
   inline def apply(inline o: Ptr[Byte]): GLeglImageOES = o
   extension (v: GLeglImageOES)
     inline def value: Ptr[Byte] = v
 
-opaque type GLenum = CUnsignedInt
+type GLenum = CUnsignedInt
 object GLenum:
   given _tag: Tag[GLenum] = Tag.UInt
   inline def apply(inline o: CUnsignedInt): GLenum = o
@@ -207,21 +207,21 @@ object GLhalfARB:
   extension (v: GLhalfARB)
     inline def value: khronos_uint16_t = v
 
-opaque type GLhalfNV = CUnsignedShort
+type GLhalfNV = CUnsignedShort
 object GLhalfNV:
   given _tag: Tag[GLhalfNV] = Tag.UShort
   inline def apply(inline o: CUnsignedShort): GLhalfNV = o
   extension (v: GLhalfNV)
     inline def value: CUnsignedShort = v
 
-opaque type GLhandleARB = CUnsignedInt
+type GLhandleARB = CUnsignedInt
 object GLhandleARB:
   given _tag: Tag[GLhandleARB] = Tag.UInt
   inline def apply(inline o: CUnsignedInt): GLhandleARB = o
   extension (v: GLhandleARB)
     inline def value: CUnsignedInt = v
 
-opaque type GLint = CInt
+type GLint = CInt
 object GLint:
   given _tag: Tag[GLint] = Tag.Int
   inline def apply(inline o: CInt): GLint = o
@@ -263,7 +263,7 @@ object GLshort:
   extension (v: GLshort)
     inline def value: khronos_int16_t = v
 
-opaque type GLsizei = CInt
+type GLsizei = CInt
 object GLsizei:
   given _tag: Tag[GLsizei] = Tag.Int
   inline def apply(inline o: CInt): GLsizei = o
@@ -284,7 +284,7 @@ object GLsizeiptrARB:
   extension (v: GLsizeiptrARB)
     inline def value: khronos_ssize_t = v
 
-opaque type GLsync = Ptr[__GLsync]
+type GLsync = Ptr[__GLsync]
 object GLsync:
   given _tag: Tag[GLsync] = Tag.Ptr[__GLsync](__GLsync._tag)
   inline def apply(inline o: Ptr[__GLsync]): GLsync = o
@@ -298,7 +298,7 @@ object GLubyte:
   extension (v: GLubyte)
     inline def value: khronos_uint8_t = v
 
-opaque type GLuint = CUnsignedInt
+type GLuint = CUnsignedInt
 object GLuint:
   given _tag: Tag[GLuint] = Tag.UInt
   inline def apply(inline o: CUnsignedInt): GLuint = o
@@ -340,7 +340,7 @@ object GLvoid:
   extension (v: GLvoid)
     inline def value: Unit = v
 
-opaque type PFNGLACCUMPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLACCUMPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLACCUMPROC:
   given _tag: Tag[PFNGLACCUMPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLACCUMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -349,7 +349,7 @@ object PFNGLACCUMPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLACTIVESHADERPROGRAMPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLACTIVESHADERPROGRAMPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLACTIVESHADERPROGRAMPROC:
   given _tag: Tag[PFNGLACTIVESHADERPROGRAMPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLACTIVESHADERPROGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -358,7 +358,7 @@ object PFNGLACTIVESHADERPROGRAMPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLACTIVETEXTUREPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLACTIVETEXTUREPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLACTIVETEXTUREPROC:
   given _tag: Tag[PFNGLACTIVETEXTUREPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLACTIVETEXTUREPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -367,7 +367,7 @@ object PFNGLACTIVETEXTUREPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLALPHAFUNCPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLALPHAFUNCPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLALPHAFUNCPROC:
   given _tag: Tag[PFNGLALPHAFUNCPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLALPHAFUNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -376,7 +376,7 @@ object PFNGLALPHAFUNCPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLARETEXTURESRESIDENTPROC = CFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLboolean], GLboolean]
+type PFNGLARETEXTURESRESIDENTPROC = CFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLboolean], GLboolean]
 object PFNGLARETEXTURESRESIDENTPROC:
   given _tag: Tag[PFNGLARETEXTURESRESIDENTPROC] = Tag.materializeCFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLboolean], GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLARETEXTURESRESIDENTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -385,7 +385,7 @@ object PFNGLARETEXTURESRESIDENTPROC:
     inline def value: CFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLboolean], GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLARRAYELEMENTPROC = CFuncPtr1[GLint, Unit]
+type PFNGLARRAYELEMENTPROC = CFuncPtr1[GLint, Unit]
 object PFNGLARRAYELEMENTPROC:
   given _tag: Tag[PFNGLARRAYELEMENTPROC] = Tag.materializeCFuncPtr1[GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLARRAYELEMENTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -394,7 +394,7 @@ object PFNGLARRAYELEMENTPROC:
     inline def value: CFuncPtr1[GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLATTACHSHADERPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLATTACHSHADERPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLATTACHSHADERPROC:
   given _tag: Tag[PFNGLATTACHSHADERPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLATTACHSHADERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -403,7 +403,7 @@ object PFNGLATTACHSHADERPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBEGINCONDITIONALRENDERPROC = CFuncPtr2[GLuint, GLenum, Unit]
+type PFNGLBEGINCONDITIONALRENDERPROC = CFuncPtr2[GLuint, GLenum, Unit]
 object PFNGLBEGINCONDITIONALRENDERPROC:
   given _tag: Tag[PFNGLBEGINCONDITIONALRENDERPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBEGINCONDITIONALRENDERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -412,7 +412,7 @@ object PFNGLBEGINCONDITIONALRENDERPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBEGINPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLBEGINPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLBEGINPROC:
   given _tag: Tag[PFNGLBEGINPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBEGINPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -421,7 +421,7 @@ object PFNGLBEGINPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBEGINQUERYINDEXEDPROC = CFuncPtr3[GLenum, GLuint, GLuint, Unit]
+type PFNGLBEGINQUERYINDEXEDPROC = CFuncPtr3[GLenum, GLuint, GLuint, Unit]
 object PFNGLBEGINQUERYINDEXEDPROC:
   given _tag: Tag[PFNGLBEGINQUERYINDEXEDPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBEGINQUERYINDEXEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -430,7 +430,7 @@ object PFNGLBEGINQUERYINDEXEDPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBEGINQUERYPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLBEGINQUERYPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLBEGINQUERYPROC:
   given _tag: Tag[PFNGLBEGINQUERYPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBEGINQUERYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -439,7 +439,7 @@ object PFNGLBEGINQUERYPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBEGINTRANSFORMFEEDBACKPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLBEGINTRANSFORMFEEDBACKPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLBEGINTRANSFORMFEEDBACKPROC:
   given _tag: Tag[PFNGLBEGINTRANSFORMFEEDBACKPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBEGINTRANSFORMFEEDBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -448,7 +448,7 @@ object PFNGLBEGINTRANSFORMFEEDBACKPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDATTRIBLOCATIONPROC = CFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit]
+type PFNGLBINDATTRIBLOCATIONPROC = CFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit]
 object PFNGLBINDATTRIBLOCATIONPROC:
   given _tag: Tag[PFNGLBINDATTRIBLOCATIONPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDATTRIBLOCATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -457,7 +457,7 @@ object PFNGLBINDATTRIBLOCATIONPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDBUFFERBASEPROC = CFuncPtr3[GLenum, GLuint, GLuint, Unit]
+type PFNGLBINDBUFFERBASEPROC = CFuncPtr3[GLenum, GLuint, GLuint, Unit]
 object PFNGLBINDBUFFERBASEPROC:
   given _tag: Tag[PFNGLBINDBUFFERBASEPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDBUFFERBASEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -466,7 +466,7 @@ object PFNGLBINDBUFFERBASEPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDBUFFERPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLBINDBUFFERPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLBINDBUFFERPROC:
   given _tag: Tag[PFNGLBINDBUFFERPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -475,7 +475,7 @@ object PFNGLBINDBUFFERPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDBUFFERRANGEPROC = CFuncPtr5[GLenum, GLuint, GLuint, GLintptr, GLsizeiptr, Unit]
+type PFNGLBINDBUFFERRANGEPROC = CFuncPtr5[GLenum, GLuint, GLuint, GLintptr, GLsizeiptr, Unit]
 object PFNGLBINDBUFFERRANGEPROC:
   given _tag: Tag[PFNGLBINDBUFFERRANGEPROC] = Tag.materializeCFuncPtr5[GLenum, GLuint, GLuint, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -484,7 +484,7 @@ object PFNGLBINDBUFFERRANGEPROC:
     inline def value: CFuncPtr5[GLenum, GLuint, GLuint, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDBUFFERSBASEPROC = CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLBINDBUFFERSBASEPROC = CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLBINDBUFFERSBASEPROC:
   given _tag: Tag[PFNGLBINDBUFFERSBASEPROC] = Tag.materializeCFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDBUFFERSBASEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -493,7 +493,7 @@ object PFNGLBINDBUFFERSBASEPROC:
     inline def value: CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDBUFFERSRANGEPROC = CFuncPtr6[GLenum, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizeiptr], Unit]
+type PFNGLBINDBUFFERSRANGEPROC = CFuncPtr6[GLenum, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizeiptr], Unit]
 object PFNGLBINDBUFFERSRANGEPROC:
   given _tag: Tag[PFNGLBINDBUFFERSRANGEPROC] = Tag.materializeCFuncPtr6[GLenum, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizeiptr], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDBUFFERSRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -502,7 +502,7 @@ object PFNGLBINDBUFFERSRANGEPROC:
     inline def value: CFuncPtr6[GLenum, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizeiptr], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDFRAGDATALOCATIONINDEXEDPROC = CFuncPtr4[GLuint, GLuint, GLuint, Ptr[GLchar], Unit]
+type PFNGLBINDFRAGDATALOCATIONINDEXEDPROC = CFuncPtr4[GLuint, GLuint, GLuint, Ptr[GLchar], Unit]
 object PFNGLBINDFRAGDATALOCATIONINDEXEDPROC:
   given _tag: Tag[PFNGLBINDFRAGDATALOCATIONINDEXEDPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLuint, Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDFRAGDATALOCATIONINDEXEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -511,7 +511,7 @@ object PFNGLBINDFRAGDATALOCATIONINDEXEDPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLuint, Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDFRAGDATALOCATIONPROC = CFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit]
+type PFNGLBINDFRAGDATALOCATIONPROC = CFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit]
 object PFNGLBINDFRAGDATALOCATIONPROC:
   given _tag: Tag[PFNGLBINDFRAGDATALOCATIONPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDFRAGDATALOCATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -520,7 +520,7 @@ object PFNGLBINDFRAGDATALOCATIONPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDFRAMEBUFFERPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLBINDFRAMEBUFFERPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLBINDFRAMEBUFFERPROC:
   given _tag: Tag[PFNGLBINDFRAMEBUFFERPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDFRAMEBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -529,7 +529,7 @@ object PFNGLBINDFRAMEBUFFERPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDIMAGETEXTUREPROC = CFuncPtr7[GLuint, GLuint, GLint, GLboolean, GLint, GLenum, GLenum, Unit]
+type PFNGLBINDIMAGETEXTUREPROC = CFuncPtr7[GLuint, GLuint, GLint, GLboolean, GLint, GLenum, GLenum, Unit]
 object PFNGLBINDIMAGETEXTUREPROC:
   given _tag: Tag[PFNGLBINDIMAGETEXTUREPROC] = Tag.materializeCFuncPtr7[GLuint, GLuint, GLint, GLboolean, GLint, GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDIMAGETEXTUREPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -538,7 +538,7 @@ object PFNGLBINDIMAGETEXTUREPROC:
     inline def value: CFuncPtr7[GLuint, GLuint, GLint, GLboolean, GLint, GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDIMAGETEXTURESPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLBINDIMAGETEXTURESPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLBINDIMAGETEXTURESPROC:
   given _tag: Tag[PFNGLBINDIMAGETEXTURESPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDIMAGETEXTURESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -547,7 +547,7 @@ object PFNGLBINDIMAGETEXTURESPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDPROGRAMPIPELINEPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLBINDPROGRAMPIPELINEPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLBINDPROGRAMPIPELINEPROC:
   given _tag: Tag[PFNGLBINDPROGRAMPIPELINEPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDPROGRAMPIPELINEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -556,7 +556,7 @@ object PFNGLBINDPROGRAMPIPELINEPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDRENDERBUFFERPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLBINDRENDERBUFFERPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLBINDRENDERBUFFERPROC:
   given _tag: Tag[PFNGLBINDRENDERBUFFERPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDRENDERBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -565,7 +565,7 @@ object PFNGLBINDRENDERBUFFERPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDSAMPLERPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLBINDSAMPLERPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLBINDSAMPLERPROC:
   given _tag: Tag[PFNGLBINDSAMPLERPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDSAMPLERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -574,7 +574,7 @@ object PFNGLBINDSAMPLERPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDSAMPLERSPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLBINDSAMPLERSPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLBINDSAMPLERSPROC:
   given _tag: Tag[PFNGLBINDSAMPLERSPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDSAMPLERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -583,7 +583,7 @@ object PFNGLBINDSAMPLERSPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDTEXTUREPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLBINDTEXTUREPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLBINDTEXTUREPROC:
   given _tag: Tag[PFNGLBINDTEXTUREPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDTEXTUREPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -592,7 +592,7 @@ object PFNGLBINDTEXTUREPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDTEXTURESPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLBINDTEXTURESPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLBINDTEXTURESPROC:
   given _tag: Tag[PFNGLBINDTEXTURESPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDTEXTURESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -601,7 +601,7 @@ object PFNGLBINDTEXTURESPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDTEXTUREUNITPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLBINDTEXTUREUNITPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLBINDTEXTUREUNITPROC:
   given _tag: Tag[PFNGLBINDTEXTUREUNITPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDTEXTUREUNITPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -610,7 +610,7 @@ object PFNGLBINDTEXTUREUNITPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDTRANSFORMFEEDBACKPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLBINDTRANSFORMFEEDBACKPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLBINDTRANSFORMFEEDBACKPROC:
   given _tag: Tag[PFNGLBINDTRANSFORMFEEDBACKPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDTRANSFORMFEEDBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -619,7 +619,7 @@ object PFNGLBINDTRANSFORMFEEDBACKPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDVERTEXARRAYPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLBINDVERTEXARRAYPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLBINDVERTEXARRAYPROC:
   given _tag: Tag[PFNGLBINDVERTEXARRAYPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDVERTEXARRAYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -628,7 +628,7 @@ object PFNGLBINDVERTEXARRAYPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDVERTEXBUFFERPROC = CFuncPtr4[GLuint, GLuint, GLintptr, GLsizei, Unit]
+type PFNGLBINDVERTEXBUFFERPROC = CFuncPtr4[GLuint, GLuint, GLintptr, GLsizei, Unit]
 object PFNGLBINDVERTEXBUFFERPROC:
   given _tag: Tag[PFNGLBINDVERTEXBUFFERPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLintptr, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDVERTEXBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -637,7 +637,7 @@ object PFNGLBINDVERTEXBUFFERPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLintptr, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBINDVERTEXBUFFERSPROC = CFuncPtr5[GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit]
+type PFNGLBINDVERTEXBUFFERSPROC = CFuncPtr5[GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit]
 object PFNGLBINDVERTEXBUFFERSPROC:
   given _tag: Tag[PFNGLBINDVERTEXBUFFERSPROC] = Tag.materializeCFuncPtr5[GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBINDVERTEXBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -646,7 +646,7 @@ object PFNGLBINDVERTEXBUFFERSPROC:
     inline def value: CFuncPtr5[GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBITMAPPROC = CFuncPtr7[GLsizei, GLsizei, GLfloat, GLfloat, GLfloat, GLfloat, Ptr[GLubyte], Unit]
+type PFNGLBITMAPPROC = CFuncPtr7[GLsizei, GLsizei, GLfloat, GLfloat, GLfloat, GLfloat, Ptr[GLubyte], Unit]
 object PFNGLBITMAPPROC:
   given _tag: Tag[PFNGLBITMAPPROC] = Tag.materializeCFuncPtr7[GLsizei, GLsizei, GLfloat, GLfloat, GLfloat, GLfloat, Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBITMAPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -655,7 +655,7 @@ object PFNGLBITMAPPROC:
     inline def value: CFuncPtr7[GLsizei, GLsizei, GLfloat, GLfloat, GLfloat, GLfloat, Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDCOLORPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLBLENDCOLORPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLBLENDCOLORPROC:
   given _tag: Tag[PFNGLBLENDCOLORPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDCOLORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -664,7 +664,7 @@ object PFNGLBLENDCOLORPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDEQUATIONIPROC = CFuncPtr2[GLuint, GLenum, Unit]
+type PFNGLBLENDEQUATIONIPROC = CFuncPtr2[GLuint, GLenum, Unit]
 object PFNGLBLENDEQUATIONIPROC:
   given _tag: Tag[PFNGLBLENDEQUATIONIPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDEQUATIONIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -673,7 +673,7 @@ object PFNGLBLENDEQUATIONIPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDEQUATIONPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLBLENDEQUATIONPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLBLENDEQUATIONPROC:
   given _tag: Tag[PFNGLBLENDEQUATIONPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDEQUATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -682,7 +682,7 @@ object PFNGLBLENDEQUATIONPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDEQUATIONSEPARATEIPROC = CFuncPtr3[GLuint, GLenum, GLenum, Unit]
+type PFNGLBLENDEQUATIONSEPARATEIPROC = CFuncPtr3[GLuint, GLenum, GLenum, Unit]
 object PFNGLBLENDEQUATIONSEPARATEIPROC:
   given _tag: Tag[PFNGLBLENDEQUATIONSEPARATEIPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDEQUATIONSEPARATEIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -691,7 +691,7 @@ object PFNGLBLENDEQUATIONSEPARATEIPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDEQUATIONSEPARATEPROC = CFuncPtr2[GLenum, GLenum, Unit]
+type PFNGLBLENDEQUATIONSEPARATEPROC = CFuncPtr2[GLenum, GLenum, Unit]
 object PFNGLBLENDEQUATIONSEPARATEPROC:
   given _tag: Tag[PFNGLBLENDEQUATIONSEPARATEPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDEQUATIONSEPARATEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -700,7 +700,7 @@ object PFNGLBLENDEQUATIONSEPARATEPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDFUNCIPROC = CFuncPtr3[GLuint, GLenum, GLenum, Unit]
+type PFNGLBLENDFUNCIPROC = CFuncPtr3[GLuint, GLenum, GLenum, Unit]
 object PFNGLBLENDFUNCIPROC:
   given _tag: Tag[PFNGLBLENDFUNCIPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDFUNCIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -709,7 +709,7 @@ object PFNGLBLENDFUNCIPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDFUNCPROC = CFuncPtr2[GLenum, GLenum, Unit]
+type PFNGLBLENDFUNCPROC = CFuncPtr2[GLenum, GLenum, Unit]
 object PFNGLBLENDFUNCPROC:
   given _tag: Tag[PFNGLBLENDFUNCPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDFUNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -718,7 +718,7 @@ object PFNGLBLENDFUNCPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDFUNCSEPARATEIPROC = CFuncPtr5[GLuint, GLenum, GLenum, GLenum, GLenum, Unit]
+type PFNGLBLENDFUNCSEPARATEIPROC = CFuncPtr5[GLuint, GLenum, GLenum, GLenum, GLenum, Unit]
 object PFNGLBLENDFUNCSEPARATEIPROC:
   given _tag: Tag[PFNGLBLENDFUNCSEPARATEIPROC] = Tag.materializeCFuncPtr5[GLuint, GLenum, GLenum, GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDFUNCSEPARATEIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -727,7 +727,7 @@ object PFNGLBLENDFUNCSEPARATEIPROC:
     inline def value: CFuncPtr5[GLuint, GLenum, GLenum, GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLENDFUNCSEPARATEPROC = CFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit]
+type PFNGLBLENDFUNCSEPARATEPROC = CFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit]
 object PFNGLBLENDFUNCSEPARATEPROC:
   given _tag: Tag[PFNGLBLENDFUNCSEPARATEPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLENDFUNCSEPARATEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -736,7 +736,7 @@ object PFNGLBLENDFUNCSEPARATEPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLITFRAMEBUFFERPROC = CFuncPtr10[GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit]
+type PFNGLBLITFRAMEBUFFERPROC = CFuncPtr10[GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit]
 object PFNGLBLITFRAMEBUFFERPROC:
   given _tag: Tag[PFNGLBLITFRAMEBUFFERPROC] = Tag.materializeCFuncPtr10[GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLITFRAMEBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -745,7 +745,7 @@ object PFNGLBLITFRAMEBUFFERPROC:
     inline def value: CFuncPtr10[GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBLITNAMEDFRAMEBUFFERPROC = CFuncPtr12[GLuint, GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit]
+type PFNGLBLITNAMEDFRAMEBUFFERPROC = CFuncPtr12[GLuint, GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit]
 object PFNGLBLITNAMEDFRAMEBUFFERPROC:
   given _tag: Tag[PFNGLBLITNAMEDFRAMEBUFFERPROC] = Tag.materializeCFuncPtr12[GLuint, GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBLITNAMEDFRAMEBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -754,7 +754,7 @@ object PFNGLBLITNAMEDFRAMEBUFFERPROC:
     inline def value: CFuncPtr12[GLuint, GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLint, GLbitfield, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBUFFERDATAPROC = CFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLenum, Unit]
+type PFNGLBUFFERDATAPROC = CFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLenum, Unit]
 object PFNGLBUFFERDATAPROC:
   given _tag: Tag[PFNGLBUFFERDATAPROC] = Tag.materializeCFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBUFFERDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -763,7 +763,7 @@ object PFNGLBUFFERDATAPROC:
     inline def value: CFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBUFFERSTORAGEPROC = CFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLbitfield, Unit]
+type PFNGLBUFFERSTORAGEPROC = CFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLbitfield, Unit]
 object PFNGLBUFFERSTORAGEPROC:
   given _tag: Tag[PFNGLBUFFERSTORAGEPROC] = Tag.materializeCFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBUFFERSTORAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -772,7 +772,7 @@ object PFNGLBUFFERSTORAGEPROC:
     inline def value: CFuncPtr4[GLenum, GLsizeiptr, Ptr[Byte], GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLBUFFERSUBDATAPROC = CFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
+type PFNGLBUFFERSUBDATAPROC = CFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
 object PFNGLBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -781,7 +781,7 @@ object PFNGLBUFFERSUBDATAPROC:
     inline def value: CFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCALLLISTPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLCALLLISTPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLCALLLISTPROC:
   given _tag: Tag[PFNGLCALLLISTPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCALLLISTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -790,7 +790,7 @@ object PFNGLCALLLISTPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCALLLISTSPROC = CFuncPtr3[GLsizei, GLenum, Ptr[Byte], Unit]
+type PFNGLCALLLISTSPROC = CFuncPtr3[GLsizei, GLenum, Ptr[Byte], Unit]
 object PFNGLCALLLISTSPROC:
   given _tag: Tag[PFNGLCALLLISTSPROC] = Tag.materializeCFuncPtr3[GLsizei, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCALLLISTSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -799,7 +799,7 @@ object PFNGLCALLLISTSPROC:
     inline def value: CFuncPtr3[GLsizei, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCHECKFRAMEBUFFERSTATUSPROC = CFuncPtr1[GLenum, GLenum]
+type PFNGLCHECKFRAMEBUFFERSTATUSPROC = CFuncPtr1[GLenum, GLenum]
 object PFNGLCHECKFRAMEBUFFERSTATUSPROC:
   given _tag: Tag[PFNGLCHECKFRAMEBUFFERSTATUSPROC] = Tag.materializeCFuncPtr1[GLenum, GLenum]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCHECKFRAMEBUFFERSTATUSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -808,7 +808,7 @@ object PFNGLCHECKFRAMEBUFFERSTATUSPROC:
     inline def value: CFuncPtr1[GLenum, GLenum] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC = CFuncPtr2[GLuint, GLenum, GLenum]
+type PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC = CFuncPtr2[GLuint, GLenum, GLenum]
 object PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC:
   given _tag: Tag[PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, GLenum]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -817,7 +817,7 @@ object PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, GLenum] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLAMPCOLORPROC = CFuncPtr2[GLenum, GLenum, Unit]
+type PFNGLCLAMPCOLORPROC = CFuncPtr2[GLenum, GLenum, Unit]
 object PFNGLCLAMPCOLORPROC:
   given _tag: Tag[PFNGLCLAMPCOLORPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLAMPCOLORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -826,7 +826,7 @@ object PFNGLCLAMPCOLORPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARACCUMPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLCLEARACCUMPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLCLEARACCUMPROC:
   given _tag: Tag[PFNGLCLEARACCUMPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARACCUMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -835,7 +835,7 @@ object PFNGLCLEARACCUMPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARBUFFERDATAPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLCLEARBUFFERDATAPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLCLEARBUFFERDATAPROC:
   given _tag: Tag[PFNGLCLEARBUFFERDATAPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARBUFFERDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -844,7 +844,7 @@ object PFNGLCLEARBUFFERDATAPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARBUFFERFIPROC = CFuncPtr4[GLenum, GLint, GLfloat, GLint, Unit]
+type PFNGLCLEARBUFFERFIPROC = CFuncPtr4[GLenum, GLint, GLfloat, GLint, Unit]
 object PFNGLCLEARBUFFERFIPROC:
   given _tag: Tag[PFNGLCLEARBUFFERFIPROC] = Tag.materializeCFuncPtr4[GLenum, GLint, GLfloat, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARBUFFERFIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -853,7 +853,7 @@ object PFNGLCLEARBUFFERFIPROC:
     inline def value: CFuncPtr4[GLenum, GLint, GLfloat, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARBUFFERFVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLfloat], Unit]
+type PFNGLCLEARBUFFERFVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLfloat], Unit]
 object PFNGLCLEARBUFFERFVPROC:
   given _tag: Tag[PFNGLCLEARBUFFERFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARBUFFERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -862,7 +862,7 @@ object PFNGLCLEARBUFFERFVPROC:
     inline def value: CFuncPtr3[GLenum, GLint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARBUFFERIVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLint], Unit]
+type PFNGLCLEARBUFFERIVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLint], Unit]
 object PFNGLCLEARBUFFERIVPROC:
   given _tag: Tag[PFNGLCLEARBUFFERIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARBUFFERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -871,7 +871,7 @@ object PFNGLCLEARBUFFERIVPROC:
     inline def value: CFuncPtr3[GLenum, GLint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARBUFFERSUBDATAPROC = CFuncPtr7[GLenum, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLCLEARBUFFERSUBDATAPROC = CFuncPtr7[GLenum, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLCLEARBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLCLEARBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr7[GLenum, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -880,7 +880,7 @@ object PFNGLCLEARBUFFERSUBDATAPROC:
     inline def value: CFuncPtr7[GLenum, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARBUFFERUIVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit]
+type PFNGLCLEARBUFFERUIVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit]
 object PFNGLCLEARBUFFERUIVPROC:
   given _tag: Tag[PFNGLCLEARBUFFERUIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARBUFFERUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -889,7 +889,7 @@ object PFNGLCLEARBUFFERUIVPROC:
     inline def value: CFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARCOLORPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLCLEARCOLORPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLCLEARCOLORPROC:
   given _tag: Tag[PFNGLCLEARCOLORPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARCOLORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -898,7 +898,7 @@ object PFNGLCLEARCOLORPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARDEPTHFPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLCLEARDEPTHFPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLCLEARDEPTHFPROC:
   given _tag: Tag[PFNGLCLEARDEPTHFPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARDEPTHFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -907,7 +907,7 @@ object PFNGLCLEARDEPTHFPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARDEPTHPROC = CFuncPtr1[GLdouble, Unit]
+type PFNGLCLEARDEPTHPROC = CFuncPtr1[GLdouble, Unit]
 object PFNGLCLEARDEPTHPROC:
   given _tag: Tag[PFNGLCLEARDEPTHPROC] = Tag.materializeCFuncPtr1[GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARDEPTHPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -916,7 +916,7 @@ object PFNGLCLEARDEPTHPROC:
     inline def value: CFuncPtr1[GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARINDEXPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLCLEARINDEXPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLCLEARINDEXPROC:
   given _tag: Tag[PFNGLCLEARINDEXPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARINDEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -925,7 +925,7 @@ object PFNGLCLEARINDEXPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARNAMEDBUFFERDATAPROC = CFuncPtr5[GLuint, GLenum, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLCLEARNAMEDBUFFERDATAPROC = CFuncPtr5[GLuint, GLenum, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLCLEARNAMEDBUFFERDATAPROC:
   given _tag: Tag[PFNGLCLEARNAMEDBUFFERDATAPROC] = Tag.materializeCFuncPtr5[GLuint, GLenum, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARNAMEDBUFFERDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -934,7 +934,7 @@ object PFNGLCLEARNAMEDBUFFERDATAPROC:
     inline def value: CFuncPtr5[GLuint, GLenum, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARNAMEDBUFFERSUBDATAPROC = CFuncPtr7[GLuint, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLCLEARNAMEDBUFFERSUBDATAPROC = CFuncPtr7[GLuint, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLCLEARNAMEDBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLCLEARNAMEDBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr7[GLuint, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARNAMEDBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -943,7 +943,7 @@ object PFNGLCLEARNAMEDBUFFERSUBDATAPROC:
     inline def value: CFuncPtr7[GLuint, GLenum, GLintptr, GLsizeiptr, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARNAMEDFRAMEBUFFERFIPROC = CFuncPtr5[GLuint, GLenum, GLint, GLfloat, GLint, Unit]
+type PFNGLCLEARNAMEDFRAMEBUFFERFIPROC = CFuncPtr5[GLuint, GLenum, GLint, GLfloat, GLint, Unit]
 object PFNGLCLEARNAMEDFRAMEBUFFERFIPROC:
   given _tag: Tag[PFNGLCLEARNAMEDFRAMEBUFFERFIPROC] = Tag.materializeCFuncPtr5[GLuint, GLenum, GLint, GLfloat, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARNAMEDFRAMEBUFFERFIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -952,7 +952,7 @@ object PFNGLCLEARNAMEDFRAMEBUFFERFIPROC:
     inline def value: CFuncPtr5[GLuint, GLenum, GLint, GLfloat, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARNAMEDFRAMEBUFFERFVPROC = CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLfloat], Unit]
+type PFNGLCLEARNAMEDFRAMEBUFFERFVPROC = CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLfloat], Unit]
 object PFNGLCLEARNAMEDFRAMEBUFFERFVPROC:
   given _tag: Tag[PFNGLCLEARNAMEDFRAMEBUFFERFVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARNAMEDFRAMEBUFFERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -961,7 +961,7 @@ object PFNGLCLEARNAMEDFRAMEBUFFERFVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARNAMEDFRAMEBUFFERIVPROC = CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLint], Unit]
+type PFNGLCLEARNAMEDFRAMEBUFFERIVPROC = CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLint], Unit]
 object PFNGLCLEARNAMEDFRAMEBUFFERIVPROC:
   given _tag: Tag[PFNGLCLEARNAMEDFRAMEBUFFERIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARNAMEDFRAMEBUFFERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -970,7 +970,7 @@ object PFNGLCLEARNAMEDFRAMEBUFFERIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC = CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLuint], Unit]
+type PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC = CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLuint], Unit]
 object PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC:
   given _tag: Tag[PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -979,7 +979,7 @@ object PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARPROC = CFuncPtr1[GLbitfield, Unit]
+type PFNGLCLEARPROC = CFuncPtr1[GLbitfield, Unit]
 object PFNGLCLEARPROC:
   given _tag: Tag[PFNGLCLEARPROC] = Tag.materializeCFuncPtr1[GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -988,7 +988,7 @@ object PFNGLCLEARPROC:
     inline def value: CFuncPtr1[GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARSTENCILPROC = CFuncPtr1[GLint, Unit]
+type PFNGLCLEARSTENCILPROC = CFuncPtr1[GLint, Unit]
 object PFNGLCLEARSTENCILPROC:
   given _tag: Tag[PFNGLCLEARSTENCILPROC] = Tag.materializeCFuncPtr1[GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARSTENCILPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -997,7 +997,7 @@ object PFNGLCLEARSTENCILPROC:
     inline def value: CFuncPtr1[GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARTEXIMAGEPROC = CFuncPtr5[GLuint, GLint, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLCLEARTEXIMAGEPROC = CFuncPtr5[GLuint, GLint, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLCLEARTEXIMAGEPROC:
   given _tag: Tag[PFNGLCLEARTEXIMAGEPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARTEXIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1006,7 +1006,7 @@ object PFNGLCLEARTEXIMAGEPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLEARTEXSUBIMAGEPROC = CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLCLEARTEXSUBIMAGEPROC = CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLCLEARTEXSUBIMAGEPROC:
   given _tag: Tag[PFNGLCLEARTEXSUBIMAGEPROC] = Tag.materializeCFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLEARTEXSUBIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1015,7 +1015,7 @@ object PFNGLCLEARTEXSUBIMAGEPROC:
     inline def value: CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLIENTACTIVETEXTUREPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLCLIENTACTIVETEXTUREPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLCLIENTACTIVETEXTUREPROC:
   given _tag: Tag[PFNGLCLIENTACTIVETEXTUREPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLIENTACTIVETEXTUREPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1024,7 +1024,7 @@ object PFNGLCLIENTACTIVETEXTUREPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLIENTWAITSYNCPROC = CFuncPtr3[GLsync, GLbitfield, GLuint64, GLenum]
+type PFNGLCLIENTWAITSYNCPROC = CFuncPtr3[GLsync, GLbitfield, GLuint64, GLenum]
 object PFNGLCLIENTWAITSYNCPROC:
   given _tag: Tag[PFNGLCLIENTWAITSYNCPROC] = Tag.materializeCFuncPtr3[GLsync, GLbitfield, GLuint64, GLenum]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLIENTWAITSYNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1033,7 +1033,7 @@ object PFNGLCLIENTWAITSYNCPROC:
     inline def value: CFuncPtr3[GLsync, GLbitfield, GLuint64, GLenum] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLIPCONTROLPROC = CFuncPtr2[GLenum, GLenum, Unit]
+type PFNGLCLIPCONTROLPROC = CFuncPtr2[GLenum, GLenum, Unit]
 object PFNGLCLIPCONTROLPROC:
   given _tag: Tag[PFNGLCLIPCONTROLPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLIPCONTROLPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1042,7 +1042,7 @@ object PFNGLCLIPCONTROLPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCLIPPLANEPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
+type PFNGLCLIPPLANEPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
 object PFNGLCLIPPLANEPROC:
   given _tag: Tag[PFNGLCLIPPLANEPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCLIPPLANEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1051,7 +1051,7 @@ object PFNGLCLIPPLANEPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3BPROC = CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
+type PFNGLCOLOR3BPROC = CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
 object PFNGLCOLOR3BPROC:
   given _tag: Tag[PFNGLCOLOR3BPROC] = Tag.materializeCFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3BPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1060,7 +1060,7 @@ object PFNGLCOLOR3BPROC:
     inline def value: CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
+type PFNGLCOLOR3BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
 object PFNGLCOLOR3BVPROC:
   given _tag: Tag[PFNGLCOLOR3BVPROC] = Tag.materializeCFuncPtr1[Ptr[GLbyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3BVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1069,7 +1069,7 @@ object PFNGLCOLOR3BVPROC:
     inline def value: CFuncPtr1[Ptr[GLbyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLCOLOR3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLCOLOR3DPROC:
   given _tag: Tag[PFNGLCOLOR3DPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1078,7 +1078,7 @@ object PFNGLCOLOR3DPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLCOLOR3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLCOLOR3DVPROC:
   given _tag: Tag[PFNGLCOLOR3DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1087,7 +1087,7 @@ object PFNGLCOLOR3DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLCOLOR3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLCOLOR3FPROC:
   given _tag: Tag[PFNGLCOLOR3FPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1096,7 +1096,7 @@ object PFNGLCOLOR3FPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLCOLOR3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLCOLOR3FVPROC:
   given _tag: Tag[PFNGLCOLOR3FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1105,7 +1105,7 @@ object PFNGLCOLOR3FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLCOLOR3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLCOLOR3IPROC:
   given _tag: Tag[PFNGLCOLOR3IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1114,7 +1114,7 @@ object PFNGLCOLOR3IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLCOLOR3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLCOLOR3IVPROC:
   given _tag: Tag[PFNGLCOLOR3IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1123,7 +1123,7 @@ object PFNGLCOLOR3IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
+type PFNGLCOLOR3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
 object PFNGLCOLOR3SPROC:
   given _tag: Tag[PFNGLCOLOR3SPROC] = Tag.materializeCFuncPtr3[GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1132,7 +1132,7 @@ object PFNGLCOLOR3SPROC:
     inline def value: CFuncPtr3[GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLCOLOR3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLCOLOR3SVPROC:
   given _tag: Tag[PFNGLCOLOR3SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1141,7 +1141,7 @@ object PFNGLCOLOR3SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3UBPROC = CFuncPtr3[GLubyte, GLubyte, GLubyte, Unit]
+type PFNGLCOLOR3UBPROC = CFuncPtr3[GLubyte, GLubyte, GLubyte, Unit]
 object PFNGLCOLOR3UBPROC:
   given _tag: Tag[PFNGLCOLOR3UBPROC] = Tag.materializeCFuncPtr3[GLubyte, GLubyte, GLubyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3UBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1150,7 +1150,7 @@ object PFNGLCOLOR3UBPROC:
     inline def value: CFuncPtr3[GLubyte, GLubyte, GLubyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3UBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
+type PFNGLCOLOR3UBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
 object PFNGLCOLOR3UBVPROC:
   given _tag: Tag[PFNGLCOLOR3UBVPROC] = Tag.materializeCFuncPtr1[Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3UBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1159,7 +1159,7 @@ object PFNGLCOLOR3UBVPROC:
     inline def value: CFuncPtr1[Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3UIPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLCOLOR3UIPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLCOLOR3UIPROC:
   given _tag: Tag[PFNGLCOLOR3UIPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1168,7 +1168,7 @@ object PFNGLCOLOR3UIPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3UIVPROC = CFuncPtr1[Ptr[GLuint], Unit]
+type PFNGLCOLOR3UIVPROC = CFuncPtr1[Ptr[GLuint], Unit]
 object PFNGLCOLOR3UIVPROC:
   given _tag: Tag[PFNGLCOLOR3UIVPROC] = Tag.materializeCFuncPtr1[Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1177,7 +1177,7 @@ object PFNGLCOLOR3UIVPROC:
     inline def value: CFuncPtr1[Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3USPROC = CFuncPtr3[GLushort, GLushort, GLushort, Unit]
+type PFNGLCOLOR3USPROC = CFuncPtr3[GLushort, GLushort, GLushort, Unit]
 object PFNGLCOLOR3USPROC:
   given _tag: Tag[PFNGLCOLOR3USPROC] = Tag.materializeCFuncPtr3[GLushort, GLushort, GLushort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3USPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1186,7 +1186,7 @@ object PFNGLCOLOR3USPROC:
     inline def value: CFuncPtr3[GLushort, GLushort, GLushort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR3USVPROC = CFuncPtr1[Ptr[GLushort], Unit]
+type PFNGLCOLOR3USVPROC = CFuncPtr1[Ptr[GLushort], Unit]
 object PFNGLCOLOR3USVPROC:
   given _tag: Tag[PFNGLCOLOR3USVPROC] = Tag.materializeCFuncPtr1[Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR3USVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1195,7 +1195,7 @@ object PFNGLCOLOR3USVPROC:
     inline def value: CFuncPtr1[Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4BPROC = CFuncPtr4[GLbyte, GLbyte, GLbyte, GLbyte, Unit]
+type PFNGLCOLOR4BPROC = CFuncPtr4[GLbyte, GLbyte, GLbyte, GLbyte, Unit]
 object PFNGLCOLOR4BPROC:
   given _tag: Tag[PFNGLCOLOR4BPROC] = Tag.materializeCFuncPtr4[GLbyte, GLbyte, GLbyte, GLbyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4BPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1204,7 +1204,7 @@ object PFNGLCOLOR4BPROC:
     inline def value: CFuncPtr4[GLbyte, GLbyte, GLbyte, GLbyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
+type PFNGLCOLOR4BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
 object PFNGLCOLOR4BVPROC:
   given _tag: Tag[PFNGLCOLOR4BVPROC] = Tag.materializeCFuncPtr1[Ptr[GLbyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4BVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1213,7 +1213,7 @@ object PFNGLCOLOR4BVPROC:
     inline def value: CFuncPtr1[Ptr[GLbyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLCOLOR4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLCOLOR4DPROC:
   given _tag: Tag[PFNGLCOLOR4DPROC] = Tag.materializeCFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1222,7 +1222,7 @@ object PFNGLCOLOR4DPROC:
     inline def value: CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLCOLOR4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLCOLOR4DVPROC:
   given _tag: Tag[PFNGLCOLOR4DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1231,7 +1231,7 @@ object PFNGLCOLOR4DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLCOLOR4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLCOLOR4FPROC:
   given _tag: Tag[PFNGLCOLOR4FPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1240,7 +1240,7 @@ object PFNGLCOLOR4FPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLCOLOR4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLCOLOR4FVPROC:
   given _tag: Tag[PFNGLCOLOR4FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1249,7 +1249,7 @@ object PFNGLCOLOR4FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
+type PFNGLCOLOR4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
 object PFNGLCOLOR4IPROC:
   given _tag: Tag[PFNGLCOLOR4IPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1258,7 +1258,7 @@ object PFNGLCOLOR4IPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLCOLOR4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLCOLOR4IVPROC:
   given _tag: Tag[PFNGLCOLOR4IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1267,7 +1267,7 @@ object PFNGLCOLOR4IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
+type PFNGLCOLOR4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
 object PFNGLCOLOR4SPROC:
   given _tag: Tag[PFNGLCOLOR4SPROC] = Tag.materializeCFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1276,7 +1276,7 @@ object PFNGLCOLOR4SPROC:
     inline def value: CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLCOLOR4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLCOLOR4SVPROC:
   given _tag: Tag[PFNGLCOLOR4SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1285,7 +1285,7 @@ object PFNGLCOLOR4SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4UBPROC = CFuncPtr4[GLubyte, GLubyte, GLubyte, GLubyte, Unit]
+type PFNGLCOLOR4UBPROC = CFuncPtr4[GLubyte, GLubyte, GLubyte, GLubyte, Unit]
 object PFNGLCOLOR4UBPROC:
   given _tag: Tag[PFNGLCOLOR4UBPROC] = Tag.materializeCFuncPtr4[GLubyte, GLubyte, GLubyte, GLubyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4UBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1294,7 +1294,7 @@ object PFNGLCOLOR4UBPROC:
     inline def value: CFuncPtr4[GLubyte, GLubyte, GLubyte, GLubyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4UBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
+type PFNGLCOLOR4UBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
 object PFNGLCOLOR4UBVPROC:
   given _tag: Tag[PFNGLCOLOR4UBVPROC] = Tag.materializeCFuncPtr1[Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4UBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1303,7 +1303,7 @@ object PFNGLCOLOR4UBVPROC:
     inline def value: CFuncPtr1[Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4UIPROC = CFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit]
+type PFNGLCOLOR4UIPROC = CFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit]
 object PFNGLCOLOR4UIPROC:
   given _tag: Tag[PFNGLCOLOR4UIPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1312,7 +1312,7 @@ object PFNGLCOLOR4UIPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4UIVPROC = CFuncPtr1[Ptr[GLuint], Unit]
+type PFNGLCOLOR4UIVPROC = CFuncPtr1[Ptr[GLuint], Unit]
 object PFNGLCOLOR4UIVPROC:
   given _tag: Tag[PFNGLCOLOR4UIVPROC] = Tag.materializeCFuncPtr1[Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1321,7 +1321,7 @@ object PFNGLCOLOR4UIVPROC:
     inline def value: CFuncPtr1[Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4USPROC = CFuncPtr4[GLushort, GLushort, GLushort, GLushort, Unit]
+type PFNGLCOLOR4USPROC = CFuncPtr4[GLushort, GLushort, GLushort, GLushort, Unit]
 object PFNGLCOLOR4USPROC:
   given _tag: Tag[PFNGLCOLOR4USPROC] = Tag.materializeCFuncPtr4[GLushort, GLushort, GLushort, GLushort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4USPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1330,7 +1330,7 @@ object PFNGLCOLOR4USPROC:
     inline def value: CFuncPtr4[GLushort, GLushort, GLushort, GLushort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLOR4USVPROC = CFuncPtr1[Ptr[GLushort], Unit]
+type PFNGLCOLOR4USVPROC = CFuncPtr1[Ptr[GLushort], Unit]
 object PFNGLCOLOR4USVPROC:
   given _tag: Tag[PFNGLCOLOR4USVPROC] = Tag.materializeCFuncPtr1[Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLOR4USVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1339,7 +1339,7 @@ object PFNGLCOLOR4USVPROC:
     inline def value: CFuncPtr1[Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORMASKIPROC = CFuncPtr5[GLuint, GLboolean, GLboolean, GLboolean, GLboolean, Unit]
+type PFNGLCOLORMASKIPROC = CFuncPtr5[GLuint, GLboolean, GLboolean, GLboolean, GLboolean, Unit]
 object PFNGLCOLORMASKIPROC:
   given _tag: Tag[PFNGLCOLORMASKIPROC] = Tag.materializeCFuncPtr5[GLuint, GLboolean, GLboolean, GLboolean, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORMASKIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1348,7 +1348,7 @@ object PFNGLCOLORMASKIPROC:
     inline def value: CFuncPtr5[GLuint, GLboolean, GLboolean, GLboolean, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORMASKPROC = CFuncPtr4[GLboolean, GLboolean, GLboolean, GLboolean, Unit]
+type PFNGLCOLORMASKPROC = CFuncPtr4[GLboolean, GLboolean, GLboolean, GLboolean, Unit]
 object PFNGLCOLORMASKPROC:
   given _tag: Tag[PFNGLCOLORMASKPROC] = Tag.materializeCFuncPtr4[GLboolean, GLboolean, GLboolean, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORMASKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1357,7 +1357,7 @@ object PFNGLCOLORMASKPROC:
     inline def value: CFuncPtr4[GLboolean, GLboolean, GLboolean, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORMATERIALPROC = CFuncPtr2[GLenum, GLenum, Unit]
+type PFNGLCOLORMATERIALPROC = CFuncPtr2[GLenum, GLenum, Unit]
 object PFNGLCOLORMATERIALPROC:
   given _tag: Tag[PFNGLCOLORMATERIALPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORMATERIALPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1366,7 +1366,7 @@ object PFNGLCOLORMATERIALPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLCOLORP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLCOLORP3UIPROC:
   given _tag: Tag[PFNGLCOLORP3UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORP3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1375,7 +1375,7 @@ object PFNGLCOLORP3UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLCOLORP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLCOLORP3UIVPROC:
   given _tag: Tag[PFNGLCOLORP3UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORP3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1384,7 +1384,7 @@ object PFNGLCOLORP3UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORP4UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLCOLORP4UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLCOLORP4UIPROC:
   given _tag: Tag[PFNGLCOLORP4UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORP4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1393,7 +1393,7 @@ object PFNGLCOLORP4UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORP4UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLCOLORP4UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLCOLORP4UIVPROC:
   given _tag: Tag[PFNGLCOLORP4UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORP4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1402,7 +1402,7 @@ object PFNGLCOLORP4UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOLORPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOLORPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOLORPOINTERPROC:
   given _tag: Tag[PFNGLCOLORPOINTERPROC] = Tag.materializeCFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOLORPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1411,7 +1411,7 @@ object PFNGLCOLORPOINTERPROC:
     inline def value: CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPILESHADERPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLCOMPILESHADERPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLCOMPILESHADERPROC:
   given _tag: Tag[PFNGLCOMPILESHADERPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPILESHADERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1420,7 +1420,7 @@ object PFNGLCOMPILESHADERPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLenum, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLenum, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXIMAGE1DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXIMAGE1DPROC] = Tag.materializeCFuncPtr7[GLenum, GLint, GLenum, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1429,7 +1429,7 @@ object PFNGLCOMPRESSEDTEXIMAGE1DPROC:
     inline def value: CFuncPtr7[GLenum, GLint, GLenum, GLsizei, GLint, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXIMAGE2DPROC = CFuncPtr8[GLenum, GLint, GLenum, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXIMAGE2DPROC = CFuncPtr8[GLenum, GLint, GLenum, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXIMAGE2DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXIMAGE2DPROC] = Tag.materializeCFuncPtr8[GLenum, GLint, GLenum, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1438,7 +1438,7 @@ object PFNGLCOMPRESSEDTEXIMAGE2DPROC:
     inline def value: CFuncPtr8[GLenum, GLint, GLenum, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXIMAGE3DPROC = CFuncPtr9[GLenum, GLint, GLenum, GLsizei, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXIMAGE3DPROC = CFuncPtr9[GLenum, GLint, GLenum, GLsizei, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXIMAGE3DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXIMAGE3DPROC] = Tag.materializeCFuncPtr9[GLenum, GLint, GLenum, GLsizei, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1447,7 +1447,7 @@ object PFNGLCOMPRESSEDTEXIMAGE3DPROC:
     inline def value: CFuncPtr9[GLenum, GLint, GLenum, GLsizei, GLsizei, GLsizei, GLint, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC] = Tag.materializeCFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1456,7 +1456,7 @@ object PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC:
     inline def value: CFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC = CFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC = CFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC] = Tag.materializeCFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1465,7 +1465,7 @@ object PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC:
     inline def value: CFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC = CFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC = CFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC] = Tag.materializeCFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1474,7 +1474,7 @@ object PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC:
     inline def value: CFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC = CFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC = CFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC] = Tag.materializeCFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1483,7 +1483,7 @@ object PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC:
     inline def value: CFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC = CFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC = CFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC] = Tag.materializeCFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1492,7 +1492,7 @@ object PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC:
     inline def value: CFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC = CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC = CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC:
   given _tag: Tag[PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC] = Tag.materializeCFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1501,7 +1501,7 @@ object PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC:
     inline def value: CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYBUFFERSUBDATAPROC = CFuncPtr5[GLenum, GLenum, GLintptr, GLintptr, GLsizeiptr, Unit]
+type PFNGLCOPYBUFFERSUBDATAPROC = CFuncPtr5[GLenum, GLenum, GLintptr, GLintptr, GLsizeiptr, Unit]
 object PFNGLCOPYBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLCOPYBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLintptr, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1510,7 +1510,7 @@ object PFNGLCOPYBUFFERSUBDATAPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLintptr, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYIMAGESUBDATAPROC = CFuncPtr15[GLuint, GLenum, GLint, GLint, GLint, GLint, GLuint, GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit]
+type PFNGLCOPYIMAGESUBDATAPROC = CFuncPtr15[GLuint, GLenum, GLint, GLint, GLint, GLint, GLuint, GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit]
 object PFNGLCOPYIMAGESUBDATAPROC:
   given _tag: Tag[PFNGLCOPYIMAGESUBDATAPROC] = Tag.materializeCFuncPtr15[GLuint, GLenum, GLint, GLint, GLint, GLint, GLuint, GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYIMAGESUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1519,7 +1519,7 @@ object PFNGLCOPYIMAGESUBDATAPROC:
     inline def value: CFuncPtr15[GLuint, GLenum, GLint, GLint, GLint, GLint, GLuint, GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYNAMEDBUFFERSUBDATAPROC = CFuncPtr5[GLuint, GLuint, GLintptr, GLintptr, GLsizeiptr, Unit]
+type PFNGLCOPYNAMEDBUFFERSUBDATAPROC = CFuncPtr5[GLuint, GLuint, GLintptr, GLintptr, GLsizeiptr, Unit]
 object PFNGLCOPYNAMEDBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLCOPYNAMEDBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLintptr, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYNAMEDBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1528,7 +1528,7 @@ object PFNGLCOPYNAMEDBUFFERSUBDATAPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLintptr, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYPIXELSPROC = CFuncPtr5[GLint, GLint, GLsizei, GLsizei, GLenum, Unit]
+type PFNGLCOPYPIXELSPROC = CFuncPtr5[GLint, GLint, GLsizei, GLsizei, GLenum, Unit]
 object PFNGLCOPYPIXELSPROC:
   given _tag: Tag[PFNGLCOPYPIXELSPROC] = Tag.materializeCFuncPtr5[GLint, GLint, GLsizei, GLsizei, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYPIXELSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1537,7 +1537,7 @@ object PFNGLCOPYPIXELSPROC:
     inline def value: CFuncPtr5[GLint, GLint, GLsizei, GLsizei, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLint, Unit]
+type PFNGLCOPYTEXIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLint, Unit]
 object PFNGLCOPYTEXIMAGE1DPROC:
   given _tag: Tag[PFNGLCOPYTEXIMAGE1DPROC] = Tag.materializeCFuncPtr7[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1546,7 +1546,7 @@ object PFNGLCOPYTEXIMAGE1DPROC:
     inline def value: CFuncPtr7[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXIMAGE2DPROC = CFuncPtr8[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLsizei, GLint, Unit]
+type PFNGLCOPYTEXIMAGE2DPROC = CFuncPtr8[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLsizei, GLint, Unit]
 object PFNGLCOPYTEXIMAGE2DPROC:
   given _tag: Tag[PFNGLCOPYTEXIMAGE2DPROC] = Tag.materializeCFuncPtr8[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLsizei, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1555,7 +1555,7 @@ object PFNGLCOPYTEXIMAGE2DPROC:
     inline def value: CFuncPtr8[GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLsizei, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXSUBIMAGE1DPROC = CFuncPtr6[GLenum, GLint, GLint, GLint, GLint, GLsizei, Unit]
+type PFNGLCOPYTEXSUBIMAGE1DPROC = CFuncPtr6[GLenum, GLint, GLint, GLint, GLint, GLsizei, Unit]
 object PFNGLCOPYTEXSUBIMAGE1DPROC:
   given _tag: Tag[PFNGLCOPYTEXSUBIMAGE1DPROC] = Tag.materializeCFuncPtr6[GLenum, GLint, GLint, GLint, GLint, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXSUBIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1564,7 +1564,7 @@ object PFNGLCOPYTEXSUBIMAGE1DPROC:
     inline def value: CFuncPtr6[GLenum, GLint, GLint, GLint, GLint, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXSUBIMAGE2DPROC = CFuncPtr8[GLenum, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLCOPYTEXSUBIMAGE2DPROC = CFuncPtr8[GLenum, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLCOPYTEXSUBIMAGE2DPROC:
   given _tag: Tag[PFNGLCOPYTEXSUBIMAGE2DPROC] = Tag.materializeCFuncPtr8[GLenum, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXSUBIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1573,7 +1573,7 @@ object PFNGLCOPYTEXSUBIMAGE2DPROC:
     inline def value: CFuncPtr8[GLenum, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXSUBIMAGE3DPROC = CFuncPtr9[GLenum, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLCOPYTEXSUBIMAGE3DPROC = CFuncPtr9[GLenum, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLCOPYTEXSUBIMAGE3DPROC:
   given _tag: Tag[PFNGLCOPYTEXSUBIMAGE3DPROC] = Tag.materializeCFuncPtr9[GLenum, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXSUBIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1582,7 +1582,7 @@ object PFNGLCOPYTEXSUBIMAGE3DPROC:
     inline def value: CFuncPtr9[GLenum, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXTURESUBIMAGE1DPROC = CFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLsizei, Unit]
+type PFNGLCOPYTEXTURESUBIMAGE1DPROC = CFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLsizei, Unit]
 object PFNGLCOPYTEXTURESUBIMAGE1DPROC:
   given _tag: Tag[PFNGLCOPYTEXTURESUBIMAGE1DPROC] = Tag.materializeCFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXTURESUBIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1591,7 +1591,7 @@ object PFNGLCOPYTEXTURESUBIMAGE1DPROC:
     inline def value: CFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXTURESUBIMAGE2DPROC = CFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLCOPYTEXTURESUBIMAGE2DPROC = CFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLCOPYTEXTURESUBIMAGE2DPROC:
   given _tag: Tag[PFNGLCOPYTEXTURESUBIMAGE2DPROC] = Tag.materializeCFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXTURESUBIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1600,7 +1600,7 @@ object PFNGLCOPYTEXTURESUBIMAGE2DPROC:
     inline def value: CFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCOPYTEXTURESUBIMAGE3DPROC = CFuncPtr9[GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLCOPYTEXTURESUBIMAGE3DPROC = CFuncPtr9[GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLCOPYTEXTURESUBIMAGE3DPROC:
   given _tag: Tag[PFNGLCOPYTEXTURESUBIMAGE3DPROC] = Tag.materializeCFuncPtr9[GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCOPYTEXTURESUBIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1609,7 +1609,7 @@ object PFNGLCOPYTEXTURESUBIMAGE3DPROC:
     inline def value: CFuncPtr9[GLuint, GLint, GLint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATEBUFFERSPROC:
   given _tag: Tag[PFNGLCREATEBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATEBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1618,7 +1618,7 @@ object PFNGLCREATEBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATEFRAMEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATEFRAMEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATEFRAMEBUFFERSPROC:
   given _tag: Tag[PFNGLCREATEFRAMEBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATEFRAMEBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1627,7 +1627,7 @@ object PFNGLCREATEFRAMEBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATEPROGRAMPIPELINESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATEPROGRAMPIPELINESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATEPROGRAMPIPELINESPROC:
   given _tag: Tag[PFNGLCREATEPROGRAMPIPELINESPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATEPROGRAMPIPELINESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1636,7 +1636,7 @@ object PFNGLCREATEPROGRAMPIPELINESPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATEPROGRAMPROC = CFuncPtr0[GLuint]
+type PFNGLCREATEPROGRAMPROC = CFuncPtr0[GLuint]
 object PFNGLCREATEPROGRAMPROC:
   given _tag: Tag[PFNGLCREATEPROGRAMPROC] = Tag.materializeCFuncPtr0[GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATEPROGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1645,7 +1645,7 @@ object PFNGLCREATEPROGRAMPROC:
     inline def value: CFuncPtr0[GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATEQUERIESPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATEQUERIESPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATEQUERIESPROC:
   given _tag: Tag[PFNGLCREATEQUERIESPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATEQUERIESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1654,7 +1654,7 @@ object PFNGLCREATEQUERIESPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATERENDERBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATERENDERBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATERENDERBUFFERSPROC:
   given _tag: Tag[PFNGLCREATERENDERBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATERENDERBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1663,7 +1663,7 @@ object PFNGLCREATERENDERBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATESAMPLERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATESAMPLERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATESAMPLERSPROC:
   given _tag: Tag[PFNGLCREATESAMPLERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATESAMPLERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1672,7 +1672,7 @@ object PFNGLCREATESAMPLERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATESHADERPROC = CFuncPtr1[GLenum, GLuint]
+type PFNGLCREATESHADERPROC = CFuncPtr1[GLenum, GLuint]
 object PFNGLCREATESHADERPROC:
   given _tag: Tag[PFNGLCREATESHADERPROC] = Tag.materializeCFuncPtr1[GLenum, GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATESHADERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1681,7 +1681,7 @@ object PFNGLCREATESHADERPROC:
     inline def value: CFuncPtr1[GLenum, GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATESHADERPROGRAMVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Ptr[GLchar]], GLuint]
+type PFNGLCREATESHADERPROGRAMVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Ptr[GLchar]], GLuint]
 object PFNGLCREATESHADERPROGRAMVPROC:
   given _tag: Tag[PFNGLCREATESHADERPROGRAMVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[Ptr[GLchar]], GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATESHADERPROGRAMVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1690,7 +1690,7 @@ object PFNGLCREATESHADERPROGRAMVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[Ptr[GLchar]], GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATETEXTURESPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATETEXTURESPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATETEXTURESPROC:
   given _tag: Tag[PFNGLCREATETEXTURESPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATETEXTURESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1699,7 +1699,7 @@ object PFNGLCREATETEXTURESPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATETRANSFORMFEEDBACKSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATETRANSFORMFEEDBACKSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATETRANSFORMFEEDBACKSPROC:
   given _tag: Tag[PFNGLCREATETRANSFORMFEEDBACKSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATETRANSFORMFEEDBACKSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1708,7 +1708,7 @@ object PFNGLCREATETRANSFORMFEEDBACKSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCREATEVERTEXARRAYSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLCREATEVERTEXARRAYSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLCREATEVERTEXARRAYSPROC:
   given _tag: Tag[PFNGLCREATEVERTEXARRAYSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCREATEVERTEXARRAYSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1717,7 +1717,7 @@ object PFNGLCREATEVERTEXARRAYSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLCULLFACEPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLCULLFACEPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLCULLFACEPROC:
   given _tag: Tag[PFNGLCULLFACEPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLCULLFACEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1726,7 +1726,7 @@ object PFNGLCULLFACEPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEBUGMESSAGECALLBACKPROC = CFuncPtr2[GLDEBUGPROC, Ptr[Byte], Unit]
+type PFNGLDEBUGMESSAGECALLBACKPROC = CFuncPtr2[GLDEBUGPROC, Ptr[Byte], Unit]
 object PFNGLDEBUGMESSAGECALLBACKPROC:
   given _tag: Tag[PFNGLDEBUGMESSAGECALLBACKPROC] = Tag.materializeCFuncPtr2[GLDEBUGPROC, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEBUGMESSAGECALLBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1735,7 +1735,7 @@ object PFNGLDEBUGMESSAGECALLBACKPROC:
     inline def value: CFuncPtr2[GLDEBUGPROC, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEBUGMESSAGECONTROLPROC = CFuncPtr6[GLenum, GLenum, GLenum, GLsizei, Ptr[GLuint], GLboolean, Unit]
+type PFNGLDEBUGMESSAGECONTROLPROC = CFuncPtr6[GLenum, GLenum, GLenum, GLsizei, Ptr[GLuint], GLboolean, Unit]
 object PFNGLDEBUGMESSAGECONTROLPROC:
   given _tag: Tag[PFNGLDEBUGMESSAGECONTROLPROC] = Tag.materializeCFuncPtr6[GLenum, GLenum, GLenum, GLsizei, Ptr[GLuint], GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEBUGMESSAGECONTROLPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1744,7 +1744,7 @@ object PFNGLDEBUGMESSAGECONTROLPROC:
     inline def value: CFuncPtr6[GLenum, GLenum, GLenum, GLsizei, Ptr[GLuint], GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEBUGMESSAGEINSERTPROC = CFuncPtr6[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Unit]
+type PFNGLDEBUGMESSAGEINSERTPROC = CFuncPtr6[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Unit]
 object PFNGLDEBUGMESSAGEINSERTPROC:
   given _tag: Tag[PFNGLDEBUGMESSAGEINSERTPROC] = Tag.materializeCFuncPtr6[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEBUGMESSAGEINSERTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1753,7 +1753,7 @@ object PFNGLDEBUGMESSAGEINSERTPROC:
     inline def value: CFuncPtr6[GLenum, GLenum, GLuint, GLenum, GLsizei, Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETEBUFFERSPROC:
   given _tag: Tag[PFNGLDELETEBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETEBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1762,7 +1762,7 @@ object PFNGLDELETEBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETEFRAMEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETEFRAMEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETEFRAMEBUFFERSPROC:
   given _tag: Tag[PFNGLDELETEFRAMEBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETEFRAMEBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1771,7 +1771,7 @@ object PFNGLDELETEFRAMEBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETELISTSPROC = CFuncPtr2[GLuint, GLsizei, Unit]
+type PFNGLDELETELISTSPROC = CFuncPtr2[GLuint, GLsizei, Unit]
 object PFNGLDELETELISTSPROC:
   given _tag: Tag[PFNGLDELETELISTSPROC] = Tag.materializeCFuncPtr2[GLuint, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETELISTSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1780,7 +1780,7 @@ object PFNGLDELETELISTSPROC:
     inline def value: CFuncPtr2[GLuint, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETEPROGRAMPIPELINESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETEPROGRAMPIPELINESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETEPROGRAMPIPELINESPROC:
   given _tag: Tag[PFNGLDELETEPROGRAMPIPELINESPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETEPROGRAMPIPELINESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1789,7 +1789,7 @@ object PFNGLDELETEPROGRAMPIPELINESPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETEPROGRAMPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLDELETEPROGRAMPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLDELETEPROGRAMPROC:
   given _tag: Tag[PFNGLDELETEPROGRAMPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETEPROGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1798,7 +1798,7 @@ object PFNGLDELETEPROGRAMPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETEQUERIESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETEQUERIESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETEQUERIESPROC:
   given _tag: Tag[PFNGLDELETEQUERIESPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETEQUERIESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1807,7 +1807,7 @@ object PFNGLDELETEQUERIESPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETERENDERBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETERENDERBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETERENDERBUFFERSPROC:
   given _tag: Tag[PFNGLDELETERENDERBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETERENDERBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1816,7 +1816,7 @@ object PFNGLDELETERENDERBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETESAMPLERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETESAMPLERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETESAMPLERSPROC:
   given _tag: Tag[PFNGLDELETESAMPLERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETESAMPLERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1825,7 +1825,7 @@ object PFNGLDELETESAMPLERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETESHADERPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLDELETESHADERPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLDELETESHADERPROC:
   given _tag: Tag[PFNGLDELETESHADERPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETESHADERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1834,7 +1834,7 @@ object PFNGLDELETESHADERPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETESYNCPROC = CFuncPtr1[GLsync, Unit]
+type PFNGLDELETESYNCPROC = CFuncPtr1[GLsync, Unit]
 object PFNGLDELETESYNCPROC:
   given _tag: Tag[PFNGLDELETESYNCPROC] = Tag.materializeCFuncPtr1[GLsync, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETESYNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1843,7 +1843,7 @@ object PFNGLDELETESYNCPROC:
     inline def value: CFuncPtr1[GLsync, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETETEXTURESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETETEXTURESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETETEXTURESPROC:
   given _tag: Tag[PFNGLDELETETEXTURESPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETETEXTURESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1852,7 +1852,7 @@ object PFNGLDELETETEXTURESPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETETRANSFORMFEEDBACKSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETETRANSFORMFEEDBACKSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETETRANSFORMFEEDBACKSPROC:
   given _tag: Tag[PFNGLDELETETRANSFORMFEEDBACKSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETETRANSFORMFEEDBACKSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1861,7 +1861,7 @@ object PFNGLDELETETRANSFORMFEEDBACKSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDELETEVERTEXARRAYSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLDELETEVERTEXARRAYSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLDELETEVERTEXARRAYSPROC:
   given _tag: Tag[PFNGLDELETEVERTEXARRAYSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDELETEVERTEXARRAYSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1870,7 +1870,7 @@ object PFNGLDELETEVERTEXARRAYSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEPTHFUNCPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLDEPTHFUNCPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLDEPTHFUNCPROC:
   given _tag: Tag[PFNGLDEPTHFUNCPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEPTHFUNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1879,7 +1879,7 @@ object PFNGLDEPTHFUNCPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEPTHMASKPROC = CFuncPtr1[GLboolean, Unit]
+type PFNGLDEPTHMASKPROC = CFuncPtr1[GLboolean, Unit]
 object PFNGLDEPTHMASKPROC:
   given _tag: Tag[PFNGLDEPTHMASKPROC] = Tag.materializeCFuncPtr1[GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEPTHMASKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1888,7 +1888,7 @@ object PFNGLDEPTHMASKPROC:
     inline def value: CFuncPtr1[GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEPTHRANGEARRAYVPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLDEPTHRANGEARRAYVPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLDEPTHRANGEARRAYVPROC:
   given _tag: Tag[PFNGLDEPTHRANGEARRAYVPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEPTHRANGEARRAYVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1897,7 +1897,7 @@ object PFNGLDEPTHRANGEARRAYVPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEPTHRANGEFPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLDEPTHRANGEFPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLDEPTHRANGEFPROC:
   given _tag: Tag[PFNGLDEPTHRANGEFPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEPTHRANGEFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1906,7 +1906,7 @@ object PFNGLDEPTHRANGEFPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEPTHRANGEINDEXEDPROC = CFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
+type PFNGLDEPTHRANGEINDEXEDPROC = CFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
 object PFNGLDEPTHRANGEINDEXEDPROC:
   given _tag: Tag[PFNGLDEPTHRANGEINDEXEDPROC] = Tag.materializeCFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEPTHRANGEINDEXEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1915,7 +1915,7 @@ object PFNGLDEPTHRANGEINDEXEDPROC:
     inline def value: CFuncPtr3[GLuint, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDEPTHRANGEPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
+type PFNGLDEPTHRANGEPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
 object PFNGLDEPTHRANGEPROC:
   given _tag: Tag[PFNGLDEPTHRANGEPROC] = Tag.materializeCFuncPtr2[GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDEPTHRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1924,7 +1924,7 @@ object PFNGLDEPTHRANGEPROC:
     inline def value: CFuncPtr2[GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDETACHSHADERPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLDETACHSHADERPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLDETACHSHADERPROC:
   given _tag: Tag[PFNGLDETACHSHADERPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDETACHSHADERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1933,7 +1933,7 @@ object PFNGLDETACHSHADERPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDISABLECLIENTSTATEPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLDISABLECLIENTSTATEPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLDISABLECLIENTSTATEPROC:
   given _tag: Tag[PFNGLDISABLECLIENTSTATEPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDISABLECLIENTSTATEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1942,7 +1942,7 @@ object PFNGLDISABLECLIENTSTATEPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDISABLEIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLDISABLEIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLDISABLEIPROC:
   given _tag: Tag[PFNGLDISABLEIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDISABLEIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1951,7 +1951,7 @@ object PFNGLDISABLEIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDISABLEPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLDISABLEPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLDISABLEPROC:
   given _tag: Tag[PFNGLDISABLEPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDISABLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1960,7 +1960,7 @@ object PFNGLDISABLEPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDISABLEVERTEXARRAYATTRIBPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLDISABLEVERTEXARRAYATTRIBPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLDISABLEVERTEXARRAYATTRIBPROC:
   given _tag: Tag[PFNGLDISABLEVERTEXARRAYATTRIBPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDISABLEVERTEXARRAYATTRIBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1969,7 +1969,7 @@ object PFNGLDISABLEVERTEXARRAYATTRIBPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDISABLEVERTEXATTRIBARRAYPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLDISABLEVERTEXATTRIBARRAYPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLDISABLEVERTEXATTRIBARRAYPROC:
   given _tag: Tag[PFNGLDISABLEVERTEXATTRIBARRAYPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDISABLEVERTEXATTRIBARRAYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1978,7 +1978,7 @@ object PFNGLDISABLEVERTEXATTRIBARRAYPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDISPATCHCOMPUTEINDIRECTPROC = CFuncPtr1[GLintptr, Unit]
+type PFNGLDISPATCHCOMPUTEINDIRECTPROC = CFuncPtr1[GLintptr, Unit]
 object PFNGLDISPATCHCOMPUTEINDIRECTPROC:
   given _tag: Tag[PFNGLDISPATCHCOMPUTEINDIRECTPROC] = Tag.materializeCFuncPtr1[GLintptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDISPATCHCOMPUTEINDIRECTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1987,7 +1987,7 @@ object PFNGLDISPATCHCOMPUTEINDIRECTPROC:
     inline def value: CFuncPtr1[GLintptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDISPATCHCOMPUTEPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLDISPATCHCOMPUTEPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLDISPATCHCOMPUTEPROC:
   given _tag: Tag[PFNGLDISPATCHCOMPUTEPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDISPATCHCOMPUTEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -1996,7 +1996,7 @@ object PFNGLDISPATCHCOMPUTEPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWARRAYSINDIRECTPROC = CFuncPtr2[GLenum, Ptr[Byte], Unit]
+type PFNGLDRAWARRAYSINDIRECTPROC = CFuncPtr2[GLenum, Ptr[Byte], Unit]
 object PFNGLDRAWARRAYSINDIRECTPROC:
   given _tag: Tag[PFNGLDRAWARRAYSINDIRECTPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWARRAYSINDIRECTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2005,7 +2005,7 @@ object PFNGLDRAWARRAYSINDIRECTPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC = CFuncPtr5[GLenum, GLint, GLsizei, GLsizei, GLuint, Unit]
+type PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC = CFuncPtr5[GLenum, GLint, GLsizei, GLsizei, GLuint, Unit]
 object PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC:
   given _tag: Tag[PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC] = Tag.materializeCFuncPtr5[GLenum, GLint, GLsizei, GLsizei, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2014,7 +2014,7 @@ object PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC:
     inline def value: CFuncPtr5[GLenum, GLint, GLsizei, GLsizei, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWARRAYSINSTANCEDPROC = CFuncPtr4[GLenum, GLint, GLsizei, GLsizei, Unit]
+type PFNGLDRAWARRAYSINSTANCEDPROC = CFuncPtr4[GLenum, GLint, GLsizei, GLsizei, Unit]
 object PFNGLDRAWARRAYSINSTANCEDPROC:
   given _tag: Tag[PFNGLDRAWARRAYSINSTANCEDPROC] = Tag.materializeCFuncPtr4[GLenum, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWARRAYSINSTANCEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2023,7 +2023,7 @@ object PFNGLDRAWARRAYSINSTANCEDPROC:
     inline def value: CFuncPtr4[GLenum, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWARRAYSPROC = CFuncPtr3[GLenum, GLint, GLsizei, Unit]
+type PFNGLDRAWARRAYSPROC = CFuncPtr3[GLenum, GLint, GLsizei, Unit]
 object PFNGLDRAWARRAYSPROC:
   given _tag: Tag[PFNGLDRAWARRAYSPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWARRAYSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2032,7 +2032,7 @@ object PFNGLDRAWARRAYSPROC:
     inline def value: CFuncPtr3[GLenum, GLint, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWBUFFERPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLDRAWBUFFERPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLDRAWBUFFERPROC:
   given _tag: Tag[PFNGLDRAWBUFFERPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2041,7 +2041,7 @@ object PFNGLDRAWBUFFERPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLenum], Unit]
+type PFNGLDRAWBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLenum], Unit]
 object PFNGLDRAWBUFFERSPROC:
   given _tag: Tag[PFNGLDRAWBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLenum], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2050,7 +2050,7 @@ object PFNGLDRAWBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLenum], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWELEMENTSBASEVERTEXPROC = CFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLint, Unit]
+type PFNGLDRAWELEMENTSBASEVERTEXPROC = CFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLint, Unit]
 object PFNGLDRAWELEMENTSBASEVERTEXPROC:
   given _tag: Tag[PFNGLDRAWELEMENTSBASEVERTEXPROC] = Tag.materializeCFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWELEMENTSBASEVERTEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2059,7 +2059,7 @@ object PFNGLDRAWELEMENTSBASEVERTEXPROC:
     inline def value: CFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWELEMENTSINDIRECTPROC = CFuncPtr3[GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLDRAWELEMENTSINDIRECTPROC = CFuncPtr3[GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLDRAWELEMENTSINDIRECTPROC:
   given _tag: Tag[PFNGLDRAWELEMENTSINDIRECTPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWELEMENTSINDIRECTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2068,7 +2068,7 @@ object PFNGLDRAWELEMENTSINDIRECTPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC = CFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLuint, Unit]
+type PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC = CFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLuint, Unit]
 object PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC:
   given _tag: Tag[PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC] = Tag.materializeCFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2077,7 +2077,7 @@ object PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC:
     inline def value: CFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC = CFuncPtr7[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, GLuint, Unit]
+type PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC = CFuncPtr7[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, GLuint, Unit]
 object PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC:
   given _tag: Tag[PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC] = Tag.materializeCFuncPtr7[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2086,7 +2086,7 @@ object PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC:
     inline def value: CFuncPtr7[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC = CFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, Unit]
+type PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC = CFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, Unit]
 object PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC:
   given _tag: Tag[PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC] = Tag.materializeCFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2095,7 +2095,7 @@ object PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC:
     inline def value: CFuncPtr6[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWELEMENTSINSTANCEDPROC = CFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, Unit]
+type PFNGLDRAWELEMENTSINSTANCEDPROC = CFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, Unit]
 object PFNGLDRAWELEMENTSINSTANCEDPROC:
   given _tag: Tag[PFNGLDRAWELEMENTSINSTANCEDPROC] = Tag.materializeCFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWELEMENTSINSTANCEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2104,7 +2104,7 @@ object PFNGLDRAWELEMENTSINSTANCEDPROC:
     inline def value: CFuncPtr5[GLenum, GLsizei, GLenum, Ptr[Byte], GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWELEMENTSPROC = CFuncPtr4[GLenum, GLsizei, GLenum, Ptr[Byte], Unit]
+type PFNGLDRAWELEMENTSPROC = CFuncPtr4[GLenum, GLsizei, GLenum, Ptr[Byte], Unit]
 object PFNGLDRAWELEMENTSPROC:
   given _tag: Tag[PFNGLDRAWELEMENTSPROC] = Tag.materializeCFuncPtr4[GLenum, GLsizei, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWELEMENTSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2113,7 +2113,7 @@ object PFNGLDRAWELEMENTSPROC:
     inline def value: CFuncPtr4[GLenum, GLsizei, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWPIXELSPROC = CFuncPtr5[GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLDRAWPIXELSPROC = CFuncPtr5[GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLDRAWPIXELSPROC:
   given _tag: Tag[PFNGLDRAWPIXELSPROC] = Tag.materializeCFuncPtr5[GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWPIXELSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2122,7 +2122,7 @@ object PFNGLDRAWPIXELSPROC:
     inline def value: CFuncPtr5[GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC = CFuncPtr7[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], GLint, Unit]
+type PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC = CFuncPtr7[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], GLint, Unit]
 object PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC:
   given _tag: Tag[PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC] = Tag.materializeCFuncPtr7[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2131,7 +2131,7 @@ object PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC:
     inline def value: CFuncPtr7[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWRANGEELEMENTSPROC = CFuncPtr6[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], Unit]
+type PFNGLDRAWRANGEELEMENTSPROC = CFuncPtr6[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], Unit]
 object PFNGLDRAWRANGEELEMENTSPROC:
   given _tag: Tag[PFNGLDRAWRANGEELEMENTSPROC] = Tag.materializeCFuncPtr6[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWRANGEELEMENTSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2140,7 +2140,7 @@ object PFNGLDRAWRANGEELEMENTSPROC:
     inline def value: CFuncPtr6[GLenum, GLuint, GLuint, GLsizei, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC = CFuncPtr3[GLenum, GLuint, GLsizei, Unit]
+type PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC = CFuncPtr3[GLenum, GLuint, GLsizei, Unit]
 object PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC:
   given _tag: Tag[PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2149,7 +2149,7 @@ object PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWTRANSFORMFEEDBACKPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLDRAWTRANSFORMFEEDBACKPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLDRAWTRANSFORMFEEDBACKPROC:
   given _tag: Tag[PFNGLDRAWTRANSFORMFEEDBACKPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWTRANSFORMFEEDBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2158,7 +2158,7 @@ object PFNGLDRAWTRANSFORMFEEDBACKPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC = CFuncPtr4[GLenum, GLuint, GLuint, GLsizei, Unit]
+type PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC = CFuncPtr4[GLenum, GLuint, GLuint, GLsizei, Unit]
 object PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC:
   given _tag: Tag[PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC] = Tag.materializeCFuncPtr4[GLenum, GLuint, GLuint, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2167,7 +2167,7 @@ object PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC:
     inline def value: CFuncPtr4[GLenum, GLuint, GLuint, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC = CFuncPtr3[GLenum, GLuint, GLuint, Unit]
+type PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC = CFuncPtr3[GLenum, GLuint, GLuint, Unit]
 object PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC:
   given _tag: Tag[PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2176,7 +2176,7 @@ object PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEDGEFLAGPOINTERPROC = CFuncPtr2[GLsizei, Ptr[Byte], Unit]
+type PFNGLEDGEFLAGPOINTERPROC = CFuncPtr2[GLsizei, Ptr[Byte], Unit]
 object PFNGLEDGEFLAGPOINTERPROC:
   given _tag: Tag[PFNGLEDGEFLAGPOINTERPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEDGEFLAGPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2185,7 +2185,7 @@ object PFNGLEDGEFLAGPOINTERPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEDGEFLAGPROC = CFuncPtr1[GLboolean, Unit]
+type PFNGLEDGEFLAGPROC = CFuncPtr1[GLboolean, Unit]
 object PFNGLEDGEFLAGPROC:
   given _tag: Tag[PFNGLEDGEFLAGPROC] = Tag.materializeCFuncPtr1[GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEDGEFLAGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2194,7 +2194,7 @@ object PFNGLEDGEFLAGPROC:
     inline def value: CFuncPtr1[GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEDGEFLAGVPROC = CFuncPtr1[Ptr[GLboolean], Unit]
+type PFNGLEDGEFLAGVPROC = CFuncPtr1[Ptr[GLboolean], Unit]
 object PFNGLEDGEFLAGVPROC:
   given _tag: Tag[PFNGLEDGEFLAGVPROC] = Tag.materializeCFuncPtr1[Ptr[GLboolean], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEDGEFLAGVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2203,7 +2203,7 @@ object PFNGLEDGEFLAGVPROC:
     inline def value: CFuncPtr1[Ptr[GLboolean], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENABLECLIENTSTATEPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLENABLECLIENTSTATEPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLENABLECLIENTSTATEPROC:
   given _tag: Tag[PFNGLENABLECLIENTSTATEPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENABLECLIENTSTATEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2212,7 +2212,7 @@ object PFNGLENABLECLIENTSTATEPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENABLEIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLENABLEIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLENABLEIPROC:
   given _tag: Tag[PFNGLENABLEIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENABLEIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2221,7 +2221,7 @@ object PFNGLENABLEIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENABLEPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLENABLEPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLENABLEPROC:
   given _tag: Tag[PFNGLENABLEPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENABLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2230,7 +2230,7 @@ object PFNGLENABLEPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENABLEVERTEXARRAYATTRIBPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLENABLEVERTEXARRAYATTRIBPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLENABLEVERTEXARRAYATTRIBPROC:
   given _tag: Tag[PFNGLENABLEVERTEXARRAYATTRIBPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENABLEVERTEXARRAYATTRIBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2239,7 +2239,7 @@ object PFNGLENABLEVERTEXARRAYATTRIBPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENABLEVERTEXATTRIBARRAYPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLENABLEVERTEXATTRIBARRAYPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLENABLEVERTEXATTRIBARRAYPROC:
   given _tag: Tag[PFNGLENABLEVERTEXATTRIBARRAYPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENABLEVERTEXATTRIBARRAYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2248,7 +2248,7 @@ object PFNGLENABLEVERTEXATTRIBARRAYPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENDCONDITIONALRENDERPROC = CFuncPtr0[Unit]
+type PFNGLENDCONDITIONALRENDERPROC = CFuncPtr0[Unit]
 object PFNGLENDCONDITIONALRENDERPROC:
   given _tag: Tag[PFNGLENDCONDITIONALRENDERPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENDCONDITIONALRENDERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2257,7 +2257,7 @@ object PFNGLENDCONDITIONALRENDERPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENDLISTPROC = CFuncPtr0[Unit]
+type PFNGLENDLISTPROC = CFuncPtr0[Unit]
 object PFNGLENDLISTPROC:
   given _tag: Tag[PFNGLENDLISTPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENDLISTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2266,7 +2266,7 @@ object PFNGLENDLISTPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENDPROC = CFuncPtr0[Unit]
+type PFNGLENDPROC = CFuncPtr0[Unit]
 object PFNGLENDPROC:
   given _tag: Tag[PFNGLENDPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2275,7 +2275,7 @@ object PFNGLENDPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENDQUERYINDEXEDPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLENDQUERYINDEXEDPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLENDQUERYINDEXEDPROC:
   given _tag: Tag[PFNGLENDQUERYINDEXEDPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENDQUERYINDEXEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2284,7 +2284,7 @@ object PFNGLENDQUERYINDEXEDPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENDQUERYPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLENDQUERYPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLENDQUERYPROC:
   given _tag: Tag[PFNGLENDQUERYPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENDQUERYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2293,7 +2293,7 @@ object PFNGLENDQUERYPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLENDTRANSFORMFEEDBACKPROC = CFuncPtr0[Unit]
+type PFNGLENDTRANSFORMFEEDBACKPROC = CFuncPtr0[Unit]
 object PFNGLENDTRANSFORMFEEDBACKPROC:
   given _tag: Tag[PFNGLENDTRANSFORMFEEDBACKPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLENDTRANSFORMFEEDBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2302,7 +2302,7 @@ object PFNGLENDTRANSFORMFEEDBACKPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD1DPROC = CFuncPtr1[GLdouble, Unit]
+type PFNGLEVALCOORD1DPROC = CFuncPtr1[GLdouble, Unit]
 object PFNGLEVALCOORD1DPROC:
   given _tag: Tag[PFNGLEVALCOORD1DPROC] = Tag.materializeCFuncPtr1[GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2311,7 +2311,7 @@ object PFNGLEVALCOORD1DPROC:
     inline def value: CFuncPtr1[GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD1DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLEVALCOORD1DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLEVALCOORD1DVPROC:
   given _tag: Tag[PFNGLEVALCOORD1DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD1DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2320,7 +2320,7 @@ object PFNGLEVALCOORD1DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD1FPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLEVALCOORD1FPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLEVALCOORD1FPROC:
   given _tag: Tag[PFNGLEVALCOORD1FPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2329,7 +2329,7 @@ object PFNGLEVALCOORD1FPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD1FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLEVALCOORD1FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLEVALCOORD1FVPROC:
   given _tag: Tag[PFNGLEVALCOORD1FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD1FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2338,7 +2338,7 @@ object PFNGLEVALCOORD1FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
+type PFNGLEVALCOORD2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
 object PFNGLEVALCOORD2DPROC:
   given _tag: Tag[PFNGLEVALCOORD2DPROC] = Tag.materializeCFuncPtr2[GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2347,7 +2347,7 @@ object PFNGLEVALCOORD2DPROC:
     inline def value: CFuncPtr2[GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLEVALCOORD2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLEVALCOORD2DVPROC:
   given _tag: Tag[PFNGLEVALCOORD2DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2356,7 +2356,7 @@ object PFNGLEVALCOORD2DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLEVALCOORD2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLEVALCOORD2FPROC:
   given _tag: Tag[PFNGLEVALCOORD2FPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2365,7 +2365,7 @@ object PFNGLEVALCOORD2FPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALCOORD2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLEVALCOORD2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLEVALCOORD2FVPROC:
   given _tag: Tag[PFNGLEVALCOORD2FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALCOORD2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2374,7 +2374,7 @@ object PFNGLEVALCOORD2FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALMESH1PROC = CFuncPtr3[GLenum, GLint, GLint, Unit]
+type PFNGLEVALMESH1PROC = CFuncPtr3[GLenum, GLint, GLint, Unit]
 object PFNGLEVALMESH1PROC:
   given _tag: Tag[PFNGLEVALMESH1PROC] = Tag.materializeCFuncPtr3[GLenum, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALMESH1PROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2383,7 +2383,7 @@ object PFNGLEVALMESH1PROC:
     inline def value: CFuncPtr3[GLenum, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALMESH2PROC = CFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit]
+type PFNGLEVALMESH2PROC = CFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit]
 object PFNGLEVALMESH2PROC:
   given _tag: Tag[PFNGLEVALMESH2PROC] = Tag.materializeCFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALMESH2PROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2392,7 +2392,7 @@ object PFNGLEVALMESH2PROC:
     inline def value: CFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALPOINT1PROC = CFuncPtr1[GLint, Unit]
+type PFNGLEVALPOINT1PROC = CFuncPtr1[GLint, Unit]
 object PFNGLEVALPOINT1PROC:
   given _tag: Tag[PFNGLEVALPOINT1PROC] = Tag.materializeCFuncPtr1[GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALPOINT1PROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2401,7 +2401,7 @@ object PFNGLEVALPOINT1PROC:
     inline def value: CFuncPtr1[GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLEVALPOINT2PROC = CFuncPtr2[GLint, GLint, Unit]
+type PFNGLEVALPOINT2PROC = CFuncPtr2[GLint, GLint, Unit]
 object PFNGLEVALPOINT2PROC:
   given _tag: Tag[PFNGLEVALPOINT2PROC] = Tag.materializeCFuncPtr2[GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLEVALPOINT2PROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2410,7 +2410,7 @@ object PFNGLEVALPOINT2PROC:
     inline def value: CFuncPtr2[GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFEEDBACKBUFFERPROC = CFuncPtr3[GLsizei, GLenum, Ptr[GLfloat], Unit]
+type PFNGLFEEDBACKBUFFERPROC = CFuncPtr3[GLsizei, GLenum, Ptr[GLfloat], Unit]
 object PFNGLFEEDBACKBUFFERPROC:
   given _tag: Tag[PFNGLFEEDBACKBUFFERPROC] = Tag.materializeCFuncPtr3[GLsizei, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFEEDBACKBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2419,7 +2419,7 @@ object PFNGLFEEDBACKBUFFERPROC:
     inline def value: CFuncPtr3[GLsizei, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFENCESYNCPROC = CFuncPtr2[GLenum, GLbitfield, GLsync]
+type PFNGLFENCESYNCPROC = CFuncPtr2[GLenum, GLbitfield, GLsync]
 object PFNGLFENCESYNCPROC:
   given _tag: Tag[PFNGLFENCESYNCPROC] = Tag.materializeCFuncPtr2[GLenum, GLbitfield, GLsync]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFENCESYNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2428,7 +2428,7 @@ object PFNGLFENCESYNCPROC:
     inline def value: CFuncPtr2[GLenum, GLbitfield, GLsync] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFINISHPROC = CFuncPtr0[Unit]
+type PFNGLFINISHPROC = CFuncPtr0[Unit]
 object PFNGLFINISHPROC:
   given _tag: Tag[PFNGLFINISHPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFINISHPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2437,7 +2437,7 @@ object PFNGLFINISHPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFLUSHMAPPEDBUFFERRANGEPROC = CFuncPtr3[GLenum, GLintptr, GLsizeiptr, Unit]
+type PFNGLFLUSHMAPPEDBUFFERRANGEPROC = CFuncPtr3[GLenum, GLintptr, GLsizeiptr, Unit]
 object PFNGLFLUSHMAPPEDBUFFERRANGEPROC:
   given _tag: Tag[PFNGLFLUSHMAPPEDBUFFERRANGEPROC] = Tag.materializeCFuncPtr3[GLenum, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFLUSHMAPPEDBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2446,7 +2446,7 @@ object PFNGLFLUSHMAPPEDBUFFERRANGEPROC:
     inline def value: CFuncPtr3[GLenum, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC = CFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit]
+type PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC = CFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit]
 object PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC:
   given _tag: Tag[PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC] = Tag.materializeCFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2455,7 +2455,7 @@ object PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC:
     inline def value: CFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFLUSHPROC = CFuncPtr0[Unit]
+type PFNGLFLUSHPROC = CFuncPtr0[Unit]
 object PFNGLFLUSHPROC:
   given _tag: Tag[PFNGLFLUSHPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFLUSHPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2464,7 +2464,7 @@ object PFNGLFLUSHPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGCOORDDPROC = CFuncPtr1[GLdouble, Unit]
+type PFNGLFOGCOORDDPROC = CFuncPtr1[GLdouble, Unit]
 object PFNGLFOGCOORDDPROC:
   given _tag: Tag[PFNGLFOGCOORDDPROC] = Tag.materializeCFuncPtr1[GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGCOORDDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2473,7 +2473,7 @@ object PFNGLFOGCOORDDPROC:
     inline def value: CFuncPtr1[GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGCOORDDVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLFOGCOORDDVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLFOGCOORDDVPROC:
   given _tag: Tag[PFNGLFOGCOORDDVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGCOORDDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2482,7 +2482,7 @@ object PFNGLFOGCOORDDVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGCOORDFPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLFOGCOORDFPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLFOGCOORDFPROC:
   given _tag: Tag[PFNGLFOGCOORDFPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGCOORDFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2491,7 +2491,7 @@ object PFNGLFOGCOORDFPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGCOORDFVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLFOGCOORDFVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLFOGCOORDFVPROC:
   given _tag: Tag[PFNGLFOGCOORDFVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGCOORDFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2500,7 +2500,7 @@ object PFNGLFOGCOORDFVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGCOORDPOINTERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLFOGCOORDPOINTERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLFOGCOORDPOINTERPROC:
   given _tag: Tag[PFNGLFOGCOORDPOINTERPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGCOORDPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2509,7 +2509,7 @@ object PFNGLFOGCOORDPOINTERPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLFOGFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLFOGFPROC:
   given _tag: Tag[PFNGLFOGFPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2518,7 +2518,7 @@ object PFNGLFOGFPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLFOGFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLFOGFVPROC:
   given _tag: Tag[PFNGLFOGFVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2527,7 +2527,7 @@ object PFNGLFOGFVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGIPROC = CFuncPtr2[GLenum, GLint, Unit]
+type PFNGLFOGIPROC = CFuncPtr2[GLenum, GLint, Unit]
 object PFNGLFOGIPROC:
   given _tag: Tag[PFNGLFOGIPROC] = Tag.materializeCFuncPtr2[GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2536,7 +2536,7 @@ object PFNGLFOGIPROC:
     inline def value: CFuncPtr2[GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFOGIVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLFOGIVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLFOGIVPROC:
   given _tag: Tag[PFNGLFOGIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFOGIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2545,7 +2545,7 @@ object PFNGLFOGIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRAMEBUFFERPARAMETERIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
+type PFNGLFRAMEBUFFERPARAMETERIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
 object PFNGLFRAMEBUFFERPARAMETERIPROC:
   given _tag: Tag[PFNGLFRAMEBUFFERPARAMETERIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRAMEBUFFERPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2554,7 +2554,7 @@ object PFNGLFRAMEBUFFERPARAMETERIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRAMEBUFFERRENDERBUFFERPROC = CFuncPtr4[GLenum, GLenum, GLenum, GLuint, Unit]
+type PFNGLFRAMEBUFFERRENDERBUFFERPROC = CFuncPtr4[GLenum, GLenum, GLenum, GLuint, Unit]
 object PFNGLFRAMEBUFFERRENDERBUFFERPROC:
   given _tag: Tag[PFNGLFRAMEBUFFERRENDERBUFFERPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRAMEBUFFERRENDERBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2563,7 +2563,7 @@ object PFNGLFRAMEBUFFERRENDERBUFFERPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRAMEBUFFERTEXTURE1DPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit]
+type PFNGLFRAMEBUFFERTEXTURE1DPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit]
 object PFNGLFRAMEBUFFERTEXTURE1DPROC:
   given _tag: Tag[PFNGLFRAMEBUFFERTEXTURE1DPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRAMEBUFFERTEXTURE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2572,7 +2572,7 @@ object PFNGLFRAMEBUFFERTEXTURE1DPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRAMEBUFFERTEXTURE2DPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit]
+type PFNGLFRAMEBUFFERTEXTURE2DPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit]
 object PFNGLFRAMEBUFFERTEXTURE2DPROC:
   given _tag: Tag[PFNGLFRAMEBUFFERTEXTURE2DPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRAMEBUFFERTEXTURE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2581,7 +2581,7 @@ object PFNGLFRAMEBUFFERTEXTURE2DPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLenum, GLuint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRAMEBUFFERTEXTURE3DPROC = CFuncPtr6[GLenum, GLenum, GLenum, GLuint, GLint, GLint, Unit]
+type PFNGLFRAMEBUFFERTEXTURE3DPROC = CFuncPtr6[GLenum, GLenum, GLenum, GLuint, GLint, GLint, Unit]
 object PFNGLFRAMEBUFFERTEXTURE3DPROC:
   given _tag: Tag[PFNGLFRAMEBUFFERTEXTURE3DPROC] = Tag.materializeCFuncPtr6[GLenum, GLenum, GLenum, GLuint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRAMEBUFFERTEXTURE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2590,7 +2590,7 @@ object PFNGLFRAMEBUFFERTEXTURE3DPROC:
     inline def value: CFuncPtr6[GLenum, GLenum, GLenum, GLuint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRAMEBUFFERTEXTURELAYERPROC = CFuncPtr5[GLenum, GLenum, GLuint, GLint, GLint, Unit]
+type PFNGLFRAMEBUFFERTEXTURELAYERPROC = CFuncPtr5[GLenum, GLenum, GLuint, GLint, GLint, Unit]
 object PFNGLFRAMEBUFFERTEXTURELAYERPROC:
   given _tag: Tag[PFNGLFRAMEBUFFERTEXTURELAYERPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLuint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRAMEBUFFERTEXTURELAYERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2599,7 +2599,7 @@ object PFNGLFRAMEBUFFERTEXTURELAYERPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLuint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRAMEBUFFERTEXTUREPROC = CFuncPtr4[GLenum, GLenum, GLuint, GLint, Unit]
+type PFNGLFRAMEBUFFERTEXTUREPROC = CFuncPtr4[GLenum, GLenum, GLuint, GLint, Unit]
 object PFNGLFRAMEBUFFERTEXTUREPROC:
   given _tag: Tag[PFNGLFRAMEBUFFERTEXTUREPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLuint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRAMEBUFFERTEXTUREPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2608,7 +2608,7 @@ object PFNGLFRAMEBUFFERTEXTUREPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLuint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRONTFACEPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLFRONTFACEPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLFRONTFACEPROC:
   given _tag: Tag[PFNGLFRONTFACEPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRONTFACEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2617,7 +2617,7 @@ object PFNGLFRONTFACEPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLFRUSTUMPROC = CFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLFRUSTUMPROC = CFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLFRUSTUMPROC:
   given _tag: Tag[PFNGLFRUSTUMPROC] = Tag.materializeCFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLFRUSTUMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2626,7 +2626,7 @@ object PFNGLFRUSTUMPROC:
     inline def value: CFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENBUFFERSPROC:
   given _tag: Tag[PFNGLGENBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2635,7 +2635,7 @@ object PFNGLGENBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENERATEMIPMAPPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLGENERATEMIPMAPPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLGENERATEMIPMAPPROC:
   given _tag: Tag[PFNGLGENERATEMIPMAPPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENERATEMIPMAPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2644,7 +2644,7 @@ object PFNGLGENERATEMIPMAPPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENERATETEXTUREMIPMAPPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLGENERATETEXTUREMIPMAPPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLGENERATETEXTUREMIPMAPPROC:
   given _tag: Tag[PFNGLGENERATETEXTUREMIPMAPPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENERATETEXTUREMIPMAPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2653,7 +2653,7 @@ object PFNGLGENERATETEXTUREMIPMAPPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENFRAMEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENFRAMEBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENFRAMEBUFFERSPROC:
   given _tag: Tag[PFNGLGENFRAMEBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENFRAMEBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2662,7 +2662,7 @@ object PFNGLGENFRAMEBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENLISTSPROC = CFuncPtr1[GLsizei, GLuint]
+type PFNGLGENLISTSPROC = CFuncPtr1[GLsizei, GLuint]
 object PFNGLGENLISTSPROC:
   given _tag: Tag[PFNGLGENLISTSPROC] = Tag.materializeCFuncPtr1[GLsizei, GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENLISTSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2671,7 +2671,7 @@ object PFNGLGENLISTSPROC:
     inline def value: CFuncPtr1[GLsizei, GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENPROGRAMPIPELINESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENPROGRAMPIPELINESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENPROGRAMPIPELINESPROC:
   given _tag: Tag[PFNGLGENPROGRAMPIPELINESPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENPROGRAMPIPELINESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2680,7 +2680,7 @@ object PFNGLGENPROGRAMPIPELINESPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENQUERIESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENQUERIESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENQUERIESPROC:
   given _tag: Tag[PFNGLGENQUERIESPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENQUERIESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2689,7 +2689,7 @@ object PFNGLGENQUERIESPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENRENDERBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENRENDERBUFFERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENRENDERBUFFERSPROC:
   given _tag: Tag[PFNGLGENRENDERBUFFERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENRENDERBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2698,7 +2698,7 @@ object PFNGLGENRENDERBUFFERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENSAMPLERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENSAMPLERSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENSAMPLERSPROC:
   given _tag: Tag[PFNGLGENSAMPLERSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENSAMPLERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2707,7 +2707,7 @@ object PFNGLGENSAMPLERSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENTEXTURESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENTEXTURESPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENTEXTURESPROC:
   given _tag: Tag[PFNGLGENTEXTURESPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENTEXTURESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2716,7 +2716,7 @@ object PFNGLGENTEXTURESPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENTRANSFORMFEEDBACKSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENTRANSFORMFEEDBACKSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENTRANSFORMFEEDBACKSPROC:
   given _tag: Tag[PFNGLGENTRANSFORMFEEDBACKSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENTRANSFORMFEEDBACKSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2725,7 +2725,7 @@ object PFNGLGENTRANSFORMFEEDBACKSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGENVERTEXARRAYSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLGENVERTEXARRAYSPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLGENVERTEXARRAYSPROC:
   given _tag: Tag[PFNGLGENVERTEXARRAYSPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGENVERTEXARRAYSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2734,7 +2734,7 @@ object PFNGLGENVERTEXARRAYSPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC:
   given _tag: Tag[PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2743,7 +2743,7 @@ object PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVEATTRIBPROC = CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit]
+type PFNGLGETACTIVEATTRIBPROC = CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit]
 object PFNGLGETACTIVEATTRIBPROC:
   given _tag: Tag[PFNGLGETACTIVEATTRIBPROC] = Tag.materializeCFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVEATTRIBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2752,7 +2752,7 @@ object PFNGLGETACTIVEATTRIBPROC:
     inline def value: CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVESUBROUTINENAMEPROC = CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETACTIVESUBROUTINENAMEPROC = CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETACTIVESUBROUTINENAMEPROC:
   given _tag: Tag[PFNGLGETACTIVESUBROUTINENAMEPROC] = Tag.materializeCFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVESUBROUTINENAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2761,7 +2761,7 @@ object PFNGLGETACTIVESUBROUTINENAMEPROC:
     inline def value: CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC = CFuncPtr5[GLuint, GLenum, GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC = CFuncPtr5[GLuint, GLenum, GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC:
   given _tag: Tag[PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC] = Tag.materializeCFuncPtr5[GLuint, GLenum, GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2770,7 +2770,7 @@ object PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC:
     inline def value: CFuncPtr5[GLuint, GLenum, GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC = CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC = CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC:
   given _tag: Tag[PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC] = Tag.materializeCFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2779,7 +2779,7 @@ object PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC:
     inline def value: CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVEUNIFORMBLOCKIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETACTIVEUNIFORMBLOCKIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETACTIVEUNIFORMBLOCKIVPROC:
   given _tag: Tag[PFNGLGETACTIVEUNIFORMBLOCKIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVEUNIFORMBLOCKIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2788,7 +2788,7 @@ object PFNGLGETACTIVEUNIFORMBLOCKIVPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC = CFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC = CFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC:
   given _tag: Tag[PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2797,7 +2797,7 @@ object PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVEUNIFORMNAMEPROC = CFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETACTIVEUNIFORMNAMEPROC = CFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETACTIVEUNIFORMNAMEPROC:
   given _tag: Tag[PFNGLGETACTIVEUNIFORMNAMEPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVEUNIFORMNAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2806,7 +2806,7 @@ object PFNGLGETACTIVEUNIFORMNAMEPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVEUNIFORMPROC = CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit]
+type PFNGLGETACTIVEUNIFORMPROC = CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit]
 object PFNGLGETACTIVEUNIFORMPROC:
   given _tag: Tag[PFNGLGETACTIVEUNIFORMPROC] = Tag.materializeCFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVEUNIFORMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2815,7 +2815,7 @@ object PFNGLGETACTIVEUNIFORMPROC:
     inline def value: CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLint], Ptr[GLenum], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETACTIVEUNIFORMSIVPROC = CFuncPtr5[GLuint, GLsizei, Ptr[GLuint], GLenum, Ptr[GLint], Unit]
+type PFNGLGETACTIVEUNIFORMSIVPROC = CFuncPtr5[GLuint, GLsizei, Ptr[GLuint], GLenum, Ptr[GLint], Unit]
 object PFNGLGETACTIVEUNIFORMSIVPROC:
   given _tag: Tag[PFNGLGETACTIVEUNIFORMSIVPROC] = Tag.materializeCFuncPtr5[GLuint, GLsizei, Ptr[GLuint], GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETACTIVEUNIFORMSIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2824,7 +2824,7 @@ object PFNGLGETACTIVEUNIFORMSIVPROC:
     inline def value: CFuncPtr5[GLuint, GLsizei, Ptr[GLuint], GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETATTACHEDSHADERSPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLuint], Unit]
+type PFNGLGETATTACHEDSHADERSPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLuint], Unit]
 object PFNGLGETATTACHEDSHADERSPROC:
   given _tag: Tag[PFNGLGETATTACHEDSHADERSPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETATTACHEDSHADERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2833,7 +2833,7 @@ object PFNGLGETATTACHEDSHADERSPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETATTRIBLOCATIONPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
+type PFNGLGETATTRIBLOCATIONPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
 object PFNGLGETATTRIBLOCATIONPROC:
   given _tag: Tag[PFNGLGETATTRIBLOCATIONPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLchar], GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETATTRIBLOCATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2842,7 +2842,7 @@ object PFNGLGETATTRIBLOCATIONPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLchar], GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETBOOLEANI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLboolean], Unit]
+type PFNGLGETBOOLEANI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLboolean], Unit]
 object PFNGLGETBOOLEANI_VPROC:
   given _tag: Tag[PFNGLGETBOOLEANI_VPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, Ptr[GLboolean], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETBOOLEANI_VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2851,7 +2851,7 @@ object PFNGLGETBOOLEANI_VPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, Ptr[GLboolean], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETBOOLEANVPROC = CFuncPtr2[GLenum, Ptr[GLboolean], Unit]
+type PFNGLGETBOOLEANVPROC = CFuncPtr2[GLenum, Ptr[GLboolean], Unit]
 object PFNGLGETBOOLEANVPROC:
   given _tag: Tag[PFNGLGETBOOLEANVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLboolean], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETBOOLEANVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2860,7 +2860,7 @@ object PFNGLGETBOOLEANVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLboolean], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETBUFFERPARAMETERI64VPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint64], Unit]
+type PFNGLGETBUFFERPARAMETERI64VPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint64], Unit]
 object PFNGLGETBUFFERPARAMETERI64VPROC:
   given _tag: Tag[PFNGLGETBUFFERPARAMETERI64VPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETBUFFERPARAMETERI64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2869,7 +2869,7 @@ object PFNGLGETBUFFERPARAMETERI64VPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETBUFFERPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETBUFFERPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETBUFFERPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETBUFFERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETBUFFERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2878,7 +2878,7 @@ object PFNGLGETBUFFERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETBUFFERPOINTERVPROC = CFuncPtr3[GLenum, GLenum, Ptr[Ptr[Byte]], Unit]
+type PFNGLGETBUFFERPOINTERVPROC = CFuncPtr3[GLenum, GLenum, Ptr[Ptr[Byte]], Unit]
 object PFNGLGETBUFFERPOINTERVPROC:
   given _tag: Tag[PFNGLGETBUFFERPOINTERVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[Ptr[Byte]], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETBUFFERPOINTERVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2887,7 +2887,7 @@ object PFNGLGETBUFFERPOINTERVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[Ptr[Byte]], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETBUFFERSUBDATAPROC = CFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
+type PFNGLGETBUFFERSUBDATAPROC = CFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
 object PFNGLGETBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLGETBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2896,7 +2896,7 @@ object PFNGLGETBUFFERSUBDATAPROC:
     inline def value: CFuncPtr4[GLenum, GLintptr, GLsizeiptr, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETCLIPPLANEPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
+type PFNGLGETCLIPPLANEPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
 object PFNGLGETCLIPPLANEPROC:
   given _tag: Tag[PFNGLGETCLIPPLANEPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETCLIPPLANEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2905,7 +2905,7 @@ object PFNGLGETCLIPPLANEPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETCOMPRESSEDTEXIMAGEPROC = CFuncPtr3[GLenum, GLint, Ptr[Byte], Unit]
+type PFNGLGETCOMPRESSEDTEXIMAGEPROC = CFuncPtr3[GLenum, GLint, Ptr[Byte], Unit]
 object PFNGLGETCOMPRESSEDTEXIMAGEPROC:
   given _tag: Tag[PFNGLGETCOMPRESSEDTEXIMAGEPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETCOMPRESSEDTEXIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2914,7 +2914,7 @@ object PFNGLGETCOMPRESSEDTEXIMAGEPROC:
     inline def value: CFuncPtr3[GLenum, GLint, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC:
   given _tag: Tag[PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2923,7 +2923,7 @@ object PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC = CFuncPtr10[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC = CFuncPtr10[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC:
   given _tag: Tag[PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC] = Tag.materializeCFuncPtr10[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2932,7 +2932,7 @@ object PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC:
     inline def value: CFuncPtr10[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETDEBUGMESSAGELOGPROC = CFuncPtr8[GLuint, GLsizei, Ptr[GLenum], Ptr[GLenum], Ptr[GLuint], Ptr[GLenum], Ptr[GLsizei], Ptr[GLchar], GLuint]
+type PFNGLGETDEBUGMESSAGELOGPROC = CFuncPtr8[GLuint, GLsizei, Ptr[GLenum], Ptr[GLenum], Ptr[GLuint], Ptr[GLenum], Ptr[GLsizei], Ptr[GLchar], GLuint]
 object PFNGLGETDEBUGMESSAGELOGPROC:
   given _tag: Tag[PFNGLGETDEBUGMESSAGELOGPROC] = Tag.materializeCFuncPtr8[GLuint, GLsizei, Ptr[GLenum], Ptr[GLenum], Ptr[GLuint], Ptr[GLenum], Ptr[GLsizei], Ptr[GLchar], GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETDEBUGMESSAGELOGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2941,7 +2941,7 @@ object PFNGLGETDEBUGMESSAGELOGPROC:
     inline def value: CFuncPtr8[GLuint, GLsizei, Ptr[GLenum], Ptr[GLenum], Ptr[GLuint], Ptr[GLenum], Ptr[GLsizei], Ptr[GLchar], GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETDOUBLEI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLdouble], Unit]
+type PFNGLGETDOUBLEI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLdouble], Unit]
 object PFNGLGETDOUBLEI_VPROC:
   given _tag: Tag[PFNGLGETDOUBLEI_VPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETDOUBLEI_VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2950,7 +2950,7 @@ object PFNGLGETDOUBLEI_VPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETDOUBLEVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
+type PFNGLGETDOUBLEVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
 object PFNGLGETDOUBLEVPROC:
   given _tag: Tag[PFNGLGETDOUBLEVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETDOUBLEVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2959,7 +2959,7 @@ object PFNGLGETDOUBLEVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETERRORPROC = CFuncPtr0[GLenum]
+type PFNGLGETERRORPROC = CFuncPtr0[GLenum]
 object PFNGLGETERRORPROC:
   given _tag: Tag[PFNGLGETERRORPROC] = Tag.materializeCFuncPtr0[GLenum]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETERRORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2968,7 +2968,7 @@ object PFNGLGETERRORPROC:
     inline def value: CFuncPtr0[GLenum] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETFLOATI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit]
+type PFNGLGETFLOATI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit]
 object PFNGLGETFLOATI_VPROC:
   given _tag: Tag[PFNGLGETFLOATI_VPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETFLOATI_VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2977,7 +2977,7 @@ object PFNGLGETFLOATI_VPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETFLOATVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETFLOATVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETFLOATVPROC:
   given _tag: Tag[PFNGLGETFLOATVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETFLOATVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2986,7 +2986,7 @@ object PFNGLGETFLOATVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETFRAGDATAINDEXPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
+type PFNGLGETFRAGDATAINDEXPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
 object PFNGLGETFRAGDATAINDEXPROC:
   given _tag: Tag[PFNGLGETFRAGDATAINDEXPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLchar], GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETFRAGDATAINDEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -2995,7 +2995,7 @@ object PFNGLGETFRAGDATAINDEXPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLchar], GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETFRAGDATALOCATIONPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
+type PFNGLGETFRAGDATALOCATIONPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
 object PFNGLGETFRAGDATALOCATIONPROC:
   given _tag: Tag[PFNGLGETFRAGDATALOCATIONPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLchar], GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETFRAGDATALOCATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3004,7 +3004,7 @@ object PFNGLGETFRAGDATALOCATIONPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLchar], GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC = CFuncPtr4[GLenum, GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC = CFuncPtr4[GLenum, GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3013,7 +3013,7 @@ object PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETFRAMEBUFFERPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETFRAMEBUFFERPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETFRAMEBUFFERPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETFRAMEBUFFERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETFRAMEBUFFERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3022,7 +3022,7 @@ object PFNGLGETFRAMEBUFFERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETGRAPHICSRESETSTATUSPROC = CFuncPtr0[GLenum]
+type PFNGLGETGRAPHICSRESETSTATUSPROC = CFuncPtr0[GLenum]
 object PFNGLGETGRAPHICSRESETSTATUSPROC:
   given _tag: Tag[PFNGLGETGRAPHICSRESETSTATUSPROC] = Tag.materializeCFuncPtr0[GLenum]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETGRAPHICSRESETSTATUSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3031,7 +3031,7 @@ object PFNGLGETGRAPHICSRESETSTATUSPROC:
     inline def value: CFuncPtr0[GLenum] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETINTEGER64I_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLint64], Unit]
+type PFNGLGETINTEGER64I_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLint64], Unit]
 object PFNGLGETINTEGER64I_VPROC:
   given _tag: Tag[PFNGLGETINTEGER64I_VPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETINTEGER64I_VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3040,7 +3040,7 @@ object PFNGLGETINTEGER64I_VPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETINTEGER64VPROC = CFuncPtr2[GLenum, Ptr[GLint64], Unit]
+type PFNGLGETINTEGER64VPROC = CFuncPtr2[GLenum, Ptr[GLint64], Unit]
 object PFNGLGETINTEGER64VPROC:
   given _tag: Tag[PFNGLGETINTEGER64VPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETINTEGER64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3049,7 +3049,7 @@ object PFNGLGETINTEGER64VPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETINTEGERI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLint], Unit]
+type PFNGLGETINTEGERI_VPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLint], Unit]
 object PFNGLGETINTEGERI_VPROC:
   given _tag: Tag[PFNGLGETINTEGERI_VPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETINTEGERI_VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3058,7 +3058,7 @@ object PFNGLGETINTEGERI_VPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETINTEGERVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLGETINTEGERVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLGETINTEGERVPROC:
   given _tag: Tag[PFNGLGETINTEGERVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETINTEGERVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3067,7 +3067,7 @@ object PFNGLGETINTEGERVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETINTERNALFORMATI64VPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint64], Unit]
+type PFNGLGETINTERNALFORMATI64VPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint64], Unit]
 object PFNGLGETINTERNALFORMATI64VPROC:
   given _tag: Tag[PFNGLGETINTERNALFORMATI64VPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETINTERNALFORMATI64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3076,7 +3076,7 @@ object PFNGLGETINTERNALFORMATI64VPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETINTERNALFORMATIVPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint], Unit]
+type PFNGLGETINTERNALFORMATIVPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint], Unit]
 object PFNGLGETINTERNALFORMATIVPROC:
   given _tag: Tag[PFNGLGETINTERNALFORMATIVPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETINTERNALFORMATIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3085,7 +3085,7 @@ object PFNGLGETINTERNALFORMATIVPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETLIGHTFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETLIGHTFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETLIGHTFVPROC:
   given _tag: Tag[PFNGLGETLIGHTFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETLIGHTFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3094,7 +3094,7 @@ object PFNGLGETLIGHTFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETLIGHTIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETLIGHTIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETLIGHTIVPROC:
   given _tag: Tag[PFNGLGETLIGHTIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETLIGHTIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3103,7 +3103,7 @@ object PFNGLGETLIGHTIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETMAPDVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
+type PFNGLGETMAPDVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
 object PFNGLGETMAPDVPROC:
   given _tag: Tag[PFNGLGETMAPDVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETMAPDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3112,7 +3112,7 @@ object PFNGLGETMAPDVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETMAPFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETMAPFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETMAPFVPROC:
   given _tag: Tag[PFNGLGETMAPFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETMAPFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3121,7 +3121,7 @@ object PFNGLGETMAPFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETMAPIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETMAPIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETMAPIVPROC:
   given _tag: Tag[PFNGLGETMAPIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETMAPIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3130,7 +3130,7 @@ object PFNGLGETMAPIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETMATERIALFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETMATERIALFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETMATERIALFVPROC:
   given _tag: Tag[PFNGLGETMATERIALFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETMATERIALFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3139,7 +3139,7 @@ object PFNGLGETMATERIALFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETMATERIALIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETMATERIALIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETMATERIALIVPROC:
   given _tag: Tag[PFNGLGETMATERIALIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETMATERIALIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3148,7 +3148,7 @@ object PFNGLGETMATERIALIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETMULTISAMPLEFVPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit]
+type PFNGLGETMULTISAMPLEFVPROC = CFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit]
 object PFNGLGETMULTISAMPLEFVPROC:
   given _tag: Tag[PFNGLGETMULTISAMPLEFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETMULTISAMPLEFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3157,7 +3157,7 @@ object PFNGLGETMULTISAMPLEFVPROC:
     inline def value: CFuncPtr3[GLenum, GLuint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNAMEDBUFFERPARAMETERI64VPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit]
+type PFNGLGETNAMEDBUFFERPARAMETERI64VPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit]
 object PFNGLGETNAMEDBUFFERPARAMETERI64VPROC:
   given _tag: Tag[PFNGLGETNAMEDBUFFERPARAMETERI64VPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNAMEDBUFFERPARAMETERI64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3166,7 +3166,7 @@ object PFNGLGETNAMEDBUFFERPARAMETERI64VPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNAMEDBUFFERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETNAMEDBUFFERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETNAMEDBUFFERPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETNAMEDBUFFERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNAMEDBUFFERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3175,7 +3175,7 @@ object PFNGLGETNAMEDBUFFERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNAMEDBUFFERPOINTERVPROC = CFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit]
+type PFNGLGETNAMEDBUFFERPOINTERVPROC = CFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit]
 object PFNGLGETNAMEDBUFFERPOINTERVPROC:
   given _tag: Tag[PFNGLGETNAMEDBUFFERPOINTERVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNAMEDBUFFERPOINTERVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3184,7 +3184,7 @@ object PFNGLGETNAMEDBUFFERPOINTERVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNAMEDBUFFERSUBDATAPROC = CFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
+type PFNGLGETNAMEDBUFFERSUBDATAPROC = CFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
 object PFNGLGETNAMEDBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLGETNAMEDBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNAMEDBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3193,7 +3193,7 @@ object PFNGLGETNAMEDBUFFERSUBDATAPROC:
     inline def value: CFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC = CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC = CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3202,7 +3202,7 @@ object PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3211,7 +3211,7 @@ object PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3220,7 +3220,7 @@ object PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNCOLORTABLEPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETNCOLORTABLEPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETNCOLORTABLEPROC:
   given _tag: Tag[PFNGLGETNCOLORTABLEPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNCOLORTABLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3229,7 +3229,7 @@ object PFNGLGETNCOLORTABLEPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNCOMPRESSEDTEXIMAGEPROC = CFuncPtr4[GLenum, GLint, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETNCOMPRESSEDTEXIMAGEPROC = CFuncPtr4[GLenum, GLint, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETNCOMPRESSEDTEXIMAGEPROC:
   given _tag: Tag[PFNGLGETNCOMPRESSEDTEXIMAGEPROC] = Tag.materializeCFuncPtr4[GLenum, GLint, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNCOMPRESSEDTEXIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3238,7 +3238,7 @@ object PFNGLGETNCOMPRESSEDTEXIMAGEPROC:
     inline def value: CFuncPtr4[GLenum, GLint, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNCONVOLUTIONFILTERPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETNCONVOLUTIONFILTERPROC = CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETNCONVOLUTIONFILTERPROC:
   given _tag: Tag[PFNGLGETNCONVOLUTIONFILTERPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNCONVOLUTIONFILTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3247,7 +3247,7 @@ object PFNGLGETNCONVOLUTIONFILTERPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNHISTOGRAMPROC = CFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETNHISTOGRAMPROC = CFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETNHISTOGRAMPROC:
   given _tag: Tag[PFNGLGETNHISTOGRAMPROC] = Tag.materializeCFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNHISTOGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3256,7 +3256,7 @@ object PFNGLGETNHISTOGRAMPROC:
     inline def value: CFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNMAPDVPROC = CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLGETNMAPDVPROC = CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLGETNMAPDVPROC:
   given _tag: Tag[PFNGLGETNMAPDVPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNMAPDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3265,7 +3265,7 @@ object PFNGLGETNMAPDVPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNMAPFVPROC = CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLGETNMAPFVPROC = CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLGETNMAPFVPROC:
   given _tag: Tag[PFNGLGETNMAPFVPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNMAPFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3274,7 +3274,7 @@ object PFNGLGETNMAPFVPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNMAPIVPROC = CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLint], Unit]
+type PFNGLGETNMAPIVPROC = CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLint], Unit]
 object PFNGLGETNMAPIVPROC:
   given _tag: Tag[PFNGLGETNMAPIVPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNMAPIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3283,7 +3283,7 @@ object PFNGLGETNMAPIVPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNMINMAXPROC = CFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETNMINMAXPROC = CFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETNMINMAXPROC:
   given _tag: Tag[PFNGLGETNMINMAXPROC] = Tag.materializeCFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNMINMAXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3292,7 +3292,7 @@ object PFNGLGETNMINMAXPROC:
     inline def value: CFuncPtr6[GLenum, GLboolean, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNPIXELMAPFVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLGETNPIXELMAPFVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLGETNPIXELMAPFVPROC:
   given _tag: Tag[PFNGLGETNPIXELMAPFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNPIXELMAPFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3301,7 +3301,7 @@ object PFNGLGETNPIXELMAPFVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNPIXELMAPUIVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
+type PFNGLGETNPIXELMAPUIVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
 object PFNGLGETNPIXELMAPUIVPROC:
   given _tag: Tag[PFNGLGETNPIXELMAPUIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNPIXELMAPUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3310,7 +3310,7 @@ object PFNGLGETNPIXELMAPUIVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNPIXELMAPUSVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit]
+type PFNGLGETNPIXELMAPUSVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit]
 object PFNGLGETNPIXELMAPUSVPROC:
   given _tag: Tag[PFNGLGETNPIXELMAPUSVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNPIXELMAPUSVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3319,7 +3319,7 @@ object PFNGLGETNPIXELMAPUSVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNPOLYGONSTIPPLEPROC = CFuncPtr2[GLsizei, Ptr[GLubyte], Unit]
+type PFNGLGETNPOLYGONSTIPPLEPROC = CFuncPtr2[GLsizei, Ptr[GLubyte], Unit]
 object PFNGLGETNPOLYGONSTIPPLEPROC:
   given _tag: Tag[PFNGLGETNPOLYGONSTIPPLEPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNPOLYGONSTIPPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3328,7 +3328,7 @@ object PFNGLGETNPOLYGONSTIPPLEPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNSEPARABLEFILTERPROC = CFuncPtr8[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], GLsizei, Ptr[Byte], Ptr[Byte], Unit]
+type PFNGLGETNSEPARABLEFILTERPROC = CFuncPtr8[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], GLsizei, Ptr[Byte], Ptr[Byte], Unit]
 object PFNGLGETNSEPARABLEFILTERPROC:
   given _tag: Tag[PFNGLGETNSEPARABLEFILTERPROC] = Tag.materializeCFuncPtr8[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], GLsizei, Ptr[Byte], Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNSEPARABLEFILTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3337,7 +3337,7 @@ object PFNGLGETNSEPARABLEFILTERPROC:
     inline def value: CFuncPtr8[GLenum, GLenum, GLenum, GLsizei, Ptr[Byte], GLsizei, Ptr[Byte], Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNTEXIMAGEPROC = CFuncPtr6[GLenum, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETNTEXIMAGEPROC = CFuncPtr6[GLenum, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETNTEXIMAGEPROC:
   given _tag: Tag[PFNGLGETNTEXIMAGEPROC] = Tag.materializeCFuncPtr6[GLenum, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNTEXIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3346,7 +3346,7 @@ object PFNGLGETNTEXIMAGEPROC:
     inline def value: CFuncPtr6[GLenum, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNUNIFORMDVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLGETNUNIFORMDVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLGETNUNIFORMDVPROC:
   given _tag: Tag[PFNGLGETNUNIFORMDVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNUNIFORMDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3355,7 +3355,7 @@ object PFNGLGETNUNIFORMDVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNUNIFORMFVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLGETNUNIFORMFVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLGETNUNIFORMFVPROC:
   given _tag: Tag[PFNGLGETNUNIFORMFVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNUNIFORMFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3364,7 +3364,7 @@ object PFNGLGETNUNIFORMFVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNUNIFORMIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLGETNUNIFORMIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLGETNUNIFORMIVPROC:
   given _tag: Tag[PFNGLGETNUNIFORMIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNUNIFORMIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3373,7 +3373,7 @@ object PFNGLGETNUNIFORMIVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETNUNIFORMUIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLGETNUNIFORMUIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLGETNUNIFORMUIVPROC:
   given _tag: Tag[PFNGLGETNUNIFORMUIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETNUNIFORMUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3382,7 +3382,7 @@ object PFNGLGETNUNIFORMUIVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETOBJECTLABELPROC = CFuncPtr5[GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETOBJECTLABELPROC = CFuncPtr5[GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETOBJECTLABELPROC:
   given _tag: Tag[PFNGLGETOBJECTLABELPROC] = Tag.materializeCFuncPtr5[GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETOBJECTLABELPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3391,7 +3391,7 @@ object PFNGLGETOBJECTLABELPROC:
     inline def value: CFuncPtr5[GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETOBJECTPTRLABELPROC = CFuncPtr4[Ptr[Byte], GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETOBJECTPTRLABELPROC = CFuncPtr4[Ptr[Byte], GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETOBJECTPTRLABELPROC:
   given _tag: Tag[PFNGLGETOBJECTPTRLABELPROC] = Tag.materializeCFuncPtr4[Ptr[Byte], GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETOBJECTPTRLABELPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3400,7 +3400,7 @@ object PFNGLGETOBJECTPTRLABELPROC:
     inline def value: CFuncPtr4[Ptr[Byte], GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPIXELMAPFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETPIXELMAPFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETPIXELMAPFVPROC:
   given _tag: Tag[PFNGLGETPIXELMAPFVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPIXELMAPFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3409,7 +3409,7 @@ object PFNGLGETPIXELMAPFVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPIXELMAPUIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLGETPIXELMAPUIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLGETPIXELMAPUIVPROC:
   given _tag: Tag[PFNGLGETPIXELMAPUIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPIXELMAPUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3418,7 +3418,7 @@ object PFNGLGETPIXELMAPUIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPIXELMAPUSVPROC = CFuncPtr2[GLenum, Ptr[GLushort], Unit]
+type PFNGLGETPIXELMAPUSVPROC = CFuncPtr2[GLenum, Ptr[GLushort], Unit]
 object PFNGLGETPIXELMAPUSVPROC:
   given _tag: Tag[PFNGLGETPIXELMAPUSVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPIXELMAPUSVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3427,7 +3427,7 @@ object PFNGLGETPIXELMAPUSVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPOINTERVPROC = CFuncPtr2[GLenum, Ptr[Ptr[Byte]], Unit]
+type PFNGLGETPOINTERVPROC = CFuncPtr2[GLenum, Ptr[Ptr[Byte]], Unit]
 object PFNGLGETPOINTERVPROC:
   given _tag: Tag[PFNGLGETPOINTERVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[Ptr[Byte]], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPOINTERVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3436,7 +3436,7 @@ object PFNGLGETPOINTERVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[Ptr[Byte]], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPOLYGONSTIPPLEPROC = CFuncPtr1[Ptr[GLubyte], Unit]
+type PFNGLGETPOLYGONSTIPPLEPROC = CFuncPtr1[Ptr[GLubyte], Unit]
 object PFNGLGETPOLYGONSTIPPLEPROC:
   given _tag: Tag[PFNGLGETPOLYGONSTIPPLEPROC] = Tag.materializeCFuncPtr1[Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPOLYGONSTIPPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3445,7 +3445,7 @@ object PFNGLGETPOLYGONSTIPPLEPROC:
     inline def value: CFuncPtr1[Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMBINARYPROC = CFuncPtr5[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLenum], Ptr[Byte], Unit]
+type PFNGLGETPROGRAMBINARYPROC = CFuncPtr5[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLenum], Ptr[Byte], Unit]
 object PFNGLGETPROGRAMBINARYPROC:
   given _tag: Tag[PFNGLGETPROGRAMBINARYPROC] = Tag.materializeCFuncPtr5[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLenum], Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMBINARYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3454,7 +3454,7 @@ object PFNGLGETPROGRAMBINARYPROC:
     inline def value: CFuncPtr5[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLenum], Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMINFOLOGPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETPROGRAMINFOLOGPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETPROGRAMINFOLOGPROC:
   given _tag: Tag[PFNGLGETPROGRAMINFOLOGPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMINFOLOGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3463,7 +3463,7 @@ object PFNGLGETPROGRAMINFOLOGPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMINTERFACEIVPROC = CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETPROGRAMINTERFACEIVPROC = CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETPROGRAMINTERFACEIVPROC:
   given _tag: Tag[PFNGLGETPROGRAMINTERFACEIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMINTERFACEIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3472,7 +3472,7 @@ object PFNGLGETPROGRAMINTERFACEIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETPROGRAMIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETPROGRAMIVPROC:
   given _tag: Tag[PFNGLGETPROGRAMIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3481,7 +3481,7 @@ object PFNGLGETPROGRAMIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMPIPELINEINFOLOGPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETPROGRAMPIPELINEINFOLOGPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETPROGRAMPIPELINEINFOLOGPROC:
   given _tag: Tag[PFNGLGETPROGRAMPIPELINEINFOLOGPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMPIPELINEINFOLOGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3490,7 +3490,7 @@ object PFNGLGETPROGRAMPIPELINEINFOLOGPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMPIPELINEIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETPROGRAMPIPELINEIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETPROGRAMPIPELINEIVPROC:
   given _tag: Tag[PFNGLGETPROGRAMPIPELINEIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMPIPELINEIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3499,7 +3499,7 @@ object PFNGLGETPROGRAMPIPELINEIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMRESOURCEINDEXPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint]
+type PFNGLGETPROGRAMRESOURCEINDEXPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint]
 object PFNGLGETPROGRAMRESOURCEINDEXPROC:
   given _tag: Tag[PFNGLGETPROGRAMRESOURCEINDEXPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMRESOURCEINDEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3508,7 +3508,7 @@ object PFNGLGETPROGRAMRESOURCEINDEXPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMRESOURCEIVPROC = CFuncPtr8[GLuint, GLenum, GLuint, GLsizei, Ptr[GLenum], GLsizei, Ptr[GLsizei], Ptr[GLint], Unit]
+type PFNGLGETPROGRAMRESOURCEIVPROC = CFuncPtr8[GLuint, GLenum, GLuint, GLsizei, Ptr[GLenum], GLsizei, Ptr[GLsizei], Ptr[GLint], Unit]
 object PFNGLGETPROGRAMRESOURCEIVPROC:
   given _tag: Tag[PFNGLGETPROGRAMRESOURCEIVPROC] = Tag.materializeCFuncPtr8[GLuint, GLenum, GLuint, GLsizei, Ptr[GLenum], GLsizei, Ptr[GLsizei], Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMRESOURCEIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3517,7 +3517,7 @@ object PFNGLGETPROGRAMRESOURCEIVPROC:
     inline def value: CFuncPtr8[GLuint, GLenum, GLuint, GLsizei, Ptr[GLenum], GLsizei, Ptr[GLsizei], Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
+type PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
 object PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC:
   given _tag: Tag[PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3526,7 +3526,7 @@ object PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMRESOURCELOCATIONPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
+type PFNGLGETPROGRAMRESOURCELOCATIONPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
 object PFNGLGETPROGRAMRESOURCELOCATIONPROC:
   given _tag: Tag[PFNGLGETPROGRAMRESOURCELOCATIONPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMRESOURCELOCATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3535,7 +3535,7 @@ object PFNGLGETPROGRAMRESOURCELOCATIONPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMRESOURCENAMEPROC = CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETPROGRAMRESOURCENAMEPROC = CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETPROGRAMRESOURCENAMEPROC:
   given _tag: Tag[PFNGLGETPROGRAMRESOURCENAMEPROC] = Tag.materializeCFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMRESOURCENAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3544,7 +3544,7 @@ object PFNGLGETPROGRAMRESOURCENAMEPROC:
     inline def value: CFuncPtr6[GLuint, GLenum, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETPROGRAMSTAGEIVPROC = CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETPROGRAMSTAGEIVPROC = CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETPROGRAMSTAGEIVPROC:
   given _tag: Tag[PFNGLGETPROGRAMSTAGEIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETPROGRAMSTAGEIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3553,7 +3553,7 @@ object PFNGLGETPROGRAMSTAGEIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYBUFFEROBJECTI64VPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
+type PFNGLGETQUERYBUFFEROBJECTI64VPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
 object PFNGLGETQUERYBUFFEROBJECTI64VPROC:
   given _tag: Tag[PFNGLGETQUERYBUFFEROBJECTI64VPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYBUFFEROBJECTI64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3562,7 +3562,7 @@ object PFNGLGETQUERYBUFFEROBJECTI64VPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYBUFFEROBJECTIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
+type PFNGLGETQUERYBUFFEROBJECTIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
 object PFNGLGETQUERYBUFFEROBJECTIVPROC:
   given _tag: Tag[PFNGLGETQUERYBUFFEROBJECTIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYBUFFEROBJECTIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3571,7 +3571,7 @@ object PFNGLGETQUERYBUFFEROBJECTIVPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYBUFFEROBJECTUI64VPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
+type PFNGLGETQUERYBUFFEROBJECTUI64VPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
 object PFNGLGETQUERYBUFFEROBJECTUI64VPROC:
   given _tag: Tag[PFNGLGETQUERYBUFFEROBJECTUI64VPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYBUFFEROBJECTUI64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3580,7 +3580,7 @@ object PFNGLGETQUERYBUFFEROBJECTUI64VPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYBUFFEROBJECTUIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
+type PFNGLGETQUERYBUFFEROBJECTUIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
 object PFNGLGETQUERYBUFFEROBJECTUIVPROC:
   given _tag: Tag[PFNGLGETQUERYBUFFEROBJECTUIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYBUFFEROBJECTUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3589,7 +3589,7 @@ object PFNGLGETQUERYBUFFEROBJECTUIVPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, GLintptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYINDEXEDIVPROC = CFuncPtr4[GLenum, GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETQUERYINDEXEDIVPROC = CFuncPtr4[GLenum, GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETQUERYINDEXEDIVPROC:
   given _tag: Tag[PFNGLGETQUERYINDEXEDIVPROC] = Tag.materializeCFuncPtr4[GLenum, GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYINDEXEDIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3598,7 +3598,7 @@ object PFNGLGETQUERYINDEXEDIVPROC:
     inline def value: CFuncPtr4[GLenum, GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETQUERYIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETQUERYIVPROC:
   given _tag: Tag[PFNGLGETQUERYIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3607,7 +3607,7 @@ object PFNGLGETQUERYIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYOBJECTI64VPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit]
+type PFNGLGETQUERYOBJECTI64VPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit]
 object PFNGLGETQUERYOBJECTI64VPROC:
   given _tag: Tag[PFNGLGETQUERYOBJECTI64VPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYOBJECTI64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3616,7 +3616,7 @@ object PFNGLGETQUERYOBJECTI64VPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYOBJECTIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETQUERYOBJECTIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETQUERYOBJECTIVPROC:
   given _tag: Tag[PFNGLGETQUERYOBJECTIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYOBJECTIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3625,7 +3625,7 @@ object PFNGLGETQUERYOBJECTIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYOBJECTUI64VPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint64], Unit]
+type PFNGLGETQUERYOBJECTUI64VPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint64], Unit]
 object PFNGLGETQUERYOBJECTUI64VPROC:
   given _tag: Tag[PFNGLGETQUERYOBJECTUI64VPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLuint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYOBJECTUI64VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3634,7 +3634,7 @@ object PFNGLGETQUERYOBJECTUI64VPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLuint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETQUERYOBJECTUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
+type PFNGLGETQUERYOBJECTUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
 object PFNGLGETQUERYOBJECTUIVPROC:
   given _tag: Tag[PFNGLGETQUERYOBJECTUIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETQUERYOBJECTUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3643,7 +3643,7 @@ object PFNGLGETQUERYOBJECTUIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETRENDERBUFFERPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETRENDERBUFFERPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETRENDERBUFFERPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETRENDERBUFFERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETRENDERBUFFERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3652,7 +3652,7 @@ object PFNGLGETRENDERBUFFERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSAMPLERPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETSAMPLERPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETSAMPLERPARAMETERFVPROC:
   given _tag: Tag[PFNGLGETSAMPLERPARAMETERFVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSAMPLERPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3661,7 +3661,7 @@ object PFNGLGETSAMPLERPARAMETERFVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSAMPLERPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETSAMPLERPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETSAMPLERPARAMETERIIVPROC:
   given _tag: Tag[PFNGLGETSAMPLERPARAMETERIIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSAMPLERPARAMETERIIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3670,7 +3670,7 @@ object PFNGLGETSAMPLERPARAMETERIIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSAMPLERPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
+type PFNGLGETSAMPLERPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
 object PFNGLGETSAMPLERPARAMETERIUIVPROC:
   given _tag: Tag[PFNGLGETSAMPLERPARAMETERIUIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSAMPLERPARAMETERIUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3679,7 +3679,7 @@ object PFNGLGETSAMPLERPARAMETERIUIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSAMPLERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETSAMPLERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETSAMPLERPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETSAMPLERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSAMPLERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3688,7 +3688,7 @@ object PFNGLGETSAMPLERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSHADERINFOLOGPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETSHADERINFOLOGPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETSHADERINFOLOGPROC:
   given _tag: Tag[PFNGLGETSHADERINFOLOGPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSHADERINFOLOGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3697,7 +3697,7 @@ object PFNGLGETSHADERINFOLOGPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSHADERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETSHADERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETSHADERIVPROC:
   given _tag: Tag[PFNGLGETSHADERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSHADERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3706,7 +3706,7 @@ object PFNGLGETSHADERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSHADERPRECISIONFORMATPROC = CFuncPtr4[GLenum, GLenum, Ptr[GLint], Ptr[GLint], Unit]
+type PFNGLGETSHADERPRECISIONFORMATPROC = CFuncPtr4[GLenum, GLenum, Ptr[GLint], Ptr[GLint], Unit]
 object PFNGLGETSHADERPRECISIONFORMATPROC:
   given _tag: Tag[PFNGLGETSHADERPRECISIONFORMATPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, Ptr[GLint], Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSHADERPRECISIONFORMATPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3715,7 +3715,7 @@ object PFNGLGETSHADERPRECISIONFORMATPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, Ptr[GLint], Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSHADERSOURCEPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
+type PFNGLGETSHADERSOURCEPROC = CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
 object PFNGLGETSHADERSOURCEPROC:
   given _tag: Tag[PFNGLGETSHADERSOURCEPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSHADERSOURCEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3724,7 +3724,7 @@ object PFNGLGETSHADERSOURCEPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[GLsizei], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSTRINGIPROC = CFuncPtr2[GLenum, GLuint, Ptr[GLubyte]]
+type PFNGLGETSTRINGIPROC = CFuncPtr2[GLenum, GLuint, Ptr[GLubyte]]
 object PFNGLGETSTRINGIPROC:
   given _tag: Tag[PFNGLGETSTRINGIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Ptr[GLubyte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSTRINGIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3733,7 +3733,7 @@ object PFNGLGETSTRINGIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Ptr[GLubyte]] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSTRINGPROC = CFuncPtr1[GLenum, Ptr[GLubyte]]
+type PFNGLGETSTRINGPROC = CFuncPtr1[GLenum, Ptr[GLubyte]]
 object PFNGLGETSTRINGPROC:
   given _tag: Tag[PFNGLGETSTRINGPROC] = Tag.materializeCFuncPtr1[GLenum, Ptr[GLubyte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSTRINGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3742,7 +3742,7 @@ object PFNGLGETSTRINGPROC:
     inline def value: CFuncPtr1[GLenum, Ptr[GLubyte]] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSUBROUTINEINDEXPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint]
+type PFNGLGETSUBROUTINEINDEXPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint]
 object PFNGLGETSUBROUTINEINDEXPROC:
   given _tag: Tag[PFNGLGETSUBROUTINEINDEXPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSUBROUTINEINDEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3751,7 +3751,7 @@ object PFNGLGETSUBROUTINEINDEXPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
+type PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
 object PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC:
   given _tag: Tag[PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3760,7 +3760,7 @@ object PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLchar], GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETSYNCIVPROC = CFuncPtr5[GLsync, GLenum, GLsizei, Ptr[GLsizei], Ptr[GLint], Unit]
+type PFNGLGETSYNCIVPROC = CFuncPtr5[GLsync, GLenum, GLsizei, Ptr[GLsizei], Ptr[GLint], Unit]
 object PFNGLGETSYNCIVPROC:
   given _tag: Tag[PFNGLGETSYNCIVPROC] = Tag.materializeCFuncPtr5[GLsync, GLenum, GLsizei, Ptr[GLsizei], Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETSYNCIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3769,7 +3769,7 @@ object PFNGLGETSYNCIVPROC:
     inline def value: CFuncPtr5[GLsync, GLenum, GLsizei, Ptr[GLsizei], Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXENVFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETTEXENVFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETTEXENVFVPROC:
   given _tag: Tag[PFNGLGETTEXENVFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXENVFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3778,7 +3778,7 @@ object PFNGLGETTEXENVFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXENVIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXENVIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXENVIVPROC:
   given _tag: Tag[PFNGLGETTEXENVIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXENVIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3787,7 +3787,7 @@ object PFNGLGETTEXENVIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXGENDVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
+type PFNGLGETTEXGENDVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
 object PFNGLGETTEXGENDVPROC:
   given _tag: Tag[PFNGLGETTEXGENDVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXGENDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3796,7 +3796,7 @@ object PFNGLGETTEXGENDVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXGENFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETTEXGENFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETTEXGENFVPROC:
   given _tag: Tag[PFNGLGETTEXGENFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXGENFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3805,7 +3805,7 @@ object PFNGLGETTEXGENFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXGENIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXGENIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXGENIVPROC:
   given _tag: Tag[PFNGLGETTEXGENIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXGENIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3814,7 +3814,7 @@ object PFNGLGETTEXGENIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXIMAGEPROC = CFuncPtr5[GLenum, GLint, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLGETTEXIMAGEPROC = CFuncPtr5[GLenum, GLint, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLGETTEXIMAGEPROC:
   given _tag: Tag[PFNGLGETTEXIMAGEPROC] = Tag.materializeCFuncPtr5[GLenum, GLint, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3823,7 +3823,7 @@ object PFNGLGETTEXIMAGEPROC:
     inline def value: CFuncPtr5[GLenum, GLint, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXLEVELPARAMETERFVPROC = CFuncPtr4[GLenum, GLint, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETTEXLEVELPARAMETERFVPROC = CFuncPtr4[GLenum, GLint, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETTEXLEVELPARAMETERFVPROC:
   given _tag: Tag[PFNGLGETTEXLEVELPARAMETERFVPROC] = Tag.materializeCFuncPtr4[GLenum, GLint, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXLEVELPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3832,7 +3832,7 @@ object PFNGLGETTEXLEVELPARAMETERFVPROC:
     inline def value: CFuncPtr4[GLenum, GLint, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXLEVELPARAMETERIVPROC = CFuncPtr4[GLenum, GLint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXLEVELPARAMETERIVPROC = CFuncPtr4[GLenum, GLint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXLEVELPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETTEXLEVELPARAMETERIVPROC] = Tag.materializeCFuncPtr4[GLenum, GLint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXLEVELPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3841,7 +3841,7 @@ object PFNGLGETTEXLEVELPARAMETERIVPROC:
     inline def value: CFuncPtr4[GLenum, GLint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXPARAMETERFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETTEXPARAMETERFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETTEXPARAMETERFVPROC:
   given _tag: Tag[PFNGLGETTEXPARAMETERFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3850,7 +3850,7 @@ object PFNGLGETTEXPARAMETERFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXPARAMETERIIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXPARAMETERIIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXPARAMETERIIVPROC:
   given _tag: Tag[PFNGLGETTEXPARAMETERIIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXPARAMETERIIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3859,7 +3859,7 @@ object PFNGLGETTEXPARAMETERIIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXPARAMETERIUIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
+type PFNGLGETTEXPARAMETERIUIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
 object PFNGLGETTEXPARAMETERIUIVPROC:
   given _tag: Tag[PFNGLGETTEXPARAMETERIUIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXPARAMETERIUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3868,7 +3868,7 @@ object PFNGLGETTEXPARAMETERIUIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETTEXPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3877,7 +3877,7 @@ object PFNGLGETTEXPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTUREIMAGEPROC = CFuncPtr6[GLuint, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETTEXTUREIMAGEPROC = CFuncPtr6[GLuint, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETTEXTUREIMAGEPROC:
   given _tag: Tag[PFNGLGETTEXTUREIMAGEPROC] = Tag.materializeCFuncPtr6[GLuint, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTUREIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3886,7 +3886,7 @@ object PFNGLGETTEXTUREIMAGEPROC:
     inline def value: CFuncPtr6[GLuint, GLint, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTURELEVELPARAMETERFVPROC = CFuncPtr4[GLuint, GLint, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETTEXTURELEVELPARAMETERFVPROC = CFuncPtr4[GLuint, GLint, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETTEXTURELEVELPARAMETERFVPROC:
   given _tag: Tag[PFNGLGETTEXTURELEVELPARAMETERFVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTURELEVELPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3895,7 +3895,7 @@ object PFNGLGETTEXTURELEVELPARAMETERFVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTURELEVELPARAMETERIVPROC = CFuncPtr4[GLuint, GLint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXTURELEVELPARAMETERIVPROC = CFuncPtr4[GLuint, GLint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXTURELEVELPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETTEXTURELEVELPARAMETERIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTURELEVELPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3904,7 +3904,7 @@ object PFNGLGETTEXTURELEVELPARAMETERIVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTUREPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETTEXTUREPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETTEXTUREPARAMETERFVPROC:
   given _tag: Tag[PFNGLGETTEXTUREPARAMETERFVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTUREPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3913,7 +3913,7 @@ object PFNGLGETTEXTUREPARAMETERFVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTUREPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXTUREPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXTUREPARAMETERIIVPROC:
   given _tag: Tag[PFNGLGETTEXTUREPARAMETERIIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTUREPARAMETERIIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3922,7 +3922,7 @@ object PFNGLGETTEXTUREPARAMETERIIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTUREPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
+type PFNGLGETTEXTUREPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
 object PFNGLGETTEXTUREPARAMETERIUIVPROC:
   given _tag: Tag[PFNGLGETTEXTUREPARAMETERIUIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTUREPARAMETERIUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3931,7 +3931,7 @@ object PFNGLGETTEXTUREPARAMETERIUIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTUREPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTEXTUREPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTEXTUREPARAMETERIVPROC:
   given _tag: Tag[PFNGLGETTEXTUREPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTUREPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3940,7 +3940,7 @@ object PFNGLGETTEXTUREPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTEXTURESUBIMAGEPROC = CFuncPtr12[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLGETTEXTURESUBIMAGEPROC = CFuncPtr12[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLGETTEXTURESUBIMAGEPROC:
   given _tag: Tag[PFNGLGETTEXTURESUBIMAGEPROC] = Tag.materializeCFuncPtr12[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTEXTURESUBIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3949,7 +3949,7 @@ object PFNGLGETTEXTURESUBIMAGEPROC:
     inline def value: CFuncPtr12[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTRANSFORMFEEDBACKI64_VPROC = CFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint64], Unit]
+type PFNGLGETTRANSFORMFEEDBACKI64_VPROC = CFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint64], Unit]
 object PFNGLGETTRANSFORMFEEDBACKI64_VPROC:
   given _tag: Tag[PFNGLGETTRANSFORMFEEDBACKI64_VPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTRANSFORMFEEDBACKI64_VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3958,7 +3958,7 @@ object PFNGLGETTRANSFORMFEEDBACKI64_VPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTRANSFORMFEEDBACKIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETTRANSFORMFEEDBACKIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETTRANSFORMFEEDBACKIVPROC:
   given _tag: Tag[PFNGLGETTRANSFORMFEEDBACKIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTRANSFORMFEEDBACKIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3967,7 +3967,7 @@ object PFNGLGETTRANSFORMFEEDBACKIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTRANSFORMFEEDBACKI_VPROC = CFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint], Unit]
+type PFNGLGETTRANSFORMFEEDBACKI_VPROC = CFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint], Unit]
 object PFNGLGETTRANSFORMFEEDBACKI_VPROC:
   given _tag: Tag[PFNGLGETTRANSFORMFEEDBACKI_VPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTRANSFORMFEEDBACKI_VPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3976,7 +3976,7 @@ object PFNGLGETTRANSFORMFEEDBACKI_VPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETTRANSFORMFEEDBACKVARYINGPROC = CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLsizei], Ptr[GLenum], Ptr[GLchar], Unit]
+type PFNGLGETTRANSFORMFEEDBACKVARYINGPROC = CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLsizei], Ptr[GLenum], Ptr[GLchar], Unit]
 object PFNGLGETTRANSFORMFEEDBACKVARYINGPROC:
   given _tag: Tag[PFNGLGETTRANSFORMFEEDBACKVARYINGPROC] = Tag.materializeCFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLsizei], Ptr[GLenum], Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETTRANSFORMFEEDBACKVARYINGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3985,7 +3985,7 @@ object PFNGLGETTRANSFORMFEEDBACKVARYINGPROC:
     inline def value: CFuncPtr7[GLuint, GLuint, GLsizei, Ptr[GLsizei], Ptr[GLsizei], Ptr[GLenum], Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMBLOCKINDEXPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLuint]
+type PFNGLGETUNIFORMBLOCKINDEXPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLuint]
 object PFNGLGETUNIFORMBLOCKINDEXPROC:
   given _tag: Tag[PFNGLGETUNIFORMBLOCKINDEXPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLchar], GLuint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMBLOCKINDEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -3994,7 +3994,7 @@ object PFNGLGETUNIFORMBLOCKINDEXPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLchar], GLuint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMDVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLdouble], Unit]
+type PFNGLGETUNIFORMDVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLdouble], Unit]
 object PFNGLGETUNIFORMDVPROC:
   given _tag: Tag[PFNGLGETUNIFORMDVPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4003,7 +4003,7 @@ object PFNGLGETUNIFORMDVPROC:
     inline def value: CFuncPtr3[GLuint, GLint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMFVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLfloat], Unit]
+type PFNGLGETUNIFORMFVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLfloat], Unit]
 object PFNGLGETUNIFORMFVPROC:
   given _tag: Tag[PFNGLGETUNIFORMFVPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4012,7 +4012,7 @@ object PFNGLGETUNIFORMFVPROC:
     inline def value: CFuncPtr3[GLuint, GLint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMINDICESPROC = CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLuint], Unit]
+type PFNGLGETUNIFORMINDICESPROC = CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLuint], Unit]
 object PFNGLGETUNIFORMINDICESPROC:
   given _tag: Tag[PFNGLGETUNIFORMINDICESPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMINDICESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4021,7 +4021,7 @@ object PFNGLGETUNIFORMINDICESPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMIVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLint], Unit]
+type PFNGLGETUNIFORMIVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLint], Unit]
 object PFNGLGETUNIFORMIVPROC:
   given _tag: Tag[PFNGLGETUNIFORMIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4030,7 +4030,7 @@ object PFNGLGETUNIFORMIVPROC:
     inline def value: CFuncPtr3[GLuint, GLint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMLOCATIONPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
+type PFNGLGETUNIFORMLOCATIONPROC = CFuncPtr2[GLuint, Ptr[GLchar], GLint]
 object PFNGLGETUNIFORMLOCATIONPROC:
   given _tag: Tag[PFNGLGETUNIFORMLOCATIONPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLchar], GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMLOCATIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4039,7 +4039,7 @@ object PFNGLGETUNIFORMLOCATIONPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLchar], GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMSUBROUTINEUIVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit]
+type PFNGLGETUNIFORMSUBROUTINEUIVPROC = CFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit]
 object PFNGLGETUNIFORMSUBROUTINEUIVPROC:
   given _tag: Tag[PFNGLGETUNIFORMSUBROUTINEUIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMSUBROUTINEUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4048,7 +4048,7 @@ object PFNGLGETUNIFORMSUBROUTINEUIVPROC:
     inline def value: CFuncPtr3[GLenum, GLint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETUNIFORMUIVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLuint], Unit]
+type PFNGLGETUNIFORMUIVPROC = CFuncPtr3[GLuint, GLint, Ptr[GLuint], Unit]
 object PFNGLGETUNIFORMUIVPROC:
   given _tag: Tag[PFNGLGETUNIFORMUIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETUNIFORMUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4057,7 +4057,7 @@ object PFNGLGETUNIFORMUIVPROC:
     inline def value: CFuncPtr3[GLuint, GLint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXARRAYINDEXED64IVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint64], Unit]
+type PFNGLGETVERTEXARRAYINDEXED64IVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint64], Unit]
 object PFNGLGETVERTEXARRAYINDEXED64IVPROC:
   given _tag: Tag[PFNGLGETVERTEXARRAYINDEXED64IVPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint64], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXARRAYINDEXED64IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4066,7 +4066,7 @@ object PFNGLGETVERTEXARRAYINDEXED64IVPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint64], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXARRAYINDEXEDIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETVERTEXARRAYINDEXEDIVPROC = CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETVERTEXARRAYINDEXEDIVPROC:
   given _tag: Tag[PFNGLGETVERTEXARRAYINDEXEDIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXARRAYINDEXEDIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4075,7 +4075,7 @@ object PFNGLGETVERTEXARRAYINDEXEDIVPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXARRAYIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETVERTEXARRAYIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETVERTEXARRAYIVPROC:
   given _tag: Tag[PFNGLGETVERTEXARRAYIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXARRAYIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4084,7 +4084,7 @@ object PFNGLGETVERTEXARRAYIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXATTRIBDVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit]
+type PFNGLGETVERTEXATTRIBDVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit]
 object PFNGLGETVERTEXATTRIBDVPROC:
   given _tag: Tag[PFNGLGETVERTEXATTRIBDVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXATTRIBDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4093,7 +4093,7 @@ object PFNGLGETVERTEXATTRIBDVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXATTRIBFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
+type PFNGLGETVERTEXATTRIBFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
 object PFNGLGETVERTEXATTRIBFVPROC:
   given _tag: Tag[PFNGLGETVERTEXATTRIBFVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXATTRIBFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4102,7 +4102,7 @@ object PFNGLGETVERTEXATTRIBFVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXATTRIBIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETVERTEXATTRIBIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETVERTEXATTRIBIIVPROC:
   given _tag: Tag[PFNGLGETVERTEXATTRIBIIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXATTRIBIIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4111,7 +4111,7 @@ object PFNGLGETVERTEXATTRIBIIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXATTRIBIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
+type PFNGLGETVERTEXATTRIBIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
 object PFNGLGETVERTEXATTRIBIUIVPROC:
   given _tag: Tag[PFNGLGETVERTEXATTRIBIUIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXATTRIBIUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4120,7 +4120,7 @@ object PFNGLGETVERTEXATTRIBIUIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXATTRIBIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLGETVERTEXATTRIBIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLGETVERTEXATTRIBIVPROC:
   given _tag: Tag[PFNGLGETVERTEXATTRIBIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXATTRIBIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4129,7 +4129,7 @@ object PFNGLGETVERTEXATTRIBIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXATTRIBLDVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit]
+type PFNGLGETVERTEXATTRIBLDVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit]
 object PFNGLGETVERTEXATTRIBLDVPROC:
   given _tag: Tag[PFNGLGETVERTEXATTRIBLDVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXATTRIBLDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4138,7 +4138,7 @@ object PFNGLGETVERTEXATTRIBLDVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLGETVERTEXATTRIBPOINTERVPROC = CFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit]
+type PFNGLGETVERTEXATTRIBPOINTERVPROC = CFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit]
 object PFNGLGETVERTEXATTRIBPOINTERVPROC:
   given _tag: Tag[PFNGLGETVERTEXATTRIBPOINTERVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLGETVERTEXATTRIBPOINTERVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4147,7 +4147,7 @@ object PFNGLGETVERTEXATTRIBPOINTERVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[Ptr[Byte]], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLHINTPROC = CFuncPtr2[GLenum, GLenum, Unit]
+type PFNGLHINTPROC = CFuncPtr2[GLenum, GLenum, Unit]
 object PFNGLHINTPROC:
   given _tag: Tag[PFNGLHINTPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLHINTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4156,7 +4156,7 @@ object PFNGLHINTPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXDPROC = CFuncPtr1[GLdouble, Unit]
+type PFNGLINDEXDPROC = CFuncPtr1[GLdouble, Unit]
 object PFNGLINDEXDPROC:
   given _tag: Tag[PFNGLINDEXDPROC] = Tag.materializeCFuncPtr1[GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4165,7 +4165,7 @@ object PFNGLINDEXDPROC:
     inline def value: CFuncPtr1[GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXDVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLINDEXDVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLINDEXDVPROC:
   given _tag: Tag[PFNGLINDEXDVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4174,7 +4174,7 @@ object PFNGLINDEXDVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXFPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLINDEXFPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLINDEXFPROC:
   given _tag: Tag[PFNGLINDEXFPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4183,7 +4183,7 @@ object PFNGLINDEXFPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXFVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLINDEXFVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLINDEXFVPROC:
   given _tag: Tag[PFNGLINDEXFVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4192,7 +4192,7 @@ object PFNGLINDEXFVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXIPROC = CFuncPtr1[GLint, Unit]
+type PFNGLINDEXIPROC = CFuncPtr1[GLint, Unit]
 object PFNGLINDEXIPROC:
   given _tag: Tag[PFNGLINDEXIPROC] = Tag.materializeCFuncPtr1[GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4201,7 +4201,7 @@ object PFNGLINDEXIPROC:
     inline def value: CFuncPtr1[GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXIVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLINDEXIVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLINDEXIVPROC:
   given _tag: Tag[PFNGLINDEXIVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4210,7 +4210,7 @@ object PFNGLINDEXIVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXMASKPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLINDEXMASKPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLINDEXMASKPROC:
   given _tag: Tag[PFNGLINDEXMASKPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXMASKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4219,7 +4219,7 @@ object PFNGLINDEXMASKPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXPOINTERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLINDEXPOINTERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLINDEXPOINTERPROC:
   given _tag: Tag[PFNGLINDEXPOINTERPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4228,7 +4228,7 @@ object PFNGLINDEXPOINTERPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXSPROC = CFuncPtr1[GLshort, Unit]
+type PFNGLINDEXSPROC = CFuncPtr1[GLshort, Unit]
 object PFNGLINDEXSPROC:
   given _tag: Tag[PFNGLINDEXSPROC] = Tag.materializeCFuncPtr1[GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4237,7 +4237,7 @@ object PFNGLINDEXSPROC:
     inline def value: CFuncPtr1[GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXSVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLINDEXSVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLINDEXSVPROC:
   given _tag: Tag[PFNGLINDEXSVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXSVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4246,7 +4246,7 @@ object PFNGLINDEXSVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXUBPROC = CFuncPtr1[GLubyte, Unit]
+type PFNGLINDEXUBPROC = CFuncPtr1[GLubyte, Unit]
 object PFNGLINDEXUBPROC:
   given _tag: Tag[PFNGLINDEXUBPROC] = Tag.materializeCFuncPtr1[GLubyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXUBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4255,7 +4255,7 @@ object PFNGLINDEXUBPROC:
     inline def value: CFuncPtr1[GLubyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINDEXUBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
+type PFNGLINDEXUBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
 object PFNGLINDEXUBVPROC:
   given _tag: Tag[PFNGLINDEXUBVPROC] = Tag.materializeCFuncPtr1[Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINDEXUBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4264,7 +4264,7 @@ object PFNGLINDEXUBVPROC:
     inline def value: CFuncPtr1[Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINITNAMESPROC = CFuncPtr0[Unit]
+type PFNGLINITNAMESPROC = CFuncPtr0[Unit]
 object PFNGLINITNAMESPROC:
   given _tag: Tag[PFNGLINITNAMESPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINITNAMESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4273,7 +4273,7 @@ object PFNGLINITNAMESPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINTERLEAVEDARRAYSPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLINTERLEAVEDARRAYSPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLINTERLEAVEDARRAYSPROC:
   given _tag: Tag[PFNGLINTERLEAVEDARRAYSPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINTERLEAVEDARRAYSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4282,7 +4282,7 @@ object PFNGLINTERLEAVEDARRAYSPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATEBUFFERDATAPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLINVALIDATEBUFFERDATAPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLINVALIDATEBUFFERDATAPROC:
   given _tag: Tag[PFNGLINVALIDATEBUFFERDATAPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATEBUFFERDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4291,7 +4291,7 @@ object PFNGLINVALIDATEBUFFERDATAPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATEBUFFERSUBDATAPROC = CFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit]
+type PFNGLINVALIDATEBUFFERSUBDATAPROC = CFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit]
 object PFNGLINVALIDATEBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLINVALIDATEBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATEBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4300,7 +4300,7 @@ object PFNGLINVALIDATEBUFFERSUBDATAPROC:
     inline def value: CFuncPtr3[GLuint, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATEFRAMEBUFFERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLenum], Unit]
+type PFNGLINVALIDATEFRAMEBUFFERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLenum], Unit]
 object PFNGLINVALIDATEFRAMEBUFFERPROC:
   given _tag: Tag[PFNGLINVALIDATEFRAMEBUFFERPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLenum], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATEFRAMEBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4309,7 +4309,7 @@ object PFNGLINVALIDATEFRAMEBUFFERPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLenum], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit]
+type PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit]
 object PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC:
   given _tag: Tag[PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4318,7 +4318,7 @@ object PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC = CFuncPtr7[GLuint, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC = CFuncPtr7[GLuint, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr7[GLuint, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4327,7 +4327,7 @@ object PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC:
     inline def value: CFuncPtr7[GLuint, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATESUBFRAMEBUFFERPROC = CFuncPtr7[GLenum, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLINVALIDATESUBFRAMEBUFFERPROC = CFuncPtr7[GLenum, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLINVALIDATESUBFRAMEBUFFERPROC:
   given _tag: Tag[PFNGLINVALIDATESUBFRAMEBUFFERPROC] = Tag.materializeCFuncPtr7[GLenum, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATESUBFRAMEBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4336,7 +4336,7 @@ object PFNGLINVALIDATESUBFRAMEBUFFERPROC:
     inline def value: CFuncPtr7[GLenum, GLsizei, Ptr[GLenum], GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATETEXIMAGEPROC = CFuncPtr2[GLuint, GLint, Unit]
+type PFNGLINVALIDATETEXIMAGEPROC = CFuncPtr2[GLuint, GLint, Unit]
 object PFNGLINVALIDATETEXIMAGEPROC:
   given _tag: Tag[PFNGLINVALIDATETEXIMAGEPROC] = Tag.materializeCFuncPtr2[GLuint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATETEXIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4345,7 +4345,7 @@ object PFNGLINVALIDATETEXIMAGEPROC:
     inline def value: CFuncPtr2[GLuint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLINVALIDATETEXSUBIMAGEPROC = CFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit]
+type PFNGLINVALIDATETEXSUBIMAGEPROC = CFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit]
 object PFNGLINVALIDATETEXSUBIMAGEPROC:
   given _tag: Tag[PFNGLINVALIDATETEXSUBIMAGEPROC] = Tag.materializeCFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLINVALIDATETEXSUBIMAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4354,7 +4354,7 @@ object PFNGLINVALIDATETEXSUBIMAGEPROC:
     inline def value: CFuncPtr8[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISBUFFERPROC:
   given _tag: Tag[PFNGLISBUFFERPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4363,7 +4363,7 @@ object PFNGLISBUFFERPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISENABLEDIPROC = CFuncPtr2[GLenum, GLuint, GLboolean]
+type PFNGLISENABLEDIPROC = CFuncPtr2[GLenum, GLuint, GLboolean]
 object PFNGLISENABLEDIPROC:
   given _tag: Tag[PFNGLISENABLEDIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISENABLEDIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4372,7 +4372,7 @@ object PFNGLISENABLEDIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISENABLEDPROC = CFuncPtr1[GLenum, GLboolean]
+type PFNGLISENABLEDPROC = CFuncPtr1[GLenum, GLboolean]
 object PFNGLISENABLEDPROC:
   given _tag: Tag[PFNGLISENABLEDPROC] = Tag.materializeCFuncPtr1[GLenum, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISENABLEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4381,7 +4381,7 @@ object PFNGLISENABLEDPROC:
     inline def value: CFuncPtr1[GLenum, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISFRAMEBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISFRAMEBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISFRAMEBUFFERPROC:
   given _tag: Tag[PFNGLISFRAMEBUFFERPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISFRAMEBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4390,7 +4390,7 @@ object PFNGLISFRAMEBUFFERPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISLISTPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISLISTPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISLISTPROC:
   given _tag: Tag[PFNGLISLISTPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISLISTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4399,7 +4399,7 @@ object PFNGLISLISTPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISPROGRAMPIPELINEPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISPROGRAMPIPELINEPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISPROGRAMPIPELINEPROC:
   given _tag: Tag[PFNGLISPROGRAMPIPELINEPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISPROGRAMPIPELINEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4408,7 +4408,7 @@ object PFNGLISPROGRAMPIPELINEPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISPROGRAMPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISPROGRAMPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISPROGRAMPROC:
   given _tag: Tag[PFNGLISPROGRAMPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISPROGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4417,7 +4417,7 @@ object PFNGLISPROGRAMPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISQUERYPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISQUERYPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISQUERYPROC:
   given _tag: Tag[PFNGLISQUERYPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISQUERYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4426,7 +4426,7 @@ object PFNGLISQUERYPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISRENDERBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISRENDERBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISRENDERBUFFERPROC:
   given _tag: Tag[PFNGLISRENDERBUFFERPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISRENDERBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4435,7 +4435,7 @@ object PFNGLISRENDERBUFFERPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISSAMPLERPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISSAMPLERPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISSAMPLERPROC:
   given _tag: Tag[PFNGLISSAMPLERPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISSAMPLERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4444,7 +4444,7 @@ object PFNGLISSAMPLERPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISSHADERPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISSHADERPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISSHADERPROC:
   given _tag: Tag[PFNGLISSHADERPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISSHADERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4453,7 +4453,7 @@ object PFNGLISSHADERPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISSYNCPROC = CFuncPtr1[GLsync, GLboolean]
+type PFNGLISSYNCPROC = CFuncPtr1[GLsync, GLboolean]
 object PFNGLISSYNCPROC:
   given _tag: Tag[PFNGLISSYNCPROC] = Tag.materializeCFuncPtr1[GLsync, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISSYNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4462,7 +4462,7 @@ object PFNGLISSYNCPROC:
     inline def value: CFuncPtr1[GLsync, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISTEXTUREPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISTEXTUREPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISTEXTUREPROC:
   given _tag: Tag[PFNGLISTEXTUREPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISTEXTUREPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4471,7 +4471,7 @@ object PFNGLISTEXTUREPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISTRANSFORMFEEDBACKPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISTRANSFORMFEEDBACKPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISTRANSFORMFEEDBACKPROC:
   given _tag: Tag[PFNGLISTRANSFORMFEEDBACKPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISTRANSFORMFEEDBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4480,7 +4480,7 @@ object PFNGLISTRANSFORMFEEDBACKPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLISVERTEXARRAYPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLISVERTEXARRAYPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLISVERTEXARRAYPROC:
   given _tag: Tag[PFNGLISVERTEXARRAYPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLISVERTEXARRAYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4489,7 +4489,7 @@ object PFNGLISVERTEXARRAYPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
+type PFNGLLIGHTFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
 object PFNGLLIGHTFPROC:
   given _tag: Tag[PFNGLLIGHTFPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4498,7 +4498,7 @@ object PFNGLLIGHTFPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLLIGHTFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLLIGHTFVPROC:
   given _tag: Tag[PFNGLLIGHTFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4507,7 +4507,7 @@ object PFNGLLIGHTFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
+type PFNGLLIGHTIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
 object PFNGLLIGHTIPROC:
   given _tag: Tag[PFNGLLIGHTIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4516,7 +4516,7 @@ object PFNGLLIGHTIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLLIGHTIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLLIGHTIVPROC:
   given _tag: Tag[PFNGLLIGHTIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4525,7 +4525,7 @@ object PFNGLLIGHTIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTMODELFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLLIGHTMODELFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLLIGHTMODELFPROC:
   given _tag: Tag[PFNGLLIGHTMODELFPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTMODELFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4534,7 +4534,7 @@ object PFNGLLIGHTMODELFPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTMODELFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLLIGHTMODELFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLLIGHTMODELFVPROC:
   given _tag: Tag[PFNGLLIGHTMODELFVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTMODELFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4543,7 +4543,7 @@ object PFNGLLIGHTMODELFVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTMODELIPROC = CFuncPtr2[GLenum, GLint, Unit]
+type PFNGLLIGHTMODELIPROC = CFuncPtr2[GLenum, GLint, Unit]
 object PFNGLLIGHTMODELIPROC:
   given _tag: Tag[PFNGLLIGHTMODELIPROC] = Tag.materializeCFuncPtr2[GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTMODELIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4552,7 +4552,7 @@ object PFNGLLIGHTMODELIPROC:
     inline def value: CFuncPtr2[GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLIGHTMODELIVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLLIGHTMODELIVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLLIGHTMODELIVPROC:
   given _tag: Tag[PFNGLLIGHTMODELIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLIGHTMODELIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4561,7 +4561,7 @@ object PFNGLLIGHTMODELIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLINESTIPPLEPROC = CFuncPtr2[GLint, GLushort, Unit]
+type PFNGLLINESTIPPLEPROC = CFuncPtr2[GLint, GLushort, Unit]
 object PFNGLLINESTIPPLEPROC:
   given _tag: Tag[PFNGLLINESTIPPLEPROC] = Tag.materializeCFuncPtr2[GLint, GLushort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLINESTIPPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4570,7 +4570,7 @@ object PFNGLLINESTIPPLEPROC:
     inline def value: CFuncPtr2[GLint, GLushort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLINEWIDTHPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLLINEWIDTHPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLLINEWIDTHPROC:
   given _tag: Tag[PFNGLLINEWIDTHPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLINEWIDTHPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4579,7 +4579,7 @@ object PFNGLLINEWIDTHPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLINKPROGRAMPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLLINKPROGRAMPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLLINKPROGRAMPROC:
   given _tag: Tag[PFNGLLINKPROGRAMPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLINKPROGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4588,7 +4588,7 @@ object PFNGLLINKPROGRAMPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLISTBASEPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLLISTBASEPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLLISTBASEPROC:
   given _tag: Tag[PFNGLLISTBASEPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLISTBASEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4597,7 +4597,7 @@ object PFNGLLISTBASEPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLOADIDENTITYPROC = CFuncPtr0[Unit]
+type PFNGLLOADIDENTITYPROC = CFuncPtr0[Unit]
 object PFNGLLOADIDENTITYPROC:
   given _tag: Tag[PFNGLLOADIDENTITYPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLOADIDENTITYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4606,7 +4606,7 @@ object PFNGLLOADIDENTITYPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLOADMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLLOADMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLLOADMATRIXDPROC:
   given _tag: Tag[PFNGLLOADMATRIXDPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLOADMATRIXDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4615,7 +4615,7 @@ object PFNGLLOADMATRIXDPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLOADMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLLOADMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLLOADMATRIXFPROC:
   given _tag: Tag[PFNGLLOADMATRIXFPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLOADMATRIXFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4624,7 +4624,7 @@ object PFNGLLOADMATRIXFPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLOADNAMEPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLLOADNAMEPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLLOADNAMEPROC:
   given _tag: Tag[PFNGLLOADNAMEPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLOADNAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4633,7 +4633,7 @@ object PFNGLLOADNAMEPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLOADTRANSPOSEMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLLOADTRANSPOSEMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLLOADTRANSPOSEMATRIXDPROC:
   given _tag: Tag[PFNGLLOADTRANSPOSEMATRIXDPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLOADTRANSPOSEMATRIXDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4642,7 +4642,7 @@ object PFNGLLOADTRANSPOSEMATRIXDPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLOADTRANSPOSEMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLLOADTRANSPOSEMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLLOADTRANSPOSEMATRIXFPROC:
   given _tag: Tag[PFNGLLOADTRANSPOSEMATRIXFPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLOADTRANSPOSEMATRIXFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4651,7 +4651,7 @@ object PFNGLLOADTRANSPOSEMATRIXFPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLLOGICOPPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLLOGICOPPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLLOGICOPPROC:
   given _tag: Tag[PFNGLLOGICOPPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLLOGICOPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4660,7 +4660,7 @@ object PFNGLLOGICOPPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAP1DPROC = CFuncPtr6[GLenum, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit]
+type PFNGLMAP1DPROC = CFuncPtr6[GLenum, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit]
 object PFNGLMAP1DPROC:
   given _tag: Tag[PFNGLMAP1DPROC] = Tag.materializeCFuncPtr6[GLenum, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAP1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4669,7 +4669,7 @@ object PFNGLMAP1DPROC:
     inline def value: CFuncPtr6[GLenum, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAP1FPROC = CFuncPtr6[GLenum, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit]
+type PFNGLMAP1FPROC = CFuncPtr6[GLenum, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit]
 object PFNGLMAP1FPROC:
   given _tag: Tag[PFNGLMAP1FPROC] = Tag.materializeCFuncPtr6[GLenum, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAP1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4678,7 +4678,7 @@ object PFNGLMAP1FPROC:
     inline def value: CFuncPtr6[GLenum, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAP2DPROC = CFuncPtr10[GLenum, GLdouble, GLdouble, GLint, GLint, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit]
+type PFNGLMAP2DPROC = CFuncPtr10[GLenum, GLdouble, GLdouble, GLint, GLint, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit]
 object PFNGLMAP2DPROC:
   given _tag: Tag[PFNGLMAP2DPROC] = Tag.materializeCFuncPtr10[GLenum, GLdouble, GLdouble, GLint, GLint, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAP2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4687,7 +4687,7 @@ object PFNGLMAP2DPROC:
     inline def value: CFuncPtr10[GLenum, GLdouble, GLdouble, GLint, GLint, GLdouble, GLdouble, GLint, GLint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAP2FPROC = CFuncPtr10[GLenum, GLfloat, GLfloat, GLint, GLint, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit]
+type PFNGLMAP2FPROC = CFuncPtr10[GLenum, GLfloat, GLfloat, GLint, GLint, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit]
 object PFNGLMAP2FPROC:
   given _tag: Tag[PFNGLMAP2FPROC] = Tag.materializeCFuncPtr10[GLenum, GLfloat, GLfloat, GLint, GLint, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAP2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4696,7 +4696,7 @@ object PFNGLMAP2FPROC:
     inline def value: CFuncPtr10[GLenum, GLfloat, GLfloat, GLint, GLint, GLfloat, GLfloat, GLint, GLint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPBUFFERPROC = CFuncPtr2[GLenum, GLenum, Ptr[Byte]]
+type PFNGLMAPBUFFERPROC = CFuncPtr2[GLenum, GLenum, Ptr[Byte]]
 object PFNGLMAPBUFFERPROC:
   given _tag: Tag[PFNGLMAPBUFFERPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Ptr[Byte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4705,7 +4705,7 @@ object PFNGLMAPBUFFERPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Ptr[Byte]] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPBUFFERRANGEPROC = CFuncPtr4[GLenum, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]]
+type PFNGLMAPBUFFERRANGEPROC = CFuncPtr4[GLenum, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]]
 object PFNGLMAPBUFFERRANGEPROC:
   given _tag: Tag[PFNGLMAPBUFFERRANGEPROC] = Tag.materializeCFuncPtr4[GLenum, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4714,7 +4714,7 @@ object PFNGLMAPBUFFERRANGEPROC:
     inline def value: CFuncPtr4[GLenum, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPGRID1DPROC = CFuncPtr3[GLint, GLdouble, GLdouble, Unit]
+type PFNGLMAPGRID1DPROC = CFuncPtr3[GLint, GLdouble, GLdouble, Unit]
 object PFNGLMAPGRID1DPROC:
   given _tag: Tag[PFNGLMAPGRID1DPROC] = Tag.materializeCFuncPtr3[GLint, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPGRID1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4723,7 +4723,7 @@ object PFNGLMAPGRID1DPROC:
     inline def value: CFuncPtr3[GLint, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPGRID1FPROC = CFuncPtr3[GLint, GLfloat, GLfloat, Unit]
+type PFNGLMAPGRID1FPROC = CFuncPtr3[GLint, GLfloat, GLfloat, Unit]
 object PFNGLMAPGRID1FPROC:
   given _tag: Tag[PFNGLMAPGRID1FPROC] = Tag.materializeCFuncPtr3[GLint, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPGRID1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4732,7 +4732,7 @@ object PFNGLMAPGRID1FPROC:
     inline def value: CFuncPtr3[GLint, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPGRID2DPROC = CFuncPtr6[GLint, GLdouble, GLdouble, GLint, GLdouble, GLdouble, Unit]
+type PFNGLMAPGRID2DPROC = CFuncPtr6[GLint, GLdouble, GLdouble, GLint, GLdouble, GLdouble, Unit]
 object PFNGLMAPGRID2DPROC:
   given _tag: Tag[PFNGLMAPGRID2DPROC] = Tag.materializeCFuncPtr6[GLint, GLdouble, GLdouble, GLint, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPGRID2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4741,7 +4741,7 @@ object PFNGLMAPGRID2DPROC:
     inline def value: CFuncPtr6[GLint, GLdouble, GLdouble, GLint, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPGRID2FPROC = CFuncPtr6[GLint, GLfloat, GLfloat, GLint, GLfloat, GLfloat, Unit]
+type PFNGLMAPGRID2FPROC = CFuncPtr6[GLint, GLfloat, GLfloat, GLint, GLfloat, GLfloat, Unit]
 object PFNGLMAPGRID2FPROC:
   given _tag: Tag[PFNGLMAPGRID2FPROC] = Tag.materializeCFuncPtr6[GLint, GLfloat, GLfloat, GLint, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPGRID2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4750,7 +4750,7 @@ object PFNGLMAPGRID2FPROC:
     inline def value: CFuncPtr6[GLint, GLfloat, GLfloat, GLint, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPNAMEDBUFFERPROC = CFuncPtr2[GLuint, GLenum, Ptr[Byte]]
+type PFNGLMAPNAMEDBUFFERPROC = CFuncPtr2[GLuint, GLenum, Ptr[Byte]]
 object PFNGLMAPNAMEDBUFFERPROC:
   given _tag: Tag[PFNGLMAPNAMEDBUFFERPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, Ptr[Byte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPNAMEDBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4759,7 +4759,7 @@ object PFNGLMAPNAMEDBUFFERPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, Ptr[Byte]] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMAPNAMEDBUFFERRANGEPROC = CFuncPtr4[GLuint, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]]
+type PFNGLMAPNAMEDBUFFERRANGEPROC = CFuncPtr4[GLuint, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]]
 object PFNGLMAPNAMEDBUFFERRANGEPROC:
   given _tag: Tag[PFNGLMAPNAMEDBUFFERRANGEPROC] = Tag.materializeCFuncPtr4[GLuint, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMAPNAMEDBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4768,7 +4768,7 @@ object PFNGLMAPNAMEDBUFFERRANGEPROC:
     inline def value: CFuncPtr4[GLuint, GLintptr, GLsizeiptr, GLbitfield, Ptr[Byte]] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMATERIALFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
+type PFNGLMATERIALFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
 object PFNGLMATERIALFPROC:
   given _tag: Tag[PFNGLMATERIALFPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMATERIALFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4777,7 +4777,7 @@ object PFNGLMATERIALFPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMATERIALFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLMATERIALFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLMATERIALFVPROC:
   given _tag: Tag[PFNGLMATERIALFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMATERIALFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4786,7 +4786,7 @@ object PFNGLMATERIALFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMATERIALIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
+type PFNGLMATERIALIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
 object PFNGLMATERIALIPROC:
   given _tag: Tag[PFNGLMATERIALIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMATERIALIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4795,7 +4795,7 @@ object PFNGLMATERIALIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMATERIALIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLMATERIALIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLMATERIALIVPROC:
   given _tag: Tag[PFNGLMATERIALIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMATERIALIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4804,7 +4804,7 @@ object PFNGLMATERIALIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMATRIXMODEPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLMATRIXMODEPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLMATRIXMODEPROC:
   given _tag: Tag[PFNGLMATRIXMODEPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMATRIXMODEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4813,7 +4813,7 @@ object PFNGLMATRIXMODEPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMEMORYBARRIERBYREGIONPROC = CFuncPtr1[GLbitfield, Unit]
+type PFNGLMEMORYBARRIERBYREGIONPROC = CFuncPtr1[GLbitfield, Unit]
 object PFNGLMEMORYBARRIERBYREGIONPROC:
   given _tag: Tag[PFNGLMEMORYBARRIERBYREGIONPROC] = Tag.materializeCFuncPtr1[GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMEMORYBARRIERBYREGIONPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4822,7 +4822,7 @@ object PFNGLMEMORYBARRIERBYREGIONPROC:
     inline def value: CFuncPtr1[GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMEMORYBARRIERPROC = CFuncPtr1[GLbitfield, Unit]
+type PFNGLMEMORYBARRIERPROC = CFuncPtr1[GLbitfield, Unit]
 object PFNGLMEMORYBARRIERPROC:
   given _tag: Tag[PFNGLMEMORYBARRIERPROC] = Tag.materializeCFuncPtr1[GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMEMORYBARRIERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4831,7 +4831,7 @@ object PFNGLMEMORYBARRIERPROC:
     inline def value: CFuncPtr1[GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMINSAMPLESHADINGPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLMINSAMPLESHADINGPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLMINSAMPLESHADINGPROC:
   given _tag: Tag[PFNGLMINSAMPLESHADINGPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMINSAMPLESHADINGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4840,7 +4840,7 @@ object PFNGLMINSAMPLESHADINGPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC = CFuncPtr5[GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit]
+type PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC = CFuncPtr5[GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit]
 object PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC:
   given _tag: Tag[PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC] = Tag.materializeCFuncPtr5[GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4849,7 +4849,7 @@ object PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC:
     inline def value: CFuncPtr5[GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTIDRAWARRAYSINDIRECTPROC = CFuncPtr4[GLenum, Ptr[Byte], GLsizei, GLsizei, Unit]
+type PFNGLMULTIDRAWARRAYSINDIRECTPROC = CFuncPtr4[GLenum, Ptr[Byte], GLsizei, GLsizei, Unit]
 object PFNGLMULTIDRAWARRAYSINDIRECTPROC:
   given _tag: Tag[PFNGLMULTIDRAWARRAYSINDIRECTPROC] = Tag.materializeCFuncPtr4[GLenum, Ptr[Byte], GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTIDRAWARRAYSINDIRECTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4858,7 +4858,7 @@ object PFNGLMULTIDRAWARRAYSINDIRECTPROC:
     inline def value: CFuncPtr4[GLenum, Ptr[Byte], GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTIDRAWARRAYSPROC = CFuncPtr4[GLenum, Ptr[GLint], Ptr[GLsizei], GLsizei, Unit]
+type PFNGLMULTIDRAWARRAYSPROC = CFuncPtr4[GLenum, Ptr[GLint], Ptr[GLsizei], GLsizei, Unit]
 object PFNGLMULTIDRAWARRAYSPROC:
   given _tag: Tag[PFNGLMULTIDRAWARRAYSPROC] = Tag.materializeCFuncPtr4[GLenum, Ptr[GLint], Ptr[GLsizei], GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTIDRAWARRAYSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4867,7 +4867,7 @@ object PFNGLMULTIDRAWARRAYSPROC:
     inline def value: CFuncPtr4[GLenum, Ptr[GLint], Ptr[GLsizei], GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC = CFuncPtr6[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Ptr[GLint], Unit]
+type PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC = CFuncPtr6[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Ptr[GLint], Unit]
 object PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC:
   given _tag: Tag[PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC] = Tag.materializeCFuncPtr6[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4876,7 +4876,7 @@ object PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC:
     inline def value: CFuncPtr6[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC = CFuncPtr6[GLenum, GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit]
+type PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC = CFuncPtr6[GLenum, GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit]
 object PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC:
   given _tag: Tag[PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC] = Tag.materializeCFuncPtr6[GLenum, GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4885,7 +4885,7 @@ object PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC:
     inline def value: CFuncPtr6[GLenum, GLenum, Ptr[Byte], GLintptr, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTIDRAWELEMENTSINDIRECTPROC = CFuncPtr5[GLenum, GLenum, Ptr[Byte], GLsizei, GLsizei, Unit]
+type PFNGLMULTIDRAWELEMENTSINDIRECTPROC = CFuncPtr5[GLenum, GLenum, Ptr[Byte], GLsizei, GLsizei, Unit]
 object PFNGLMULTIDRAWELEMENTSINDIRECTPROC:
   given _tag: Tag[PFNGLMULTIDRAWELEMENTSINDIRECTPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, Ptr[Byte], GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTIDRAWELEMENTSINDIRECTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4894,7 +4894,7 @@ object PFNGLMULTIDRAWELEMENTSINDIRECTPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, Ptr[Byte], GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTIDRAWELEMENTSPROC = CFuncPtr5[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Unit]
+type PFNGLMULTIDRAWELEMENTSPROC = CFuncPtr5[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Unit]
 object PFNGLMULTIDRAWELEMENTSPROC:
   given _tag: Tag[PFNGLMULTIDRAWELEMENTSPROC] = Tag.materializeCFuncPtr5[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTIDRAWELEMENTSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4903,7 +4903,7 @@ object PFNGLMULTIDRAWELEMENTSPROC:
     inline def value: CFuncPtr5[GLenum, Ptr[GLsizei], GLenum, Ptr[Ptr[Byte]], GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1DPROC = CFuncPtr2[GLenum, GLdouble, Unit]
+type PFNGLMULTITEXCOORD1DPROC = CFuncPtr2[GLenum, GLdouble, Unit]
 object PFNGLMULTITEXCOORD1DPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1DPROC] = Tag.materializeCFuncPtr2[GLenum, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4912,7 +4912,7 @@ object PFNGLMULTITEXCOORD1DPROC:
     inline def value: CFuncPtr2[GLenum, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
+type PFNGLMULTITEXCOORD1DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
 object PFNGLMULTITEXCOORD1DVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1DVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4921,7 +4921,7 @@ object PFNGLMULTITEXCOORD1DVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1FPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLMULTITEXCOORD1FPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLMULTITEXCOORD1FPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1FPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4930,7 +4930,7 @@ object PFNGLMULTITEXCOORD1FPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLMULTITEXCOORD1FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLMULTITEXCOORD1FVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1FVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4939,7 +4939,7 @@ object PFNGLMULTITEXCOORD1FVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1IPROC = CFuncPtr2[GLenum, GLint, Unit]
+type PFNGLMULTITEXCOORD1IPROC = CFuncPtr2[GLenum, GLint, Unit]
 object PFNGLMULTITEXCOORD1IPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1IPROC] = Tag.materializeCFuncPtr2[GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4948,7 +4948,7 @@ object PFNGLMULTITEXCOORD1IPROC:
     inline def value: CFuncPtr2[GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLMULTITEXCOORD1IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLMULTITEXCOORD1IVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1IVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4957,7 +4957,7 @@ object PFNGLMULTITEXCOORD1IVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1SPROC = CFuncPtr2[GLenum, GLshort, Unit]
+type PFNGLMULTITEXCOORD1SPROC = CFuncPtr2[GLenum, GLshort, Unit]
 object PFNGLMULTITEXCOORD1SPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1SPROC] = Tag.materializeCFuncPtr2[GLenum, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4966,7 +4966,7 @@ object PFNGLMULTITEXCOORD1SPROC:
     inline def value: CFuncPtr2[GLenum, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD1SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
+type PFNGLMULTITEXCOORD1SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
 object PFNGLMULTITEXCOORD1SVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD1SVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD1SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4975,7 +4975,7 @@ object PFNGLMULTITEXCOORD1SVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2DPROC = CFuncPtr3[GLenum, GLdouble, GLdouble, Unit]
+type PFNGLMULTITEXCOORD2DPROC = CFuncPtr3[GLenum, GLdouble, GLdouble, Unit]
 object PFNGLMULTITEXCOORD2DPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2DPROC] = Tag.materializeCFuncPtr3[GLenum, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4984,7 +4984,7 @@ object PFNGLMULTITEXCOORD2DPROC:
     inline def value: CFuncPtr3[GLenum, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
+type PFNGLMULTITEXCOORD2DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
 object PFNGLMULTITEXCOORD2DVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2DVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -4993,7 +4993,7 @@ object PFNGLMULTITEXCOORD2DVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2FPROC = CFuncPtr3[GLenum, GLfloat, GLfloat, Unit]
+type PFNGLMULTITEXCOORD2FPROC = CFuncPtr3[GLenum, GLfloat, GLfloat, Unit]
 object PFNGLMULTITEXCOORD2FPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2FPROC] = Tag.materializeCFuncPtr3[GLenum, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5002,7 +5002,7 @@ object PFNGLMULTITEXCOORD2FPROC:
     inline def value: CFuncPtr3[GLenum, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLMULTITEXCOORD2FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLMULTITEXCOORD2FVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2FVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5011,7 +5011,7 @@ object PFNGLMULTITEXCOORD2FVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2IPROC = CFuncPtr3[GLenum, GLint, GLint, Unit]
+type PFNGLMULTITEXCOORD2IPROC = CFuncPtr3[GLenum, GLint, GLint, Unit]
 object PFNGLMULTITEXCOORD2IPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2IPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5020,7 +5020,7 @@ object PFNGLMULTITEXCOORD2IPROC:
     inline def value: CFuncPtr3[GLenum, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLMULTITEXCOORD2IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLMULTITEXCOORD2IVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2IVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5029,7 +5029,7 @@ object PFNGLMULTITEXCOORD2IVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2SPROC = CFuncPtr3[GLenum, GLshort, GLshort, Unit]
+type PFNGLMULTITEXCOORD2SPROC = CFuncPtr3[GLenum, GLshort, GLshort, Unit]
 object PFNGLMULTITEXCOORD2SPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2SPROC] = Tag.materializeCFuncPtr3[GLenum, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5038,7 +5038,7 @@ object PFNGLMULTITEXCOORD2SPROC:
     inline def value: CFuncPtr3[GLenum, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD2SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
+type PFNGLMULTITEXCOORD2SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
 object PFNGLMULTITEXCOORD2SVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD2SVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD2SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5047,7 +5047,7 @@ object PFNGLMULTITEXCOORD2SVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3DPROC = CFuncPtr4[GLenum, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLMULTITEXCOORD3DPROC = CFuncPtr4[GLenum, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLMULTITEXCOORD3DPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3DPROC] = Tag.materializeCFuncPtr4[GLenum, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5056,7 +5056,7 @@ object PFNGLMULTITEXCOORD3DPROC:
     inline def value: CFuncPtr4[GLenum, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
+type PFNGLMULTITEXCOORD3DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
 object PFNGLMULTITEXCOORD3DVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3DVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5065,7 +5065,7 @@ object PFNGLMULTITEXCOORD3DVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3FPROC = CFuncPtr4[GLenum, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLMULTITEXCOORD3FPROC = CFuncPtr4[GLenum, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLMULTITEXCOORD3FPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3FPROC] = Tag.materializeCFuncPtr4[GLenum, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5074,7 +5074,7 @@ object PFNGLMULTITEXCOORD3FPROC:
     inline def value: CFuncPtr4[GLenum, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLMULTITEXCOORD3FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLMULTITEXCOORD3FVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3FVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5083,7 +5083,7 @@ object PFNGLMULTITEXCOORD3FVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3IPROC = CFuncPtr4[GLenum, GLint, GLint, GLint, Unit]
+type PFNGLMULTITEXCOORD3IPROC = CFuncPtr4[GLenum, GLint, GLint, GLint, Unit]
 object PFNGLMULTITEXCOORD3IPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3IPROC] = Tag.materializeCFuncPtr4[GLenum, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5092,7 +5092,7 @@ object PFNGLMULTITEXCOORD3IPROC:
     inline def value: CFuncPtr4[GLenum, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLMULTITEXCOORD3IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLMULTITEXCOORD3IVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3IVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5101,7 +5101,7 @@ object PFNGLMULTITEXCOORD3IVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3SPROC = CFuncPtr4[GLenum, GLshort, GLshort, GLshort, Unit]
+type PFNGLMULTITEXCOORD3SPROC = CFuncPtr4[GLenum, GLshort, GLshort, GLshort, Unit]
 object PFNGLMULTITEXCOORD3SPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3SPROC] = Tag.materializeCFuncPtr4[GLenum, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5110,7 +5110,7 @@ object PFNGLMULTITEXCOORD3SPROC:
     inline def value: CFuncPtr4[GLenum, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD3SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
+type PFNGLMULTITEXCOORD3SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
 object PFNGLMULTITEXCOORD3SVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD3SVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5119,7 +5119,7 @@ object PFNGLMULTITEXCOORD3SVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4DPROC = CFuncPtr5[GLenum, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLMULTITEXCOORD4DPROC = CFuncPtr5[GLenum, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLMULTITEXCOORD4DPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4DPROC] = Tag.materializeCFuncPtr5[GLenum, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5128,7 +5128,7 @@ object PFNGLMULTITEXCOORD4DPROC:
     inline def value: CFuncPtr5[GLenum, GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
+type PFNGLMULTITEXCOORD4DVPROC = CFuncPtr2[GLenum, Ptr[GLdouble], Unit]
 object PFNGLMULTITEXCOORD4DVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4DVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5137,7 +5137,7 @@ object PFNGLMULTITEXCOORD4DVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4FPROC = CFuncPtr5[GLenum, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLMULTITEXCOORD4FPROC = CFuncPtr5[GLenum, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLMULTITEXCOORD4FPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4FPROC] = Tag.materializeCFuncPtr5[GLenum, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5146,7 +5146,7 @@ object PFNGLMULTITEXCOORD4FPROC:
     inline def value: CFuncPtr5[GLenum, GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLMULTITEXCOORD4FVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLMULTITEXCOORD4FVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4FVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5155,7 +5155,7 @@ object PFNGLMULTITEXCOORD4FVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4IPROC = CFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit]
+type PFNGLMULTITEXCOORD4IPROC = CFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit]
 object PFNGLMULTITEXCOORD4IPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4IPROC] = Tag.materializeCFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5164,7 +5164,7 @@ object PFNGLMULTITEXCOORD4IPROC:
     inline def value: CFuncPtr5[GLenum, GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLMULTITEXCOORD4IVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLMULTITEXCOORD4IVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4IVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5173,7 +5173,7 @@ object PFNGLMULTITEXCOORD4IVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4SPROC = CFuncPtr5[GLenum, GLshort, GLshort, GLshort, GLshort, Unit]
+type PFNGLMULTITEXCOORD4SPROC = CFuncPtr5[GLenum, GLshort, GLshort, GLshort, GLshort, Unit]
 object PFNGLMULTITEXCOORD4SPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4SPROC] = Tag.materializeCFuncPtr5[GLenum, GLshort, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5182,7 +5182,7 @@ object PFNGLMULTITEXCOORD4SPROC:
     inline def value: CFuncPtr5[GLenum, GLshort, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORD4SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
+type PFNGLMULTITEXCOORD4SVPROC = CFuncPtr2[GLenum, Ptr[GLshort], Unit]
 object PFNGLMULTITEXCOORD4SVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORD4SVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORD4SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5191,7 +5191,7 @@ object PFNGLMULTITEXCOORD4SVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP1UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
+type PFNGLMULTITEXCOORDP1UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
 object PFNGLMULTITEXCOORDP1UIPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP1UIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP1UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5200,7 +5200,7 @@ object PFNGLMULTITEXCOORDP1UIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP1UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
+type PFNGLMULTITEXCOORDP1UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
 object PFNGLMULTITEXCOORDP1UIVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP1UIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP1UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5209,7 +5209,7 @@ object PFNGLMULTITEXCOORDP1UIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP2UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
+type PFNGLMULTITEXCOORDP2UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
 object PFNGLMULTITEXCOORDP2UIPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP2UIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP2UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5218,7 +5218,7 @@ object PFNGLMULTITEXCOORDP2UIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP2UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
+type PFNGLMULTITEXCOORDP2UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
 object PFNGLMULTITEXCOORDP2UIVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP2UIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP2UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5227,7 +5227,7 @@ object PFNGLMULTITEXCOORDP2UIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP3UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
+type PFNGLMULTITEXCOORDP3UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
 object PFNGLMULTITEXCOORDP3UIPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP3UIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5236,7 +5236,7 @@ object PFNGLMULTITEXCOORDP3UIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP3UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
+type PFNGLMULTITEXCOORDP3UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
 object PFNGLMULTITEXCOORDP3UIVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP3UIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5245,7 +5245,7 @@ object PFNGLMULTITEXCOORDP3UIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP4UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
+type PFNGLMULTITEXCOORDP4UIPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
 object PFNGLMULTITEXCOORDP4UIPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP4UIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5254,7 +5254,7 @@ object PFNGLMULTITEXCOORDP4UIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTITEXCOORDP4UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
+type PFNGLMULTITEXCOORDP4UIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
 object PFNGLMULTITEXCOORDP4UIVPROC:
   given _tag: Tag[PFNGLMULTITEXCOORDP4UIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTITEXCOORDP4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5263,7 +5263,7 @@ object PFNGLMULTITEXCOORDP4UIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLMULTMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLMULTMATRIXDPROC:
   given _tag: Tag[PFNGLMULTMATRIXDPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTMATRIXDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5272,7 +5272,7 @@ object PFNGLMULTMATRIXDPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLMULTMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLMULTMATRIXFPROC:
   given _tag: Tag[PFNGLMULTMATRIXFPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTMATRIXFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5281,7 +5281,7 @@ object PFNGLMULTMATRIXFPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTTRANSPOSEMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLMULTTRANSPOSEMATRIXDPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLMULTTRANSPOSEMATRIXDPROC:
   given _tag: Tag[PFNGLMULTTRANSPOSEMATRIXDPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTTRANSPOSEMATRIXDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5290,7 +5290,7 @@ object PFNGLMULTTRANSPOSEMATRIXDPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLMULTTRANSPOSEMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLMULTTRANSPOSEMATRIXFPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLMULTTRANSPOSEMATRIXFPROC:
   given _tag: Tag[PFNGLMULTTRANSPOSEMATRIXFPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLMULTTRANSPOSEMATRIXFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5299,7 +5299,7 @@ object PFNGLMULTTRANSPOSEMATRIXFPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDBUFFERDATAPROC = CFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLenum, Unit]
+type PFNGLNAMEDBUFFERDATAPROC = CFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLenum, Unit]
 object PFNGLNAMEDBUFFERDATAPROC:
   given _tag: Tag[PFNGLNAMEDBUFFERDATAPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDBUFFERDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5308,7 +5308,7 @@ object PFNGLNAMEDBUFFERDATAPROC:
     inline def value: CFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDBUFFERSTORAGEPROC = CFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLbitfield, Unit]
+type PFNGLNAMEDBUFFERSTORAGEPROC = CFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLbitfield, Unit]
 object PFNGLNAMEDBUFFERSTORAGEPROC:
   given _tag: Tag[PFNGLNAMEDBUFFERSTORAGEPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDBUFFERSTORAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5317,7 +5317,7 @@ object PFNGLNAMEDBUFFERSTORAGEPROC:
     inline def value: CFuncPtr4[GLuint, GLsizeiptr, Ptr[Byte], GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDBUFFERSUBDATAPROC = CFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
+type PFNGLNAMEDBUFFERSUBDATAPROC = CFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
 object PFNGLNAMEDBUFFERSUBDATAPROC:
   given _tag: Tag[PFNGLNAMEDBUFFERSUBDATAPROC] = Tag.materializeCFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDBUFFERSUBDATAPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5326,7 +5326,7 @@ object PFNGLNAMEDBUFFERSUBDATAPROC:
     inline def value: CFuncPtr4[GLuint, GLintptr, GLsizeiptr, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC = CFuncPtr2[GLuint, GLenum, Unit]
+type PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC = CFuncPtr2[GLuint, GLenum, Unit]
 object PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC:
   given _tag: Tag[PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5335,7 +5335,7 @@ object PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit]
+type PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit]
 object PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC:
   given _tag: Tag[PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5344,7 +5344,7 @@ object PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLenum], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
+type PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
 object PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC:
   given _tag: Tag[PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5353,7 +5353,7 @@ object PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC = CFuncPtr2[GLuint, GLenum, Unit]
+type PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC = CFuncPtr2[GLuint, GLenum, Unit]
 object PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC:
   given _tag: Tag[PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5362,7 +5362,7 @@ object PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC = CFuncPtr4[GLuint, GLenum, GLenum, GLuint, Unit]
+type PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC = CFuncPtr4[GLuint, GLenum, GLenum, GLuint, Unit]
 object PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC:
   given _tag: Tag[PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5371,7 +5371,7 @@ object PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC = CFuncPtr5[GLuint, GLenum, GLuint, GLint, GLint, Unit]
+type PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC = CFuncPtr5[GLuint, GLenum, GLuint, GLint, GLint, Unit]
 object PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC:
   given _tag: Tag[PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC] = Tag.materializeCFuncPtr5[GLuint, GLenum, GLuint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5380,7 +5380,7 @@ object PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC:
     inline def value: CFuncPtr5[GLuint, GLenum, GLuint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDFRAMEBUFFERTEXTUREPROC = CFuncPtr4[GLuint, GLenum, GLuint, GLint, Unit]
+type PFNGLNAMEDFRAMEBUFFERTEXTUREPROC = CFuncPtr4[GLuint, GLenum, GLuint, GLint, Unit]
 object PFNGLNAMEDFRAMEBUFFERTEXTUREPROC:
   given _tag: Tag[PFNGLNAMEDFRAMEBUFFERTEXTUREPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLuint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDFRAMEBUFFERTEXTUREPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5389,7 +5389,7 @@ object PFNGLNAMEDFRAMEBUFFERTEXTUREPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLuint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC = CFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit]
+type PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC = CFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit]
 object PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC:
   given _tag: Tag[PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC] = Tag.materializeCFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5398,7 +5398,7 @@ object PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC:
     inline def value: CFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNAMEDRENDERBUFFERSTORAGEPROC = CFuncPtr4[GLuint, GLenum, GLsizei, GLsizei, Unit]
+type PFNGLNAMEDRENDERBUFFERSTORAGEPROC = CFuncPtr4[GLuint, GLenum, GLsizei, GLsizei, Unit]
 object PFNGLNAMEDRENDERBUFFERSTORAGEPROC:
   given _tag: Tag[PFNGLNAMEDRENDERBUFFERSTORAGEPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNAMEDRENDERBUFFERSTORAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5407,7 +5407,7 @@ object PFNGLNAMEDRENDERBUFFERSTORAGEPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNEWLISTPROC = CFuncPtr2[GLuint, GLenum, Unit]
+type PFNGLNEWLISTPROC = CFuncPtr2[GLuint, GLenum, Unit]
 object PFNGLNEWLISTPROC:
   given _tag: Tag[PFNGLNEWLISTPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNEWLISTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5416,7 +5416,7 @@ object PFNGLNEWLISTPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3BPROC = CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
+type PFNGLNORMAL3BPROC = CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
 object PFNGLNORMAL3BPROC:
   given _tag: Tag[PFNGLNORMAL3BPROC] = Tag.materializeCFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3BPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5425,7 +5425,7 @@ object PFNGLNORMAL3BPROC:
     inline def value: CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
+type PFNGLNORMAL3BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
 object PFNGLNORMAL3BVPROC:
   given _tag: Tag[PFNGLNORMAL3BVPROC] = Tag.materializeCFuncPtr1[Ptr[GLbyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3BVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5434,7 +5434,7 @@ object PFNGLNORMAL3BVPROC:
     inline def value: CFuncPtr1[Ptr[GLbyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLNORMAL3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLNORMAL3DPROC:
   given _tag: Tag[PFNGLNORMAL3DPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5443,7 +5443,7 @@ object PFNGLNORMAL3DPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLNORMAL3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLNORMAL3DVPROC:
   given _tag: Tag[PFNGLNORMAL3DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5452,7 +5452,7 @@ object PFNGLNORMAL3DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLNORMAL3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLNORMAL3FPROC:
   given _tag: Tag[PFNGLNORMAL3FPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5461,7 +5461,7 @@ object PFNGLNORMAL3FPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLNORMAL3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLNORMAL3FVPROC:
   given _tag: Tag[PFNGLNORMAL3FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5470,7 +5470,7 @@ object PFNGLNORMAL3FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLNORMAL3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLNORMAL3IPROC:
   given _tag: Tag[PFNGLNORMAL3IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5479,7 +5479,7 @@ object PFNGLNORMAL3IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLNORMAL3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLNORMAL3IVPROC:
   given _tag: Tag[PFNGLNORMAL3IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5488,7 +5488,7 @@ object PFNGLNORMAL3IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
+type PFNGLNORMAL3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
 object PFNGLNORMAL3SPROC:
   given _tag: Tag[PFNGLNORMAL3SPROC] = Tag.materializeCFuncPtr3[GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5497,7 +5497,7 @@ object PFNGLNORMAL3SPROC:
     inline def value: CFuncPtr3[GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMAL3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLNORMAL3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLNORMAL3SVPROC:
   given _tag: Tag[PFNGLNORMAL3SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMAL3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5506,7 +5506,7 @@ object PFNGLNORMAL3SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMALP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLNORMALP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLNORMALP3UIPROC:
   given _tag: Tag[PFNGLNORMALP3UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMALP3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5515,7 +5515,7 @@ object PFNGLNORMALP3UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMALP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLNORMALP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLNORMALP3UIVPROC:
   given _tag: Tag[PFNGLNORMALP3UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMALP3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5524,7 +5524,7 @@ object PFNGLNORMALP3UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLNORMALPOINTERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLNORMALPOINTERPROC = CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLNORMALPOINTERPROC:
   given _tag: Tag[PFNGLNORMALPOINTERPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLNORMALPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5533,7 +5533,7 @@ object PFNGLNORMALPOINTERPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLOBJECTLABELPROC = CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit]
+type PFNGLOBJECTLABELPROC = CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit]
 object PFNGLOBJECTLABELPROC:
   given _tag: Tag[PFNGLOBJECTLABELPROC] = Tag.materializeCFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLOBJECTLABELPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5542,7 +5542,7 @@ object PFNGLOBJECTLABELPROC:
     inline def value: CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLOBJECTPTRLABELPROC = CFuncPtr3[Ptr[Byte], GLsizei, Ptr[GLchar], Unit]
+type PFNGLOBJECTPTRLABELPROC = CFuncPtr3[Ptr[Byte], GLsizei, Ptr[GLchar], Unit]
 object PFNGLOBJECTPTRLABELPROC:
   given _tag: Tag[PFNGLOBJECTPTRLABELPROC] = Tag.materializeCFuncPtr3[Ptr[Byte], GLsizei, Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLOBJECTPTRLABELPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5551,7 +5551,7 @@ object PFNGLOBJECTPTRLABELPROC:
     inline def value: CFuncPtr3[Ptr[Byte], GLsizei, Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLORTHOPROC = CFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLORTHOPROC = CFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLORTHOPROC:
   given _tag: Tag[PFNGLORTHOPROC] = Tag.materializeCFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLORTHOPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5560,7 +5560,7 @@ object PFNGLORTHOPROC:
     inline def value: CFuncPtr6[GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPASSTHROUGHPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLPASSTHROUGHPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLPASSTHROUGHPROC:
   given _tag: Tag[PFNGLPASSTHROUGHPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPASSTHROUGHPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5569,7 +5569,7 @@ object PFNGLPASSTHROUGHPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPATCHPARAMETERFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLPATCHPARAMETERFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLPATCHPARAMETERFVPROC:
   given _tag: Tag[PFNGLPATCHPARAMETERFVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPATCHPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5578,7 +5578,7 @@ object PFNGLPATCHPARAMETERFVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPATCHPARAMETERIPROC = CFuncPtr2[GLenum, GLint, Unit]
+type PFNGLPATCHPARAMETERIPROC = CFuncPtr2[GLenum, GLint, Unit]
 object PFNGLPATCHPARAMETERIPROC:
   given _tag: Tag[PFNGLPATCHPARAMETERIPROC] = Tag.materializeCFuncPtr2[GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPATCHPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5587,7 +5587,7 @@ object PFNGLPATCHPARAMETERIPROC:
     inline def value: CFuncPtr2[GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPAUSETRANSFORMFEEDBACKPROC = CFuncPtr0[Unit]
+type PFNGLPAUSETRANSFORMFEEDBACKPROC = CFuncPtr0[Unit]
 object PFNGLPAUSETRANSFORMFEEDBACKPROC:
   given _tag: Tag[PFNGLPAUSETRANSFORMFEEDBACKPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPAUSETRANSFORMFEEDBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5596,7 +5596,7 @@ object PFNGLPAUSETRANSFORMFEEDBACKPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELMAPFVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLPIXELMAPFVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLPIXELMAPFVPROC:
   given _tag: Tag[PFNGLPIXELMAPFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELMAPFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5605,7 +5605,7 @@ object PFNGLPIXELMAPFVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELMAPUIVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
+type PFNGLPIXELMAPUIVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
 object PFNGLPIXELMAPUIVPROC:
   given _tag: Tag[PFNGLPIXELMAPUIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELMAPUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5614,7 +5614,7 @@ object PFNGLPIXELMAPUIVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELMAPUSVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit]
+type PFNGLPIXELMAPUSVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit]
 object PFNGLPIXELMAPUSVPROC:
   given _tag: Tag[PFNGLPIXELMAPUSVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELMAPUSVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5623,7 +5623,7 @@ object PFNGLPIXELMAPUSVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELSTOREFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLPIXELSTOREFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLPIXELSTOREFPROC:
   given _tag: Tag[PFNGLPIXELSTOREFPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELSTOREFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5632,7 +5632,7 @@ object PFNGLPIXELSTOREFPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELSTOREIPROC = CFuncPtr2[GLenum, GLint, Unit]
+type PFNGLPIXELSTOREIPROC = CFuncPtr2[GLenum, GLint, Unit]
 object PFNGLPIXELSTOREIPROC:
   given _tag: Tag[PFNGLPIXELSTOREIPROC] = Tag.materializeCFuncPtr2[GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELSTOREIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5641,7 +5641,7 @@ object PFNGLPIXELSTOREIPROC:
     inline def value: CFuncPtr2[GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELTRANSFERFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLPIXELTRANSFERFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLPIXELTRANSFERFPROC:
   given _tag: Tag[PFNGLPIXELTRANSFERFPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELTRANSFERFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5650,7 +5650,7 @@ object PFNGLPIXELTRANSFERFPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELTRANSFERIPROC = CFuncPtr2[GLenum, GLint, Unit]
+type PFNGLPIXELTRANSFERIPROC = CFuncPtr2[GLenum, GLint, Unit]
 object PFNGLPIXELTRANSFERIPROC:
   given _tag: Tag[PFNGLPIXELTRANSFERIPROC] = Tag.materializeCFuncPtr2[GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELTRANSFERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5659,7 +5659,7 @@ object PFNGLPIXELTRANSFERIPROC:
     inline def value: CFuncPtr2[GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPIXELZOOMPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLPIXELZOOMPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLPIXELZOOMPROC:
   given _tag: Tag[PFNGLPIXELZOOMPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPIXELZOOMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5668,7 +5668,7 @@ object PFNGLPIXELZOOMPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOINTPARAMETERFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
+type PFNGLPOINTPARAMETERFPROC = CFuncPtr2[GLenum, GLfloat, Unit]
 object PFNGLPOINTPARAMETERFPROC:
   given _tag: Tag[PFNGLPOINTPARAMETERFPROC] = Tag.materializeCFuncPtr2[GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOINTPARAMETERFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5677,7 +5677,7 @@ object PFNGLPOINTPARAMETERFPROC:
     inline def value: CFuncPtr2[GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOINTPARAMETERFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
+type PFNGLPOINTPARAMETERFVPROC = CFuncPtr2[GLenum, Ptr[GLfloat], Unit]
 object PFNGLPOINTPARAMETERFVPROC:
   given _tag: Tag[PFNGLPOINTPARAMETERFVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOINTPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5686,7 +5686,7 @@ object PFNGLPOINTPARAMETERFVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOINTPARAMETERIPROC = CFuncPtr2[GLenum, GLint, Unit]
+type PFNGLPOINTPARAMETERIPROC = CFuncPtr2[GLenum, GLint, Unit]
 object PFNGLPOINTPARAMETERIPROC:
   given _tag: Tag[PFNGLPOINTPARAMETERIPROC] = Tag.materializeCFuncPtr2[GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOINTPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5695,7 +5695,7 @@ object PFNGLPOINTPARAMETERIPROC:
     inline def value: CFuncPtr2[GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOINTPARAMETERIVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
+type PFNGLPOINTPARAMETERIVPROC = CFuncPtr2[GLenum, Ptr[GLint], Unit]
 object PFNGLPOINTPARAMETERIVPROC:
   given _tag: Tag[PFNGLPOINTPARAMETERIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOINTPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5704,7 +5704,7 @@ object PFNGLPOINTPARAMETERIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOINTSIZEPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLPOINTSIZEPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLPOINTSIZEPROC:
   given _tag: Tag[PFNGLPOINTSIZEPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOINTSIZEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5713,7 +5713,7 @@ object PFNGLPOINTSIZEPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOLYGONMODEPROC = CFuncPtr2[GLenum, GLenum, Unit]
+type PFNGLPOLYGONMODEPROC = CFuncPtr2[GLenum, GLenum, Unit]
 object PFNGLPOLYGONMODEPROC:
   given _tag: Tag[PFNGLPOLYGONMODEPROC] = Tag.materializeCFuncPtr2[GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOLYGONMODEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5722,7 +5722,7 @@ object PFNGLPOLYGONMODEPROC:
     inline def value: CFuncPtr2[GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOLYGONOFFSETCLAMPPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLPOLYGONOFFSETCLAMPPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLPOLYGONOFFSETCLAMPPROC:
   given _tag: Tag[PFNGLPOLYGONOFFSETCLAMPPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOLYGONOFFSETCLAMPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5731,7 +5731,7 @@ object PFNGLPOLYGONOFFSETCLAMPPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOLYGONOFFSETPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLPOLYGONOFFSETPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLPOLYGONOFFSETPROC:
   given _tag: Tag[PFNGLPOLYGONOFFSETPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOLYGONOFFSETPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5740,7 +5740,7 @@ object PFNGLPOLYGONOFFSETPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOLYGONSTIPPLEPROC = CFuncPtr1[Ptr[GLubyte], Unit]
+type PFNGLPOLYGONSTIPPLEPROC = CFuncPtr1[Ptr[GLubyte], Unit]
 object PFNGLPOLYGONSTIPPLEPROC:
   given _tag: Tag[PFNGLPOLYGONSTIPPLEPROC] = Tag.materializeCFuncPtr1[Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOLYGONSTIPPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5749,7 +5749,7 @@ object PFNGLPOLYGONSTIPPLEPROC:
     inline def value: CFuncPtr1[Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOPATTRIBPROC = CFuncPtr0[Unit]
+type PFNGLPOPATTRIBPROC = CFuncPtr0[Unit]
 object PFNGLPOPATTRIBPROC:
   given _tag: Tag[PFNGLPOPATTRIBPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOPATTRIBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5758,7 +5758,7 @@ object PFNGLPOPATTRIBPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOPCLIENTATTRIBPROC = CFuncPtr0[Unit]
+type PFNGLPOPCLIENTATTRIBPROC = CFuncPtr0[Unit]
 object PFNGLPOPCLIENTATTRIBPROC:
   given _tag: Tag[PFNGLPOPCLIENTATTRIBPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOPCLIENTATTRIBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5767,7 +5767,7 @@ object PFNGLPOPCLIENTATTRIBPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOPDEBUGGROUPPROC = CFuncPtr0[Unit]
+type PFNGLPOPDEBUGGROUPPROC = CFuncPtr0[Unit]
 object PFNGLPOPDEBUGGROUPPROC:
   given _tag: Tag[PFNGLPOPDEBUGGROUPPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOPDEBUGGROUPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5776,7 +5776,7 @@ object PFNGLPOPDEBUGGROUPPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOPMATRIXPROC = CFuncPtr0[Unit]
+type PFNGLPOPMATRIXPROC = CFuncPtr0[Unit]
 object PFNGLPOPMATRIXPROC:
   given _tag: Tag[PFNGLPOPMATRIXPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOPMATRIXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5785,7 +5785,7 @@ object PFNGLPOPMATRIXPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPOPNAMEPROC = CFuncPtr0[Unit]
+type PFNGLPOPNAMEPROC = CFuncPtr0[Unit]
 object PFNGLPOPNAMEPROC:
   given _tag: Tag[PFNGLPOPNAMEPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPOPNAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5794,7 +5794,7 @@ object PFNGLPOPNAMEPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPRIMITIVERESTARTINDEXPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLPRIMITIVERESTARTINDEXPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLPRIMITIVERESTARTINDEXPROC:
   given _tag: Tag[PFNGLPRIMITIVERESTARTINDEXPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPRIMITIVERESTARTINDEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5803,7 +5803,7 @@ object PFNGLPRIMITIVERESTARTINDEXPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPRIORITIZETEXTURESPROC = CFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLfloat], Unit]
+type PFNGLPRIORITIZETEXTURESPROC = CFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLfloat], Unit]
 object PFNGLPRIORITIZETEXTURESPROC:
   given _tag: Tag[PFNGLPRIORITIZETEXTURESPROC] = Tag.materializeCFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPRIORITIZETEXTURESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5812,7 +5812,7 @@ object PFNGLPRIORITIZETEXTURESPROC:
     inline def value: CFuncPtr3[GLsizei, Ptr[GLuint], Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMBINARYPROC = CFuncPtr4[GLuint, GLenum, Ptr[Byte], GLsizei, Unit]
+type PFNGLPROGRAMBINARYPROC = CFuncPtr4[GLuint, GLenum, Ptr[Byte], GLsizei, Unit]
 object PFNGLPROGRAMBINARYPROC:
   given _tag: Tag[PFNGLPROGRAMBINARYPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, Ptr[Byte], GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMBINARYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5821,7 +5821,7 @@ object PFNGLPROGRAMBINARYPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, Ptr[Byte], GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
+type PFNGLPROGRAMPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
 object PFNGLPROGRAMPARAMETERIPROC:
   given _tag: Tag[PFNGLPROGRAMPARAMETERIPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5830,7 +5830,7 @@ object PFNGLPROGRAMPARAMETERIPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1DPROC = CFuncPtr3[GLuint, GLint, GLdouble, Unit]
+type PFNGLPROGRAMUNIFORM1DPROC = CFuncPtr3[GLuint, GLint, GLdouble, Unit]
 object PFNGLPROGRAMUNIFORM1DPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1DPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5839,7 +5839,7 @@ object PFNGLPROGRAMUNIFORM1DPROC:
     inline def value: CFuncPtr3[GLuint, GLint, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORM1DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORM1DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1DVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5848,7 +5848,7 @@ object PFNGLPROGRAMUNIFORM1DVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1FPROC = CFuncPtr3[GLuint, GLint, GLfloat, Unit]
+type PFNGLPROGRAMUNIFORM1FPROC = CFuncPtr3[GLuint, GLint, GLfloat, Unit]
 object PFNGLPROGRAMUNIFORM1FPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1FPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5857,7 +5857,7 @@ object PFNGLPROGRAMUNIFORM1FPROC:
     inline def value: CFuncPtr3[GLuint, GLint, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORM1FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORM1FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1FVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5866,7 +5866,7 @@ object PFNGLPROGRAMUNIFORM1FVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1IPROC = CFuncPtr3[GLuint, GLint, GLint, Unit]
+type PFNGLPROGRAMUNIFORM1IPROC = CFuncPtr3[GLuint, GLint, GLint, Unit]
 object PFNGLPROGRAMUNIFORM1IPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1IPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5875,7 +5875,7 @@ object PFNGLPROGRAMUNIFORM1IPROC:
     inline def value: CFuncPtr3[GLuint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLPROGRAMUNIFORM1IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLPROGRAMUNIFORM1IVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1IVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5884,7 +5884,7 @@ object PFNGLPROGRAMUNIFORM1IVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1UIPROC = CFuncPtr3[GLuint, GLint, GLuint, Unit]
+type PFNGLPROGRAMUNIFORM1UIPROC = CFuncPtr3[GLuint, GLint, GLuint, Unit]
 object PFNGLPROGRAMUNIFORM1UIPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1UIPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5893,7 +5893,7 @@ object PFNGLPROGRAMUNIFORM1UIPROC:
     inline def value: CFuncPtr3[GLuint, GLint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM1UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLPROGRAMUNIFORM1UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLPROGRAMUNIFORM1UIVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM1UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM1UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5902,7 +5902,7 @@ object PFNGLPROGRAMUNIFORM1UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2DPROC = CFuncPtr4[GLuint, GLint, GLdouble, GLdouble, Unit]
+type PFNGLPROGRAMUNIFORM2DPROC = CFuncPtr4[GLuint, GLint, GLdouble, GLdouble, Unit]
 object PFNGLPROGRAMUNIFORM2DPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2DPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5911,7 +5911,7 @@ object PFNGLPROGRAMUNIFORM2DPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORM2DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORM2DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2DVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5920,7 +5920,7 @@ object PFNGLPROGRAMUNIFORM2DVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2FPROC = CFuncPtr4[GLuint, GLint, GLfloat, GLfloat, Unit]
+type PFNGLPROGRAMUNIFORM2FPROC = CFuncPtr4[GLuint, GLint, GLfloat, GLfloat, Unit]
 object PFNGLPROGRAMUNIFORM2FPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2FPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5929,7 +5929,7 @@ object PFNGLPROGRAMUNIFORM2FPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORM2FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORM2FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2FVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5938,7 +5938,7 @@ object PFNGLPROGRAMUNIFORM2FVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2IPROC = CFuncPtr4[GLuint, GLint, GLint, GLint, Unit]
+type PFNGLPROGRAMUNIFORM2IPROC = CFuncPtr4[GLuint, GLint, GLint, GLint, Unit]
 object PFNGLPROGRAMUNIFORM2IPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2IPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5947,7 +5947,7 @@ object PFNGLPROGRAMUNIFORM2IPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLPROGRAMUNIFORM2IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLPROGRAMUNIFORM2IVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2IVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5956,7 +5956,7 @@ object PFNGLPROGRAMUNIFORM2IVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2UIPROC = CFuncPtr4[GLuint, GLint, GLuint, GLuint, Unit]
+type PFNGLPROGRAMUNIFORM2UIPROC = CFuncPtr4[GLuint, GLint, GLuint, GLuint, Unit]
 object PFNGLPROGRAMUNIFORM2UIPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2UIPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5965,7 +5965,7 @@ object PFNGLPROGRAMUNIFORM2UIPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM2UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLPROGRAMUNIFORM2UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLPROGRAMUNIFORM2UIVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM2UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM2UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5974,7 +5974,7 @@ object PFNGLPROGRAMUNIFORM2UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3DPROC = CFuncPtr5[GLuint, GLint, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLPROGRAMUNIFORM3DPROC = CFuncPtr5[GLuint, GLint, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLPROGRAMUNIFORM3DPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3DPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5983,7 +5983,7 @@ object PFNGLPROGRAMUNIFORM3DPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORM3DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORM3DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3DVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -5992,7 +5992,7 @@ object PFNGLPROGRAMUNIFORM3DVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3FPROC = CFuncPtr5[GLuint, GLint, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLPROGRAMUNIFORM3FPROC = CFuncPtr5[GLuint, GLint, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLPROGRAMUNIFORM3FPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3FPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6001,7 +6001,7 @@ object PFNGLPROGRAMUNIFORM3FPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORM3FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORM3FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3FVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6010,7 +6010,7 @@ object PFNGLPROGRAMUNIFORM3FVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3IPROC = CFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit]
+type PFNGLPROGRAMUNIFORM3IPROC = CFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit]
 object PFNGLPROGRAMUNIFORM3IPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3IPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6019,7 +6019,7 @@ object PFNGLPROGRAMUNIFORM3IPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLPROGRAMUNIFORM3IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLPROGRAMUNIFORM3IVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3IVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6028,7 +6028,7 @@ object PFNGLPROGRAMUNIFORM3IVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3UIPROC = CFuncPtr5[GLuint, GLint, GLuint, GLuint, GLuint, Unit]
+type PFNGLPROGRAMUNIFORM3UIPROC = CFuncPtr5[GLuint, GLint, GLuint, GLuint, GLuint, Unit]
 object PFNGLPROGRAMUNIFORM3UIPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3UIPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6037,7 +6037,7 @@ object PFNGLPROGRAMUNIFORM3UIPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM3UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLPROGRAMUNIFORM3UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLPROGRAMUNIFORM3UIVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM3UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6046,7 +6046,7 @@ object PFNGLPROGRAMUNIFORM3UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4DPROC = CFuncPtr6[GLuint, GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLPROGRAMUNIFORM4DPROC = CFuncPtr6[GLuint, GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLPROGRAMUNIFORM4DPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4DPROC] = Tag.materializeCFuncPtr6[GLuint, GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6055,7 +6055,7 @@ object PFNGLPROGRAMUNIFORM4DPROC:
     inline def value: CFuncPtr6[GLuint, GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORM4DVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORM4DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4DVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6064,7 +6064,7 @@ object PFNGLPROGRAMUNIFORM4DVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4FPROC = CFuncPtr6[GLuint, GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLPROGRAMUNIFORM4FPROC = CFuncPtr6[GLuint, GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLPROGRAMUNIFORM4FPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4FPROC] = Tag.materializeCFuncPtr6[GLuint, GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6073,7 +6073,7 @@ object PFNGLPROGRAMUNIFORM4FPROC:
     inline def value: CFuncPtr6[GLuint, GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORM4FVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORM4FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4FVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6082,7 +6082,7 @@ object PFNGLPROGRAMUNIFORM4FVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4IPROC = CFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLint, Unit]
+type PFNGLPROGRAMUNIFORM4IPROC = CFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLint, Unit]
 object PFNGLPROGRAMUNIFORM4IPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4IPROC] = Tag.materializeCFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6091,7 +6091,7 @@ object PFNGLPROGRAMUNIFORM4IPROC:
     inline def value: CFuncPtr6[GLuint, GLint, GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLPROGRAMUNIFORM4IVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLPROGRAMUNIFORM4IVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4IVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6100,7 +6100,7 @@ object PFNGLPROGRAMUNIFORM4IVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4UIPROC = CFuncPtr6[GLuint, GLint, GLuint, GLuint, GLuint, GLuint, Unit]
+type PFNGLPROGRAMUNIFORM4UIPROC = CFuncPtr6[GLuint, GLint, GLuint, GLuint, GLuint, GLuint, Unit]
 object PFNGLPROGRAMUNIFORM4UIPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4UIPROC] = Tag.materializeCFuncPtr6[GLuint, GLint, GLuint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6109,7 +6109,7 @@ object PFNGLPROGRAMUNIFORM4UIPROC:
     inline def value: CFuncPtr6[GLuint, GLint, GLuint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORM4UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLPROGRAMUNIFORM4UIVPROC = CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLPROGRAMUNIFORM4UIVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORM4UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORM4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6118,7 +6118,7 @@ object PFNGLPROGRAMUNIFORM4UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX2DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX2DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX2DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX2DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6127,7 +6127,7 @@ object PFNGLPROGRAMUNIFORMMATRIX2DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX2FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX2FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX2FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX2FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6136,7 +6136,7 @@ object PFNGLPROGRAMUNIFORMMATRIX2FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6145,7 +6145,7 @@ object PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6154,7 +6154,7 @@ object PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6163,7 +6163,7 @@ object PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6172,7 +6172,7 @@ object PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX3DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX3DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX3DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX3DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6181,7 +6181,7 @@ object PFNGLPROGRAMUNIFORMMATRIX3DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX3FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX3FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX3FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX3FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6190,7 +6190,7 @@ object PFNGLPROGRAMUNIFORMMATRIX3FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6199,7 +6199,7 @@ object PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6208,7 +6208,7 @@ object PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6217,7 +6217,7 @@ object PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6226,7 +6226,7 @@ object PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX4DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX4DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX4DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX4DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6235,7 +6235,7 @@ object PFNGLPROGRAMUNIFORMMATRIX4DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX4FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX4FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX4FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX4FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6244,7 +6244,7 @@ object PFNGLPROGRAMUNIFORMMATRIX4FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6253,7 +6253,7 @@ object PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6262,7 +6262,7 @@ object PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6271,7 +6271,7 @@ object PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC = CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC:
   given _tag: Tag[PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6280,7 +6280,7 @@ object PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPROVOKINGVERTEXPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLPROVOKINGVERTEXPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLPROVOKINGVERTEXPROC:
   given _tag: Tag[PFNGLPROVOKINGVERTEXPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPROVOKINGVERTEXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6289,7 +6289,7 @@ object PFNGLPROVOKINGVERTEXPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPUSHATTRIBPROC = CFuncPtr1[GLbitfield, Unit]
+type PFNGLPUSHATTRIBPROC = CFuncPtr1[GLbitfield, Unit]
 object PFNGLPUSHATTRIBPROC:
   given _tag: Tag[PFNGLPUSHATTRIBPROC] = Tag.materializeCFuncPtr1[GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPUSHATTRIBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6298,7 +6298,7 @@ object PFNGLPUSHATTRIBPROC:
     inline def value: CFuncPtr1[GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPUSHCLIENTATTRIBPROC = CFuncPtr1[GLbitfield, Unit]
+type PFNGLPUSHCLIENTATTRIBPROC = CFuncPtr1[GLbitfield, Unit]
 object PFNGLPUSHCLIENTATTRIBPROC:
   given _tag: Tag[PFNGLPUSHCLIENTATTRIBPROC] = Tag.materializeCFuncPtr1[GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPUSHCLIENTATTRIBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6307,7 +6307,7 @@ object PFNGLPUSHCLIENTATTRIBPROC:
     inline def value: CFuncPtr1[GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPUSHDEBUGGROUPPROC = CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit]
+type PFNGLPUSHDEBUGGROUPPROC = CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit]
 object PFNGLPUSHDEBUGGROUPPROC:
   given _tag: Tag[PFNGLPUSHDEBUGGROUPPROC] = Tag.materializeCFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPUSHDEBUGGROUPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6316,7 +6316,7 @@ object PFNGLPUSHDEBUGGROUPPROC:
     inline def value: CFuncPtr4[GLenum, GLuint, GLsizei, Ptr[GLchar], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPUSHMATRIXPROC = CFuncPtr0[Unit]
+type PFNGLPUSHMATRIXPROC = CFuncPtr0[Unit]
 object PFNGLPUSHMATRIXPROC:
   given _tag: Tag[PFNGLPUSHMATRIXPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPUSHMATRIXPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6325,7 +6325,7 @@ object PFNGLPUSHMATRIXPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLPUSHNAMEPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLPUSHNAMEPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLPUSHNAMEPROC:
   given _tag: Tag[PFNGLPUSHNAMEPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLPUSHNAMEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6334,7 +6334,7 @@ object PFNGLPUSHNAMEPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLQUERYCOUNTERPROC = CFuncPtr2[GLuint, GLenum, Unit]
+type PFNGLQUERYCOUNTERPROC = CFuncPtr2[GLuint, GLenum, Unit]
 object PFNGLQUERYCOUNTERPROC:
   given _tag: Tag[PFNGLQUERYCOUNTERPROC] = Tag.materializeCFuncPtr2[GLuint, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLQUERYCOUNTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6343,7 +6343,7 @@ object PFNGLQUERYCOUNTERPROC:
     inline def value: CFuncPtr2[GLuint, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
+type PFNGLRASTERPOS2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
 object PFNGLRASTERPOS2DPROC:
   given _tag: Tag[PFNGLRASTERPOS2DPROC] = Tag.materializeCFuncPtr2[GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6352,7 +6352,7 @@ object PFNGLRASTERPOS2DPROC:
     inline def value: CFuncPtr2[GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLRASTERPOS2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLRASTERPOS2DVPROC:
   given _tag: Tag[PFNGLRASTERPOS2DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6361,7 +6361,7 @@ object PFNGLRASTERPOS2DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLRASTERPOS2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLRASTERPOS2FPROC:
   given _tag: Tag[PFNGLRASTERPOS2FPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6370,7 +6370,7 @@ object PFNGLRASTERPOS2FPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLRASTERPOS2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLRASTERPOS2FVPROC:
   given _tag: Tag[PFNGLRASTERPOS2FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6379,7 +6379,7 @@ object PFNGLRASTERPOS2FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2IPROC = CFuncPtr2[GLint, GLint, Unit]
+type PFNGLRASTERPOS2IPROC = CFuncPtr2[GLint, GLint, Unit]
 object PFNGLRASTERPOS2IPROC:
   given _tag: Tag[PFNGLRASTERPOS2IPROC] = Tag.materializeCFuncPtr2[GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6388,7 +6388,7 @@ object PFNGLRASTERPOS2IPROC:
     inline def value: CFuncPtr2[GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLRASTERPOS2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLRASTERPOS2IVPROC:
   given _tag: Tag[PFNGLRASTERPOS2IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6397,7 +6397,7 @@ object PFNGLRASTERPOS2IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
+type PFNGLRASTERPOS2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
 object PFNGLRASTERPOS2SPROC:
   given _tag: Tag[PFNGLRASTERPOS2SPROC] = Tag.materializeCFuncPtr2[GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6406,7 +6406,7 @@ object PFNGLRASTERPOS2SPROC:
     inline def value: CFuncPtr2[GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLRASTERPOS2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLRASTERPOS2SVPROC:
   given _tag: Tag[PFNGLRASTERPOS2SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS2SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6415,7 +6415,7 @@ object PFNGLRASTERPOS2SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLRASTERPOS3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLRASTERPOS3DPROC:
   given _tag: Tag[PFNGLRASTERPOS3DPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6424,7 +6424,7 @@ object PFNGLRASTERPOS3DPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLRASTERPOS3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLRASTERPOS3DVPROC:
   given _tag: Tag[PFNGLRASTERPOS3DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6433,7 +6433,7 @@ object PFNGLRASTERPOS3DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLRASTERPOS3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLRASTERPOS3FPROC:
   given _tag: Tag[PFNGLRASTERPOS3FPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6442,7 +6442,7 @@ object PFNGLRASTERPOS3FPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLRASTERPOS3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLRASTERPOS3FVPROC:
   given _tag: Tag[PFNGLRASTERPOS3FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6451,7 +6451,7 @@ object PFNGLRASTERPOS3FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLRASTERPOS3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLRASTERPOS3IPROC:
   given _tag: Tag[PFNGLRASTERPOS3IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6460,7 +6460,7 @@ object PFNGLRASTERPOS3IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLRASTERPOS3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLRASTERPOS3IVPROC:
   given _tag: Tag[PFNGLRASTERPOS3IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6469,7 +6469,7 @@ object PFNGLRASTERPOS3IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
+type PFNGLRASTERPOS3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
 object PFNGLRASTERPOS3SPROC:
   given _tag: Tag[PFNGLRASTERPOS3SPROC] = Tag.materializeCFuncPtr3[GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6478,7 +6478,7 @@ object PFNGLRASTERPOS3SPROC:
     inline def value: CFuncPtr3[GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLRASTERPOS3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLRASTERPOS3SVPROC:
   given _tag: Tag[PFNGLRASTERPOS3SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6487,7 +6487,7 @@ object PFNGLRASTERPOS3SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLRASTERPOS4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLRASTERPOS4DPROC:
   given _tag: Tag[PFNGLRASTERPOS4DPROC] = Tag.materializeCFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6496,7 +6496,7 @@ object PFNGLRASTERPOS4DPROC:
     inline def value: CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLRASTERPOS4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLRASTERPOS4DVPROC:
   given _tag: Tag[PFNGLRASTERPOS4DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6505,7 +6505,7 @@ object PFNGLRASTERPOS4DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLRASTERPOS4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLRASTERPOS4FPROC:
   given _tag: Tag[PFNGLRASTERPOS4FPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6514,7 +6514,7 @@ object PFNGLRASTERPOS4FPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLRASTERPOS4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLRASTERPOS4FVPROC:
   given _tag: Tag[PFNGLRASTERPOS4FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6523,7 +6523,7 @@ object PFNGLRASTERPOS4FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
+type PFNGLRASTERPOS4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
 object PFNGLRASTERPOS4IPROC:
   given _tag: Tag[PFNGLRASTERPOS4IPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6532,7 +6532,7 @@ object PFNGLRASTERPOS4IPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLRASTERPOS4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLRASTERPOS4IVPROC:
   given _tag: Tag[PFNGLRASTERPOS4IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6541,7 +6541,7 @@ object PFNGLRASTERPOS4IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
+type PFNGLRASTERPOS4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
 object PFNGLRASTERPOS4SPROC:
   given _tag: Tag[PFNGLRASTERPOS4SPROC] = Tag.materializeCFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6550,7 +6550,7 @@ object PFNGLRASTERPOS4SPROC:
     inline def value: CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRASTERPOS4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLRASTERPOS4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLRASTERPOS4SVPROC:
   given _tag: Tag[PFNGLRASTERPOS4SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRASTERPOS4SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6559,7 +6559,7 @@ object PFNGLRASTERPOS4SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLREADBUFFERPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLREADBUFFERPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLREADBUFFERPROC:
   given _tag: Tag[PFNGLREADBUFFERPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLREADBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6568,7 +6568,7 @@ object PFNGLREADBUFFERPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLREADNPIXELSPROC = CFuncPtr8[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLREADNPIXELSPROC = CFuncPtr8[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLREADNPIXELSPROC:
   given _tag: Tag[PFNGLREADNPIXELSPROC] = Tag.materializeCFuncPtr8[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLREADNPIXELSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6577,7 +6577,7 @@ object PFNGLREADNPIXELSPROC:
     inline def value: CFuncPtr8[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLREADPIXELSPROC = CFuncPtr7[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLREADPIXELSPROC = CFuncPtr7[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLREADPIXELSPROC:
   given _tag: Tag[PFNGLREADPIXELSPROC] = Tag.materializeCFuncPtr7[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLREADPIXELSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6586,7 +6586,7 @@ object PFNGLREADPIXELSPROC:
     inline def value: CFuncPtr7[GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTDPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLRECTDPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLRECTDPROC:
   given _tag: Tag[PFNGLRECTDPROC] = Tag.materializeCFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6595,7 +6595,7 @@ object PFNGLRECTDPROC:
     inline def value: CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTDVPROC = CFuncPtr2[Ptr[GLdouble], Ptr[GLdouble], Unit]
+type PFNGLRECTDVPROC = CFuncPtr2[Ptr[GLdouble], Ptr[GLdouble], Unit]
 object PFNGLRECTDVPROC:
   given _tag: Tag[PFNGLRECTDVPROC] = Tag.materializeCFuncPtr2[Ptr[GLdouble], Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6604,7 +6604,7 @@ object PFNGLRECTDVPROC:
     inline def value: CFuncPtr2[Ptr[GLdouble], Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTFPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLRECTFPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLRECTFPROC:
   given _tag: Tag[PFNGLRECTFPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6613,7 +6613,7 @@ object PFNGLRECTFPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTFVPROC = CFuncPtr2[Ptr[GLfloat], Ptr[GLfloat], Unit]
+type PFNGLRECTFVPROC = CFuncPtr2[Ptr[GLfloat], Ptr[GLfloat], Unit]
 object PFNGLRECTFVPROC:
   given _tag: Tag[PFNGLRECTFVPROC] = Tag.materializeCFuncPtr2[Ptr[GLfloat], Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6622,7 +6622,7 @@ object PFNGLRECTFVPROC:
     inline def value: CFuncPtr2[Ptr[GLfloat], Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTIPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
+type PFNGLRECTIPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
 object PFNGLRECTIPROC:
   given _tag: Tag[PFNGLRECTIPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6631,7 +6631,7 @@ object PFNGLRECTIPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTIVPROC = CFuncPtr2[Ptr[GLint], Ptr[GLint], Unit]
+type PFNGLRECTIVPROC = CFuncPtr2[Ptr[GLint], Ptr[GLint], Unit]
 object PFNGLRECTIVPROC:
   given _tag: Tag[PFNGLRECTIVPROC] = Tag.materializeCFuncPtr2[Ptr[GLint], Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6640,7 +6640,7 @@ object PFNGLRECTIVPROC:
     inline def value: CFuncPtr2[Ptr[GLint], Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTSPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
+type PFNGLRECTSPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
 object PFNGLRECTSPROC:
   given _tag: Tag[PFNGLRECTSPROC] = Tag.materializeCFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6649,7 +6649,7 @@ object PFNGLRECTSPROC:
     inline def value: CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRECTSVPROC = CFuncPtr2[Ptr[GLshort], Ptr[GLshort], Unit]
+type PFNGLRECTSVPROC = CFuncPtr2[Ptr[GLshort], Ptr[GLshort], Unit]
 object PFNGLRECTSVPROC:
   given _tag: Tag[PFNGLRECTSVPROC] = Tag.materializeCFuncPtr2[Ptr[GLshort], Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRECTSVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6658,7 +6658,7 @@ object PFNGLRECTSVPROC:
     inline def value: CFuncPtr2[Ptr[GLshort], Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRELEASESHADERCOMPILERPROC = CFuncPtr0[Unit]
+type PFNGLRELEASESHADERCOMPILERPROC = CFuncPtr0[Unit]
 object PFNGLRELEASESHADERCOMPILERPROC:
   given _tag: Tag[PFNGLRELEASESHADERCOMPILERPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRELEASESHADERCOMPILERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6667,7 +6667,7 @@ object PFNGLRELEASESHADERCOMPILERPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC = CFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit]
+type PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC = CFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit]
 object PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC:
   given _tag: Tag[PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC] = Tag.materializeCFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6676,7 +6676,7 @@ object PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC:
     inline def value: CFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRENDERBUFFERSTORAGEPROC = CFuncPtr4[GLenum, GLenum, GLsizei, GLsizei, Unit]
+type PFNGLRENDERBUFFERSTORAGEPROC = CFuncPtr4[GLenum, GLenum, GLsizei, GLsizei, Unit]
 object PFNGLRENDERBUFFERSTORAGEPROC:
   given _tag: Tag[PFNGLRENDERBUFFERSTORAGEPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRENDERBUFFERSTORAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6685,7 +6685,7 @@ object PFNGLRENDERBUFFERSTORAGEPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRENDERMODEPROC = CFuncPtr1[GLenum, GLint]
+type PFNGLRENDERMODEPROC = CFuncPtr1[GLenum, GLint]
 object PFNGLRENDERMODEPROC:
   given _tag: Tag[PFNGLRENDERMODEPROC] = Tag.materializeCFuncPtr1[GLenum, GLint]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRENDERMODEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6694,7 +6694,7 @@ object PFNGLRENDERMODEPROC:
     inline def value: CFuncPtr1[GLenum, GLint] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLRESUMETRANSFORMFEEDBACKPROC = CFuncPtr0[Unit]
+type PFNGLRESUMETRANSFORMFEEDBACKPROC = CFuncPtr0[Unit]
 object PFNGLRESUMETRANSFORMFEEDBACKPROC:
   given _tag: Tag[PFNGLRESUMETRANSFORMFEEDBACKPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLRESUMETRANSFORMFEEDBACKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6703,7 +6703,7 @@ object PFNGLRESUMETRANSFORMFEEDBACKPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLROTATEDPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLROTATEDPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLROTATEDPROC:
   given _tag: Tag[PFNGLROTATEDPROC] = Tag.materializeCFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLROTATEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6712,7 +6712,7 @@ object PFNGLROTATEDPROC:
     inline def value: CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLROTATEFPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLROTATEFPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLROTATEFPROC:
   given _tag: Tag[PFNGLROTATEFPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLROTATEFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6721,7 +6721,7 @@ object PFNGLROTATEFPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLECOVERAGEPROC = CFuncPtr2[GLfloat, GLboolean, Unit]
+type PFNGLSAMPLECOVERAGEPROC = CFuncPtr2[GLfloat, GLboolean, Unit]
 object PFNGLSAMPLECOVERAGEPROC:
   given _tag: Tag[PFNGLSAMPLECOVERAGEPROC] = Tag.materializeCFuncPtr2[GLfloat, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLECOVERAGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6730,7 +6730,7 @@ object PFNGLSAMPLECOVERAGEPROC:
     inline def value: CFuncPtr2[GLfloat, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLEMASKIPROC = CFuncPtr2[GLuint, GLbitfield, Unit]
+type PFNGLSAMPLEMASKIPROC = CFuncPtr2[GLuint, GLbitfield, Unit]
 object PFNGLSAMPLEMASKIPROC:
   given _tag: Tag[PFNGLSAMPLEMASKIPROC] = Tag.materializeCFuncPtr2[GLuint, GLbitfield, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLEMASKIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6739,7 +6739,7 @@ object PFNGLSAMPLEMASKIPROC:
     inline def value: CFuncPtr2[GLuint, GLbitfield, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLERPARAMETERFPROC = CFuncPtr3[GLuint, GLenum, GLfloat, Unit]
+type PFNGLSAMPLERPARAMETERFPROC = CFuncPtr3[GLuint, GLenum, GLfloat, Unit]
 object PFNGLSAMPLERPARAMETERFPROC:
   given _tag: Tag[PFNGLSAMPLERPARAMETERFPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLERPARAMETERFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6748,7 +6748,7 @@ object PFNGLSAMPLERPARAMETERFPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLERPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
+type PFNGLSAMPLERPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
 object PFNGLSAMPLERPARAMETERFVPROC:
   given _tag: Tag[PFNGLSAMPLERPARAMETERFVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLERPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6757,7 +6757,7 @@ object PFNGLSAMPLERPARAMETERFVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLERPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLSAMPLERPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLSAMPLERPARAMETERIIVPROC:
   given _tag: Tag[PFNGLSAMPLERPARAMETERIIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLERPARAMETERIIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6766,7 +6766,7 @@ object PFNGLSAMPLERPARAMETERIIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLERPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
+type PFNGLSAMPLERPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
 object PFNGLSAMPLERPARAMETERIPROC:
   given _tag: Tag[PFNGLSAMPLERPARAMETERIPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLERPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6775,7 +6775,7 @@ object PFNGLSAMPLERPARAMETERIPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLERPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
+type PFNGLSAMPLERPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
 object PFNGLSAMPLERPARAMETERIUIVPROC:
   given _tag: Tag[PFNGLSAMPLERPARAMETERIUIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLERPARAMETERIUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6784,7 +6784,7 @@ object PFNGLSAMPLERPARAMETERIUIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSAMPLERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLSAMPLERPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLSAMPLERPARAMETERIVPROC:
   given _tag: Tag[PFNGLSAMPLERPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSAMPLERPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6793,7 +6793,7 @@ object PFNGLSAMPLERPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSCALEDPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLSCALEDPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLSCALEDPROC:
   given _tag: Tag[PFNGLSCALEDPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSCALEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6802,7 +6802,7 @@ object PFNGLSCALEDPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSCALEFPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLSCALEFPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLSCALEFPROC:
   given _tag: Tag[PFNGLSCALEFPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSCALEFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6811,7 +6811,7 @@ object PFNGLSCALEFPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSCISSORARRAYVPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLint], Unit]
+type PFNGLSCISSORARRAYVPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLint], Unit]
 object PFNGLSCISSORARRAYVPROC:
   given _tag: Tag[PFNGLSCISSORARRAYVPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSCISSORARRAYVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6820,7 +6820,7 @@ object PFNGLSCISSORARRAYVPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSCISSORINDEXEDPROC = CFuncPtr5[GLuint, GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLSCISSORINDEXEDPROC = CFuncPtr5[GLuint, GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLSCISSORINDEXEDPROC:
   given _tag: Tag[PFNGLSCISSORINDEXEDPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSCISSORINDEXEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6829,7 +6829,7 @@ object PFNGLSCISSORINDEXEDPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSCISSORINDEXEDVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
+type PFNGLSCISSORINDEXEDVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
 object PFNGLSCISSORINDEXEDVPROC:
   given _tag: Tag[PFNGLSCISSORINDEXEDVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSCISSORINDEXEDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6838,7 +6838,7 @@ object PFNGLSCISSORINDEXEDVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSCISSORPROC = CFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLSCISSORPROC = CFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLSCISSORPROC:
   given _tag: Tag[PFNGLSCISSORPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSCISSORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6847,7 +6847,7 @@ object PFNGLSCISSORPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3BPROC = CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
+type PFNGLSECONDARYCOLOR3BPROC = CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
 object PFNGLSECONDARYCOLOR3BPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3BPROC] = Tag.materializeCFuncPtr3[GLbyte, GLbyte, GLbyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3BPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6856,7 +6856,7 @@ object PFNGLSECONDARYCOLOR3BPROC:
     inline def value: CFuncPtr3[GLbyte, GLbyte, GLbyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
+type PFNGLSECONDARYCOLOR3BVPROC = CFuncPtr1[Ptr[GLbyte], Unit]
 object PFNGLSECONDARYCOLOR3BVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3BVPROC] = Tag.materializeCFuncPtr1[Ptr[GLbyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3BVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6865,7 +6865,7 @@ object PFNGLSECONDARYCOLOR3BVPROC:
     inline def value: CFuncPtr1[Ptr[GLbyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLSECONDARYCOLOR3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLSECONDARYCOLOR3DPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3DPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6874,7 +6874,7 @@ object PFNGLSECONDARYCOLOR3DPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLSECONDARYCOLOR3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLSECONDARYCOLOR3DVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6883,7 +6883,7 @@ object PFNGLSECONDARYCOLOR3DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLSECONDARYCOLOR3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLSECONDARYCOLOR3FPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3FPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6892,7 +6892,7 @@ object PFNGLSECONDARYCOLOR3FPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLSECONDARYCOLOR3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLSECONDARYCOLOR3FVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6901,7 +6901,7 @@ object PFNGLSECONDARYCOLOR3FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLSECONDARYCOLOR3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLSECONDARYCOLOR3IPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6910,7 +6910,7 @@ object PFNGLSECONDARYCOLOR3IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLSECONDARYCOLOR3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLSECONDARYCOLOR3IVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6919,7 +6919,7 @@ object PFNGLSECONDARYCOLOR3IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
+type PFNGLSECONDARYCOLOR3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
 object PFNGLSECONDARYCOLOR3SPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3SPROC] = Tag.materializeCFuncPtr3[GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6928,7 +6928,7 @@ object PFNGLSECONDARYCOLOR3SPROC:
     inline def value: CFuncPtr3[GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLSECONDARYCOLOR3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLSECONDARYCOLOR3SVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6937,7 +6937,7 @@ object PFNGLSECONDARYCOLOR3SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3UBPROC = CFuncPtr3[GLubyte, GLubyte, GLubyte, Unit]
+type PFNGLSECONDARYCOLOR3UBPROC = CFuncPtr3[GLubyte, GLubyte, GLubyte, Unit]
 object PFNGLSECONDARYCOLOR3UBPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3UBPROC] = Tag.materializeCFuncPtr3[GLubyte, GLubyte, GLubyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3UBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6946,7 +6946,7 @@ object PFNGLSECONDARYCOLOR3UBPROC:
     inline def value: CFuncPtr3[GLubyte, GLubyte, GLubyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3UBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
+type PFNGLSECONDARYCOLOR3UBVPROC = CFuncPtr1[Ptr[GLubyte], Unit]
 object PFNGLSECONDARYCOLOR3UBVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3UBVPROC] = Tag.materializeCFuncPtr1[Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3UBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6955,7 +6955,7 @@ object PFNGLSECONDARYCOLOR3UBVPROC:
     inline def value: CFuncPtr1[Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3UIPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLSECONDARYCOLOR3UIPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLSECONDARYCOLOR3UIPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3UIPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6964,7 +6964,7 @@ object PFNGLSECONDARYCOLOR3UIPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3UIVPROC = CFuncPtr1[Ptr[GLuint], Unit]
+type PFNGLSECONDARYCOLOR3UIVPROC = CFuncPtr1[Ptr[GLuint], Unit]
 object PFNGLSECONDARYCOLOR3UIVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3UIVPROC] = Tag.materializeCFuncPtr1[Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6973,7 +6973,7 @@ object PFNGLSECONDARYCOLOR3UIVPROC:
     inline def value: CFuncPtr1[Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3USPROC = CFuncPtr3[GLushort, GLushort, GLushort, Unit]
+type PFNGLSECONDARYCOLOR3USPROC = CFuncPtr3[GLushort, GLushort, GLushort, Unit]
 object PFNGLSECONDARYCOLOR3USPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3USPROC] = Tag.materializeCFuncPtr3[GLushort, GLushort, GLushort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3USPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6982,7 +6982,7 @@ object PFNGLSECONDARYCOLOR3USPROC:
     inline def value: CFuncPtr3[GLushort, GLushort, GLushort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLOR3USVPROC = CFuncPtr1[Ptr[GLushort], Unit]
+type PFNGLSECONDARYCOLOR3USVPROC = CFuncPtr1[Ptr[GLushort], Unit]
 object PFNGLSECONDARYCOLOR3USVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLOR3USVPROC] = Tag.materializeCFuncPtr1[Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLOR3USVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -6991,7 +6991,7 @@ object PFNGLSECONDARYCOLOR3USVPROC:
     inline def value: CFuncPtr1[Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLORP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLSECONDARYCOLORP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLSECONDARYCOLORP3UIPROC:
   given _tag: Tag[PFNGLSECONDARYCOLORP3UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLORP3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7000,7 +7000,7 @@ object PFNGLSECONDARYCOLORP3UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLORP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLSECONDARYCOLORP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLSECONDARYCOLORP3UIVPROC:
   given _tag: Tag[PFNGLSECONDARYCOLORP3UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLORP3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7009,7 +7009,7 @@ object PFNGLSECONDARYCOLORP3UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSECONDARYCOLORPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLSECONDARYCOLORPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLSECONDARYCOLORPOINTERPROC:
   given _tag: Tag[PFNGLSECONDARYCOLORPOINTERPROC] = Tag.materializeCFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSECONDARYCOLORPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7018,7 +7018,7 @@ object PFNGLSECONDARYCOLORPOINTERPROC:
     inline def value: CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSELECTBUFFERPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
+type PFNGLSELECTBUFFERPROC = CFuncPtr2[GLsizei, Ptr[GLuint], Unit]
 object PFNGLSELECTBUFFERPROC:
   given _tag: Tag[PFNGLSELECTBUFFERPROC] = Tag.materializeCFuncPtr2[GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSELECTBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7027,7 +7027,7 @@ object PFNGLSELECTBUFFERPROC:
     inline def value: CFuncPtr2[GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSHADEMODELPROC = CFuncPtr1[GLenum, Unit]
+type PFNGLSHADEMODELPROC = CFuncPtr1[GLenum, Unit]
 object PFNGLSHADEMODELPROC:
   given _tag: Tag[PFNGLSHADEMODELPROC] = Tag.materializeCFuncPtr1[GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSHADEMODELPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7036,7 +7036,7 @@ object PFNGLSHADEMODELPROC:
     inline def value: CFuncPtr1[GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSHADERBINARYPROC = CFuncPtr5[GLsizei, Ptr[GLuint], GLenum, Ptr[Byte], GLsizei, Unit]
+type PFNGLSHADERBINARYPROC = CFuncPtr5[GLsizei, Ptr[GLuint], GLenum, Ptr[Byte], GLsizei, Unit]
 object PFNGLSHADERBINARYPROC:
   given _tag: Tag[PFNGLSHADERBINARYPROC] = Tag.materializeCFuncPtr5[GLsizei, Ptr[GLuint], GLenum, Ptr[Byte], GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSHADERBINARYPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7045,7 +7045,7 @@ object PFNGLSHADERBINARYPROC:
     inline def value: CFuncPtr5[GLsizei, Ptr[GLuint], GLenum, Ptr[Byte], GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSHADERSOURCEPROC = CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLint], Unit]
+type PFNGLSHADERSOURCEPROC = CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLint], Unit]
 object PFNGLSHADERSOURCEPROC:
   given _tag: Tag[PFNGLSHADERSOURCEPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSHADERSOURCEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7054,7 +7054,7 @@ object PFNGLSHADERSOURCEPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSHADERSTORAGEBLOCKBINDINGPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLSHADERSTORAGEBLOCKBINDINGPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLSHADERSTORAGEBLOCKBINDINGPROC:
   given _tag: Tag[PFNGLSHADERSTORAGEBLOCKBINDINGPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSHADERSTORAGEBLOCKBINDINGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7063,7 +7063,7 @@ object PFNGLSHADERSTORAGEBLOCKBINDINGPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSPECIALIZESHADERPROC = CFuncPtr5[GLuint, Ptr[GLchar], GLuint, Ptr[GLuint], Ptr[GLuint], Unit]
+type PFNGLSPECIALIZESHADERPROC = CFuncPtr5[GLuint, Ptr[GLchar], GLuint, Ptr[GLuint], Ptr[GLuint], Unit]
 object PFNGLSPECIALIZESHADERPROC:
   given _tag: Tag[PFNGLSPECIALIZESHADERPROC] = Tag.materializeCFuncPtr5[GLuint, Ptr[GLchar], GLuint, Ptr[GLuint], Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSPECIALIZESHADERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7072,7 +7072,7 @@ object PFNGLSPECIALIZESHADERPROC:
     inline def value: CFuncPtr5[GLuint, Ptr[GLchar], GLuint, Ptr[GLuint], Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSTENCILFUNCPROC = CFuncPtr3[GLenum, GLint, GLuint, Unit]
+type PFNGLSTENCILFUNCPROC = CFuncPtr3[GLenum, GLint, GLuint, Unit]
 object PFNGLSTENCILFUNCPROC:
   given _tag: Tag[PFNGLSTENCILFUNCPROC] = Tag.materializeCFuncPtr3[GLenum, GLint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSTENCILFUNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7081,7 +7081,7 @@ object PFNGLSTENCILFUNCPROC:
     inline def value: CFuncPtr3[GLenum, GLint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSTENCILFUNCSEPARATEPROC = CFuncPtr4[GLenum, GLenum, GLint, GLuint, Unit]
+type PFNGLSTENCILFUNCSEPARATEPROC = CFuncPtr4[GLenum, GLenum, GLint, GLuint, Unit]
 object PFNGLSTENCILFUNCSEPARATEPROC:
   given _tag: Tag[PFNGLSTENCILFUNCSEPARATEPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSTENCILFUNCSEPARATEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7090,7 +7090,7 @@ object PFNGLSTENCILFUNCSEPARATEPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSTENCILMASKPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLSTENCILMASKPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLSTENCILMASKPROC:
   given _tag: Tag[PFNGLSTENCILMASKPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSTENCILMASKPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7099,7 +7099,7 @@ object PFNGLSTENCILMASKPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSTENCILMASKSEPARATEPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLSTENCILMASKSEPARATEPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLSTENCILMASKSEPARATEPROC:
   given _tag: Tag[PFNGLSTENCILMASKSEPARATEPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSTENCILMASKSEPARATEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7108,7 +7108,7 @@ object PFNGLSTENCILMASKSEPARATEPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSTENCILOPPROC = CFuncPtr3[GLenum, GLenum, GLenum, Unit]
+type PFNGLSTENCILOPPROC = CFuncPtr3[GLenum, GLenum, GLenum, Unit]
 object PFNGLSTENCILOPPROC:
   given _tag: Tag[PFNGLSTENCILOPPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSTENCILOPPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7117,7 +7117,7 @@ object PFNGLSTENCILOPPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLSTENCILOPSEPARATEPROC = CFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit]
+type PFNGLSTENCILOPSEPARATEPROC = CFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit]
 object PFNGLSTENCILOPSEPARATEPROC:
   given _tag: Tag[PFNGLSTENCILOPSEPARATEPROC] = Tag.materializeCFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLSTENCILOPSEPARATEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7126,7 +7126,7 @@ object PFNGLSTENCILOPSEPARATEPROC:
     inline def value: CFuncPtr4[GLenum, GLenum, GLenum, GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXBUFFERPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
+type PFNGLTEXBUFFERPROC = CFuncPtr3[GLenum, GLenum, GLuint, Unit]
 object PFNGLTEXBUFFERPROC:
   given _tag: Tag[PFNGLTEXBUFFERPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7135,7 +7135,7 @@ object PFNGLTEXBUFFERPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXBUFFERRANGEPROC = CFuncPtr5[GLenum, GLenum, GLuint, GLintptr, GLsizeiptr, Unit]
+type PFNGLTEXBUFFERRANGEPROC = CFuncPtr5[GLenum, GLenum, GLuint, GLintptr, GLsizeiptr, Unit]
 object PFNGLTEXBUFFERRANGEPROC:
   given _tag: Tag[PFNGLTEXBUFFERRANGEPROC] = Tag.materializeCFuncPtr5[GLenum, GLenum, GLuint, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7144,7 +7144,7 @@ object PFNGLTEXBUFFERRANGEPROC:
     inline def value: CFuncPtr5[GLenum, GLenum, GLuint, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1DPROC = CFuncPtr1[GLdouble, Unit]
+type PFNGLTEXCOORD1DPROC = CFuncPtr1[GLdouble, Unit]
 object PFNGLTEXCOORD1DPROC:
   given _tag: Tag[PFNGLTEXCOORD1DPROC] = Tag.materializeCFuncPtr1[GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7153,7 +7153,7 @@ object PFNGLTEXCOORD1DPROC:
     inline def value: CFuncPtr1[GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLTEXCOORD1DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLTEXCOORD1DVPROC:
   given _tag: Tag[PFNGLTEXCOORD1DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7162,7 +7162,7 @@ object PFNGLTEXCOORD1DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1FPROC = CFuncPtr1[GLfloat, Unit]
+type PFNGLTEXCOORD1FPROC = CFuncPtr1[GLfloat, Unit]
 object PFNGLTEXCOORD1FPROC:
   given _tag: Tag[PFNGLTEXCOORD1FPROC] = Tag.materializeCFuncPtr1[GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7171,7 +7171,7 @@ object PFNGLTEXCOORD1FPROC:
     inline def value: CFuncPtr1[GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLTEXCOORD1FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLTEXCOORD1FVPROC:
   given _tag: Tag[PFNGLTEXCOORD1FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7180,7 +7180,7 @@ object PFNGLTEXCOORD1FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1IPROC = CFuncPtr1[GLint, Unit]
+type PFNGLTEXCOORD1IPROC = CFuncPtr1[GLint, Unit]
 object PFNGLTEXCOORD1IPROC:
   given _tag: Tag[PFNGLTEXCOORD1IPROC] = Tag.materializeCFuncPtr1[GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7189,7 +7189,7 @@ object PFNGLTEXCOORD1IPROC:
     inline def value: CFuncPtr1[GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLTEXCOORD1IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLTEXCOORD1IVPROC:
   given _tag: Tag[PFNGLTEXCOORD1IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7198,7 +7198,7 @@ object PFNGLTEXCOORD1IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1SPROC = CFuncPtr1[GLshort, Unit]
+type PFNGLTEXCOORD1SPROC = CFuncPtr1[GLshort, Unit]
 object PFNGLTEXCOORD1SPROC:
   given _tag: Tag[PFNGLTEXCOORD1SPROC] = Tag.materializeCFuncPtr1[GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7207,7 +7207,7 @@ object PFNGLTEXCOORD1SPROC:
     inline def value: CFuncPtr1[GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD1SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLTEXCOORD1SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLTEXCOORD1SVPROC:
   given _tag: Tag[PFNGLTEXCOORD1SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD1SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7216,7 +7216,7 @@ object PFNGLTEXCOORD1SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
+type PFNGLTEXCOORD2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
 object PFNGLTEXCOORD2DPROC:
   given _tag: Tag[PFNGLTEXCOORD2DPROC] = Tag.materializeCFuncPtr2[GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7225,7 +7225,7 @@ object PFNGLTEXCOORD2DPROC:
     inline def value: CFuncPtr2[GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLTEXCOORD2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLTEXCOORD2DVPROC:
   given _tag: Tag[PFNGLTEXCOORD2DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7234,7 +7234,7 @@ object PFNGLTEXCOORD2DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLTEXCOORD2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLTEXCOORD2FPROC:
   given _tag: Tag[PFNGLTEXCOORD2FPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7243,7 +7243,7 @@ object PFNGLTEXCOORD2FPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLTEXCOORD2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLTEXCOORD2FVPROC:
   given _tag: Tag[PFNGLTEXCOORD2FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7252,7 +7252,7 @@ object PFNGLTEXCOORD2FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2IPROC = CFuncPtr2[GLint, GLint, Unit]
+type PFNGLTEXCOORD2IPROC = CFuncPtr2[GLint, GLint, Unit]
 object PFNGLTEXCOORD2IPROC:
   given _tag: Tag[PFNGLTEXCOORD2IPROC] = Tag.materializeCFuncPtr2[GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7261,7 +7261,7 @@ object PFNGLTEXCOORD2IPROC:
     inline def value: CFuncPtr2[GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLTEXCOORD2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLTEXCOORD2IVPROC:
   given _tag: Tag[PFNGLTEXCOORD2IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7270,7 +7270,7 @@ object PFNGLTEXCOORD2IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
+type PFNGLTEXCOORD2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
 object PFNGLTEXCOORD2SPROC:
   given _tag: Tag[PFNGLTEXCOORD2SPROC] = Tag.materializeCFuncPtr2[GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7279,7 +7279,7 @@ object PFNGLTEXCOORD2SPROC:
     inline def value: CFuncPtr2[GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLTEXCOORD2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLTEXCOORD2SVPROC:
   given _tag: Tag[PFNGLTEXCOORD2SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD2SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7288,7 +7288,7 @@ object PFNGLTEXCOORD2SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLTEXCOORD3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLTEXCOORD3DPROC:
   given _tag: Tag[PFNGLTEXCOORD3DPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7297,7 +7297,7 @@ object PFNGLTEXCOORD3DPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLTEXCOORD3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLTEXCOORD3DVPROC:
   given _tag: Tag[PFNGLTEXCOORD3DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7306,7 +7306,7 @@ object PFNGLTEXCOORD3DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLTEXCOORD3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLTEXCOORD3FPROC:
   given _tag: Tag[PFNGLTEXCOORD3FPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7315,7 +7315,7 @@ object PFNGLTEXCOORD3FPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLTEXCOORD3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLTEXCOORD3FVPROC:
   given _tag: Tag[PFNGLTEXCOORD3FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7324,7 +7324,7 @@ object PFNGLTEXCOORD3FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLTEXCOORD3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLTEXCOORD3IPROC:
   given _tag: Tag[PFNGLTEXCOORD3IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7333,7 +7333,7 @@ object PFNGLTEXCOORD3IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLTEXCOORD3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLTEXCOORD3IVPROC:
   given _tag: Tag[PFNGLTEXCOORD3IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7342,7 +7342,7 @@ object PFNGLTEXCOORD3IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
+type PFNGLTEXCOORD3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
 object PFNGLTEXCOORD3SPROC:
   given _tag: Tag[PFNGLTEXCOORD3SPROC] = Tag.materializeCFuncPtr3[GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7351,7 +7351,7 @@ object PFNGLTEXCOORD3SPROC:
     inline def value: CFuncPtr3[GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLTEXCOORD3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLTEXCOORD3SVPROC:
   given _tag: Tag[PFNGLTEXCOORD3SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7360,7 +7360,7 @@ object PFNGLTEXCOORD3SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLTEXCOORD4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLTEXCOORD4DPROC:
   given _tag: Tag[PFNGLTEXCOORD4DPROC] = Tag.materializeCFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7369,7 +7369,7 @@ object PFNGLTEXCOORD4DPROC:
     inline def value: CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLTEXCOORD4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLTEXCOORD4DVPROC:
   given _tag: Tag[PFNGLTEXCOORD4DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7378,7 +7378,7 @@ object PFNGLTEXCOORD4DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLTEXCOORD4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLTEXCOORD4FPROC:
   given _tag: Tag[PFNGLTEXCOORD4FPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7387,7 +7387,7 @@ object PFNGLTEXCOORD4FPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLTEXCOORD4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLTEXCOORD4FVPROC:
   given _tag: Tag[PFNGLTEXCOORD4FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7396,7 +7396,7 @@ object PFNGLTEXCOORD4FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
+type PFNGLTEXCOORD4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
 object PFNGLTEXCOORD4IPROC:
   given _tag: Tag[PFNGLTEXCOORD4IPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7405,7 +7405,7 @@ object PFNGLTEXCOORD4IPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLTEXCOORD4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLTEXCOORD4IVPROC:
   given _tag: Tag[PFNGLTEXCOORD4IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7414,7 +7414,7 @@ object PFNGLTEXCOORD4IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
+type PFNGLTEXCOORD4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
 object PFNGLTEXCOORD4SPROC:
   given _tag: Tag[PFNGLTEXCOORD4SPROC] = Tag.materializeCFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7423,7 +7423,7 @@ object PFNGLTEXCOORD4SPROC:
     inline def value: CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORD4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLTEXCOORD4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLTEXCOORD4SVPROC:
   given _tag: Tag[PFNGLTEXCOORD4SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORD4SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7432,7 +7432,7 @@ object PFNGLTEXCOORD4SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP1UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLTEXCOORDP1UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLTEXCOORDP1UIPROC:
   given _tag: Tag[PFNGLTEXCOORDP1UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP1UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7441,7 +7441,7 @@ object PFNGLTEXCOORDP1UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP1UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLTEXCOORDP1UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLTEXCOORDP1UIVPROC:
   given _tag: Tag[PFNGLTEXCOORDP1UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP1UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7450,7 +7450,7 @@ object PFNGLTEXCOORDP1UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP2UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLTEXCOORDP2UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLTEXCOORDP2UIPROC:
   given _tag: Tag[PFNGLTEXCOORDP2UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP2UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7459,7 +7459,7 @@ object PFNGLTEXCOORDP2UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP2UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLTEXCOORDP2UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLTEXCOORDP2UIVPROC:
   given _tag: Tag[PFNGLTEXCOORDP2UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP2UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7468,7 +7468,7 @@ object PFNGLTEXCOORDP2UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLTEXCOORDP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLTEXCOORDP3UIPROC:
   given _tag: Tag[PFNGLTEXCOORDP3UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7477,7 +7477,7 @@ object PFNGLTEXCOORDP3UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLTEXCOORDP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLTEXCOORDP3UIVPROC:
   given _tag: Tag[PFNGLTEXCOORDP3UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7486,7 +7486,7 @@ object PFNGLTEXCOORDP3UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP4UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLTEXCOORDP4UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLTEXCOORDP4UIPROC:
   given _tag: Tag[PFNGLTEXCOORDP4UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7495,7 +7495,7 @@ object PFNGLTEXCOORDP4UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDP4UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLTEXCOORDP4UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLTEXCOORDP4UIVPROC:
   given _tag: Tag[PFNGLTEXCOORDP4UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDP4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7504,7 +7504,7 @@ object PFNGLTEXCOORDP4UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXCOORDPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLTEXCOORDPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLTEXCOORDPOINTERPROC:
   given _tag: Tag[PFNGLTEXCOORDPOINTERPROC] = Tag.materializeCFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXCOORDPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7513,7 +7513,7 @@ object PFNGLTEXCOORDPOINTERPROC:
     inline def value: CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXENVFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
+type PFNGLTEXENVFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
 object PFNGLTEXENVFPROC:
   given _tag: Tag[PFNGLTEXENVFPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXENVFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7522,7 +7522,7 @@ object PFNGLTEXENVFPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXENVFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLTEXENVFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLTEXENVFVPROC:
   given _tag: Tag[PFNGLTEXENVFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXENVFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7531,7 +7531,7 @@ object PFNGLTEXENVFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXENVIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
+type PFNGLTEXENVIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
 object PFNGLTEXENVIPROC:
   given _tag: Tag[PFNGLTEXENVIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXENVIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7540,7 +7540,7 @@ object PFNGLTEXENVIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXENVIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLTEXENVIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLTEXENVIVPROC:
   given _tag: Tag[PFNGLTEXENVIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXENVIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7549,7 +7549,7 @@ object PFNGLTEXENVIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXGENDPROC = CFuncPtr3[GLenum, GLenum, GLdouble, Unit]
+type PFNGLTEXGENDPROC = CFuncPtr3[GLenum, GLenum, GLdouble, Unit]
 object PFNGLTEXGENDPROC:
   given _tag: Tag[PFNGLTEXGENDPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXGENDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7558,7 +7558,7 @@ object PFNGLTEXGENDPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXGENDVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
+type PFNGLTEXGENDVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
 object PFNGLTEXGENDVPROC:
   given _tag: Tag[PFNGLTEXGENDVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXGENDVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7567,7 +7567,7 @@ object PFNGLTEXGENDVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXGENFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
+type PFNGLTEXGENFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
 object PFNGLTEXGENFPROC:
   given _tag: Tag[PFNGLTEXGENFPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXGENFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7576,7 +7576,7 @@ object PFNGLTEXGENFPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXGENFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLTEXGENFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLTEXGENFVPROC:
   given _tag: Tag[PFNGLTEXGENFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXGENFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7585,7 +7585,7 @@ object PFNGLTEXGENFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXGENIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
+type PFNGLTEXGENIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
 object PFNGLTEXGENIPROC:
   given _tag: Tag[PFNGLTEXGENIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXGENIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7594,7 +7594,7 @@ object PFNGLTEXGENIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXGENIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLTEXGENIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLTEXGENIVPROC:
   given _tag: Tag[PFNGLTEXGENIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXGENIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7603,7 +7603,7 @@ object PFNGLTEXGENIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXIMAGE1DPROC = CFuncPtr8[GLenum, GLint, GLint, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXIMAGE1DPROC = CFuncPtr8[GLenum, GLint, GLint, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXIMAGE1DPROC:
   given _tag: Tag[PFNGLTEXIMAGE1DPROC] = Tag.materializeCFuncPtr8[GLenum, GLint, GLint, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7612,7 +7612,7 @@ object PFNGLTEXIMAGE1DPROC:
     inline def value: CFuncPtr8[GLenum, GLint, GLint, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXIMAGE2DMULTISAMPLEPROC = CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
+type PFNGLTEXIMAGE2DMULTISAMPLEPROC = CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
 object PFNGLTEXIMAGE2DMULTISAMPLEPROC:
   given _tag: Tag[PFNGLTEXIMAGE2DMULTISAMPLEPROC] = Tag.materializeCFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXIMAGE2DMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7621,7 +7621,7 @@ object PFNGLTEXIMAGE2DMULTISAMPLEPROC:
     inline def value: CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXIMAGE2DPROC = CFuncPtr9[GLenum, GLint, GLint, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXIMAGE2DPROC = CFuncPtr9[GLenum, GLint, GLint, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXIMAGE2DPROC:
   given _tag: Tag[PFNGLTEXIMAGE2DPROC] = Tag.materializeCFuncPtr9[GLenum, GLint, GLint, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7630,7 +7630,7 @@ object PFNGLTEXIMAGE2DPROC:
     inline def value: CFuncPtr9[GLenum, GLint, GLint, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXIMAGE3DMULTISAMPLEPROC = CFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
+type PFNGLTEXIMAGE3DMULTISAMPLEPROC = CFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
 object PFNGLTEXIMAGE3DMULTISAMPLEPROC:
   given _tag: Tag[PFNGLTEXIMAGE3DMULTISAMPLEPROC] = Tag.materializeCFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXIMAGE3DMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7639,7 +7639,7 @@ object PFNGLTEXIMAGE3DMULTISAMPLEPROC:
     inline def value: CFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXIMAGE3DPROC = CFuncPtr10[GLenum, GLint, GLint, GLsizei, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXIMAGE3DPROC = CFuncPtr10[GLenum, GLint, GLint, GLsizei, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXIMAGE3DPROC:
   given _tag: Tag[PFNGLTEXIMAGE3DPROC] = Tag.materializeCFuncPtr10[GLenum, GLint, GLint, GLsizei, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7648,7 +7648,7 @@ object PFNGLTEXIMAGE3DPROC:
     inline def value: CFuncPtr10[GLenum, GLint, GLint, GLsizei, GLsizei, GLsizei, GLint, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXPARAMETERFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
+type PFNGLTEXPARAMETERFPROC = CFuncPtr3[GLenum, GLenum, GLfloat, Unit]
 object PFNGLTEXPARAMETERFPROC:
   given _tag: Tag[PFNGLTEXPARAMETERFPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXPARAMETERFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7657,7 +7657,7 @@ object PFNGLTEXPARAMETERFPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXPARAMETERFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
+type PFNGLTEXPARAMETERFVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
 object PFNGLTEXPARAMETERFVPROC:
   given _tag: Tag[PFNGLTEXPARAMETERFVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7666,7 +7666,7 @@ object PFNGLTEXPARAMETERFVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXPARAMETERIIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLTEXPARAMETERIIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLTEXPARAMETERIIVPROC:
   given _tag: Tag[PFNGLTEXPARAMETERIIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXPARAMETERIIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7675,7 +7675,7 @@ object PFNGLTEXPARAMETERIIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXPARAMETERIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
+type PFNGLTEXPARAMETERIPROC = CFuncPtr3[GLenum, GLenum, GLint, Unit]
 object PFNGLTEXPARAMETERIPROC:
   given _tag: Tag[PFNGLTEXPARAMETERIPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7684,7 +7684,7 @@ object PFNGLTEXPARAMETERIPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXPARAMETERIUIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
+type PFNGLTEXPARAMETERIUIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
 object PFNGLTEXPARAMETERIUIVPROC:
   given _tag: Tag[PFNGLTEXPARAMETERIUIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXPARAMETERIUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7693,7 +7693,7 @@ object PFNGLTEXPARAMETERIUIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
+type PFNGLTEXPARAMETERIVPROC = CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
 object PFNGLTEXPARAMETERIVPROC:
   given _tag: Tag[PFNGLTEXPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7702,7 +7702,7 @@ object PFNGLTEXPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLenum, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSTORAGE1DPROC = CFuncPtr4[GLenum, GLsizei, GLenum, GLsizei, Unit]
+type PFNGLTEXSTORAGE1DPROC = CFuncPtr4[GLenum, GLsizei, GLenum, GLsizei, Unit]
 object PFNGLTEXSTORAGE1DPROC:
   given _tag: Tag[PFNGLTEXSTORAGE1DPROC] = Tag.materializeCFuncPtr4[GLenum, GLsizei, GLenum, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSTORAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7711,7 +7711,7 @@ object PFNGLTEXSTORAGE1DPROC:
     inline def value: CFuncPtr4[GLenum, GLsizei, GLenum, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSTORAGE2DMULTISAMPLEPROC = CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
+type PFNGLTEXSTORAGE2DMULTISAMPLEPROC = CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
 object PFNGLTEXSTORAGE2DMULTISAMPLEPROC:
   given _tag: Tag[PFNGLTEXSTORAGE2DMULTISAMPLEPROC] = Tag.materializeCFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSTORAGE2DMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7720,7 +7720,7 @@ object PFNGLTEXSTORAGE2DMULTISAMPLEPROC:
     inline def value: CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSTORAGE2DPROC = CFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit]
+type PFNGLTEXSTORAGE2DPROC = CFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit]
 object PFNGLTEXSTORAGE2DPROC:
   given _tag: Tag[PFNGLTEXSTORAGE2DPROC] = Tag.materializeCFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSTORAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7729,7 +7729,7 @@ object PFNGLTEXSTORAGE2DPROC:
     inline def value: CFuncPtr5[GLenum, GLsizei, GLenum, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSTORAGE3DMULTISAMPLEPROC = CFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
+type PFNGLTEXSTORAGE3DMULTISAMPLEPROC = CFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
 object PFNGLTEXSTORAGE3DMULTISAMPLEPROC:
   given _tag: Tag[PFNGLTEXSTORAGE3DMULTISAMPLEPROC] = Tag.materializeCFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSTORAGE3DMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7738,7 +7738,7 @@ object PFNGLTEXSTORAGE3DMULTISAMPLEPROC:
     inline def value: CFuncPtr7[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSTORAGE3DPROC = CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit]
+type PFNGLTEXSTORAGE3DPROC = CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit]
 object PFNGLTEXSTORAGE3DPROC:
   given _tag: Tag[PFNGLTEXSTORAGE3DPROC] = Tag.materializeCFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSTORAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7747,7 +7747,7 @@ object PFNGLTEXSTORAGE3DPROC:
     inline def value: CFuncPtr6[GLenum, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSUBIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXSUBIMAGE1DPROC = CFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXSUBIMAGE1DPROC:
   given _tag: Tag[PFNGLTEXSUBIMAGE1DPROC] = Tag.materializeCFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSUBIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7756,7 +7756,7 @@ object PFNGLTEXSUBIMAGE1DPROC:
     inline def value: CFuncPtr7[GLenum, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSUBIMAGE2DPROC = CFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXSUBIMAGE2DPROC = CFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXSUBIMAGE2DPROC:
   given _tag: Tag[PFNGLTEXSUBIMAGE2DPROC] = Tag.materializeCFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSUBIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7765,7 +7765,7 @@ object PFNGLTEXSUBIMAGE2DPROC:
     inline def value: CFuncPtr9[GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXSUBIMAGE3DPROC = CFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXSUBIMAGE3DPROC = CFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXSUBIMAGE3DPROC:
   given _tag: Tag[PFNGLTEXSUBIMAGE3DPROC] = Tag.materializeCFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXSUBIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7774,7 +7774,7 @@ object PFNGLTEXSUBIMAGE3DPROC:
     inline def value: CFuncPtr11[GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREBARRIERPROC = CFuncPtr0[Unit]
+type PFNGLTEXTUREBARRIERPROC = CFuncPtr0[Unit]
 object PFNGLTEXTUREBARRIERPROC:
   given _tag: Tag[PFNGLTEXTUREBARRIERPROC] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREBARRIERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7783,7 +7783,7 @@ object PFNGLTEXTUREBARRIERPROC:
     inline def value: CFuncPtr0[Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREBUFFERPROC = CFuncPtr3[GLuint, GLenum, GLuint, Unit]
+type PFNGLTEXTUREBUFFERPROC = CFuncPtr3[GLuint, GLenum, GLuint, Unit]
 object PFNGLTEXTUREBUFFERPROC:
   given _tag: Tag[PFNGLTEXTUREBUFFERPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7792,7 +7792,7 @@ object PFNGLTEXTUREBUFFERPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREBUFFERRANGEPROC = CFuncPtr5[GLuint, GLenum, GLuint, GLintptr, GLsizeiptr, Unit]
+type PFNGLTEXTUREBUFFERRANGEPROC = CFuncPtr5[GLuint, GLenum, GLuint, GLintptr, GLsizeiptr, Unit]
 object PFNGLTEXTUREBUFFERRANGEPROC:
   given _tag: Tag[PFNGLTEXTUREBUFFERRANGEPROC] = Tag.materializeCFuncPtr5[GLuint, GLenum, GLuint, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7801,7 +7801,7 @@ object PFNGLTEXTUREBUFFERRANGEPROC:
     inline def value: CFuncPtr5[GLuint, GLenum, GLuint, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREPARAMETERFPROC = CFuncPtr3[GLuint, GLenum, GLfloat, Unit]
+type PFNGLTEXTUREPARAMETERFPROC = CFuncPtr3[GLuint, GLenum, GLfloat, Unit]
 object PFNGLTEXTUREPARAMETERFPROC:
   given _tag: Tag[PFNGLTEXTUREPARAMETERFPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREPARAMETERFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7810,7 +7810,7 @@ object PFNGLTEXTUREPARAMETERFPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
+type PFNGLTEXTUREPARAMETERFVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
 object PFNGLTEXTUREPARAMETERFVPROC:
   given _tag: Tag[PFNGLTEXTUREPARAMETERFVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREPARAMETERFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7819,7 +7819,7 @@ object PFNGLTEXTUREPARAMETERFVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLTEXTUREPARAMETERIIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLTEXTUREPARAMETERIIVPROC:
   given _tag: Tag[PFNGLTEXTUREPARAMETERIIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREPARAMETERIIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7828,7 +7828,7 @@ object PFNGLTEXTUREPARAMETERIIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
+type PFNGLTEXTUREPARAMETERIPROC = CFuncPtr3[GLuint, GLenum, GLint, Unit]
 object PFNGLTEXTUREPARAMETERIPROC:
   given _tag: Tag[PFNGLTEXTUREPARAMETERIPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREPARAMETERIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7837,7 +7837,7 @@ object PFNGLTEXTUREPARAMETERIPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
+type PFNGLTEXTUREPARAMETERIUIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
 object PFNGLTEXTUREPARAMETERIUIVPROC:
   given _tag: Tag[PFNGLTEXTUREPARAMETERIUIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREPARAMETERIUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7846,7 +7846,7 @@ object PFNGLTEXTUREPARAMETERIUIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
+type PFNGLTEXTUREPARAMETERIVPROC = CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
 object PFNGLTEXTUREPARAMETERIVPROC:
   given _tag: Tag[PFNGLTEXTUREPARAMETERIVPROC] = Tag.materializeCFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREPARAMETERIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7855,7 +7855,7 @@ object PFNGLTEXTUREPARAMETERIVPROC:
     inline def value: CFuncPtr3[GLuint, GLenum, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESTORAGE1DPROC = CFuncPtr4[GLuint, GLsizei, GLenum, GLsizei, Unit]
+type PFNGLTEXTURESTORAGE1DPROC = CFuncPtr4[GLuint, GLsizei, GLenum, GLsizei, Unit]
 object PFNGLTEXTURESTORAGE1DPROC:
   given _tag: Tag[PFNGLTEXTURESTORAGE1DPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, GLenum, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESTORAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7864,7 +7864,7 @@ object PFNGLTEXTURESTORAGE1DPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, GLenum, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC = CFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
+type PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC = CFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
 object PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC:
   given _tag: Tag[PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC] = Tag.materializeCFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7873,7 +7873,7 @@ object PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC:
     inline def value: CFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESTORAGE2DPROC = CFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit]
+type PFNGLTEXTURESTORAGE2DPROC = CFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit]
 object PFNGLTEXTURESTORAGE2DPROC:
   given _tag: Tag[PFNGLTEXTURESTORAGE2DPROC] = Tag.materializeCFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESTORAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7882,7 +7882,7 @@ object PFNGLTEXTURESTORAGE2DPROC:
     inline def value: CFuncPtr5[GLuint, GLsizei, GLenum, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC = CFuncPtr7[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
+type PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC = CFuncPtr7[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
 object PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC:
   given _tag: Tag[PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC] = Tag.materializeCFuncPtr7[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7891,7 +7891,7 @@ object PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC:
     inline def value: CFuncPtr7[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, GLboolean, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESTORAGE3DPROC = CFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit]
+type PFNGLTEXTURESTORAGE3DPROC = CFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit]
 object PFNGLTEXTURESTORAGE3DPROC:
   given _tag: Tag[PFNGLTEXTURESTORAGE3DPROC] = Tag.materializeCFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESTORAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7900,7 +7900,7 @@ object PFNGLTEXTURESTORAGE3DPROC:
     inline def value: CFuncPtr6[GLuint, GLsizei, GLenum, GLsizei, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESUBIMAGE1DPROC = CFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXTURESUBIMAGE1DPROC = CFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXTURESUBIMAGE1DPROC:
   given _tag: Tag[PFNGLTEXTURESUBIMAGE1DPROC] = Tag.materializeCFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESUBIMAGE1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7909,7 +7909,7 @@ object PFNGLTEXTURESUBIMAGE1DPROC:
     inline def value: CFuncPtr7[GLuint, GLint, GLint, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESUBIMAGE2DPROC = CFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXTURESUBIMAGE2DPROC = CFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXTURESUBIMAGE2DPROC:
   given _tag: Tag[PFNGLTEXTURESUBIMAGE2DPROC] = Tag.materializeCFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESUBIMAGE2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7918,7 +7918,7 @@ object PFNGLTEXTURESUBIMAGE2DPROC:
     inline def value: CFuncPtr9[GLuint, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTURESUBIMAGE3DPROC = CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
+type PFNGLTEXTURESUBIMAGE3DPROC = CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
 object PFNGLTEXTURESUBIMAGE3DPROC:
   given _tag: Tag[PFNGLTEXTURESUBIMAGE3DPROC] = Tag.materializeCFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTURESUBIMAGE3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7927,7 +7927,7 @@ object PFNGLTEXTURESUBIMAGE3DPROC:
     inline def value: CFuncPtr11[GLuint, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTEXTUREVIEWPROC = CFuncPtr8[GLuint, GLenum, GLuint, GLenum, GLuint, GLuint, GLuint, GLuint, Unit]
+type PFNGLTEXTUREVIEWPROC = CFuncPtr8[GLuint, GLenum, GLuint, GLenum, GLuint, GLuint, GLuint, GLuint, Unit]
 object PFNGLTEXTUREVIEWPROC:
   given _tag: Tag[PFNGLTEXTUREVIEWPROC] = Tag.materializeCFuncPtr8[GLuint, GLenum, GLuint, GLenum, GLuint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTEXTUREVIEWPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7936,7 +7936,7 @@ object PFNGLTEXTUREVIEWPROC:
     inline def value: CFuncPtr8[GLuint, GLenum, GLuint, GLenum, GLuint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC:
   given _tag: Tag[PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7945,7 +7945,7 @@ object PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC = CFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizeiptr, Unit]
+type PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC = CFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizeiptr, Unit]
 object PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC:
   given _tag: Tag[PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizeiptr, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7954,7 +7954,7 @@ object PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizeiptr, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTRANSFORMFEEDBACKVARYINGSPROC = CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], GLenum, Unit]
+type PFNGLTRANSFORMFEEDBACKVARYINGSPROC = CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], GLenum, Unit]
 object PFNGLTRANSFORMFEEDBACKVARYINGSPROC:
   given _tag: Tag[PFNGLTRANSFORMFEEDBACKVARYINGSPROC] = Tag.materializeCFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], GLenum, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTRANSFORMFEEDBACKVARYINGSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7963,7 +7963,7 @@ object PFNGLTRANSFORMFEEDBACKVARYINGSPROC:
     inline def value: CFuncPtr4[GLuint, GLsizei, Ptr[Ptr[GLchar]], GLenum, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTRANSLATEDPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLTRANSLATEDPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLTRANSLATEDPROC:
   given _tag: Tag[PFNGLTRANSLATEDPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTRANSLATEDPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7972,7 +7972,7 @@ object PFNGLTRANSLATEDPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLTRANSLATEFPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLTRANSLATEFPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLTRANSLATEFPROC:
   given _tag: Tag[PFNGLTRANSLATEFPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLTRANSLATEFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7981,7 +7981,7 @@ object PFNGLTRANSLATEFPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1DPROC = CFuncPtr2[GLint, GLdouble, Unit]
+type PFNGLUNIFORM1DPROC = CFuncPtr2[GLint, GLdouble, Unit]
 object PFNGLUNIFORM1DPROC:
   given _tag: Tag[PFNGLUNIFORM1DPROC] = Tag.materializeCFuncPtr2[GLint, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7990,7 +7990,7 @@ object PFNGLUNIFORM1DPROC:
     inline def value: CFuncPtr2[GLint, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLUNIFORM1DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLUNIFORM1DVPROC:
   given _tag: Tag[PFNGLUNIFORM1DVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -7999,7 +7999,7 @@ object PFNGLUNIFORM1DVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1FPROC = CFuncPtr2[GLint, GLfloat, Unit]
+type PFNGLUNIFORM1FPROC = CFuncPtr2[GLint, GLfloat, Unit]
 object PFNGLUNIFORM1FPROC:
   given _tag: Tag[PFNGLUNIFORM1FPROC] = Tag.materializeCFuncPtr2[GLint, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8008,7 +8008,7 @@ object PFNGLUNIFORM1FPROC:
     inline def value: CFuncPtr2[GLint, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLUNIFORM1FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLUNIFORM1FVPROC:
   given _tag: Tag[PFNGLUNIFORM1FVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8017,7 +8017,7 @@ object PFNGLUNIFORM1FVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1IPROC = CFuncPtr2[GLint, GLint, Unit]
+type PFNGLUNIFORM1IPROC = CFuncPtr2[GLint, GLint, Unit]
 object PFNGLUNIFORM1IPROC:
   given _tag: Tag[PFNGLUNIFORM1IPROC] = Tag.materializeCFuncPtr2[GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8026,7 +8026,7 @@ object PFNGLUNIFORM1IPROC:
     inline def value: CFuncPtr2[GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLUNIFORM1IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLUNIFORM1IVPROC:
   given _tag: Tag[PFNGLUNIFORM1IVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8035,7 +8035,7 @@ object PFNGLUNIFORM1IVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1UIPROC = CFuncPtr2[GLint, GLuint, Unit]
+type PFNGLUNIFORM1UIPROC = CFuncPtr2[GLint, GLuint, Unit]
 object PFNGLUNIFORM1UIPROC:
   given _tag: Tag[PFNGLUNIFORM1UIPROC] = Tag.materializeCFuncPtr2[GLint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8044,7 +8044,7 @@ object PFNGLUNIFORM1UIPROC:
     inline def value: CFuncPtr2[GLint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM1UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLUNIFORM1UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLUNIFORM1UIVPROC:
   given _tag: Tag[PFNGLUNIFORM1UIVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM1UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8053,7 +8053,7 @@ object PFNGLUNIFORM1UIVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2DPROC = CFuncPtr3[GLint, GLdouble, GLdouble, Unit]
+type PFNGLUNIFORM2DPROC = CFuncPtr3[GLint, GLdouble, GLdouble, Unit]
 object PFNGLUNIFORM2DPROC:
   given _tag: Tag[PFNGLUNIFORM2DPROC] = Tag.materializeCFuncPtr3[GLint, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8062,7 +8062,7 @@ object PFNGLUNIFORM2DPROC:
     inline def value: CFuncPtr3[GLint, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLUNIFORM2DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLUNIFORM2DVPROC:
   given _tag: Tag[PFNGLUNIFORM2DVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8071,7 +8071,7 @@ object PFNGLUNIFORM2DVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2FPROC = CFuncPtr3[GLint, GLfloat, GLfloat, Unit]
+type PFNGLUNIFORM2FPROC = CFuncPtr3[GLint, GLfloat, GLfloat, Unit]
 object PFNGLUNIFORM2FPROC:
   given _tag: Tag[PFNGLUNIFORM2FPROC] = Tag.materializeCFuncPtr3[GLint, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8080,7 +8080,7 @@ object PFNGLUNIFORM2FPROC:
     inline def value: CFuncPtr3[GLint, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLUNIFORM2FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLUNIFORM2FVPROC:
   given _tag: Tag[PFNGLUNIFORM2FVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8089,7 +8089,7 @@ object PFNGLUNIFORM2FVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLUNIFORM2IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLUNIFORM2IPROC:
   given _tag: Tag[PFNGLUNIFORM2IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8098,7 +8098,7 @@ object PFNGLUNIFORM2IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLUNIFORM2IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLUNIFORM2IVPROC:
   given _tag: Tag[PFNGLUNIFORM2IVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8107,7 +8107,7 @@ object PFNGLUNIFORM2IVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2UIPROC = CFuncPtr3[GLint, GLuint, GLuint, Unit]
+type PFNGLUNIFORM2UIPROC = CFuncPtr3[GLint, GLuint, GLuint, Unit]
 object PFNGLUNIFORM2UIPROC:
   given _tag: Tag[PFNGLUNIFORM2UIPROC] = Tag.materializeCFuncPtr3[GLint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8116,7 +8116,7 @@ object PFNGLUNIFORM2UIPROC:
     inline def value: CFuncPtr3[GLint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM2UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLUNIFORM2UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLUNIFORM2UIVPROC:
   given _tag: Tag[PFNGLUNIFORM2UIVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM2UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8125,7 +8125,7 @@ object PFNGLUNIFORM2UIVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3DPROC = CFuncPtr4[GLint, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLUNIFORM3DPROC = CFuncPtr4[GLint, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLUNIFORM3DPROC:
   given _tag: Tag[PFNGLUNIFORM3DPROC] = Tag.materializeCFuncPtr4[GLint, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8134,7 +8134,7 @@ object PFNGLUNIFORM3DPROC:
     inline def value: CFuncPtr4[GLint, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLUNIFORM3DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLUNIFORM3DVPROC:
   given _tag: Tag[PFNGLUNIFORM3DVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8143,7 +8143,7 @@ object PFNGLUNIFORM3DVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3FPROC = CFuncPtr4[GLint, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLUNIFORM3FPROC = CFuncPtr4[GLint, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLUNIFORM3FPROC:
   given _tag: Tag[PFNGLUNIFORM3FPROC] = Tag.materializeCFuncPtr4[GLint, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8152,7 +8152,7 @@ object PFNGLUNIFORM3FPROC:
     inline def value: CFuncPtr4[GLint, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLUNIFORM3FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLUNIFORM3FVPROC:
   given _tag: Tag[PFNGLUNIFORM3FVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8161,7 +8161,7 @@ object PFNGLUNIFORM3FVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
+type PFNGLUNIFORM3IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
 object PFNGLUNIFORM3IPROC:
   given _tag: Tag[PFNGLUNIFORM3IPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8170,7 +8170,7 @@ object PFNGLUNIFORM3IPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLUNIFORM3IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLUNIFORM3IVPROC:
   given _tag: Tag[PFNGLUNIFORM3IVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8179,7 +8179,7 @@ object PFNGLUNIFORM3IVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3UIPROC = CFuncPtr4[GLint, GLuint, GLuint, GLuint, Unit]
+type PFNGLUNIFORM3UIPROC = CFuncPtr4[GLint, GLuint, GLuint, GLuint, Unit]
 object PFNGLUNIFORM3UIPROC:
   given _tag: Tag[PFNGLUNIFORM3UIPROC] = Tag.materializeCFuncPtr4[GLint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8188,7 +8188,7 @@ object PFNGLUNIFORM3UIPROC:
     inline def value: CFuncPtr4[GLint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM3UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLUNIFORM3UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLUNIFORM3UIVPROC:
   given _tag: Tag[PFNGLUNIFORM3UIVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8197,7 +8197,7 @@ object PFNGLUNIFORM3UIVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4DPROC = CFuncPtr5[GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLUNIFORM4DPROC = CFuncPtr5[GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLUNIFORM4DPROC:
   given _tag: Tag[PFNGLUNIFORM4DPROC] = Tag.materializeCFuncPtr5[GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8206,7 +8206,7 @@ object PFNGLUNIFORM4DPROC:
     inline def value: CFuncPtr5[GLint, GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
+type PFNGLUNIFORM4DVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
 object PFNGLUNIFORM4DVPROC:
   given _tag: Tag[PFNGLUNIFORM4DVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8215,7 +8215,7 @@ object PFNGLUNIFORM4DVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4FPROC = CFuncPtr5[GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLUNIFORM4FPROC = CFuncPtr5[GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLUNIFORM4FPROC:
   given _tag: Tag[PFNGLUNIFORM4FPROC] = Tag.materializeCFuncPtr5[GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8224,7 +8224,7 @@ object PFNGLUNIFORM4FPROC:
     inline def value: CFuncPtr5[GLint, GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLUNIFORM4FVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLUNIFORM4FVPROC:
   given _tag: Tag[PFNGLUNIFORM4FVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8233,7 +8233,7 @@ object PFNGLUNIFORM4FVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4IPROC = CFuncPtr5[GLint, GLint, GLint, GLint, GLint, Unit]
+type PFNGLUNIFORM4IPROC = CFuncPtr5[GLint, GLint, GLint, GLint, GLint, Unit]
 object PFNGLUNIFORM4IPROC:
   given _tag: Tag[PFNGLUNIFORM4IPROC] = Tag.materializeCFuncPtr5[GLint, GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8242,7 +8242,7 @@ object PFNGLUNIFORM4IPROC:
     inline def value: CFuncPtr5[GLint, GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
+type PFNGLUNIFORM4IVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
 object PFNGLUNIFORM4IVPROC:
   given _tag: Tag[PFNGLUNIFORM4IVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8251,7 +8251,7 @@ object PFNGLUNIFORM4IVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4UIPROC = CFuncPtr5[GLint, GLuint, GLuint, GLuint, GLuint, Unit]
+type PFNGLUNIFORM4UIPROC = CFuncPtr5[GLint, GLuint, GLuint, GLuint, GLuint, Unit]
 object PFNGLUNIFORM4UIPROC:
   given _tag: Tag[PFNGLUNIFORM4UIPROC] = Tag.materializeCFuncPtr5[GLint, GLuint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8260,7 +8260,7 @@ object PFNGLUNIFORM4UIPROC:
     inline def value: CFuncPtr5[GLint, GLuint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORM4UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
+type PFNGLUNIFORM4UIVPROC = CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
 object PFNGLUNIFORM4UIVPROC:
   given _tag: Tag[PFNGLUNIFORM4UIVPROC] = Tag.materializeCFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORM4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8269,7 +8269,7 @@ object PFNGLUNIFORM4UIVPROC:
     inline def value: CFuncPtr3[GLint, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMBLOCKBINDINGPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLUNIFORMBLOCKBINDINGPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLUNIFORMBLOCKBINDINGPROC:
   given _tag: Tag[PFNGLUNIFORMBLOCKBINDINGPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMBLOCKBINDINGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8278,7 +8278,7 @@ object PFNGLUNIFORMBLOCKBINDINGPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX2DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX2DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX2DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX2DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8287,7 +8287,7 @@ object PFNGLUNIFORMMATRIX2DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX2FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX2FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX2FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX2FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8296,7 +8296,7 @@ object PFNGLUNIFORMMATRIX2FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX2X3DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX2X3DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX2X3DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX2X3DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX2X3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8305,7 +8305,7 @@ object PFNGLUNIFORMMATRIX2X3DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX2X3FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX2X3FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX2X3FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX2X3FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX2X3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8314,7 +8314,7 @@ object PFNGLUNIFORMMATRIX2X3FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX2X4DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX2X4DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX2X4DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX2X4DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX2X4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8323,7 +8323,7 @@ object PFNGLUNIFORMMATRIX2X4DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX2X4FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX2X4FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX2X4FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX2X4FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX2X4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8332,7 +8332,7 @@ object PFNGLUNIFORMMATRIX2X4FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX3DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX3DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX3DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX3DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8341,7 +8341,7 @@ object PFNGLUNIFORMMATRIX3DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX3FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX3FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX3FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX3FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8350,7 +8350,7 @@ object PFNGLUNIFORMMATRIX3FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX3X2DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX3X2DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX3X2DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX3X2DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX3X2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8359,7 +8359,7 @@ object PFNGLUNIFORMMATRIX3X2DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX3X2FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX3X2FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX3X2FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX3X2FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX3X2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8368,7 +8368,7 @@ object PFNGLUNIFORMMATRIX3X2FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX3X4DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX3X4DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX3X4DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX3X4DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX3X4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8377,7 +8377,7 @@ object PFNGLUNIFORMMATRIX3X4DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX3X4FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX3X4FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX3X4FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX3X4FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX3X4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8386,7 +8386,7 @@ object PFNGLUNIFORMMATRIX3X4FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX4DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX4DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX4DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX4DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8395,7 +8395,7 @@ object PFNGLUNIFORMMATRIX4DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX4FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX4FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX4FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX4FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8404,7 +8404,7 @@ object PFNGLUNIFORMMATRIX4FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX4X2DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX4X2DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX4X2DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX4X2DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX4X2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8413,7 +8413,7 @@ object PFNGLUNIFORMMATRIX4X2DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX4X2FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX4X2FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX4X2FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX4X2FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX4X2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8422,7 +8422,7 @@ object PFNGLUNIFORMMATRIX4X2FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX4X3DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
+type PFNGLUNIFORMMATRIX4X3DVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
 object PFNGLUNIFORMMATRIX4X3DVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX4X3DVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX4X3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8431,7 +8431,7 @@ object PFNGLUNIFORMMATRIX4X3DVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMMATRIX4X3FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
+type PFNGLUNIFORMMATRIX4X3FVPROC = CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
 object PFNGLUNIFORMMATRIX4X3FVPROC:
   given _tag: Tag[PFNGLUNIFORMMATRIX4X3FVPROC] = Tag.materializeCFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMMATRIX4X3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8440,7 +8440,7 @@ object PFNGLUNIFORMMATRIX4X3FVPROC:
     inline def value: CFuncPtr4[GLint, GLsizei, GLboolean, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNIFORMSUBROUTINESUIVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
+type PFNGLUNIFORMSUBROUTINESUIVPROC = CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
 object PFNGLUNIFORMSUBROUTINESUIVPROC:
   given _tag: Tag[PFNGLUNIFORMSUBROUTINESUIVPROC] = Tag.materializeCFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNIFORMSUBROUTINESUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8449,7 +8449,7 @@ object PFNGLUNIFORMSUBROUTINESUIVPROC:
     inline def value: CFuncPtr3[GLenum, GLsizei, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNMAPBUFFERPROC = CFuncPtr1[GLenum, GLboolean]
+type PFNGLUNMAPBUFFERPROC = CFuncPtr1[GLenum, GLboolean]
 object PFNGLUNMAPBUFFERPROC:
   given _tag: Tag[PFNGLUNMAPBUFFERPROC] = Tag.materializeCFuncPtr1[GLenum, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNMAPBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8458,7 +8458,7 @@ object PFNGLUNMAPBUFFERPROC:
     inline def value: CFuncPtr1[GLenum, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUNMAPNAMEDBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
+type PFNGLUNMAPNAMEDBUFFERPROC = CFuncPtr1[GLuint, GLboolean]
 object PFNGLUNMAPNAMEDBUFFERPROC:
   given _tag: Tag[PFNGLUNMAPNAMEDBUFFERPROC] = Tag.materializeCFuncPtr1[GLuint, GLboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUNMAPNAMEDBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8467,7 +8467,7 @@ object PFNGLUNMAPNAMEDBUFFERPROC:
     inline def value: CFuncPtr1[GLuint, GLboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUSEPROGRAMPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLUSEPROGRAMPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLUSEPROGRAMPROC:
   given _tag: Tag[PFNGLUSEPROGRAMPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUSEPROGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8476,7 +8476,7 @@ object PFNGLUSEPROGRAMPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLUSEPROGRAMSTAGESPROC = CFuncPtr3[GLuint, GLbitfield, GLuint, Unit]
+type PFNGLUSEPROGRAMSTAGESPROC = CFuncPtr3[GLuint, GLbitfield, GLuint, Unit]
 object PFNGLUSEPROGRAMSTAGESPROC:
   given _tag: Tag[PFNGLUSEPROGRAMSTAGESPROC] = Tag.materializeCFuncPtr3[GLuint, GLbitfield, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLUSEPROGRAMSTAGESPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8485,7 +8485,7 @@ object PFNGLUSEPROGRAMSTAGESPROC:
     inline def value: CFuncPtr3[GLuint, GLbitfield, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVALIDATEPROGRAMPIPELINEPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLVALIDATEPROGRAMPIPELINEPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLVALIDATEPROGRAMPIPELINEPROC:
   given _tag: Tag[PFNGLVALIDATEPROGRAMPIPELINEPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVALIDATEPROGRAMPIPELINEPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8494,7 +8494,7 @@ object PFNGLVALIDATEPROGRAMPIPELINEPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVALIDATEPROGRAMPROC = CFuncPtr1[GLuint, Unit]
+type PFNGLVALIDATEPROGRAMPROC = CFuncPtr1[GLuint, Unit]
 object PFNGLVALIDATEPROGRAMPROC:
   given _tag: Tag[PFNGLVALIDATEPROGRAMPROC] = Tag.materializeCFuncPtr1[GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVALIDATEPROGRAMPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8503,7 +8503,7 @@ object PFNGLVALIDATEPROGRAMPROC:
     inline def value: CFuncPtr1[GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
+type PFNGLVERTEX2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
 object PFNGLVERTEX2DPROC:
   given _tag: Tag[PFNGLVERTEX2DPROC] = Tag.materializeCFuncPtr2[GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8512,7 +8512,7 @@ object PFNGLVERTEX2DPROC:
     inline def value: CFuncPtr2[GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLVERTEX2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLVERTEX2DVPROC:
   given _tag: Tag[PFNGLVERTEX2DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8521,7 +8521,7 @@ object PFNGLVERTEX2DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLVERTEX2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLVERTEX2FPROC:
   given _tag: Tag[PFNGLVERTEX2FPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8530,7 +8530,7 @@ object PFNGLVERTEX2FPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLVERTEX2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLVERTEX2FVPROC:
   given _tag: Tag[PFNGLVERTEX2FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8539,7 +8539,7 @@ object PFNGLVERTEX2FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2IPROC = CFuncPtr2[GLint, GLint, Unit]
+type PFNGLVERTEX2IPROC = CFuncPtr2[GLint, GLint, Unit]
 object PFNGLVERTEX2IPROC:
   given _tag: Tag[PFNGLVERTEX2IPROC] = Tag.materializeCFuncPtr2[GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8548,7 +8548,7 @@ object PFNGLVERTEX2IPROC:
     inline def value: CFuncPtr2[GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLVERTEX2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLVERTEX2IVPROC:
   given _tag: Tag[PFNGLVERTEX2IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8557,7 +8557,7 @@ object PFNGLVERTEX2IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
+type PFNGLVERTEX2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
 object PFNGLVERTEX2SPROC:
   given _tag: Tag[PFNGLVERTEX2SPROC] = Tag.materializeCFuncPtr2[GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8566,7 +8566,7 @@ object PFNGLVERTEX2SPROC:
     inline def value: CFuncPtr2[GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLVERTEX2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLVERTEX2SVPROC:
   given _tag: Tag[PFNGLVERTEX2SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX2SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8575,7 +8575,7 @@ object PFNGLVERTEX2SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLVERTEX3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLVERTEX3DPROC:
   given _tag: Tag[PFNGLVERTEX3DPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8584,7 +8584,7 @@ object PFNGLVERTEX3DPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLVERTEX3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLVERTEX3DVPROC:
   given _tag: Tag[PFNGLVERTEX3DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8593,7 +8593,7 @@ object PFNGLVERTEX3DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLVERTEX3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLVERTEX3FPROC:
   given _tag: Tag[PFNGLVERTEX3FPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8602,7 +8602,7 @@ object PFNGLVERTEX3FPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLVERTEX3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLVERTEX3FVPROC:
   given _tag: Tag[PFNGLVERTEX3FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8611,7 +8611,7 @@ object PFNGLVERTEX3FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLVERTEX3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLVERTEX3IPROC:
   given _tag: Tag[PFNGLVERTEX3IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8620,7 +8620,7 @@ object PFNGLVERTEX3IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLVERTEX3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLVERTEX3IVPROC:
   given _tag: Tag[PFNGLVERTEX3IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8629,7 +8629,7 @@ object PFNGLVERTEX3IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
+type PFNGLVERTEX3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
 object PFNGLVERTEX3SPROC:
   given _tag: Tag[PFNGLVERTEX3SPROC] = Tag.materializeCFuncPtr3[GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8638,7 +8638,7 @@ object PFNGLVERTEX3SPROC:
     inline def value: CFuncPtr3[GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLVERTEX3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLVERTEX3SVPROC:
   given _tag: Tag[PFNGLVERTEX3SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8647,7 +8647,7 @@ object PFNGLVERTEX3SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLVERTEX4DPROC = CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLVERTEX4DPROC:
   given _tag: Tag[PFNGLVERTEX4DPROC] = Tag.materializeCFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8656,7 +8656,7 @@ object PFNGLVERTEX4DPROC:
     inline def value: CFuncPtr4[GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLVERTEX4DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLVERTEX4DVPROC:
   given _tag: Tag[PFNGLVERTEX4DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8665,7 +8665,7 @@ object PFNGLVERTEX4DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLVERTEX4FPROC = CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLVERTEX4FPROC:
   given _tag: Tag[PFNGLVERTEX4FPROC] = Tag.materializeCFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8674,7 +8674,7 @@ object PFNGLVERTEX4FPROC:
     inline def value: CFuncPtr4[GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLVERTEX4FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLVERTEX4FVPROC:
   given _tag: Tag[PFNGLVERTEX4FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8683,7 +8683,7 @@ object PFNGLVERTEX4FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
+type PFNGLVERTEX4IPROC = CFuncPtr4[GLint, GLint, GLint, GLint, Unit]
 object PFNGLVERTEX4IPROC:
   given _tag: Tag[PFNGLVERTEX4IPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8692,7 +8692,7 @@ object PFNGLVERTEX4IPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLVERTEX4IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLVERTEX4IVPROC:
   given _tag: Tag[PFNGLVERTEX4IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8701,7 +8701,7 @@ object PFNGLVERTEX4IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
+type PFNGLVERTEX4SPROC = CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
 object PFNGLVERTEX4SPROC:
   given _tag: Tag[PFNGLVERTEX4SPROC] = Tag.materializeCFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8710,7 +8710,7 @@ object PFNGLVERTEX4SPROC:
     inline def value: CFuncPtr4[GLshort, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEX4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLVERTEX4SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLVERTEX4SVPROC:
   given _tag: Tag[PFNGLVERTEX4SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEX4SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8719,7 +8719,7 @@ object PFNGLVERTEX4SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYATTRIBBINDINGPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLVERTEXARRAYATTRIBBINDINGPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLVERTEXARRAYATTRIBBINDINGPROC:
   given _tag: Tag[PFNGLVERTEXARRAYATTRIBBINDINGPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYATTRIBBINDINGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8728,7 +8728,7 @@ object PFNGLVERTEXARRAYATTRIBBINDINGPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYATTRIBFORMATPROC = CFuncPtr6[GLuint, GLuint, GLint, GLenum, GLboolean, GLuint, Unit]
+type PFNGLVERTEXARRAYATTRIBFORMATPROC = CFuncPtr6[GLuint, GLuint, GLint, GLenum, GLboolean, GLuint, Unit]
 object PFNGLVERTEXARRAYATTRIBFORMATPROC:
   given _tag: Tag[PFNGLVERTEXARRAYATTRIBFORMATPROC] = Tag.materializeCFuncPtr6[GLuint, GLuint, GLint, GLenum, GLboolean, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYATTRIBFORMATPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8737,7 +8737,7 @@ object PFNGLVERTEXARRAYATTRIBFORMATPROC:
     inline def value: CFuncPtr6[GLuint, GLuint, GLint, GLenum, GLboolean, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYATTRIBIFORMATPROC = CFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit]
+type PFNGLVERTEXARRAYATTRIBIFORMATPROC = CFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit]
 object PFNGLVERTEXARRAYATTRIBIFORMATPROC:
   given _tag: Tag[PFNGLVERTEXARRAYATTRIBIFORMATPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYATTRIBIFORMATPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8746,7 +8746,7 @@ object PFNGLVERTEXARRAYATTRIBIFORMATPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYATTRIBLFORMATPROC = CFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit]
+type PFNGLVERTEXARRAYATTRIBLFORMATPROC = CFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit]
 object PFNGLVERTEXARRAYATTRIBLFORMATPROC:
   given _tag: Tag[PFNGLVERTEXARRAYATTRIBLFORMATPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYATTRIBLFORMATPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8755,7 +8755,7 @@ object PFNGLVERTEXARRAYATTRIBLFORMATPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLint, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYBINDINGDIVISORPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLVERTEXARRAYBINDINGDIVISORPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLVERTEXARRAYBINDINGDIVISORPROC:
   given _tag: Tag[PFNGLVERTEXARRAYBINDINGDIVISORPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYBINDINGDIVISORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8764,7 +8764,7 @@ object PFNGLVERTEXARRAYBINDINGDIVISORPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYELEMENTBUFFERPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLVERTEXARRAYELEMENTBUFFERPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLVERTEXARRAYELEMENTBUFFERPROC:
   given _tag: Tag[PFNGLVERTEXARRAYELEMENTBUFFERPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYELEMENTBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8773,7 +8773,7 @@ object PFNGLVERTEXARRAYELEMENTBUFFERPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYVERTEXBUFFERPROC = CFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizei, Unit]
+type PFNGLVERTEXARRAYVERTEXBUFFERPROC = CFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizei, Unit]
 object PFNGLVERTEXARRAYVERTEXBUFFERPROC:
   given _tag: Tag[PFNGLVERTEXARRAYVERTEXBUFFERPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYVERTEXBUFFERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8782,7 +8782,7 @@ object PFNGLVERTEXARRAYVERTEXBUFFERPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLuint, GLintptr, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXARRAYVERTEXBUFFERSPROC = CFuncPtr6[GLuint, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit]
+type PFNGLVERTEXARRAYVERTEXBUFFERSPROC = CFuncPtr6[GLuint, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit]
 object PFNGLVERTEXARRAYVERTEXBUFFERSPROC:
   given _tag: Tag[PFNGLVERTEXARRAYVERTEXBUFFERSPROC] = Tag.materializeCFuncPtr6[GLuint, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXARRAYVERTEXBUFFERSPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8791,7 +8791,7 @@ object PFNGLVERTEXARRAYVERTEXBUFFERSPROC:
     inline def value: CFuncPtr6[GLuint, GLuint, GLsizei, Ptr[GLuint], Ptr[GLintptr], Ptr[GLsizei], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB1DPROC = CFuncPtr2[GLuint, GLdouble, Unit]
+type PFNGLVERTEXATTRIB1DPROC = CFuncPtr2[GLuint, GLdouble, Unit]
 object PFNGLVERTEXATTRIB1DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB1DPROC] = Tag.materializeCFuncPtr2[GLuint, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8800,7 +8800,7 @@ object PFNGLVERTEXATTRIB1DPROC:
     inline def value: CFuncPtr2[GLuint, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB1DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIB1DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIB1DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB1DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB1DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8809,7 +8809,7 @@ object PFNGLVERTEXATTRIB1DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB1FPROC = CFuncPtr2[GLuint, GLfloat, Unit]
+type PFNGLVERTEXATTRIB1FPROC = CFuncPtr2[GLuint, GLfloat, Unit]
 object PFNGLVERTEXATTRIB1FPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB1FPROC] = Tag.materializeCFuncPtr2[GLuint, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB1FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8818,7 +8818,7 @@ object PFNGLVERTEXATTRIB1FPROC:
     inline def value: CFuncPtr2[GLuint, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB1FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
+type PFNGLVERTEXATTRIB1FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
 object PFNGLVERTEXATTRIB1FVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB1FVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB1FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8827,7 +8827,7 @@ object PFNGLVERTEXATTRIB1FVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB1SPROC = CFuncPtr2[GLuint, GLshort, Unit]
+type PFNGLVERTEXATTRIB1SPROC = CFuncPtr2[GLuint, GLshort, Unit]
 object PFNGLVERTEXATTRIB1SPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB1SPROC] = Tag.materializeCFuncPtr2[GLuint, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB1SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8836,7 +8836,7 @@ object PFNGLVERTEXATTRIB1SPROC:
     inline def value: CFuncPtr2[GLuint, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB1SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
+type PFNGLVERTEXATTRIB1SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
 object PFNGLVERTEXATTRIB1SVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB1SVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB1SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8845,7 +8845,7 @@ object PFNGLVERTEXATTRIB1SVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB2DPROC = CFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
+type PFNGLVERTEXATTRIB2DPROC = CFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
 object PFNGLVERTEXATTRIB2DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB2DPROC] = Tag.materializeCFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8854,7 +8854,7 @@ object PFNGLVERTEXATTRIB2DPROC:
     inline def value: CFuncPtr3[GLuint, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB2DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIB2DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIB2DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB2DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8863,7 +8863,7 @@ object PFNGLVERTEXATTRIB2DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB2FPROC = CFuncPtr3[GLuint, GLfloat, GLfloat, Unit]
+type PFNGLVERTEXATTRIB2FPROC = CFuncPtr3[GLuint, GLfloat, GLfloat, Unit]
 object PFNGLVERTEXATTRIB2FPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB2FPROC] = Tag.materializeCFuncPtr3[GLuint, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8872,7 +8872,7 @@ object PFNGLVERTEXATTRIB2FPROC:
     inline def value: CFuncPtr3[GLuint, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB2FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
+type PFNGLVERTEXATTRIB2FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
 object PFNGLVERTEXATTRIB2FVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB2FVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8881,7 +8881,7 @@ object PFNGLVERTEXATTRIB2FVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB2SPROC = CFuncPtr3[GLuint, GLshort, GLshort, Unit]
+type PFNGLVERTEXATTRIB2SPROC = CFuncPtr3[GLuint, GLshort, GLshort, Unit]
 object PFNGLVERTEXATTRIB2SPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB2SPROC] = Tag.materializeCFuncPtr3[GLuint, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB2SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8890,7 +8890,7 @@ object PFNGLVERTEXATTRIB2SPROC:
     inline def value: CFuncPtr3[GLuint, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB2SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
+type PFNGLVERTEXATTRIB2SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
 object PFNGLVERTEXATTRIB2SVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB2SVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB2SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8899,7 +8899,7 @@ object PFNGLVERTEXATTRIB2SVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB3DPROC = CFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLVERTEXATTRIB3DPROC = CFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLVERTEXATTRIB3DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB3DPROC] = Tag.materializeCFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8908,7 +8908,7 @@ object PFNGLVERTEXATTRIB3DPROC:
     inline def value: CFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB3DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIB3DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIB3DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB3DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8917,7 +8917,7 @@ object PFNGLVERTEXATTRIB3DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB3FPROC = CFuncPtr4[GLuint, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLVERTEXATTRIB3FPROC = CFuncPtr4[GLuint, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLVERTEXATTRIB3FPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB3FPROC] = Tag.materializeCFuncPtr4[GLuint, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8926,7 +8926,7 @@ object PFNGLVERTEXATTRIB3FPROC:
     inline def value: CFuncPtr4[GLuint, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB3FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
+type PFNGLVERTEXATTRIB3FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
 object PFNGLVERTEXATTRIB3FVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB3FVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8935,7 +8935,7 @@ object PFNGLVERTEXATTRIB3FVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB3SPROC = CFuncPtr4[GLuint, GLshort, GLshort, GLshort, Unit]
+type PFNGLVERTEXATTRIB3SPROC = CFuncPtr4[GLuint, GLshort, GLshort, GLshort, Unit]
 object PFNGLVERTEXATTRIB3SPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB3SPROC] = Tag.materializeCFuncPtr4[GLuint, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8944,7 +8944,7 @@ object PFNGLVERTEXATTRIB3SPROC:
     inline def value: CFuncPtr4[GLuint, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB3SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
+type PFNGLVERTEXATTRIB3SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
 object PFNGLVERTEXATTRIB3SVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB3SVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8953,7 +8953,7 @@ object PFNGLVERTEXATTRIB3SVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4BVPROC = CFuncPtr2[GLuint, Ptr[GLbyte], Unit]
+type PFNGLVERTEXATTRIB4BVPROC = CFuncPtr2[GLuint, Ptr[GLbyte], Unit]
 object PFNGLVERTEXATTRIB4BVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4BVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLbyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4BVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8962,7 +8962,7 @@ object PFNGLVERTEXATTRIB4BVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLbyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4DPROC = CFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLVERTEXATTRIB4DPROC = CFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLVERTEXATTRIB4DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4DPROC] = Tag.materializeCFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8971,7 +8971,7 @@ object PFNGLVERTEXATTRIB4DPROC:
     inline def value: CFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIB4DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIB4DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8980,7 +8980,7 @@ object PFNGLVERTEXATTRIB4DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4FPROC = CFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLVERTEXATTRIB4FPROC = CFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLVERTEXATTRIB4FPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4FPROC] = Tag.materializeCFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8989,7 +8989,7 @@ object PFNGLVERTEXATTRIB4FPROC:
     inline def value: CFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
+type PFNGLVERTEXATTRIB4FVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
 object PFNGLVERTEXATTRIB4FVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4FVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -8998,7 +8998,7 @@ object PFNGLVERTEXATTRIB4FVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
+type PFNGLVERTEXATTRIB4IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
 object PFNGLVERTEXATTRIB4IVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4IVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9007,7 +9007,7 @@ object PFNGLVERTEXATTRIB4IVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4NBVPROC = CFuncPtr2[GLuint, Ptr[GLbyte], Unit]
+type PFNGLVERTEXATTRIB4NBVPROC = CFuncPtr2[GLuint, Ptr[GLbyte], Unit]
 object PFNGLVERTEXATTRIB4NBVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4NBVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLbyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4NBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9016,7 +9016,7 @@ object PFNGLVERTEXATTRIB4NBVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLbyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4NIVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
+type PFNGLVERTEXATTRIB4NIVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
 object PFNGLVERTEXATTRIB4NIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4NIVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4NIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9025,7 +9025,7 @@ object PFNGLVERTEXATTRIB4NIVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4NSVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
+type PFNGLVERTEXATTRIB4NSVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
 object PFNGLVERTEXATTRIB4NSVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4NSVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4NSVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9034,7 +9034,7 @@ object PFNGLVERTEXATTRIB4NSVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4NUBPROC = CFuncPtr5[GLuint, GLubyte, GLubyte, GLubyte, GLubyte, Unit]
+type PFNGLVERTEXATTRIB4NUBPROC = CFuncPtr5[GLuint, GLubyte, GLubyte, GLubyte, GLubyte, Unit]
 object PFNGLVERTEXATTRIB4NUBPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4NUBPROC] = Tag.materializeCFuncPtr5[GLuint, GLubyte, GLubyte, GLubyte, GLubyte, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4NUBPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9043,7 +9043,7 @@ object PFNGLVERTEXATTRIB4NUBPROC:
     inline def value: CFuncPtr5[GLuint, GLubyte, GLubyte, GLubyte, GLubyte, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4NUBVPROC = CFuncPtr2[GLuint, Ptr[GLubyte], Unit]
+type PFNGLVERTEXATTRIB4NUBVPROC = CFuncPtr2[GLuint, Ptr[GLubyte], Unit]
 object PFNGLVERTEXATTRIB4NUBVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4NUBVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4NUBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9052,7 +9052,7 @@ object PFNGLVERTEXATTRIB4NUBVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4NUIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIB4NUIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIB4NUIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4NUIVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4NUIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9061,7 +9061,7 @@ object PFNGLVERTEXATTRIB4NUIVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4NUSVPROC = CFuncPtr2[GLuint, Ptr[GLushort], Unit]
+type PFNGLVERTEXATTRIB4NUSVPROC = CFuncPtr2[GLuint, Ptr[GLushort], Unit]
 object PFNGLVERTEXATTRIB4NUSVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4NUSVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4NUSVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9070,7 +9070,7 @@ object PFNGLVERTEXATTRIB4NUSVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4SPROC = CFuncPtr5[GLuint, GLshort, GLshort, GLshort, GLshort, Unit]
+type PFNGLVERTEXATTRIB4SPROC = CFuncPtr5[GLuint, GLshort, GLshort, GLshort, GLshort, Unit]
 object PFNGLVERTEXATTRIB4SPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4SPROC] = Tag.materializeCFuncPtr5[GLuint, GLshort, GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9079,7 +9079,7 @@ object PFNGLVERTEXATTRIB4SPROC:
     inline def value: CFuncPtr5[GLuint, GLshort, GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
+type PFNGLVERTEXATTRIB4SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
 object PFNGLVERTEXATTRIB4SVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4SVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9088,7 +9088,7 @@ object PFNGLVERTEXATTRIB4SVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4UBVPROC = CFuncPtr2[GLuint, Ptr[GLubyte], Unit]
+type PFNGLVERTEXATTRIB4UBVPROC = CFuncPtr2[GLuint, Ptr[GLubyte], Unit]
 object PFNGLVERTEXATTRIB4UBVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4UBVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4UBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9097,7 +9097,7 @@ object PFNGLVERTEXATTRIB4UBVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIB4UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIB4UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4UIVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9106,7 +9106,7 @@ object PFNGLVERTEXATTRIB4UIVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIB4USVPROC = CFuncPtr2[GLuint, Ptr[GLushort], Unit]
+type PFNGLVERTEXATTRIB4USVPROC = CFuncPtr2[GLuint, Ptr[GLushort], Unit]
 object PFNGLVERTEXATTRIB4USVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIB4USVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIB4USVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9115,7 +9115,7 @@ object PFNGLVERTEXATTRIB4USVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBBINDINGPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLVERTEXATTRIBBINDINGPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLVERTEXATTRIBBINDINGPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBBINDINGPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBBINDINGPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9124,7 +9124,7 @@ object PFNGLVERTEXATTRIBBINDINGPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBDIVISORPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLVERTEXATTRIBDIVISORPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLVERTEXATTRIBDIVISORPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBDIVISORPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBDIVISORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9133,7 +9133,7 @@ object PFNGLVERTEXATTRIBDIVISORPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBFORMATPROC = CFuncPtr5[GLuint, GLint, GLenum, GLboolean, GLuint, Unit]
+type PFNGLVERTEXATTRIBFORMATPROC = CFuncPtr5[GLuint, GLint, GLenum, GLboolean, GLuint, Unit]
 object PFNGLVERTEXATTRIBFORMATPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBFORMATPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLenum, GLboolean, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBFORMATPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9142,7 +9142,7 @@ object PFNGLVERTEXATTRIBFORMATPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLenum, GLboolean, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI1IPROC = CFuncPtr2[GLuint, GLint, Unit]
+type PFNGLVERTEXATTRIBI1IPROC = CFuncPtr2[GLuint, GLint, Unit]
 object PFNGLVERTEXATTRIBI1IPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI1IPROC] = Tag.materializeCFuncPtr2[GLuint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI1IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9151,7 +9151,7 @@ object PFNGLVERTEXATTRIBI1IPROC:
     inline def value: CFuncPtr2[GLuint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI1IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
+type PFNGLVERTEXATTRIBI1IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
 object PFNGLVERTEXATTRIBI1IVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI1IVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI1IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9160,7 +9160,7 @@ object PFNGLVERTEXATTRIBI1IVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI1UIPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLVERTEXATTRIBI1UIPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLVERTEXATTRIBI1UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI1UIPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI1UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9169,7 +9169,7 @@ object PFNGLVERTEXATTRIBI1UIPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI1UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBI1UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBI1UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI1UIVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI1UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9178,7 +9178,7 @@ object PFNGLVERTEXATTRIBI1UIVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI2IPROC = CFuncPtr3[GLuint, GLint, GLint, Unit]
+type PFNGLVERTEXATTRIBI2IPROC = CFuncPtr3[GLuint, GLint, GLint, Unit]
 object PFNGLVERTEXATTRIBI2IPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI2IPROC] = Tag.materializeCFuncPtr3[GLuint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9187,7 +9187,7 @@ object PFNGLVERTEXATTRIBI2IPROC:
     inline def value: CFuncPtr3[GLuint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI2IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
+type PFNGLVERTEXATTRIBI2IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
 object PFNGLVERTEXATTRIBI2IVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI2IVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9196,7 +9196,7 @@ object PFNGLVERTEXATTRIBI2IVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI2UIPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
+type PFNGLVERTEXATTRIBI2UIPROC = CFuncPtr3[GLuint, GLuint, GLuint, Unit]
 object PFNGLVERTEXATTRIBI2UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI2UIPROC] = Tag.materializeCFuncPtr3[GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI2UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9205,7 +9205,7 @@ object PFNGLVERTEXATTRIBI2UIPROC:
     inline def value: CFuncPtr3[GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI2UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBI2UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBI2UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI2UIVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI2UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9214,7 +9214,7 @@ object PFNGLVERTEXATTRIBI2UIVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI3IPROC = CFuncPtr4[GLuint, GLint, GLint, GLint, Unit]
+type PFNGLVERTEXATTRIBI3IPROC = CFuncPtr4[GLuint, GLint, GLint, GLint, Unit]
 object PFNGLVERTEXATTRIBI3IPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI3IPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9223,7 +9223,7 @@ object PFNGLVERTEXATTRIBI3IPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI3IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
+type PFNGLVERTEXATTRIBI3IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
 object PFNGLVERTEXATTRIBI3IVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI3IVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9232,7 +9232,7 @@ object PFNGLVERTEXATTRIBI3IVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI3UIPROC = CFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit]
+type PFNGLVERTEXATTRIBI3UIPROC = CFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit]
 object PFNGLVERTEXATTRIBI3UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI3UIPROC] = Tag.materializeCFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9241,7 +9241,7 @@ object PFNGLVERTEXATTRIBI3UIPROC:
     inline def value: CFuncPtr4[GLuint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI3UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBI3UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBI3UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI3UIVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9250,7 +9250,7 @@ object PFNGLVERTEXATTRIBI3UIVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4BVPROC = CFuncPtr2[GLuint, Ptr[GLbyte], Unit]
+type PFNGLVERTEXATTRIBI4BVPROC = CFuncPtr2[GLuint, Ptr[GLbyte], Unit]
 object PFNGLVERTEXATTRIBI4BVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4BVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLbyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4BVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9259,7 +9259,7 @@ object PFNGLVERTEXATTRIBI4BVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLbyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4IPROC = CFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit]
+type PFNGLVERTEXATTRIBI4IPROC = CFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit]
 object PFNGLVERTEXATTRIBI4IPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4IPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9268,7 +9268,7 @@ object PFNGLVERTEXATTRIBI4IPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
+type PFNGLVERTEXATTRIBI4IVPROC = CFuncPtr2[GLuint, Ptr[GLint], Unit]
 object PFNGLVERTEXATTRIBI4IVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4IVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9277,7 +9277,7 @@ object PFNGLVERTEXATTRIBI4IVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
+type PFNGLVERTEXATTRIBI4SVPROC = CFuncPtr2[GLuint, Ptr[GLshort], Unit]
 object PFNGLVERTEXATTRIBI4SVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4SVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9286,7 +9286,7 @@ object PFNGLVERTEXATTRIBI4SVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4UBVPROC = CFuncPtr2[GLuint, Ptr[GLubyte], Unit]
+type PFNGLVERTEXATTRIBI4UBVPROC = CFuncPtr2[GLuint, Ptr[GLubyte], Unit]
 object PFNGLVERTEXATTRIBI4UBVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4UBVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLubyte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4UBVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9295,7 +9295,7 @@ object PFNGLVERTEXATTRIBI4UBVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLubyte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4UIPROC = CFuncPtr5[GLuint, GLuint, GLuint, GLuint, GLuint, Unit]
+type PFNGLVERTEXATTRIBI4UIPROC = CFuncPtr5[GLuint, GLuint, GLuint, GLuint, GLuint, Unit]
 object PFNGLVERTEXATTRIBI4UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4UIPROC] = Tag.materializeCFuncPtr5[GLuint, GLuint, GLuint, GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9304,7 +9304,7 @@ object PFNGLVERTEXATTRIBI4UIPROC:
     inline def value: CFuncPtr5[GLuint, GLuint, GLuint, GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBI4UIVPROC = CFuncPtr2[GLuint, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBI4UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4UIVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9313,7 +9313,7 @@ object PFNGLVERTEXATTRIBI4UIVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBI4USVPROC = CFuncPtr2[GLuint, Ptr[GLushort], Unit]
+type PFNGLVERTEXATTRIBI4USVPROC = CFuncPtr2[GLuint, Ptr[GLushort], Unit]
 object PFNGLVERTEXATTRIBI4USVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBI4USVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLushort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBI4USVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9322,7 +9322,7 @@ object PFNGLVERTEXATTRIBI4USVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLushort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBIFORMATPROC = CFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit]
+type PFNGLVERTEXATTRIBIFORMATPROC = CFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit]
 object PFNGLVERTEXATTRIBIFORMATPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBIFORMATPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBIFORMATPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9331,7 +9331,7 @@ object PFNGLVERTEXATTRIBIFORMATPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBIPOINTERPROC = CFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLVERTEXATTRIBIPOINTERPROC = CFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLVERTEXATTRIBIPOINTERPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBIPOINTERPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBIPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9340,7 +9340,7 @@ object PFNGLVERTEXATTRIBIPOINTERPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL1DPROC = CFuncPtr2[GLuint, GLdouble, Unit]
+type PFNGLVERTEXATTRIBL1DPROC = CFuncPtr2[GLuint, GLdouble, Unit]
 object PFNGLVERTEXATTRIBL1DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL1DPROC] = Tag.materializeCFuncPtr2[GLuint, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL1DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9349,7 +9349,7 @@ object PFNGLVERTEXATTRIBL1DPROC:
     inline def value: CFuncPtr2[GLuint, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL1DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIBL1DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIBL1DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL1DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL1DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9358,7 +9358,7 @@ object PFNGLVERTEXATTRIBL1DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL2DPROC = CFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
+type PFNGLVERTEXATTRIBL2DPROC = CFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
 object PFNGLVERTEXATTRIBL2DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL2DPROC] = Tag.materializeCFuncPtr3[GLuint, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9367,7 +9367,7 @@ object PFNGLVERTEXATTRIBL2DPROC:
     inline def value: CFuncPtr3[GLuint, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL2DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIBL2DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIBL2DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL2DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9376,7 +9376,7 @@ object PFNGLVERTEXATTRIBL2DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL3DPROC = CFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLVERTEXATTRIBL3DPROC = CFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLVERTEXATTRIBL3DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL3DPROC] = Tag.materializeCFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9385,7 +9385,7 @@ object PFNGLVERTEXATTRIBL3DPROC:
     inline def value: CFuncPtr4[GLuint, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL3DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIBL3DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIBL3DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL3DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9394,7 +9394,7 @@ object PFNGLVERTEXATTRIBL3DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL4DPROC = CFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLVERTEXATTRIBL4DPROC = CFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLVERTEXATTRIBL4DPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL4DPROC] = Tag.materializeCFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL4DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9403,7 +9403,7 @@ object PFNGLVERTEXATTRIBL4DPROC:
     inline def value: CFuncPtr5[GLuint, GLdouble, GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBL4DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
+type PFNGLVERTEXATTRIBL4DVPROC = CFuncPtr2[GLuint, Ptr[GLdouble], Unit]
 object PFNGLVERTEXATTRIBL4DVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBL4DVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBL4DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9412,7 +9412,7 @@ object PFNGLVERTEXATTRIBL4DVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBLFORMATPROC = CFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit]
+type PFNGLVERTEXATTRIBLFORMATPROC = CFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit]
 object PFNGLVERTEXATTRIBLFORMATPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBLFORMATPROC] = Tag.materializeCFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBLFORMATPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9421,7 +9421,7 @@ object PFNGLVERTEXATTRIBLFORMATPROC:
     inline def value: CFuncPtr4[GLuint, GLint, GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBLPOINTERPROC = CFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLVERTEXATTRIBLPOINTERPROC = CFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLVERTEXATTRIBLPOINTERPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBLPOINTERPROC] = Tag.materializeCFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBLPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9430,7 +9430,7 @@ object PFNGLVERTEXATTRIBLPOINTERPROC:
     inline def value: CFuncPtr5[GLuint, GLint, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP1UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
+type PFNGLVERTEXATTRIBP1UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
 object PFNGLVERTEXATTRIBP1UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP1UIPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP1UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9439,7 +9439,7 @@ object PFNGLVERTEXATTRIBP1UIPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP1UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBP1UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBP1UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP1UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP1UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9448,7 +9448,7 @@ object PFNGLVERTEXATTRIBP1UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP2UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
+type PFNGLVERTEXATTRIBP2UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
 object PFNGLVERTEXATTRIBP2UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP2UIPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP2UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9457,7 +9457,7 @@ object PFNGLVERTEXATTRIBP2UIPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP2UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBP2UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBP2UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP2UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP2UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9466,7 +9466,7 @@ object PFNGLVERTEXATTRIBP2UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP3UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
+type PFNGLVERTEXATTRIBP3UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
 object PFNGLVERTEXATTRIBP3UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP3UIPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9475,7 +9475,7 @@ object PFNGLVERTEXATTRIBP3UIPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP3UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBP3UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBP3UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP3UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9484,7 +9484,7 @@ object PFNGLVERTEXATTRIBP3UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP4UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
+type PFNGLVERTEXATTRIBP4UIPROC = CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
 object PFNGLVERTEXATTRIBP4UIPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP4UIPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9493,7 +9493,7 @@ object PFNGLVERTEXATTRIBP4UIPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBP4UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
+type PFNGLVERTEXATTRIBP4UIVPROC = CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
 object PFNGLVERTEXATTRIBP4UIVPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBP4UIVPROC] = Tag.materializeCFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBP4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9502,7 +9502,7 @@ object PFNGLVERTEXATTRIBP4UIVPROC:
     inline def value: CFuncPtr4[GLuint, GLenum, GLboolean, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXATTRIBPOINTERPROC = CFuncPtr6[GLuint, GLint, GLenum, GLboolean, GLsizei, Ptr[Byte], Unit]
+type PFNGLVERTEXATTRIBPOINTERPROC = CFuncPtr6[GLuint, GLint, GLenum, GLboolean, GLsizei, Ptr[Byte], Unit]
 object PFNGLVERTEXATTRIBPOINTERPROC:
   given _tag: Tag[PFNGLVERTEXATTRIBPOINTERPROC] = Tag.materializeCFuncPtr6[GLuint, GLint, GLenum, GLboolean, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXATTRIBPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9511,7 +9511,7 @@ object PFNGLVERTEXATTRIBPOINTERPROC:
     inline def value: CFuncPtr6[GLuint, GLint, GLenum, GLboolean, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXBINDINGDIVISORPROC = CFuncPtr2[GLuint, GLuint, Unit]
+type PFNGLVERTEXBINDINGDIVISORPROC = CFuncPtr2[GLuint, GLuint, Unit]
 object PFNGLVERTEXBINDINGDIVISORPROC:
   given _tag: Tag[PFNGLVERTEXBINDINGDIVISORPROC] = Tag.materializeCFuncPtr2[GLuint, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXBINDINGDIVISORPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9520,7 +9520,7 @@ object PFNGLVERTEXBINDINGDIVISORPROC:
     inline def value: CFuncPtr2[GLuint, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXP2UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLVERTEXP2UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLVERTEXP2UIPROC:
   given _tag: Tag[PFNGLVERTEXP2UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXP2UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9529,7 +9529,7 @@ object PFNGLVERTEXP2UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXP2UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLVERTEXP2UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLVERTEXP2UIVPROC:
   given _tag: Tag[PFNGLVERTEXP2UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXP2UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9538,7 +9538,7 @@ object PFNGLVERTEXP2UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLVERTEXP3UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLVERTEXP3UIPROC:
   given _tag: Tag[PFNGLVERTEXP3UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXP3UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9547,7 +9547,7 @@ object PFNGLVERTEXP3UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLVERTEXP3UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLVERTEXP3UIVPROC:
   given _tag: Tag[PFNGLVERTEXP3UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXP3UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9556,7 +9556,7 @@ object PFNGLVERTEXP3UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXP4UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
+type PFNGLVERTEXP4UIPROC = CFuncPtr2[GLenum, GLuint, Unit]
 object PFNGLVERTEXP4UIPROC:
   given _tag: Tag[PFNGLVERTEXP4UIPROC] = Tag.materializeCFuncPtr2[GLenum, GLuint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXP4UIPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9565,7 +9565,7 @@ object PFNGLVERTEXP4UIPROC:
     inline def value: CFuncPtr2[GLenum, GLuint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXP4UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
+type PFNGLVERTEXP4UIVPROC = CFuncPtr2[GLenum, Ptr[GLuint], Unit]
 object PFNGLVERTEXP4UIVPROC:
   given _tag: Tag[PFNGLVERTEXP4UIVPROC] = Tag.materializeCFuncPtr2[GLenum, Ptr[GLuint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXP4UIVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9574,7 +9574,7 @@ object PFNGLVERTEXP4UIVPROC:
     inline def value: CFuncPtr2[GLenum, Ptr[GLuint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVERTEXPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
+type PFNGLVERTEXPOINTERPROC = CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
 object PFNGLVERTEXPOINTERPROC:
   given _tag: Tag[PFNGLVERTEXPOINTERPROC] = Tag.materializeCFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVERTEXPOINTERPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9583,7 +9583,7 @@ object PFNGLVERTEXPOINTERPROC:
     inline def value: CFuncPtr4[GLint, GLenum, GLsizei, Ptr[Byte], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVIEWPORTARRAYVPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLfloat], Unit]
+type PFNGLVIEWPORTARRAYVPROC = CFuncPtr3[GLuint, GLsizei, Ptr[GLfloat], Unit]
 object PFNGLVIEWPORTARRAYVPROC:
   given _tag: Tag[PFNGLVIEWPORTARRAYVPROC] = Tag.materializeCFuncPtr3[GLuint, GLsizei, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVIEWPORTARRAYVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9592,7 +9592,7 @@ object PFNGLVIEWPORTARRAYVPROC:
     inline def value: CFuncPtr3[GLuint, GLsizei, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVIEWPORTINDEXEDFPROC = CFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLVIEWPORTINDEXEDFPROC = CFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLVIEWPORTINDEXEDFPROC:
   given _tag: Tag[PFNGLVIEWPORTINDEXEDFPROC] = Tag.materializeCFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVIEWPORTINDEXEDFPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9601,7 +9601,7 @@ object PFNGLVIEWPORTINDEXEDFPROC:
     inline def value: CFuncPtr5[GLuint, GLfloat, GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVIEWPORTINDEXEDFVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
+type PFNGLVIEWPORTINDEXEDFVPROC = CFuncPtr2[GLuint, Ptr[GLfloat], Unit]
 object PFNGLVIEWPORTINDEXEDFVPROC:
   given _tag: Tag[PFNGLVIEWPORTINDEXEDFVPROC] = Tag.materializeCFuncPtr2[GLuint, Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVIEWPORTINDEXEDFVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9610,7 +9610,7 @@ object PFNGLVIEWPORTINDEXEDFVPROC:
     inline def value: CFuncPtr2[GLuint, Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLVIEWPORTPROC = CFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit]
+type PFNGLVIEWPORTPROC = CFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit]
 object PFNGLVIEWPORTPROC:
   given _tag: Tag[PFNGLVIEWPORTPROC] = Tag.materializeCFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLVIEWPORTPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9619,7 +9619,7 @@ object PFNGLVIEWPORTPROC:
     inline def value: CFuncPtr4[GLint, GLint, GLsizei, GLsizei, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWAITSYNCPROC = CFuncPtr3[GLsync, GLbitfield, GLuint64, Unit]
+type PFNGLWAITSYNCPROC = CFuncPtr3[GLsync, GLbitfield, GLuint64, Unit]
 object PFNGLWAITSYNCPROC:
   given _tag: Tag[PFNGLWAITSYNCPROC] = Tag.materializeCFuncPtr3[GLsync, GLbitfield, GLuint64, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWAITSYNCPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9628,7 +9628,7 @@ object PFNGLWAITSYNCPROC:
     inline def value: CFuncPtr3[GLsync, GLbitfield, GLuint64, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
+type PFNGLWINDOWPOS2DPROC = CFuncPtr2[GLdouble, GLdouble, Unit]
 object PFNGLWINDOWPOS2DPROC:
   given _tag: Tag[PFNGLWINDOWPOS2DPROC] = Tag.materializeCFuncPtr2[GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9637,7 +9637,7 @@ object PFNGLWINDOWPOS2DPROC:
     inline def value: CFuncPtr2[GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLWINDOWPOS2DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLWINDOWPOS2DVPROC:
   given _tag: Tag[PFNGLWINDOWPOS2DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9646,7 +9646,7 @@ object PFNGLWINDOWPOS2DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
+type PFNGLWINDOWPOS2FPROC = CFuncPtr2[GLfloat, GLfloat, Unit]
 object PFNGLWINDOWPOS2FPROC:
   given _tag: Tag[PFNGLWINDOWPOS2FPROC] = Tag.materializeCFuncPtr2[GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9655,7 +9655,7 @@ object PFNGLWINDOWPOS2FPROC:
     inline def value: CFuncPtr2[GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLWINDOWPOS2FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLWINDOWPOS2FVPROC:
   given _tag: Tag[PFNGLWINDOWPOS2FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9664,7 +9664,7 @@ object PFNGLWINDOWPOS2FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2IPROC = CFuncPtr2[GLint, GLint, Unit]
+type PFNGLWINDOWPOS2IPROC = CFuncPtr2[GLint, GLint, Unit]
 object PFNGLWINDOWPOS2IPROC:
   given _tag: Tag[PFNGLWINDOWPOS2IPROC] = Tag.materializeCFuncPtr2[GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9673,7 +9673,7 @@ object PFNGLWINDOWPOS2IPROC:
     inline def value: CFuncPtr2[GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLWINDOWPOS2IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLWINDOWPOS2IVPROC:
   given _tag: Tag[PFNGLWINDOWPOS2IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9682,7 +9682,7 @@ object PFNGLWINDOWPOS2IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
+type PFNGLWINDOWPOS2SPROC = CFuncPtr2[GLshort, GLshort, Unit]
 object PFNGLWINDOWPOS2SPROC:
   given _tag: Tag[PFNGLWINDOWPOS2SPROC] = Tag.materializeCFuncPtr2[GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9691,7 +9691,7 @@ object PFNGLWINDOWPOS2SPROC:
     inline def value: CFuncPtr2[GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLWINDOWPOS2SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLWINDOWPOS2SVPROC:
   given _tag: Tag[PFNGLWINDOWPOS2SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS2SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9700,7 +9700,7 @@ object PFNGLWINDOWPOS2SVPROC:
     inline def value: CFuncPtr1[Ptr[GLshort], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
+type PFNGLWINDOWPOS3DPROC = CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
 object PFNGLWINDOWPOS3DPROC:
   given _tag: Tag[PFNGLWINDOWPOS3DPROC] = Tag.materializeCFuncPtr3[GLdouble, GLdouble, GLdouble, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3DPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9709,7 +9709,7 @@ object PFNGLWINDOWPOS3DPROC:
     inline def value: CFuncPtr3[GLdouble, GLdouble, GLdouble, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
+type PFNGLWINDOWPOS3DVPROC = CFuncPtr1[Ptr[GLdouble], Unit]
 object PFNGLWINDOWPOS3DVPROC:
   given _tag: Tag[PFNGLWINDOWPOS3DVPROC] = Tag.materializeCFuncPtr1[Ptr[GLdouble], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3DVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9718,7 +9718,7 @@ object PFNGLWINDOWPOS3DVPROC:
     inline def value: CFuncPtr1[Ptr[GLdouble], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
+type PFNGLWINDOWPOS3FPROC = CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
 object PFNGLWINDOWPOS3FPROC:
   given _tag: Tag[PFNGLWINDOWPOS3FPROC] = Tag.materializeCFuncPtr3[GLfloat, GLfloat, GLfloat, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3FPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9727,7 +9727,7 @@ object PFNGLWINDOWPOS3FPROC:
     inline def value: CFuncPtr3[GLfloat, GLfloat, GLfloat, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
+type PFNGLWINDOWPOS3FVPROC = CFuncPtr1[Ptr[GLfloat], Unit]
 object PFNGLWINDOWPOS3FVPROC:
   given _tag: Tag[PFNGLWINDOWPOS3FVPROC] = Tag.materializeCFuncPtr1[Ptr[GLfloat], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3FVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9736,7 +9736,7 @@ object PFNGLWINDOWPOS3FVPROC:
     inline def value: CFuncPtr1[Ptr[GLfloat], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
+type PFNGLWINDOWPOS3IPROC = CFuncPtr3[GLint, GLint, GLint, Unit]
 object PFNGLWINDOWPOS3IPROC:
   given _tag: Tag[PFNGLWINDOWPOS3IPROC] = Tag.materializeCFuncPtr3[GLint, GLint, GLint, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3IPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9745,7 +9745,7 @@ object PFNGLWINDOWPOS3IPROC:
     inline def value: CFuncPtr3[GLint, GLint, GLint, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
+type PFNGLWINDOWPOS3IVPROC = CFuncPtr1[Ptr[GLint], Unit]
 object PFNGLWINDOWPOS3IVPROC:
   given _tag: Tag[PFNGLWINDOWPOS3IVPROC] = Tag.materializeCFuncPtr1[Ptr[GLint], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3IVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9754,7 +9754,7 @@ object PFNGLWINDOWPOS3IVPROC:
     inline def value: CFuncPtr1[Ptr[GLint], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
+type PFNGLWINDOWPOS3SPROC = CFuncPtr3[GLshort, GLshort, GLshort, Unit]
 object PFNGLWINDOWPOS3SPROC:
   given _tag: Tag[PFNGLWINDOWPOS3SPROC] = Tag.materializeCFuncPtr3[GLshort, GLshort, GLshort, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3SPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9763,7 +9763,7 @@ object PFNGLWINDOWPOS3SPROC:
     inline def value: CFuncPtr3[GLshort, GLshort, GLshort, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-opaque type PFNGLWINDOWPOS3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
+type PFNGLWINDOWPOS3SVPROC = CFuncPtr1[Ptr[GLshort], Unit]
 object PFNGLWINDOWPOS3SVPROC:
   given _tag: Tag[PFNGLWINDOWPOS3SVPROC] = Tag.materializeCFuncPtr1[Ptr[GLshort], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): PFNGLWINDOWPOS3SVPROC = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -9786,21 +9786,21 @@ object int64_t:
   extension (v: int64_t)
     inline def value: scala.Long = v
 
-opaque type intptr_t = CLongLong
+type intptr_t = CLongLong
 object intptr_t:
   given _tag: Tag[intptr_t] = Tag.Long
   inline def apply(inline o: CLongLong): intptr_t = o
   extension (v: intptr_t)
     inline def value: CLongLong = v
 
-opaque type khronos_float_t = Float
+type khronos_float_t = Float
 object khronos_float_t:
   given _tag: Tag[khronos_float_t] = Tag.Float
   inline def apply(inline o: Float): khronos_float_t = o
   extension (v: khronos_float_t)
     inline def value: Float = v
 
-opaque type khronos_int16_t = CShort
+type khronos_int16_t = CShort
 object khronos_int16_t:
   given _tag: Tag[khronos_int16_t] = Tag.Short
   inline def apply(inline o: CShort): khronos_int16_t = o
@@ -9821,7 +9821,7 @@ object khronos_int64_t:
   extension (v: khronos_int64_t)
     inline def value: int64_t = v
 
-opaque type khronos_int8_t = CChar
+type khronos_int8_t = CChar
 object khronos_int8_t:
   given _tag: Tag[khronos_int8_t] = Tag.Byte
   inline def apply(inline o: CChar): khronos_int8_t = o
@@ -9835,7 +9835,7 @@ object khronos_intptr_t:
   extension (v: khronos_intptr_t)
     inline def value: intptr_t = v
 
-opaque type khronos_ssize_t = CLongLong
+type khronos_ssize_t = CLongLong
 object khronos_ssize_t:
   given _tag: Tag[khronos_ssize_t] = Tag.Long
   inline def apply(inline o: CLongLong): khronos_ssize_t = o
@@ -9849,7 +9849,7 @@ object khronos_stime_nanoseconds_t:
   extension (v: khronos_stime_nanoseconds_t)
     inline def value: khronos_int64_t = v
 
-opaque type khronos_uint16_t = CUnsignedShort
+type khronos_uint16_t = CUnsignedShort
 object khronos_uint16_t:
   given _tag: Tag[khronos_uint16_t] = Tag.UShort
   inline def apply(inline o: CUnsignedShort): khronos_uint16_t = o
@@ -9870,7 +9870,7 @@ object khronos_uint64_t:
   extension (v: khronos_uint64_t)
     inline def value: uint64_t = v
 
-opaque type khronos_uint8_t = CUnsignedChar
+type khronos_uint8_t = CUnsignedChar
 object khronos_uint8_t:
   given _tag: Tag[khronos_uint8_t] = Tag.UByte
   inline def apply(inline o: CUnsignedChar): khronos_uint8_t = o
@@ -9884,7 +9884,7 @@ object khronos_uintptr_t:
   extension (v: khronos_uintptr_t)
     inline def value: uintptr_t = v
 
-opaque type khronos_usize_t = CUnsignedLongLong
+type khronos_usize_t = CUnsignedLongLong
 object khronos_usize_t:
   given _tag: Tag[khronos_usize_t] = Tag.ULong
   inline def apply(inline o: CUnsignedLongLong): khronos_usize_t = o
@@ -9912,7 +9912,7 @@ object uint64_t:
   extension (v: uint64_t)
     inline def value: scala.scalanative.unsigned.ULong = v
 
-opaque type uintptr_t = CUnsignedLongLong
+type uintptr_t = CUnsignedLongLong
 object uintptr_t:
   given _tag: Tag[uintptr_t] = Tag.ULong
   inline def apply(inline o: CUnsignedLongLong): uintptr_t = o

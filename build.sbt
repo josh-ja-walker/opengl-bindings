@@ -37,6 +37,7 @@ lazy val openglBindings = project
     .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
     .settings(
         name := "opengl-bindings",
+
         bindgenBindings += {
             val include = (Compile / resourceDirectory).value / "scala-native" / "glad" / "include"
             Binding(include / "glad" / "gl.h", "glad")
@@ -51,9 +52,8 @@ lazy val openglBindings = project
                 .withCImports(List("glfw3.h", "glfw3native.h"))
                 .withClangFlags(List("-I" + include))
         },
-                
+
         bindgenBindings := {
-            //TODO: export to library with .withExport(true)
             bindgenBindings.value.map(_.withNoLocation(true).withMultiFile(true)) 
         },
 
@@ -68,7 +68,6 @@ lazy val openglBindings = project
             val pkgs = Seq("glfw3")
             val pkgConfig = vcpkgConfigurator.value.pkgConfig
 
-            // TODO: maybe include "-lglad", "-lgdi32"
             val compflags = pkgs.flatMap(pkg => pkgConfig.compilationFlags(pkg)) ++ List("-D GLFW_DLL", ("-I" + (gladBase / "include").toString), "-L" + gladBase.toString)
             val linkflags = pkgs.flatMap(pkg => pkgConfig.linkingFlags(pkg)) ++ List("-lshell32", "-lopengl32",  "-L" + (gladBase.toString))
 

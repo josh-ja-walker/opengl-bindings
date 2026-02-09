@@ -8,7 +8,7 @@ import _root_.scala.scalanative.*
 /**
  * The function pointer type for memory allocation callbacks.
 */
-opaque type GLFWallocatefun = CFuncPtr2[size_t, Ptr[Byte], Ptr[Byte]]
+type GLFWallocatefun = CFuncPtr2[size_t, Ptr[Byte], Ptr[Byte]]
 object GLFWallocatefun:
   given _tag: Tag[GLFWallocatefun] = Tag.materializeCFuncPtr2[size_t, Ptr[Byte], Ptr[Byte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWallocatefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -20,7 +20,7 @@ object GLFWallocatefun:
 /**
  * The function pointer type for Unicode character callbacks.
 */
-opaque type GLFWcharfun = CFuncPtr2[Ptr[GLFWwindow], CUnsignedInt, Unit]
+type GLFWcharfun = CFuncPtr2[Ptr[GLFWwindow], CUnsignedInt, Unit]
 object GLFWcharfun:
   given _tag: Tag[GLFWcharfun] = Tag.materializeCFuncPtr2[Ptr[GLFWwindow], CUnsignedInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWcharfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -32,7 +32,7 @@ object GLFWcharfun:
 /**
  * The function pointer type for Unicode character with modifiers callbacks.
 */
-opaque type GLFWcharmodsfun = CFuncPtr3[Ptr[GLFWwindow], CUnsignedInt, CInt, Unit]
+type GLFWcharmodsfun = CFuncPtr3[Ptr[GLFWwindow], CUnsignedInt, CInt, Unit]
 object GLFWcharmodsfun:
   given _tag: Tag[GLFWcharmodsfun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], CUnsignedInt, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWcharmodsfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -44,7 +44,7 @@ object GLFWcharmodsfun:
 /**
  * The function pointer type for cursor enter/leave callbacks.
 */
-opaque type GLFWcursorenterfun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
+type GLFWcursorenterfun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
 object GLFWcursorenterfun:
   given _tag: Tag[GLFWcursorenterfun] = Tag.materializeCFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWcursorenterfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -56,7 +56,7 @@ object GLFWcursorenterfun:
 /**
  * The function pointer type for cursor position callbacks.
 */
-opaque type GLFWcursorposfun = CFuncPtr3[Ptr[GLFWwindow], Double, Double, Unit]
+type GLFWcursorposfun = CFuncPtr3[Ptr[GLFWwindow], Double, Double, Unit]
 object GLFWcursorposfun:
   given _tag: Tag[GLFWcursorposfun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], Double, Double, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWcursorposfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -68,7 +68,7 @@ object GLFWcursorposfun:
 /**
  * The function pointer type for memory deallocation callbacks.
 */
-opaque type GLFWdeallocatefun = CFuncPtr2[Ptr[Byte], Ptr[Byte], Unit]
+type GLFWdeallocatefun = CFuncPtr2[Ptr[Byte], Ptr[Byte], Unit]
 object GLFWdeallocatefun:
   given _tag: Tag[GLFWdeallocatefun] = Tag.materializeCFuncPtr2[Ptr[Byte], Ptr[Byte], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWdeallocatefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -80,7 +80,7 @@ object GLFWdeallocatefun:
 /**
  * The function pointer type for path drop callbacks.
 */
-opaque type GLFWdropfun = CFuncPtr3[Ptr[GLFWwindow], CInt, Ptr[CString], Unit]
+type GLFWdropfun = CFuncPtr3[Ptr[GLFWwindow], CInt, Ptr[CString], Unit]
 object GLFWdropfun:
   given _tag: Tag[GLFWdropfun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], CInt, Ptr[CString], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWdropfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -92,7 +92,7 @@ object GLFWdropfun:
 /**
  * The function pointer type for error callbacks.
 */
-opaque type GLFWerrorfun = CFuncPtr2[CInt, CString, Unit]
+type GLFWerrorfun = CFuncPtr2[CInt, CString, Unit]
 object GLFWerrorfun:
   given _tag: Tag[GLFWerrorfun] = Tag.materializeCFuncPtr2[CInt, CString, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWerrorfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -104,7 +104,7 @@ object GLFWerrorfun:
 /**
  * The function pointer type for framebuffer size callbacks.
 */
-opaque type GLFWframebuffersizefun = CFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
+type GLFWframebuffersizefun = CFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
 object GLFWframebuffersizefun:
   given _tag: Tag[GLFWframebuffersizefun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWframebuffersizefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -116,7 +116,7 @@ object GLFWframebuffersizefun:
 /**
  * Client API function pointer type.
 */
-opaque type GLFWglproc = CFuncPtr0[Unit]
+type GLFWglproc = CFuncPtr0[Unit]
 object GLFWglproc:
   given _tag: Tag[GLFWglproc] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWglproc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -128,7 +128,7 @@ object GLFWglproc:
 /**
  * The function pointer type for joystick configuration callbacks.
 */
-opaque type GLFWjoystickfun = CFuncPtr2[CInt, CInt, Unit]
+type GLFWjoystickfun = CFuncPtr2[CInt, CInt, Unit]
 object GLFWjoystickfun:
   given _tag: Tag[GLFWjoystickfun] = Tag.materializeCFuncPtr2[CInt, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWjoystickfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -140,7 +140,7 @@ object GLFWjoystickfun:
 /**
  * The function pointer type for keyboard key callbacks.
 */
-opaque type GLFWkeyfun = CFuncPtr5[Ptr[GLFWwindow], CInt, CInt, CInt, CInt, Unit]
+type GLFWkeyfun = CFuncPtr5[Ptr[GLFWwindow], CInt, CInt, CInt, CInt, Unit]
 object GLFWkeyfun:
   given _tag: Tag[GLFWkeyfun] = Tag.materializeCFuncPtr5[Ptr[GLFWwindow], CInt, CInt, CInt, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWkeyfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -152,7 +152,7 @@ object GLFWkeyfun:
 /**
  * The function pointer type for monitor configuration callbacks.
 */
-opaque type GLFWmonitorfun = CFuncPtr2[Ptr[GLFWmonitor], CInt, Unit]
+type GLFWmonitorfun = CFuncPtr2[Ptr[GLFWmonitor], CInt, Unit]
 object GLFWmonitorfun:
   given _tag: Tag[GLFWmonitorfun] = Tag.materializeCFuncPtr2[Ptr[GLFWmonitor], CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWmonitorfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -164,7 +164,7 @@ object GLFWmonitorfun:
 /**
  * The function pointer type for mouse button callbacks.
 */
-opaque type GLFWmousebuttonfun = CFuncPtr4[Ptr[GLFWwindow], CInt, CInt, CInt, Unit]
+type GLFWmousebuttonfun = CFuncPtr4[Ptr[GLFWwindow], CInt, CInt, CInt, Unit]
 object GLFWmousebuttonfun:
   given _tag: Tag[GLFWmousebuttonfun] = Tag.materializeCFuncPtr4[Ptr[GLFWwindow], CInt, CInt, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWmousebuttonfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -176,7 +176,7 @@ object GLFWmousebuttonfun:
 /**
  * The function pointer type for memory reallocation callbacks.
 */
-opaque type GLFWreallocatefun = CFuncPtr3[Ptr[Byte], size_t, Ptr[Byte], Ptr[Byte]]
+type GLFWreallocatefun = CFuncPtr3[Ptr[Byte], size_t, Ptr[Byte], Ptr[Byte]]
 object GLFWreallocatefun:
   given _tag: Tag[GLFWreallocatefun] = Tag.materializeCFuncPtr3[Ptr[Byte], size_t, Ptr[Byte], Ptr[Byte]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWreallocatefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -188,7 +188,7 @@ object GLFWreallocatefun:
 /**
  * The function pointer type for scroll callbacks.
 */
-opaque type GLFWscrollfun = CFuncPtr3[Ptr[GLFWwindow], Double, Double, Unit]
+type GLFWscrollfun = CFuncPtr3[Ptr[GLFWwindow], Double, Double, Unit]
 object GLFWscrollfun:
   given _tag: Tag[GLFWscrollfun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], Double, Double, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWscrollfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -200,7 +200,7 @@ object GLFWscrollfun:
 /**
  * Vulkan API function pointer type.
 */
-opaque type GLFWvkproc = CFuncPtr0[Unit]
+type GLFWvkproc = CFuncPtr0[Unit]
 object GLFWvkproc:
   given _tag: Tag[GLFWvkproc] = Tag.materializeCFuncPtr0[Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWvkproc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -212,7 +212,7 @@ object GLFWvkproc:
 /**
  * The function pointer type for window close callbacks.
 */
-opaque type GLFWwindowclosefun = CFuncPtr1[Ptr[GLFWwindow], Unit]
+type GLFWwindowclosefun = CFuncPtr1[Ptr[GLFWwindow], Unit]
 object GLFWwindowclosefun:
   given _tag: Tag[GLFWwindowclosefun] = Tag.materializeCFuncPtr1[Ptr[GLFWwindow], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowclosefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -224,7 +224,7 @@ object GLFWwindowclosefun:
 /**
  * The function pointer type for window content scale callbacks.
 */
-opaque type GLFWwindowcontentscalefun = CFuncPtr3[Ptr[GLFWwindow], Float, Float, Unit]
+type GLFWwindowcontentscalefun = CFuncPtr3[Ptr[GLFWwindow], Float, Float, Unit]
 object GLFWwindowcontentscalefun:
   given _tag: Tag[GLFWwindowcontentscalefun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], Float, Float, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowcontentscalefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -236,7 +236,7 @@ object GLFWwindowcontentscalefun:
 /**
  * The function pointer type for window focus callbacks.
 */
-opaque type GLFWwindowfocusfun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
+type GLFWwindowfocusfun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
 object GLFWwindowfocusfun:
   given _tag: Tag[GLFWwindowfocusfun] = Tag.materializeCFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowfocusfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -248,7 +248,7 @@ object GLFWwindowfocusfun:
 /**
  * The function pointer type for window iconify callbacks.
 */
-opaque type GLFWwindowiconifyfun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
+type GLFWwindowiconifyfun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
 object GLFWwindowiconifyfun:
   given _tag: Tag[GLFWwindowiconifyfun] = Tag.materializeCFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowiconifyfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -260,7 +260,7 @@ object GLFWwindowiconifyfun:
 /**
  * The function pointer type for window maximize callbacks.
 */
-opaque type GLFWwindowmaximizefun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
+type GLFWwindowmaximizefun = CFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
 object GLFWwindowmaximizefun:
   given _tag: Tag[GLFWwindowmaximizefun] = Tag.materializeCFuncPtr2[Ptr[GLFWwindow], CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowmaximizefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -272,7 +272,7 @@ object GLFWwindowmaximizefun:
 /**
  * The function pointer type for window position callbacks.
 */
-opaque type GLFWwindowposfun = CFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
+type GLFWwindowposfun = CFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
 object GLFWwindowposfun:
   given _tag: Tag[GLFWwindowposfun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowposfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -284,7 +284,7 @@ object GLFWwindowposfun:
 /**
  * The function pointer type for window content refresh callbacks.
 */
-opaque type GLFWwindowrefreshfun = CFuncPtr1[Ptr[GLFWwindow], Unit]
+type GLFWwindowrefreshfun = CFuncPtr1[Ptr[GLFWwindow], Unit]
 object GLFWwindowrefreshfun:
   given _tag: Tag[GLFWwindowrefreshfun] = Tag.materializeCFuncPtr1[Ptr[GLFWwindow], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowrefreshfun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
@@ -296,7 +296,7 @@ object GLFWwindowrefreshfun:
 /**
  * The function pointer type for window size callbacks.
 */
-opaque type GLFWwindowsizefun = CFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
+type GLFWwindowsizefun = CFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
 object GLFWwindowsizefun:
   given _tag: Tag[GLFWwindowsizefun] = Tag.materializeCFuncPtr3[Ptr[GLFWwindow], CInt, CInt, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GLFWwindowsizefun = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])

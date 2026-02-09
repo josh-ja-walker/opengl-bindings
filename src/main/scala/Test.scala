@@ -1,4 +1,5 @@
 import scalanative.unsafe.*
+import scalanative.unsigned.*
 import scala.scalanative.unsafe.Size.*
 import scala.scalanative.unsafe.Nat.*
 import scala.scalanative.libc.string
@@ -6,6 +7,7 @@ import scala.scalanative.libc.stdio
 
 import glfw.*
 import glad.*
+
 
 @main def main: Int = {
     // Start OpenGL context using the GLFW helper library.
@@ -30,11 +32,8 @@ import glad.*
 
     glfwMakeContextCurrent(window)
 
-    // Redefine glfwProc as a GLADloadfunc
-    val glfwProc = GLADloadfunc((name: CString) => GLADapiproc(glfwGetProcAddress(name).value))
-
     // Start GLAD with GLFW linked to call OpenGL functions.
-    val version_glad = gladLoadGL(glfwProc)
+    val version_glad = gladLoadGL(glfwGetProcAddress)
     if (version_glad == 0) {
         Console.err.println("ERROR: Failed to initialize OpenGL context.")
         return -1
@@ -65,8 +64,8 @@ import glad.*
         !vsPtr = toCString(vertex_shader)
         
         // Link and compile vertex shader
-        val vs: GLuint = glCreateShader(GL_VERTEX_SHADER)
-        glShaderSource(vs, GLsizei(1), vsPtr, null)
+        val vs: UInt = glCreateShader.apply(GL_VERTEX_SHADER)
+        glShaderSource(vs, 1, vsPtr, null)
         glCompileShader(vs)
 
 
@@ -83,51 +82,47 @@ import glad.*
         !fsPtr = toCString(fragment_shader)
 
         // Link and compile fragment shader
-        val fs: GLuint = glCreateShader(GL_FRAGMENT_SHADER)
-        glShaderSource(fs, GLsizei(1), fsPtr, null)
+        val fs: UInt = glCreateShader(GL_FRAGMENT_SHADER)
+        glShaderSource(fs, 1, fsPtr, null)
         glCompileShader(fs)
 
-        val shader_program: GLuint = glCreateProgram()
+        val shader_program: UInt = glCreateProgram()
         glAttachShader(shader_program, fs)
         glAttachShader(shader_program, vs)
         glLinkProgram(shader_program)
-        
-        
-        // Define points of triangle
-        val points: Seq[GLfloat] = Seq(
+
+
+        val points: Array[Float] = Array(
             -1.0f, -1.0f, 0.0f, // x,y,z of first point.
              1.0f, -1.0f, 0.0f, // x,y,z of second point.
              0.0f,  1.0f, 0.0f  // x,y,z of third point.
-        ).map(khronos_float_t.apply andThen GLfloat.apply)
+        )
 
-        // Copy points into an array
-        // TODO: likely possible to improve this
-        val pointsPtr: Ptr[GLfloat] = alloc[GLfloat](points.length)
-        points.zipWithIndex.foreach((v, i) => pointsPtr(i) = v)
+        val pointsPtr: Ptr[Byte] = points.at(0).asInstanceOf[Ptr[Byte]]
 
-        
+
         // Initialise vertex buffer
-        val vbo: Ptr[GLuint] = alloc[GLuint]()
-        !vbo = GLuint(0.toUInt)
+        val vbo: Ptr[UInt] = alloc[UInt]()
+        !vbo = 0.toUInt
 
-        glGenBuffers(GLsizei(1), vbo)
+        glGenBuffers(1, vbo)
         glBindBuffer(GL_ARRAY_BUFFER, !vbo)
-        glBufferData(GL_ARRAY_BUFFER, khronos_ssize_t(points.length * sizeOf[GLfloat]), pointsPtr.asInstanceOf[Ptr[Byte]], GL_STATIC_DRAW)
-        
+        glBufferData(GL_ARRAY_BUFFER, khronos_ssize_t(points.length * sizeOf[Float]), pointsPtr, GL_STATIC_DRAW)
+
 
         // Initialise vertex array
-        val vao: Ptr[GLuint] = alloc[GLuint]()
-        !vao = GLuint(0.toUInt)
+        val vao: Ptr[UInt] = alloc[UInt]()
+        !vao = 0.toUInt
         
-        glGenVertexArrays(GLsizei(1), vao)
+        glGenVertexArrays(1, vao)
         glBindVertexArray(!vao)
-        glEnableVertexAttribArray(GLuint(0.toUInt))
+        glEnableVertexAttribArray(0.toUInt)
         glBindBuffer(GL_ARRAY_BUFFER, !vbo)
-        glVertexAttribPointer(GLuint(0.toUInt), GLint(3), GL_FLOAT, glad.GL_FALSE, GLsizei(0), null)
-        
+        glVertexAttribPointer(0.toUInt, 3, GL_FLOAT, glad.GL_FALSE, 0, null)
+
 
         // Set background colour to black rgba(0, 0, 0, 1)
-        glClearColor(GLfloat(khronos_float_t(0f)), GLfloat(khronos_float_t(0f)), GLfloat(khronos_float_t(0f)), GLfloat(khronos_float_t(1.0f)));
+        glClearColor(0f, 0f, 0f, 1.0f)
 
         // Until window closed by user input
         while (glfwWindowShouldClose(window) == glfw.GL_FALSE) {
@@ -135,14 +130,14 @@ import glad.*
             glfwPollEvents()
 
             // Clear window
-            glClear(GLbitfield(GL_COLOR_BUFFER_BIT.value | GL_DEPTH_BUFFER_BIT.value))
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     
             // Bind shader and vertex to OpenGL state machine
             glUseProgram(shader_program)
             glBindVertexArray(!vao)
             
             // Draw points 0-3 from bound vertex array
-            glDrawArrays(GL_TRIANGLES, GLint(0), GLsizei(3))
+            glDrawArrays(GL_TRIANGLES, 0, 3)
             
             // Copy buffers into window to render
             glfwSwapBuffers(window)

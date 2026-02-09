@@ -5,1052 +5,2102 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-inline def glAccum = PreFunc.glAccum.value
-inline def glActiveShaderProgram = PreFunc.glActiveShaderProgram.value
-inline def glActiveTexture = PreFunc.glActiveTexture.value
-inline def glAlphaFunc = PreFunc.glAlphaFunc.value
-inline def glAreTexturesResident = PreFunc.glAreTexturesResident.value
-inline def glArrayElement = PreFunc.glArrayElement.value
-inline def glAttachShader = PreFunc.glAttachShader.value
-inline def glBegin = PreFunc.glBegin.value
-inline def glBeginConditionalRender = PreFunc.glBeginConditionalRender.value
-inline def glBeginQuery = PreFunc.glBeginQuery.value
-inline def glBeginQueryIndexed = PreFunc.glBeginQueryIndexed.value
-inline def glBeginTransformFeedback = PreFunc.glBeginTransformFeedback.value
-inline def glBindAttribLocation = PreFunc.glBindAttribLocation.value
-inline def glBindBuffer = PreFunc.glBindBuffer.value
-inline def glBindBufferBase = PreFunc.glBindBufferBase.value
-inline def glBindBufferRange = PreFunc.glBindBufferRange.value
-inline def glBindBuffersBase = PreFunc.glBindBuffersBase.value
-inline def glBindBuffersRange = PreFunc.glBindBuffersRange.value
-inline def glBindFragDataLocation = PreFunc.glBindFragDataLocation.value
-inline def glBindFragDataLocationIndexed = PreFunc.glBindFragDataLocationIndexed.value
-inline def glBindFramebuffer = PreFunc.glBindFramebuffer.value
-inline def glBindImageTexture = PreFunc.glBindImageTexture.value
-inline def glBindImageTextures = PreFunc.glBindImageTextures.value
-inline def glBindProgramPipeline = PreFunc.glBindProgramPipeline.value
-inline def glBindRenderbuffer = PreFunc.glBindRenderbuffer.value
-inline def glBindSampler = PreFunc.glBindSampler.value
-inline def glBindSamplers = PreFunc.glBindSamplers.value
-inline def glBindTexture = PreFunc.glBindTexture.value
-inline def glBindTextureUnit = PreFunc.glBindTextureUnit.value
-inline def glBindTextures = PreFunc.glBindTextures.value
-inline def glBindTransformFeedback = PreFunc.glBindTransformFeedback.value
-inline def glBindVertexArray = PreFunc.glBindVertexArray.value
-inline def glBindVertexBuffer = PreFunc.glBindVertexBuffer.value
-inline def glBindVertexBuffers = PreFunc.glBindVertexBuffers.value
-inline def glBitmap = PreFunc.glBitmap.value
-inline def glBlendColor = PreFunc.glBlendColor.value
-inline def glBlendEquation = PreFunc.glBlendEquation.value
-inline def glBlendEquationSeparate = PreFunc.glBlendEquationSeparate.value
-inline def glBlendEquationSeparatei = PreFunc.glBlendEquationSeparatei.value
-inline def glBlendEquationi = PreFunc.glBlendEquationi.value
-inline def glBlendFunc = PreFunc.glBlendFunc.value
-inline def glBlendFuncSeparate = PreFunc.glBlendFuncSeparate.value
-inline def glBlendFuncSeparatei = PreFunc.glBlendFuncSeparatei.value
-inline def glBlendFunci = PreFunc.glBlendFunci.value
-inline def glBlitFramebuffer = PreFunc.glBlitFramebuffer.value
-inline def glBlitNamedFramebuffer = PreFunc.glBlitNamedFramebuffer.value
-inline def glBufferData = PreFunc.glBufferData.value
-inline def glBufferStorage = PreFunc.glBufferStorage.value
-inline def glBufferSubData = PreFunc.glBufferSubData.value
-inline def glCallList = PreFunc.glCallList.value
-inline def glCallLists = PreFunc.glCallLists.value
-inline def glCheckFramebufferStatus = PreFunc.glCheckFramebufferStatus.value
-inline def glCheckNamedFramebufferStatus = PreFunc.glCheckNamedFramebufferStatus.value
-inline def glClampColor = PreFunc.glClampColor.value
-inline def glClearGLbitfield = PreFunc.glClear.value
-inline def glClear = PreFunc.glClear.value
-inline def glClearAccum = PreFunc.glClearAccum.value
-inline def glClearBufferData = PreFunc.glClearBufferData.value
-inline def glClearBufferSubData = PreFunc.glClearBufferSubData.value
-inline def glClearBufferfi = PreFunc.glClearBufferfi.value
-inline def glClearBufferfv = PreFunc.glClearBufferfv.value
-inline def glClearBufferiv = PreFunc.glClearBufferiv.value
-inline def glClearBufferuiv = PreFunc.glClearBufferuiv.value
-inline def glClearColor = PreFunc.glClearColor.value
-inline def glClearDepth = PreFunc.glClearDepth.value
-inline def glClearDepthf = PreFunc.glClearDepthf.value
-inline def glClearIndex = PreFunc.glClearIndex.value
-inline def glClearNamedBufferData = PreFunc.glClearNamedBufferData.value
-inline def glClearNamedBufferSubData = PreFunc.glClearNamedBufferSubData.value
-inline def glClearNamedFramebufferfi = PreFunc.glClearNamedFramebufferfi.value
-inline def glClearNamedFramebufferfv = PreFunc.glClearNamedFramebufferfv.value
-inline def glClearNamedFramebufferiv = PreFunc.glClearNamedFramebufferiv.value
-inline def glClearNamedFramebufferuiv = PreFunc.glClearNamedFramebufferuiv.value
-inline def glClearStencil = PreFunc.glClearStencil.value
-inline def glClearTexImage = PreFunc.glClearTexImage.value
-inline def glClearTexSubImage = PreFunc.glClearTexSubImage.value
-inline def glClientActiveTexture = PreFunc.glClientActiveTexture.value
-inline def glClientWaitSync = PreFunc.glClientWaitSync.value
-inline def glClipControl = PreFunc.glClipControl.value
-inline def glClipPlane = PreFunc.glClipPlane.value
-inline def glColor3b = PreFunc.glColor3b.value
-inline def glColor3bv = PreFunc.glColor3bv.value
-inline def glColor3d = PreFunc.glColor3d.value
-inline def glColor3dv = PreFunc.glColor3dv.value
-inline def glColor3f = PreFunc.glColor3f.value
-inline def glColor3fv = PreFunc.glColor3fv.value
-inline def glColor3i = PreFunc.glColor3i.value
-inline def glColor3iv = PreFunc.glColor3iv.value
-inline def glColor3s = PreFunc.glColor3s.value
-inline def glColor3sv = PreFunc.glColor3sv.value
-inline def glColor3ub = PreFunc.glColor3ub.value
-inline def glColor3ubv = PreFunc.glColor3ubv.value
-inline def glColor3ui = PreFunc.glColor3ui.value
-inline def glColor3uiv = PreFunc.glColor3uiv.value
-inline def glColor3us = PreFunc.glColor3us.value
-inline def glColor3usv = PreFunc.glColor3usv.value
-inline def glColor4b = PreFunc.glColor4b.value
-inline def glColor4bv = PreFunc.glColor4bv.value
-inline def glColor4d = PreFunc.glColor4d.value
-inline def glColor4dv = PreFunc.glColor4dv.value
-inline def glColor4f = PreFunc.glColor4f.value
-inline def glColor4fv = PreFunc.glColor4fv.value
-inline def glColor4i = PreFunc.glColor4i.value
-inline def glColor4iv = PreFunc.glColor4iv.value
-inline def glColor4s = PreFunc.glColor4s.value
-inline def glColor4sv = PreFunc.glColor4sv.value
-inline def glColor4ub = PreFunc.glColor4ub.value
-inline def glColor4ubv = PreFunc.glColor4ubv.value
-inline def glColor4ui = PreFunc.glColor4ui.value
-inline def glColor4uiv = PreFunc.glColor4uiv.value
-inline def glColor4us = PreFunc.glColor4us.value
-inline def glColor4usv = PreFunc.glColor4usv.value
-inline def glColorMask = PreFunc.glColorMask.value
-inline def glColorMaski = PreFunc.glColorMaski.value
-inline def glColorMaterial = PreFunc.glColorMaterial.value
-inline def glColorP3ui = PreFunc.glColorP3ui.value
-inline def glColorP3uiv = PreFunc.glColorP3uiv.value
-inline def glColorP4ui = PreFunc.glColorP4ui.value
-inline def glColorP4uiv = PreFunc.glColorP4uiv.value
-inline def glColorPointer = PreFunc.glColorPointer.value
-inline def glCompileShader = PreFunc.glCompileShader.value
-inline def glCompressedTexImage1D = PreFunc.glCompressedTexImage1D.value
-inline def glCompressedTexImage2D = PreFunc.glCompressedTexImage2D.value
-inline def glCompressedTexImage3D = PreFunc.glCompressedTexImage3D.value
-inline def glCompressedTexSubImage1D = PreFunc.glCompressedTexSubImage1D.value
-inline def glCompressedTexSubImage2D = PreFunc.glCompressedTexSubImage2D.value
-inline def glCompressedTexSubImage3D = PreFunc.glCompressedTexSubImage3D.value
-inline def glCompressedTextureSubImage1D = PreFunc.glCompressedTextureSubImage1D.value
-inline def glCompressedTextureSubImage2D = PreFunc.glCompressedTextureSubImage2D.value
-inline def glCompressedTextureSubImage3D = PreFunc.glCompressedTextureSubImage3D.value
-inline def glCopyBufferSubData = PreFunc.glCopyBufferSubData.value
-inline def glCopyImageSubData = PreFunc.glCopyImageSubData.value
-inline def glCopyNamedBufferSubData = PreFunc.glCopyNamedBufferSubData.value
-inline def glCopyPixels = PreFunc.glCopyPixels.value
-inline def glCopyTexImage1D = PreFunc.glCopyTexImage1D.value
-inline def glCopyTexImage2D = PreFunc.glCopyTexImage2D.value
-inline def glCopyTexSubImage1D = PreFunc.glCopyTexSubImage1D.value
-inline def glCopyTexSubImage2D = PreFunc.glCopyTexSubImage2D.value
-inline def glCopyTexSubImage3D = PreFunc.glCopyTexSubImage3D.value
-inline def glCopyTextureSubImage1D = PreFunc.glCopyTextureSubImage1D.value
-inline def glCopyTextureSubImage2D = PreFunc.glCopyTextureSubImage2D.value
-inline def glCopyTextureSubImage3D = PreFunc.glCopyTextureSubImage3D.value
-inline def glCreateBuffers = PreFunc.glCreateBuffers.value
-inline def glCreateFramebuffers = PreFunc.glCreateFramebuffers.value
-inline def glCreateProgram = PreFunc.glCreateProgram.value
-inline def glCreateProgramPipelines = PreFunc.glCreateProgramPipelines.value
-inline def glCreateQueries = PreFunc.glCreateQueries.value
-inline def glCreateRenderbuffers = PreFunc.glCreateRenderbuffers.value
-inline def glCreateSamplers = PreFunc.glCreateSamplers.value
-inline def glCreateShader = PreFunc.glCreateShader.value
-inline def glCreateShaderProgramv = PreFunc.glCreateShaderProgramv.value
-inline def glCreateTextures = PreFunc.glCreateTextures.value
-inline def glCreateTransformFeedbacks = PreFunc.glCreateTransformFeedbacks.value
-inline def glCreateVertexArrays = PreFunc.glCreateVertexArrays.value
-inline def glCullFace = PreFunc.glCullFace.value
-inline def glDebugMessageCallback = PreFunc.glDebugMessageCallback.value
-inline def glDebugMessageControl = PreFunc.glDebugMessageControl.value
-inline def glDebugMessageInsert = PreFunc.glDebugMessageInsert.value
-inline def glDeleteBuffers = PreFunc.glDeleteBuffers.value
-inline def glDeleteFramebuffers = PreFunc.glDeleteFramebuffers.value
-inline def glDeleteLists = PreFunc.glDeleteLists.value
-inline def glDeleteProgram = PreFunc.glDeleteProgram.value
-inline def glDeleteProgramPipelines = PreFunc.glDeleteProgramPipelines.value
-inline def glDeleteQueries = PreFunc.glDeleteQueries.value
-inline def glDeleteRenderbuffers = PreFunc.glDeleteRenderbuffers.value
-inline def glDeleteSamplers = PreFunc.glDeleteSamplers.value
-inline def glDeleteShader = PreFunc.glDeleteShader.value
-inline def glDeleteSync = PreFunc.glDeleteSync.value
-inline def glDeleteTextures = PreFunc.glDeleteTextures.value
-inline def glDeleteTransformFeedbacks = PreFunc.glDeleteTransformFeedbacks.value
-inline def glDeleteVertexArrays = PreFunc.glDeleteVertexArrays.value
-inline def glDepthFunc = PreFunc.glDepthFunc.value
-inline def glDepthMask = PreFunc.glDepthMask.value
-inline def glDepthRange = PreFunc.glDepthRange.value
-inline def glDepthRangeArrayv = PreFunc.glDepthRangeArrayv.value
-inline def glDepthRangeIndexed = PreFunc.glDepthRangeIndexed.value
-inline def glDepthRangef = PreFunc.glDepthRangef.value
-inline def glDetachShader = PreFunc.glDetachShader.value
-inline def glDisable = PreFunc.glDisable.value
-inline def glDisableClientState = PreFunc.glDisableClientState.value
-inline def glDisableVertexArrayAttrib = PreFunc.glDisableVertexArrayAttrib.value
-inline def glDisableVertexAttribArray = PreFunc.glDisableVertexAttribArray.value
-inline def glDisablei = PreFunc.glDisablei.value
-inline def glDispatchCompute = PreFunc.glDispatchCompute.value
-inline def glDispatchComputeIndirect = PreFunc.glDispatchComputeIndirect.value
-inline def glDrawArrays = PreFunc.glDrawArrays.value
-inline def glDrawArraysIndirect = PreFunc.glDrawArraysIndirect.value
-inline def glDrawArraysInstanced = PreFunc.glDrawArraysInstanced.value
-inline def glDrawArraysInstancedBaseInstance = PreFunc.glDrawArraysInstancedBaseInstance.value
-inline def glDrawBuffer = PreFunc.glDrawBuffer.value
-inline def glDrawBuffers = PreFunc.glDrawBuffers.value
-inline def glDrawElements = PreFunc.glDrawElements.value
-inline def glDrawElementsBaseVertex = PreFunc.glDrawElementsBaseVertex.value
-inline def glDrawElementsIndirect = PreFunc.glDrawElementsIndirect.value
-inline def glDrawElementsInstanced = PreFunc.glDrawElementsInstanced.value
-inline def glDrawElementsInstancedBaseInstance = PreFunc.glDrawElementsInstancedBaseInstance.value
-inline def glDrawElementsInstancedBaseVertex = PreFunc.glDrawElementsInstancedBaseVertex.value
-inline def glDrawElementsInstancedBaseVertexBaseInstance = PreFunc.glDrawElementsInstancedBaseVertexBaseInstance.value
-inline def glDrawPixels = PreFunc.glDrawPixels.value
-inline def glDrawRangeElements = PreFunc.glDrawRangeElements.value
-inline def glDrawRangeElementsBaseVertex = PreFunc.glDrawRangeElementsBaseVertex.value
-inline def glDrawTransformFeedback = PreFunc.glDrawTransformFeedback.value
-inline def glDrawTransformFeedbackInstanced = PreFunc.glDrawTransformFeedbackInstanced.value
-inline def glDrawTransformFeedbackStream = PreFunc.glDrawTransformFeedbackStream.value
-inline def glDrawTransformFeedbackStreamInstanced = PreFunc.glDrawTransformFeedbackStreamInstanced.value
-inline def glEdgeFlag = PreFunc.glEdgeFlag.value
-inline def glEdgeFlagPointer = PreFunc.glEdgeFlagPointer.value
-inline def glEdgeFlagv = PreFunc.glEdgeFlagv.value
-inline def glEnable = PreFunc.glEnable.value
-inline def glEnableClientState = PreFunc.glEnableClientState.value
-inline def glEnableVertexArrayAttrib = PreFunc.glEnableVertexArrayAttrib.value
-inline def glEnableVertexAttribArray = PreFunc.glEnableVertexAttribArray.value
-inline def glEnablei = PreFunc.glEnablei.value
-inline def glEnd = PreFunc.glEnd.value
-inline def glEndConditionalRender = PreFunc.glEndConditionalRender.value
-inline def glEndList = PreFunc.glEndList.value
-inline def glEndQuery = PreFunc.glEndQuery.value
-inline def glEndQueryIndexed = PreFunc.glEndQueryIndexed.value
-inline def glEndTransformFeedback = PreFunc.glEndTransformFeedback.value
-inline def glEvalCoord1d = PreFunc.glEvalCoord1d.value
-inline def glEvalCoord1dv = PreFunc.glEvalCoord1dv.value
-inline def glEvalCoord1f = PreFunc.glEvalCoord1f.value
-inline def glEvalCoord1fv = PreFunc.glEvalCoord1fv.value
-inline def glEvalCoord2d = PreFunc.glEvalCoord2d.value
-inline def glEvalCoord2dv = PreFunc.glEvalCoord2dv.value
-inline def glEvalCoord2f = PreFunc.glEvalCoord2f.value
-inline def glEvalCoord2fv = PreFunc.glEvalCoord2fv.value
-inline def glEvalMesh1 = PreFunc.glEvalMesh1.value
-inline def glEvalMesh2 = PreFunc.glEvalMesh2.value
-inline def glEvalPoint1 = PreFunc.glEvalPoint1.value
-inline def glEvalPoint2 = PreFunc.glEvalPoint2.value
-inline def glFeedbackBuffer = PreFunc.glFeedbackBuffer.value
-inline def glFenceSync = PreFunc.glFenceSync.value
-inline def glFinish = PreFunc.glFinish.value
-inline def glFlush = PreFunc.glFlush.value
-inline def glFlushMappedBufferRange = PreFunc.glFlushMappedBufferRange.value
-inline def glFlushMappedNamedBufferRange = PreFunc.glFlushMappedNamedBufferRange.value
-inline def glFogCoordPointer = PreFunc.glFogCoordPointer.value
-inline def glFogCoordd = PreFunc.glFogCoordd.value
-inline def glFogCoorddv = PreFunc.glFogCoorddv.value
-inline def glFogCoordf = PreFunc.glFogCoordf.value
-inline def glFogCoordfv = PreFunc.glFogCoordfv.value
-inline def glFogf = PreFunc.glFogf.value
-inline def glFogfv = PreFunc.glFogfv.value
-inline def glFogi = PreFunc.glFogi.value
-inline def glFogiv = PreFunc.glFogiv.value
-inline def glFramebufferParameteri = PreFunc.glFramebufferParameteri.value
-inline def glFramebufferRenderbuffer = PreFunc.glFramebufferRenderbuffer.value
-inline def glFramebufferTexture = PreFunc.glFramebufferTexture.value
-inline def glFramebufferTexture1D = PreFunc.glFramebufferTexture1D.value
-inline def glFramebufferTexture2D = PreFunc.glFramebufferTexture2D.value
-inline def glFramebufferTexture3D = PreFunc.glFramebufferTexture3D.value
-inline def glFramebufferTextureLayer = PreFunc.glFramebufferTextureLayer.value
-inline def glFrontFace = PreFunc.glFrontFace.value
-inline def glFrustum = PreFunc.glFrustum.value
-inline def glGenBuffers = PreFunc.glGenBuffers.value
-inline def glGenFramebuffers = PreFunc.glGenFramebuffers.value
-inline def glGenLists = PreFunc.glGenLists.value
-inline def glGenProgramPipelines = PreFunc.glGenProgramPipelines.value
-inline def glGenQueries = PreFunc.glGenQueries.value
-inline def glGenRenderbuffers = PreFunc.glGenRenderbuffers.value
-inline def glGenSamplers = PreFunc.glGenSamplers.value
-inline def glGenTextures = PreFunc.glGenTextures.value
-inline def glGenTransformFeedbacks = PreFunc.glGenTransformFeedbacks.value
-inline def glGenVertexArrays = PreFunc.glGenVertexArrays.value
-inline def glGenerateMipmap = PreFunc.glGenerateMipmap.value
-inline def glGenerateTextureMipmap = PreFunc.glGenerateTextureMipmap.value
-inline def glGetActiveAtomicCounterBufferiv = PreFunc.glGetActiveAtomicCounterBufferiv.value
-inline def glGetActiveAttrib = PreFunc.glGetActiveAttrib.value
-inline def glGetActiveSubroutineName = PreFunc.glGetActiveSubroutineName.value
-inline def glGetActiveSubroutineUniformName = PreFunc.glGetActiveSubroutineUniformName.value
-inline def glGetActiveSubroutineUniformiv = PreFunc.glGetActiveSubroutineUniformiv.value
-inline def glGetActiveUniform = PreFunc.glGetActiveUniform.value
-inline def glGetActiveUniformBlockName = PreFunc.glGetActiveUniformBlockName.value
-inline def glGetActiveUniformBlockiv = PreFunc.glGetActiveUniformBlockiv.value
-inline def glGetActiveUniformName = PreFunc.glGetActiveUniformName.value
-inline def glGetActiveUniformsiv = PreFunc.glGetActiveUniformsiv.value
-inline def glGetAttachedShaders = PreFunc.glGetAttachedShaders.value
-inline def glGetAttribLocation = PreFunc.glGetAttribLocation.value
-inline def glGetBooleani_v = PreFunc.glGetBooleani_v.value
-inline def glGetBooleanv = PreFunc.glGetBooleanv.value
-inline def glGetBufferParameteri64v = PreFunc.glGetBufferParameteri64v.value
-inline def glGetBufferParameteriv = PreFunc.glGetBufferParameteriv.value
-inline def glGetBufferPointerv = PreFunc.glGetBufferPointerv.value
-inline def glGetBufferSubData = PreFunc.glGetBufferSubData.value
-inline def glGetClipPlane = PreFunc.glGetClipPlane.value
-inline def glGetCompressedTexImage = PreFunc.glGetCompressedTexImage.value
-inline def glGetCompressedTextureImage = PreFunc.glGetCompressedTextureImage.value
-inline def glGetCompressedTextureSubImage = PreFunc.glGetCompressedTextureSubImage.value
-inline def glGetDebugMessageLog = PreFunc.glGetDebugMessageLog.value
-inline def glGetDoublei_v = PreFunc.glGetDoublei_v.value
-inline def glGetDoublev = PreFunc.glGetDoublev.value
-inline def glGetError = PreFunc.glGetError.value
-inline def glGetFloati_v = PreFunc.glGetFloati_v.value
-inline def glGetFloatv = PreFunc.glGetFloatv.value
-inline def glGetFragDataIndex = PreFunc.glGetFragDataIndex.value
-inline def glGetFragDataLocation = PreFunc.glGetFragDataLocation.value
-inline def glGetFramebufferAttachmentParameteriv = PreFunc.glGetFramebufferAttachmentParameteriv.value
-inline def glGetFramebufferParameteriv = PreFunc.glGetFramebufferParameteriv.value
-inline def glGetGraphicsResetStatus = PreFunc.glGetGraphicsResetStatus.value
-inline def glGetInteger64i_v = PreFunc.glGetInteger64i_v.value
-inline def glGetInteger64v = PreFunc.glGetInteger64v.value
-inline def glGetIntegeri_v = PreFunc.glGetIntegeri_v.value
-inline def glGetIntegerv = PreFunc.glGetIntegerv.value
-inline def glGetInternalformati64v = PreFunc.glGetInternalformati64v.value
-inline def glGetInternalformativ = PreFunc.glGetInternalformativ.value
-inline def glGetLightfv = PreFunc.glGetLightfv.value
-inline def glGetLightiv = PreFunc.glGetLightiv.value
-inline def glGetMapdv = PreFunc.glGetMapdv.value
-inline def glGetMapfv = PreFunc.glGetMapfv.value
-inline def glGetMapiv = PreFunc.glGetMapiv.value
-inline def glGetMaterialfv = PreFunc.glGetMaterialfv.value
-inline def glGetMaterialiv = PreFunc.glGetMaterialiv.value
-inline def glGetMultisamplefv = PreFunc.glGetMultisamplefv.value
-inline def glGetNamedBufferParameteri64v = PreFunc.glGetNamedBufferParameteri64v.value
-inline def glGetNamedBufferParameteriv = PreFunc.glGetNamedBufferParameteriv.value
-inline def glGetNamedBufferPointerv = PreFunc.glGetNamedBufferPointerv.value
-inline def glGetNamedBufferSubData = PreFunc.glGetNamedBufferSubData.value
-inline def glGetNamedFramebufferAttachmentParameteriv = PreFunc.glGetNamedFramebufferAttachmentParameteriv.value
-inline def glGetNamedFramebufferParameteriv = PreFunc.glGetNamedFramebufferParameteriv.value
-inline def glGetNamedRenderbufferParameteriv = PreFunc.glGetNamedRenderbufferParameteriv.value
-inline def glGetObjectLabel = PreFunc.glGetObjectLabel.value
-inline def glGetObjectPtrLabel = PreFunc.glGetObjectPtrLabel.value
-inline def glGetPixelMapfv = PreFunc.glGetPixelMapfv.value
-inline def glGetPixelMapuiv = PreFunc.glGetPixelMapuiv.value
-inline def glGetPixelMapusv = PreFunc.glGetPixelMapusv.value
-inline def glGetPointerv = PreFunc.glGetPointerv.value
-inline def glGetPolygonStipple = PreFunc.glGetPolygonStipple.value
-inline def glGetProgramBinary = PreFunc.glGetProgramBinary.value
-inline def glGetProgramInfoLog = PreFunc.glGetProgramInfoLog.value
-inline def glGetProgramInterfaceiv = PreFunc.glGetProgramInterfaceiv.value
-inline def glGetProgramPipelineInfoLog = PreFunc.glGetProgramPipelineInfoLog.value
-inline def glGetProgramPipelineiv = PreFunc.glGetProgramPipelineiv.value
-inline def glGetProgramResourceIndex = PreFunc.glGetProgramResourceIndex.value
-inline def glGetProgramResourceLocation = PreFunc.glGetProgramResourceLocation.value
-inline def glGetProgramResourceLocationIndex = PreFunc.glGetProgramResourceLocationIndex.value
-inline def glGetProgramResourceName = PreFunc.glGetProgramResourceName.value
-inline def glGetProgramResourceiv = PreFunc.glGetProgramResourceiv.value
-inline def glGetProgramStageiv = PreFunc.glGetProgramStageiv.value
-inline def glGetProgramiv = PreFunc.glGetProgramiv.value
-inline def glGetQueryBufferObjecti64v = PreFunc.glGetQueryBufferObjecti64v.value
-inline def glGetQueryBufferObjectiv = PreFunc.glGetQueryBufferObjectiv.value
-inline def glGetQueryBufferObjectui64v = PreFunc.glGetQueryBufferObjectui64v.value
-inline def glGetQueryBufferObjectuiv = PreFunc.glGetQueryBufferObjectuiv.value
-inline def glGetQueryIndexediv = PreFunc.glGetQueryIndexediv.value
-inline def glGetQueryObjecti64v = PreFunc.glGetQueryObjecti64v.value
-inline def glGetQueryObjectiv = PreFunc.glGetQueryObjectiv.value
-inline def glGetQueryObjectui64v = PreFunc.glGetQueryObjectui64v.value
-inline def glGetQueryObjectuiv = PreFunc.glGetQueryObjectuiv.value
-inline def glGetQueryiv = PreFunc.glGetQueryiv.value
-inline def glGetRenderbufferParameteriv = PreFunc.glGetRenderbufferParameteriv.value
-inline def glGetSamplerParameterIiv = PreFunc.glGetSamplerParameterIiv.value
-inline def glGetSamplerParameterIuiv = PreFunc.glGetSamplerParameterIuiv.value
-inline def glGetSamplerParameterfv = PreFunc.glGetSamplerParameterfv.value
-inline def glGetSamplerParameteriv = PreFunc.glGetSamplerParameteriv.value
-inline def glGetShaderInfoLog = PreFunc.glGetShaderInfoLog.value
-inline def glGetShaderPrecisionFormat = PreFunc.glGetShaderPrecisionFormat.value
-inline def glGetShaderSource = PreFunc.glGetShaderSource.value
-inline def glGetShaderiv = PreFunc.glGetShaderiv.value
-inline def glGetString = PreFunc.glGetString.value
-inline def glGetStringi = PreFunc.glGetStringi.value
-inline def glGetSubroutineIndex = PreFunc.glGetSubroutineIndex.value
-inline def glGetSubroutineUniformLocation = PreFunc.glGetSubroutineUniformLocation.value
-inline def glGetSynciv = PreFunc.glGetSynciv.value
-inline def glGetTexEnvfv = PreFunc.glGetTexEnvfv.value
-inline def glGetTexEnviv = PreFunc.glGetTexEnviv.value
-inline def glGetTexGendv = PreFunc.glGetTexGendv.value
-inline def glGetTexGenfv = PreFunc.glGetTexGenfv.value
-inline def glGetTexGeniv = PreFunc.glGetTexGeniv.value
-inline def glGetTexImage = PreFunc.glGetTexImage.value
-inline def glGetTexLevelParameterfv = PreFunc.glGetTexLevelParameterfv.value
-inline def glGetTexLevelParameteriv = PreFunc.glGetTexLevelParameteriv.value
-inline def glGetTexParameterIiv = PreFunc.glGetTexParameterIiv.value
-inline def glGetTexParameterIuiv = PreFunc.glGetTexParameterIuiv.value
-inline def glGetTexParameterfv = PreFunc.glGetTexParameterfv.value
-inline def glGetTexParameteriv = PreFunc.glGetTexParameteriv.value
-inline def glGetTextureImage = PreFunc.glGetTextureImage.value
-inline def glGetTextureLevelParameterfv = PreFunc.glGetTextureLevelParameterfv.value
-inline def glGetTextureLevelParameteriv = PreFunc.glGetTextureLevelParameteriv.value
-inline def glGetTextureParameterIiv = PreFunc.glGetTextureParameterIiv.value
-inline def glGetTextureParameterIuiv = PreFunc.glGetTextureParameterIuiv.value
-inline def glGetTextureParameterfv = PreFunc.glGetTextureParameterfv.value
-inline def glGetTextureParameteriv = PreFunc.glGetTextureParameteriv.value
-inline def glGetTextureSubImage = PreFunc.glGetTextureSubImage.value
-inline def glGetTransformFeedbackVarying = PreFunc.glGetTransformFeedbackVarying.value
-inline def glGetTransformFeedbacki64_v = PreFunc.glGetTransformFeedbacki64_v.value
-inline def glGetTransformFeedbacki_v = PreFunc.glGetTransformFeedbacki_v.value
-inline def glGetTransformFeedbackiv = PreFunc.glGetTransformFeedbackiv.value
-inline def glGetUniformBlockIndex = PreFunc.glGetUniformBlockIndex.value
-inline def glGetUniformIndices = PreFunc.glGetUniformIndices.value
-inline def glGetUniformLocation = PreFunc.glGetUniformLocation.value
-inline def glGetUniformSubroutineuiv = PreFunc.glGetUniformSubroutineuiv.value
-inline def glGetUniformdv = PreFunc.glGetUniformdv.value
-inline def glGetUniformfv = PreFunc.glGetUniformfv.value
-inline def glGetUniformiv = PreFunc.glGetUniformiv.value
-inline def glGetUniformuiv = PreFunc.glGetUniformuiv.value
-inline def glGetVertexArrayIndexed64iv = PreFunc.glGetVertexArrayIndexed64iv.value
-inline def glGetVertexArrayIndexediv = PreFunc.glGetVertexArrayIndexediv.value
-inline def glGetVertexArrayiv = PreFunc.glGetVertexArrayiv.value
-inline def glGetVertexAttribIiv = PreFunc.glGetVertexAttribIiv.value
-inline def glGetVertexAttribIuiv = PreFunc.glGetVertexAttribIuiv.value
-inline def glGetVertexAttribLdv = PreFunc.glGetVertexAttribLdv.value
-inline def glGetVertexAttribPointerv = PreFunc.glGetVertexAttribPointerv.value
-inline def glGetVertexAttribdv = PreFunc.glGetVertexAttribdv.value
-inline def glGetVertexAttribfv = PreFunc.glGetVertexAttribfv.value
-inline def glGetVertexAttribiv = PreFunc.glGetVertexAttribiv.value
-inline def glGetnColorTable = PreFunc.glGetnColorTable.value
-inline def glGetnCompressedTexImage = PreFunc.glGetnCompressedTexImage.value
-inline def glGetnConvolutionFilter = PreFunc.glGetnConvolutionFilter.value
-inline def glGetnHistogram = PreFunc.glGetnHistogram.value
-inline def glGetnMapdv = PreFunc.glGetnMapdv.value
-inline def glGetnMapfv = PreFunc.glGetnMapfv.value
-inline def glGetnMapiv = PreFunc.glGetnMapiv.value
-inline def glGetnMinmax = PreFunc.glGetnMinmax.value
-inline def glGetnPixelMapfv = PreFunc.glGetnPixelMapfv.value
-inline def glGetnPixelMapuiv = PreFunc.glGetnPixelMapuiv.value
-inline def glGetnPixelMapusv = PreFunc.glGetnPixelMapusv.value
-inline def glGetnPolygonStipple = PreFunc.glGetnPolygonStipple.value
-inline def glGetnSeparableFilter = PreFunc.glGetnSeparableFilter.value
-inline def glGetnTexImage = PreFunc.glGetnTexImage.value
-inline def glGetnUniformdv = PreFunc.glGetnUniformdv.value
-inline def glGetnUniformfv = PreFunc.glGetnUniformfv.value
-inline def glGetnUniformiv = PreFunc.glGetnUniformiv.value
-inline def glGetnUniformuiv = PreFunc.glGetnUniformuiv.value
-inline def glHint = PreFunc.glHint.value
-inline def glIndexMask = PreFunc.glIndexMask.value
-inline def glIndexPointer = PreFunc.glIndexPointer.value
-inline def glIndexd = PreFunc.glIndexd.value
-inline def glIndexdv = PreFunc.glIndexdv.value
-inline def glIndexf = PreFunc.glIndexf.value
-inline def glIndexfv = PreFunc.glIndexfv.value
-inline def glIndexi = PreFunc.glIndexi.value
-inline def glIndexiv = PreFunc.glIndexiv.value
-inline def glIndexs = PreFunc.glIndexs.value
-inline def glIndexsv = PreFunc.glIndexsv.value
-inline def glIndexub = PreFunc.glIndexub.value
-inline def glIndexubv = PreFunc.glIndexubv.value
-inline def glInitNames = PreFunc.glInitNames.value
-inline def glInterleavedArrays = PreFunc.glInterleavedArrays.value
-inline def glInvalidateBufferData = PreFunc.glInvalidateBufferData.value
-inline def glInvalidateBufferSubData = PreFunc.glInvalidateBufferSubData.value
-inline def glInvalidateFramebuffer = PreFunc.glInvalidateFramebuffer.value
-inline def glInvalidateNamedFramebufferData = PreFunc.glInvalidateNamedFramebufferData.value
-inline def glInvalidateNamedFramebufferSubData = PreFunc.glInvalidateNamedFramebufferSubData.value
-inline def glInvalidateSubFramebuffer = PreFunc.glInvalidateSubFramebuffer.value
-inline def glInvalidateTexImage = PreFunc.glInvalidateTexImage.value
-inline def glInvalidateTexSubImage = PreFunc.glInvalidateTexSubImage.value
-inline def glIsBuffer = PreFunc.glIsBuffer.value
-inline def glIsEnabled = PreFunc.glIsEnabled.value
-inline def glIsEnabledi = PreFunc.glIsEnabledi.value
-inline def glIsFramebuffer = PreFunc.glIsFramebuffer.value
-inline def glIsList = PreFunc.glIsList.value
-inline def glIsProgram = PreFunc.glIsProgram.value
-inline def glIsProgramPipeline = PreFunc.glIsProgramPipeline.value
-inline def glIsQuery = PreFunc.glIsQuery.value
-inline def glIsRenderbuffer = PreFunc.glIsRenderbuffer.value
-inline def glIsSampler = PreFunc.glIsSampler.value
-inline def glIsShader = PreFunc.glIsShader.value
-inline def glIsSync = PreFunc.glIsSync.value
-inline def glIsTexture = PreFunc.glIsTexture.value
-inline def glIsTransformFeedback = PreFunc.glIsTransformFeedback.value
-inline def glIsVertexArray = PreFunc.glIsVertexArray.value
-inline def glLightModelf = PreFunc.glLightModelf.value
-inline def glLightModelfv = PreFunc.glLightModelfv.value
-inline def glLightModeli = PreFunc.glLightModeli.value
-inline def glLightModeliv = PreFunc.glLightModeliv.value
-inline def glLightf = PreFunc.glLightf.value
-inline def glLightfv = PreFunc.glLightfv.value
-inline def glLighti = PreFunc.glLighti.value
-inline def glLightiv = PreFunc.glLightiv.value
-inline def glLineStipple = PreFunc.glLineStipple.value
-inline def glLineWidth = PreFunc.glLineWidth.value
-inline def glLinkProgram = PreFunc.glLinkProgram.value
-inline def glListBase = PreFunc.glListBase.value
-inline def glLoadIdentity = PreFunc.glLoadIdentity.value
-inline def glLoadMatrixd = PreFunc.glLoadMatrixd.value
-inline def glLoadMatrixf = PreFunc.glLoadMatrixf.value
-inline def glLoadName = PreFunc.glLoadName.value
-inline def glLoadTransposeMatrixd = PreFunc.glLoadTransposeMatrixd.value
-inline def glLoadTransposeMatrixf = PreFunc.glLoadTransposeMatrixf.value
-inline def glLogicOp = PreFunc.glLogicOp.value
-inline def glMap1d = PreFunc.glMap1d.value
-inline def glMap1f = PreFunc.glMap1f.value
-inline def glMap2d = PreFunc.glMap2d.value
-inline def glMap2f = PreFunc.glMap2f.value
-inline def glMapBuffer = PreFunc.glMapBuffer.value
-inline def glMapBufferRange = PreFunc.glMapBufferRange.value
-inline def glMapGrid1d = PreFunc.glMapGrid1d.value
-inline def glMapGrid1f = PreFunc.glMapGrid1f.value
-inline def glMapGrid2d = PreFunc.glMapGrid2d.value
-inline def glMapGrid2f = PreFunc.glMapGrid2f.value
-inline def glMapNamedBuffer = PreFunc.glMapNamedBuffer.value
-inline def glMapNamedBufferRange = PreFunc.glMapNamedBufferRange.value
-inline def glMaterialf = PreFunc.glMaterialf.value
-inline def glMaterialfv = PreFunc.glMaterialfv.value
-inline def glMateriali = PreFunc.glMateriali.value
-inline def glMaterialiv = PreFunc.glMaterialiv.value
-inline def glMatrixMode = PreFunc.glMatrixMode.value
-inline def glMemoryBarrier = PreFunc.glMemoryBarrier.value
-inline def glMemoryBarrierByRegion = PreFunc.glMemoryBarrierByRegion.value
-inline def glMinSampleShading = PreFunc.glMinSampleShading.value
-inline def glMultMatrixd = PreFunc.glMultMatrixd.value
-inline def glMultMatrixf = PreFunc.glMultMatrixf.value
-inline def glMultTransposeMatrixd = PreFunc.glMultTransposeMatrixd.value
-inline def glMultTransposeMatrixf = PreFunc.glMultTransposeMatrixf.value
-inline def glMultiDrawArrays = PreFunc.glMultiDrawArrays.value
-inline def glMultiDrawArraysIndirect = PreFunc.glMultiDrawArraysIndirect.value
-inline def glMultiDrawArraysIndirectCount = PreFunc.glMultiDrawArraysIndirectCount.value
-inline def glMultiDrawElements = PreFunc.glMultiDrawElements.value
-inline def glMultiDrawElementsBaseVertex = PreFunc.glMultiDrawElementsBaseVertex.value
-inline def glMultiDrawElementsIndirect = PreFunc.glMultiDrawElementsIndirect.value
-inline def glMultiDrawElementsIndirectCount = PreFunc.glMultiDrawElementsIndirectCount.value
-inline def glMultiTexCoord1d = PreFunc.glMultiTexCoord1d.value
-inline def glMultiTexCoord1dv = PreFunc.glMultiTexCoord1dv.value
-inline def glMultiTexCoord1f = PreFunc.glMultiTexCoord1f.value
-inline def glMultiTexCoord1fv = PreFunc.glMultiTexCoord1fv.value
-inline def glMultiTexCoord1i = PreFunc.glMultiTexCoord1i.value
-inline def glMultiTexCoord1iv = PreFunc.glMultiTexCoord1iv.value
-inline def glMultiTexCoord1s = PreFunc.glMultiTexCoord1s.value
-inline def glMultiTexCoord1sv = PreFunc.glMultiTexCoord1sv.value
-inline def glMultiTexCoord2d = PreFunc.glMultiTexCoord2d.value
-inline def glMultiTexCoord2dv = PreFunc.glMultiTexCoord2dv.value
-inline def glMultiTexCoord2f = PreFunc.glMultiTexCoord2f.value
-inline def glMultiTexCoord2fv = PreFunc.glMultiTexCoord2fv.value
-inline def glMultiTexCoord2i = PreFunc.glMultiTexCoord2i.value
-inline def glMultiTexCoord2iv = PreFunc.glMultiTexCoord2iv.value
-inline def glMultiTexCoord2s = PreFunc.glMultiTexCoord2s.value
-inline def glMultiTexCoord2sv = PreFunc.glMultiTexCoord2sv.value
-inline def glMultiTexCoord3d = PreFunc.glMultiTexCoord3d.value
-inline def glMultiTexCoord3dv = PreFunc.glMultiTexCoord3dv.value
-inline def glMultiTexCoord3f = PreFunc.glMultiTexCoord3f.value
-inline def glMultiTexCoord3fv = PreFunc.glMultiTexCoord3fv.value
-inline def glMultiTexCoord3i = PreFunc.glMultiTexCoord3i.value
-inline def glMultiTexCoord3iv = PreFunc.glMultiTexCoord3iv.value
-inline def glMultiTexCoord3s = PreFunc.glMultiTexCoord3s.value
-inline def glMultiTexCoord3sv = PreFunc.glMultiTexCoord3sv.value
-inline def glMultiTexCoord4d = PreFunc.glMultiTexCoord4d.value
-inline def glMultiTexCoord4dv = PreFunc.glMultiTexCoord4dv.value
-inline def glMultiTexCoord4f = PreFunc.glMultiTexCoord4f.value
-inline def glMultiTexCoord4fv = PreFunc.glMultiTexCoord4fv.value
-inline def glMultiTexCoord4i = PreFunc.glMultiTexCoord4i.value
-inline def glMultiTexCoord4iv = PreFunc.glMultiTexCoord4iv.value
-inline def glMultiTexCoord4s = PreFunc.glMultiTexCoord4s.value
-inline def glMultiTexCoord4sv = PreFunc.glMultiTexCoord4sv.value
-inline def glMultiTexCoordP1ui = PreFunc.glMultiTexCoordP1ui.value
-inline def glMultiTexCoordP1uiv = PreFunc.glMultiTexCoordP1uiv.value
-inline def glMultiTexCoordP2ui = PreFunc.glMultiTexCoordP2ui.value
-inline def glMultiTexCoordP2uiv = PreFunc.glMultiTexCoordP2uiv.value
-inline def glMultiTexCoordP3ui = PreFunc.glMultiTexCoordP3ui.value
-inline def glMultiTexCoordP3uiv = PreFunc.glMultiTexCoordP3uiv.value
-inline def glMultiTexCoordP4ui = PreFunc.glMultiTexCoordP4ui.value
-inline def glMultiTexCoordP4uiv = PreFunc.glMultiTexCoordP4uiv.value
-inline def glNamedBufferData = PreFunc.glNamedBufferData.value
-inline def glNamedBufferStorage = PreFunc.glNamedBufferStorage.value
-inline def glNamedBufferSubData = PreFunc.glNamedBufferSubData.value
-inline def glNamedFramebufferDrawBuffer = PreFunc.glNamedFramebufferDrawBuffer.value
-inline def glNamedFramebufferDrawBuffers = PreFunc.glNamedFramebufferDrawBuffers.value
-inline def glNamedFramebufferParameteri = PreFunc.glNamedFramebufferParameteri.value
-inline def glNamedFramebufferReadBuffer = PreFunc.glNamedFramebufferReadBuffer.value
-inline def glNamedFramebufferRenderbuffer = PreFunc.glNamedFramebufferRenderbuffer.value
-inline def glNamedFramebufferTexture = PreFunc.glNamedFramebufferTexture.value
-inline def glNamedFramebufferTextureLayer = PreFunc.glNamedFramebufferTextureLayer.value
-inline def glNamedRenderbufferStorage = PreFunc.glNamedRenderbufferStorage.value
-inline def glNamedRenderbufferStorageMultisample = PreFunc.glNamedRenderbufferStorageMultisample.value
-inline def glNewList = PreFunc.glNewList.value
-inline def glNormal3b = PreFunc.glNormal3b.value
-inline def glNormal3bv = PreFunc.glNormal3bv.value
-inline def glNormal3d = PreFunc.glNormal3d.value
-inline def glNormal3dv = PreFunc.glNormal3dv.value
-inline def glNormal3f = PreFunc.glNormal3f.value
-inline def glNormal3fv = PreFunc.glNormal3fv.value
-inline def glNormal3i = PreFunc.glNormal3i.value
-inline def glNormal3iv = PreFunc.glNormal3iv.value
-inline def glNormal3s = PreFunc.glNormal3s.value
-inline def glNormal3sv = PreFunc.glNormal3sv.value
-inline def glNormalP3ui = PreFunc.glNormalP3ui.value
-inline def glNormalP3uiv = PreFunc.glNormalP3uiv.value
-inline def glNormalPointer = PreFunc.glNormalPointer.value
-inline def glObjectLabel = PreFunc.glObjectLabel.value
-inline def glObjectPtrLabel = PreFunc.glObjectPtrLabel.value
-inline def glOrtho = PreFunc.glOrtho.value
-inline def glPassThrough = PreFunc.glPassThrough.value
-inline def glPatchParameterfv = PreFunc.glPatchParameterfv.value
-inline def glPatchParameteri = PreFunc.glPatchParameteri.value
-inline def glPauseTransformFeedback = PreFunc.glPauseTransformFeedback.value
-inline def glPixelMapfv = PreFunc.glPixelMapfv.value
-inline def glPixelMapuiv = PreFunc.glPixelMapuiv.value
-inline def glPixelMapusv = PreFunc.glPixelMapusv.value
-inline def glPixelStoref = PreFunc.glPixelStoref.value
-inline def glPixelStorei = PreFunc.glPixelStorei.value
-inline def glPixelTransferf = PreFunc.glPixelTransferf.value
-inline def glPixelTransferi = PreFunc.glPixelTransferi.value
-inline def glPixelZoom = PreFunc.glPixelZoom.value
-inline def glPointParameterf = PreFunc.glPointParameterf.value
-inline def glPointParameterfv = PreFunc.glPointParameterfv.value
-inline def glPointParameteri = PreFunc.glPointParameteri.value
-inline def glPointParameteriv = PreFunc.glPointParameteriv.value
-inline def glPointSize = PreFunc.glPointSize.value
-inline def glPolygonMode = PreFunc.glPolygonMode.value
-inline def glPolygonOffset = PreFunc.glPolygonOffset.value
-inline def glPolygonOffsetClamp = PreFunc.glPolygonOffsetClamp.value
-inline def glPolygonStipple = PreFunc.glPolygonStipple.value
-inline def glPopAttrib = PreFunc.glPopAttrib.value
-inline def glPopClientAttrib = PreFunc.glPopClientAttrib.value
-inline def glPopDebugGroup = PreFunc.glPopDebugGroup.value
-inline def glPopMatrix = PreFunc.glPopMatrix.value
-inline def glPopName = PreFunc.glPopName.value
-inline def glPrimitiveRestartIndex = PreFunc.glPrimitiveRestartIndex.value
-inline def glPrioritizeTextures = PreFunc.glPrioritizeTextures.value
-inline def glProgramBinary = PreFunc.glProgramBinary.value
-inline def glProgramParameteri = PreFunc.glProgramParameteri.value
-inline def glProgramUniform1d = PreFunc.glProgramUniform1d.value
-inline def glProgramUniform1dv = PreFunc.glProgramUniform1dv.value
-inline def glProgramUniform1f = PreFunc.glProgramUniform1f.value
-inline def glProgramUniform1fv = PreFunc.glProgramUniform1fv.value
-inline def glProgramUniform1i = PreFunc.glProgramUniform1i.value
-inline def glProgramUniform1iv = PreFunc.glProgramUniform1iv.value
-inline def glProgramUniform1ui = PreFunc.glProgramUniform1ui.value
-inline def glProgramUniform1uiv = PreFunc.glProgramUniform1uiv.value
-inline def glProgramUniform2d = PreFunc.glProgramUniform2d.value
-inline def glProgramUniform2dv = PreFunc.glProgramUniform2dv.value
-inline def glProgramUniform2f = PreFunc.glProgramUniform2f.value
-inline def glProgramUniform2fv = PreFunc.glProgramUniform2fv.value
-inline def glProgramUniform2i = PreFunc.glProgramUniform2i.value
-inline def glProgramUniform2iv = PreFunc.glProgramUniform2iv.value
-inline def glProgramUniform2ui = PreFunc.glProgramUniform2ui.value
-inline def glProgramUniform2uiv = PreFunc.glProgramUniform2uiv.value
-inline def glProgramUniform3d = PreFunc.glProgramUniform3d.value
-inline def glProgramUniform3dv = PreFunc.glProgramUniform3dv.value
-inline def glProgramUniform3f = PreFunc.glProgramUniform3f.value
-inline def glProgramUniform3fv = PreFunc.glProgramUniform3fv.value
-inline def glProgramUniform3i = PreFunc.glProgramUniform3i.value
-inline def glProgramUniform3iv = PreFunc.glProgramUniform3iv.value
-inline def glProgramUniform3ui = PreFunc.glProgramUniform3ui.value
-inline def glProgramUniform3uiv = PreFunc.glProgramUniform3uiv.value
-inline def glProgramUniform4d = PreFunc.glProgramUniform4d.value
-inline def glProgramUniform4dv = PreFunc.glProgramUniform4dv.value
-inline def glProgramUniform4f = PreFunc.glProgramUniform4f.value
-inline def glProgramUniform4fv = PreFunc.glProgramUniform4fv.value
-inline def glProgramUniform4i = PreFunc.glProgramUniform4i.value
-inline def glProgramUniform4iv = PreFunc.glProgramUniform4iv.value
-inline def glProgramUniform4ui = PreFunc.glProgramUniform4ui.value
-inline def glProgramUniform4uiv = PreFunc.glProgramUniform4uiv.value
-inline def glProgramUniformMatrix2dv = PreFunc.glProgramUniformMatrix2dv.value
-inline def glProgramUniformMatrix2fv = PreFunc.glProgramUniformMatrix2fv.value
-inline def glProgramUniformMatrix2x3dv = PreFunc.glProgramUniformMatrix2x3dv.value
-inline def glProgramUniformMatrix2x3fv = PreFunc.glProgramUniformMatrix2x3fv.value
-inline def glProgramUniformMatrix2x4dv = PreFunc.glProgramUniformMatrix2x4dv.value
-inline def glProgramUniformMatrix2x4fv = PreFunc.glProgramUniformMatrix2x4fv.value
-inline def glProgramUniformMatrix3dv = PreFunc.glProgramUniformMatrix3dv.value
-inline def glProgramUniformMatrix3fv = PreFunc.glProgramUniformMatrix3fv.value
-inline def glProgramUniformMatrix3x2dv = PreFunc.glProgramUniformMatrix3x2dv.value
-inline def glProgramUniformMatrix3x2fv = PreFunc.glProgramUniformMatrix3x2fv.value
-inline def glProgramUniformMatrix3x4dv = PreFunc.glProgramUniformMatrix3x4dv.value
-inline def glProgramUniformMatrix3x4fv = PreFunc.glProgramUniformMatrix3x4fv.value
-inline def glProgramUniformMatrix4dv = PreFunc.glProgramUniformMatrix4dv.value
-inline def glProgramUniformMatrix4fv = PreFunc.glProgramUniformMatrix4fv.value
-inline def glProgramUniformMatrix4x2dv = PreFunc.glProgramUniformMatrix4x2dv.value
-inline def glProgramUniformMatrix4x2fv = PreFunc.glProgramUniformMatrix4x2fv.value
-inline def glProgramUniformMatrix4x3dv = PreFunc.glProgramUniformMatrix4x3dv.value
-inline def glProgramUniformMatrix4x3fv = PreFunc.glProgramUniformMatrix4x3fv.value
-inline def glProvokingVertex = PreFunc.glProvokingVertex.value
-inline def glPushAttrib = PreFunc.glPushAttrib.value
-inline def glPushClientAttrib = PreFunc.glPushClientAttrib.value
-inline def glPushDebugGroup = PreFunc.glPushDebugGroup.value
-inline def glPushMatrix = PreFunc.glPushMatrix.value
-inline def glPushName = PreFunc.glPushName.value
-inline def glQueryCounter = PreFunc.glQueryCounter.value
-inline def glRasterPos2d = PreFunc.glRasterPos2d.value
-inline def glRasterPos2dv = PreFunc.glRasterPos2dv.value
-inline def glRasterPos2f = PreFunc.glRasterPos2f.value
-inline def glRasterPos2fv = PreFunc.glRasterPos2fv.value
-inline def glRasterPos2i = PreFunc.glRasterPos2i.value
-inline def glRasterPos2iv = PreFunc.glRasterPos2iv.value
-inline def glRasterPos2s = PreFunc.glRasterPos2s.value
-inline def glRasterPos2sv = PreFunc.glRasterPos2sv.value
-inline def glRasterPos3d = PreFunc.glRasterPos3d.value
-inline def glRasterPos3dv = PreFunc.glRasterPos3dv.value
-inline def glRasterPos3f = PreFunc.glRasterPos3f.value
-inline def glRasterPos3fv = PreFunc.glRasterPos3fv.value
-inline def glRasterPos3i = PreFunc.glRasterPos3i.value
-inline def glRasterPos3iv = PreFunc.glRasterPos3iv.value
-inline def glRasterPos3s = PreFunc.glRasterPos3s.value
-inline def glRasterPos3sv = PreFunc.glRasterPos3sv.value
-inline def glRasterPos4d = PreFunc.glRasterPos4d.value
-inline def glRasterPos4dv = PreFunc.glRasterPos4dv.value
-inline def glRasterPos4f = PreFunc.glRasterPos4f.value
-inline def glRasterPos4fv = PreFunc.glRasterPos4fv.value
-inline def glRasterPos4i = PreFunc.glRasterPos4i.value
-inline def glRasterPos4iv = PreFunc.glRasterPos4iv.value
-inline def glRasterPos4s = PreFunc.glRasterPos4s.value
-inline def glRasterPos4sv = PreFunc.glRasterPos4sv.value
-inline def glReadBuffer = PreFunc.glReadBuffer.value
-inline def glReadPixels = PreFunc.glReadPixels.value
-inline def glReadnPixels = PreFunc.glReadnPixels.value
-inline def glRectd = PreFunc.glRectd.value
-inline def glRectdv = PreFunc.glRectdv.value
-inline def glRectf = PreFunc.glRectf.value
-inline def glRectfv = PreFunc.glRectfv.value
-inline def glRecti = PreFunc.glRecti.value
-inline def glRectiv = PreFunc.glRectiv.value
-inline def glRects = PreFunc.glRects.value
-inline def glRectsv = PreFunc.glRectsv.value
-inline def glReleaseShaderCompiler = PreFunc.glReleaseShaderCompiler.value
-inline def glRenderMode = PreFunc.glRenderMode.value
-inline def glRenderbufferStorage = PreFunc.glRenderbufferStorage.value
-inline def glRenderbufferStorageMultisample = PreFunc.glRenderbufferStorageMultisample.value
-inline def glResumeTransformFeedback = PreFunc.glResumeTransformFeedback.value
-inline def glRotated = PreFunc.glRotated.value
-inline def glRotatef = PreFunc.glRotatef.value
-inline def glSampleCoverage = PreFunc.glSampleCoverage.value
-inline def glSampleMaski = PreFunc.glSampleMaski.value
-inline def glSamplerParameterIiv = PreFunc.glSamplerParameterIiv.value
-inline def glSamplerParameterIuiv = PreFunc.glSamplerParameterIuiv.value
-inline def glSamplerParameterf = PreFunc.glSamplerParameterf.value
-inline def glSamplerParameterfv = PreFunc.glSamplerParameterfv.value
-inline def glSamplerParameteri = PreFunc.glSamplerParameteri.value
-inline def glSamplerParameteriv = PreFunc.glSamplerParameteriv.value
-inline def glScaled = PreFunc.glScaled.value
-inline def glScalef = PreFunc.glScalef.value
-inline def glScissor = PreFunc.glScissor.value
-inline def glScissorArrayv = PreFunc.glScissorArrayv.value
-inline def glScissorIndexed = PreFunc.glScissorIndexed.value
-inline def glScissorIndexedv = PreFunc.glScissorIndexedv.value
-inline def glSecondaryColor3b = PreFunc.glSecondaryColor3b.value
-inline def glSecondaryColor3bv = PreFunc.glSecondaryColor3bv.value
-inline def glSecondaryColor3d = PreFunc.glSecondaryColor3d.value
-inline def glSecondaryColor3dv = PreFunc.glSecondaryColor3dv.value
-inline def glSecondaryColor3f = PreFunc.glSecondaryColor3f.value
-inline def glSecondaryColor3fv = PreFunc.glSecondaryColor3fv.value
-inline def glSecondaryColor3i = PreFunc.glSecondaryColor3i.value
-inline def glSecondaryColor3iv = PreFunc.glSecondaryColor3iv.value
-inline def glSecondaryColor3s = PreFunc.glSecondaryColor3s.value
-inline def glSecondaryColor3sv = PreFunc.glSecondaryColor3sv.value
-inline def glSecondaryColor3ub = PreFunc.glSecondaryColor3ub.value
-inline def glSecondaryColor3ubv = PreFunc.glSecondaryColor3ubv.value
-inline def glSecondaryColor3ui = PreFunc.glSecondaryColor3ui.value
-inline def glSecondaryColor3uiv = PreFunc.glSecondaryColor3uiv.value
-inline def glSecondaryColor3us = PreFunc.glSecondaryColor3us.value
-inline def glSecondaryColor3usv = PreFunc.glSecondaryColor3usv.value
-inline def glSecondaryColorP3ui = PreFunc.glSecondaryColorP3ui.value
-inline def glSecondaryColorP3uiv = PreFunc.glSecondaryColorP3uiv.value
-inline def glSecondaryColorPointer = PreFunc.glSecondaryColorPointer.value
-inline def glSelectBuffer = PreFunc.glSelectBuffer.value
-inline def glShadeModel = PreFunc.glShadeModel.value
-inline def glShaderBinary = PreFunc.glShaderBinary.value
-inline def glShaderSource = PreFunc.glShaderSource.value
-inline def glShaderStorageBlockBinding = PreFunc.glShaderStorageBlockBinding.value
-inline def glSpecializeShader = PreFunc.glSpecializeShader.value
-inline def glStencilFunc = PreFunc.glStencilFunc.value
-inline def glStencilFuncSeparate = PreFunc.glStencilFuncSeparate.value
-inline def glStencilMask = PreFunc.glStencilMask.value
-inline def glStencilMaskSeparate = PreFunc.glStencilMaskSeparate.value
-inline def glStencilOp = PreFunc.glStencilOp.value
-inline def glStencilOpSeparate = PreFunc.glStencilOpSeparate.value
-inline def glTexBuffer = PreFunc.glTexBuffer.value
-inline def glTexBufferRange = PreFunc.glTexBufferRange.value
-inline def glTexCoord1d = PreFunc.glTexCoord1d.value
-inline def glTexCoord1dv = PreFunc.glTexCoord1dv.value
-inline def glTexCoord1f = PreFunc.glTexCoord1f.value
-inline def glTexCoord1fv = PreFunc.glTexCoord1fv.value
-inline def glTexCoord1i = PreFunc.glTexCoord1i.value
-inline def glTexCoord1iv = PreFunc.glTexCoord1iv.value
-inline def glTexCoord1s = PreFunc.glTexCoord1s.value
-inline def glTexCoord1sv = PreFunc.glTexCoord1sv.value
-inline def glTexCoord2d = PreFunc.glTexCoord2d.value
-inline def glTexCoord2dv = PreFunc.glTexCoord2dv.value
-inline def glTexCoord2f = PreFunc.glTexCoord2f.value
-inline def glTexCoord2fv = PreFunc.glTexCoord2fv.value
-inline def glTexCoord2i = PreFunc.glTexCoord2i.value
-inline def glTexCoord2iv = PreFunc.glTexCoord2iv.value
-inline def glTexCoord2s = PreFunc.glTexCoord2s.value
-inline def glTexCoord2sv = PreFunc.glTexCoord2sv.value
-inline def glTexCoord3d = PreFunc.glTexCoord3d.value
-inline def glTexCoord3dv = PreFunc.glTexCoord3dv.value
-inline def glTexCoord3f = PreFunc.glTexCoord3f.value
-inline def glTexCoord3fv = PreFunc.glTexCoord3fv.value
-inline def glTexCoord3i = PreFunc.glTexCoord3i.value
-inline def glTexCoord3iv = PreFunc.glTexCoord3iv.value
-inline def glTexCoord3s = PreFunc.glTexCoord3s.value
-inline def glTexCoord3sv = PreFunc.glTexCoord3sv.value
-inline def glTexCoord4d = PreFunc.glTexCoord4d.value
-inline def glTexCoord4dv = PreFunc.glTexCoord4dv.value
-inline def glTexCoord4f = PreFunc.glTexCoord4f.value
-inline def glTexCoord4fv = PreFunc.glTexCoord4fv.value
-inline def glTexCoord4i = PreFunc.glTexCoord4i.value
-inline def glTexCoord4iv = PreFunc.glTexCoord4iv.value
-inline def glTexCoord4s = PreFunc.glTexCoord4s.value
-inline def glTexCoord4sv = PreFunc.glTexCoord4sv.value
-inline def glTexCoordP1ui = PreFunc.glTexCoordP1ui.value
-inline def glTexCoordP1uiv = PreFunc.glTexCoordP1uiv.value
-inline def glTexCoordP2ui = PreFunc.glTexCoordP2ui.value
-inline def glTexCoordP2uiv = PreFunc.glTexCoordP2uiv.value
-inline def glTexCoordP3ui = PreFunc.glTexCoordP3ui.value
-inline def glTexCoordP3uiv = PreFunc.glTexCoordP3uiv.value
-inline def glTexCoordP4ui = PreFunc.glTexCoordP4ui.value
-inline def glTexCoordP4uiv = PreFunc.glTexCoordP4uiv.value
-inline def glTexCoordPointer = PreFunc.glTexCoordPointer.value
-inline def glTexEnvf = PreFunc.glTexEnvf.value
-inline def glTexEnvfv = PreFunc.glTexEnvfv.value
-inline def glTexEnvi = PreFunc.glTexEnvi.value
-inline def glTexEnviv = PreFunc.glTexEnviv.value
-inline def glTexGend = PreFunc.glTexGend.value
-inline def glTexGendv = PreFunc.glTexGendv.value
-inline def glTexGenf = PreFunc.glTexGenf.value
-inline def glTexGenfv = PreFunc.glTexGenfv.value
-inline def glTexGeni = PreFunc.glTexGeni.value
-inline def glTexGeniv = PreFunc.glTexGeniv.value
-inline def glTexImage1D = PreFunc.glTexImage1D.value
-inline def glTexImage2D = PreFunc.glTexImage2D.value
-inline def glTexImage2DMultisample = PreFunc.glTexImage2DMultisample.value
-inline def glTexImage3D = PreFunc.glTexImage3D.value
-inline def glTexImage3DMultisample = PreFunc.glTexImage3DMultisample.value
-inline def glTexParameterIiv = PreFunc.glTexParameterIiv.value
-inline def glTexParameterIuiv = PreFunc.glTexParameterIuiv.value
-inline def glTexParameterf = PreFunc.glTexParameterf.value
-inline def glTexParameterfv = PreFunc.glTexParameterfv.value
-inline def glTexParameteri = PreFunc.glTexParameteri.value
-inline def glTexParameteriv = PreFunc.glTexParameteriv.value
-inline def glTexStorage1D = PreFunc.glTexStorage1D.value
-inline def glTexStorage2D = PreFunc.glTexStorage2D.value
-inline def glTexStorage2DMultisample = PreFunc.glTexStorage2DMultisample.value
-inline def glTexStorage3D = PreFunc.glTexStorage3D.value
-inline def glTexStorage3DMultisample = PreFunc.glTexStorage3DMultisample.value
-inline def glTexSubImage1D = PreFunc.glTexSubImage1D.value
-inline def glTexSubImage2D = PreFunc.glTexSubImage2D.value
-inline def glTexSubImage3D = PreFunc.glTexSubImage3D.value
-inline def glTextureBarrier = PreFunc.glTextureBarrier.value
-inline def glTextureBuffer = PreFunc.glTextureBuffer.value
-inline def glTextureBufferRange = PreFunc.glTextureBufferRange.value
-inline def glTextureParameterIiv = PreFunc.glTextureParameterIiv.value
-inline def glTextureParameterIuiv = PreFunc.glTextureParameterIuiv.value
-inline def glTextureParameterf = PreFunc.glTextureParameterf.value
-inline def glTextureParameterfv = PreFunc.glTextureParameterfv.value
-inline def glTextureParameteri = PreFunc.glTextureParameteri.value
-inline def glTextureParameteriv = PreFunc.glTextureParameteriv.value
-inline def glTextureStorage1D = PreFunc.glTextureStorage1D.value
-inline def glTextureStorage2D = PreFunc.glTextureStorage2D.value
-inline def glTextureStorage2DMultisample = PreFunc.glTextureStorage2DMultisample.value
-inline def glTextureStorage3D = PreFunc.glTextureStorage3D.value
-inline def glTextureStorage3DMultisample = PreFunc.glTextureStorage3DMultisample.value
-inline def glTextureSubImage1D = PreFunc.glTextureSubImage1D.value
-inline def glTextureSubImage2D = PreFunc.glTextureSubImage2D.value
-inline def glTextureSubImage3D = PreFunc.glTextureSubImage3D.value
-inline def glTextureView = PreFunc.glTextureView.value
-inline def glTransformFeedbackBufferBase = PreFunc.glTransformFeedbackBufferBase.value
-inline def glTransformFeedbackBufferRange = PreFunc.glTransformFeedbackBufferRange.value
-inline def glTransformFeedbackVaryings = PreFunc.glTransformFeedbackVaryings.value
-inline def glTranslated = PreFunc.glTranslated.value
-inline def glTranslatef = PreFunc.glTranslatef.value
-inline def glUniform1d = PreFunc.glUniform1d.value
-inline def glUniform1dv = PreFunc.glUniform1dv.value
-inline def glUniform1f = PreFunc.glUniform1f.value
-inline def glUniform1fv = PreFunc.glUniform1fv.value
-inline def glUniform1i = PreFunc.glUniform1i.value
-inline def glUniform1iv = PreFunc.glUniform1iv.value
-inline def glUniform1ui = PreFunc.glUniform1ui.value
-inline def glUniform1uiv = PreFunc.glUniform1uiv.value
-inline def glUniform2d = PreFunc.glUniform2d.value
-inline def glUniform2dv = PreFunc.glUniform2dv.value
-inline def glUniform2f = PreFunc.glUniform2f.value
-inline def glUniform2fv = PreFunc.glUniform2fv.value
-inline def glUniform2i = PreFunc.glUniform2i.value
-inline def glUniform2iv = PreFunc.glUniform2iv.value
-inline def glUniform2ui = PreFunc.glUniform2ui.value
-inline def glUniform2uiv = PreFunc.glUniform2uiv.value
-inline def glUniform3d = PreFunc.glUniform3d.value
-inline def glUniform3dv = PreFunc.glUniform3dv.value
-inline def glUniform3f = PreFunc.glUniform3f.value
-inline def glUniform3fv = PreFunc.glUniform3fv.value
-inline def glUniform3i = PreFunc.glUniform3i.value
-inline def glUniform3iv = PreFunc.glUniform3iv.value
-inline def glUniform3ui = PreFunc.glUniform3ui.value
-inline def glUniform3uiv = PreFunc.glUniform3uiv.value
-inline def glUniform4d = PreFunc.glUniform4d.value
-inline def glUniform4dv = PreFunc.glUniform4dv.value
-inline def glUniform4f = PreFunc.glUniform4f.value
-inline def glUniform4fv = PreFunc.glUniform4fv.value
-inline def glUniform4i = PreFunc.glUniform4i.value
-inline def glUniform4iv = PreFunc.glUniform4iv.value
-inline def glUniform4ui = PreFunc.glUniform4ui.value
-inline def glUniform4uiv = PreFunc.glUniform4uiv.value
-inline def glUniformBlockBinding = PreFunc.glUniformBlockBinding.value
-inline def glUniformMatrix2dv = PreFunc.glUniformMatrix2dv.value
-inline def glUniformMatrix2fv = PreFunc.glUniformMatrix2fv.value
-inline def glUniformMatrix2x3dv = PreFunc.glUniformMatrix2x3dv.value
-inline def glUniformMatrix2x3fv = PreFunc.glUniformMatrix2x3fv.value
-inline def glUniformMatrix2x4dv = PreFunc.glUniformMatrix2x4dv.value
-inline def glUniformMatrix2x4fv = PreFunc.glUniformMatrix2x4fv.value
-inline def glUniformMatrix3dv = PreFunc.glUniformMatrix3dv.value
-inline def glUniformMatrix3fv = PreFunc.glUniformMatrix3fv.value
-inline def glUniformMatrix3x2dv = PreFunc.glUniformMatrix3x2dv.value
-inline def glUniformMatrix3x2fv = PreFunc.glUniformMatrix3x2fv.value
-inline def glUniformMatrix3x4dv = PreFunc.glUniformMatrix3x4dv.value
-inline def glUniformMatrix3x4fv = PreFunc.glUniformMatrix3x4fv.value
-inline def glUniformMatrix4dv = PreFunc.glUniformMatrix4dv.value
-inline def glUniformMatrix4fv = PreFunc.glUniformMatrix4fv.value
-inline def glUniformMatrix4x2dv = PreFunc.glUniformMatrix4x2dv.value
-inline def glUniformMatrix4x2fv = PreFunc.glUniformMatrix4x2fv.value
-inline def glUniformMatrix4x3dv = PreFunc.glUniformMatrix4x3dv.value
-inline def glUniformMatrix4x3fv = PreFunc.glUniformMatrix4x3fv.value
-inline def glUniformSubroutinesuiv = PreFunc.glUniformSubroutinesuiv.value
-inline def glUnmapBuffer = PreFunc.glUnmapBuffer.value
-inline def glUnmapNamedBuffer = PreFunc.glUnmapNamedBuffer.value
-inline def glUseProgram = PreFunc.glUseProgram.value
-inline def glUseProgramStages = PreFunc.glUseProgramStages.value
-inline def glValidateProgram = PreFunc.glValidateProgram.value
-inline def glValidateProgramPipeline = PreFunc.glValidateProgramPipeline.value
-inline def glVertex2d = PreFunc.glVertex2d.value
-inline def glVertex2dv = PreFunc.glVertex2dv.value
-inline def glVertex2f = PreFunc.glVertex2f.value
-inline def glVertex2fv = PreFunc.glVertex2fv.value
-inline def glVertex2i = PreFunc.glVertex2i.value
-inline def glVertex2iv = PreFunc.glVertex2iv.value
-inline def glVertex2s = PreFunc.glVertex2s.value
-inline def glVertex2sv = PreFunc.glVertex2sv.value
-inline def glVertex3d = PreFunc.glVertex3d.value
-inline def glVertex3dv = PreFunc.glVertex3dv.value
-inline def glVertex3f = PreFunc.glVertex3f.value
-inline def glVertex3fv = PreFunc.glVertex3fv.value
-inline def glVertex3i = PreFunc.glVertex3i.value
-inline def glVertex3iv = PreFunc.glVertex3iv.value
-inline def glVertex3s = PreFunc.glVertex3s.value
-inline def glVertex3sv = PreFunc.glVertex3sv.value
-inline def glVertex4d = PreFunc.glVertex4d.value
-inline def glVertex4dv = PreFunc.glVertex4dv.value
-inline def glVertex4f = PreFunc.glVertex4f.value
-inline def glVertex4fv = PreFunc.glVertex4fv.value
-inline def glVertex4i = PreFunc.glVertex4i.value
-inline def glVertex4iv = PreFunc.glVertex4iv.value
-inline def glVertex4s = PreFunc.glVertex4s.value
-inline def glVertex4sv = PreFunc.glVertex4sv.value
-inline def glVertexArrayAttribBinding = PreFunc.glVertexArrayAttribBinding.value
-inline def glVertexArrayAttribFormat = PreFunc.glVertexArrayAttribFormat.value
-inline def glVertexArrayAttribIFormat = PreFunc.glVertexArrayAttribIFormat.value
-inline def glVertexArrayAttribLFormat = PreFunc.glVertexArrayAttribLFormat.value
-inline def glVertexArrayBindingDivisor = PreFunc.glVertexArrayBindingDivisor.value
-inline def glVertexArrayElementBuffer = PreFunc.glVertexArrayElementBuffer.value
-inline def glVertexArrayVertexBuffer = PreFunc.glVertexArrayVertexBuffer.value
-inline def glVertexArrayVertexBuffers = PreFunc.glVertexArrayVertexBuffers.value
-inline def glVertexAttrib1d = PreFunc.glVertexAttrib1d.value
-inline def glVertexAttrib1dv = PreFunc.glVertexAttrib1dv.value
-inline def glVertexAttrib1f = PreFunc.glVertexAttrib1f.value
-inline def glVertexAttrib1fv = PreFunc.glVertexAttrib1fv.value
-inline def glVertexAttrib1s = PreFunc.glVertexAttrib1s.value
-inline def glVertexAttrib1sv = PreFunc.glVertexAttrib1sv.value
-inline def glVertexAttrib2d = PreFunc.glVertexAttrib2d.value
-inline def glVertexAttrib2dv = PreFunc.glVertexAttrib2dv.value
-inline def glVertexAttrib2f = PreFunc.glVertexAttrib2f.value
-inline def glVertexAttrib2fv = PreFunc.glVertexAttrib2fv.value
-inline def glVertexAttrib2s = PreFunc.glVertexAttrib2s.value
-inline def glVertexAttrib2sv = PreFunc.glVertexAttrib2sv.value
-inline def glVertexAttrib3d = PreFunc.glVertexAttrib3d.value
-inline def glVertexAttrib3dv = PreFunc.glVertexAttrib3dv.value
-inline def glVertexAttrib3f = PreFunc.glVertexAttrib3f.value
-inline def glVertexAttrib3fv = PreFunc.glVertexAttrib3fv.value
-inline def glVertexAttrib3s = PreFunc.glVertexAttrib3s.value
-inline def glVertexAttrib3sv = PreFunc.glVertexAttrib3sv.value
-inline def glVertexAttrib4Nbv = PreFunc.glVertexAttrib4Nbv.value
-inline def glVertexAttrib4Niv = PreFunc.glVertexAttrib4Niv.value
-inline def glVertexAttrib4Nsv = PreFunc.glVertexAttrib4Nsv.value
-inline def glVertexAttrib4Nub = PreFunc.glVertexAttrib4Nub.value
-inline def glVertexAttrib4Nubv = PreFunc.glVertexAttrib4Nubv.value
-inline def glVertexAttrib4Nuiv = PreFunc.glVertexAttrib4Nuiv.value
-inline def glVertexAttrib4Nusv = PreFunc.glVertexAttrib4Nusv.value
-inline def glVertexAttrib4bv = PreFunc.glVertexAttrib4bv.value
-inline def glVertexAttrib4d = PreFunc.glVertexAttrib4d.value
-inline def glVertexAttrib4dv = PreFunc.glVertexAttrib4dv.value
-inline def glVertexAttrib4f = PreFunc.glVertexAttrib4f.value
-inline def glVertexAttrib4fv = PreFunc.glVertexAttrib4fv.value
-inline def glVertexAttrib4iv = PreFunc.glVertexAttrib4iv.value
-inline def glVertexAttrib4s = PreFunc.glVertexAttrib4s.value
-inline def glVertexAttrib4sv = PreFunc.glVertexAttrib4sv.value
-inline def glVertexAttrib4ubv = PreFunc.glVertexAttrib4ubv.value
-inline def glVertexAttrib4uiv = PreFunc.glVertexAttrib4uiv.value
-inline def glVertexAttrib4usv = PreFunc.glVertexAttrib4usv.value
-inline def glVertexAttribBinding = PreFunc.glVertexAttribBinding.value
-inline def glVertexAttribDivisor = PreFunc.glVertexAttribDivisor.value
-inline def glVertexAttribFormat = PreFunc.glVertexAttribFormat.value
-inline def glVertexAttribI1i = PreFunc.glVertexAttribI1i.value
-inline def glVertexAttribI1iv = PreFunc.glVertexAttribI1iv.value
-inline def glVertexAttribI1ui = PreFunc.glVertexAttribI1ui.value
-inline def glVertexAttribI1uiv = PreFunc.glVertexAttribI1uiv.value
-inline def glVertexAttribI2i = PreFunc.glVertexAttribI2i.value
-inline def glVertexAttribI2iv = PreFunc.glVertexAttribI2iv.value
-inline def glVertexAttribI2ui = PreFunc.glVertexAttribI2ui.value
-inline def glVertexAttribI2uiv = PreFunc.glVertexAttribI2uiv.value
-inline def glVertexAttribI3i = PreFunc.glVertexAttribI3i.value
-inline def glVertexAttribI3iv = PreFunc.glVertexAttribI3iv.value
-inline def glVertexAttribI3ui = PreFunc.glVertexAttribI3ui.value
-inline def glVertexAttribI3uiv = PreFunc.glVertexAttribI3uiv.value
-inline def glVertexAttribI4bv = PreFunc.glVertexAttribI4bv.value
-inline def glVertexAttribI4i = PreFunc.glVertexAttribI4i.value
-inline def glVertexAttribI4iv = PreFunc.glVertexAttribI4iv.value
-inline def glVertexAttribI4sv = PreFunc.glVertexAttribI4sv.value
-inline def glVertexAttribI4ubv = PreFunc.glVertexAttribI4ubv.value
-inline def glVertexAttribI4ui = PreFunc.glVertexAttribI4ui.value
-inline def glVertexAttribI4uiv = PreFunc.glVertexAttribI4uiv.value
-inline def glVertexAttribI4usv = PreFunc.glVertexAttribI4usv.value
-inline def glVertexAttribIFormat = PreFunc.glVertexAttribIFormat.value
-inline def glVertexAttribIPointer = PreFunc.glVertexAttribIPointer.value
-inline def glVertexAttribL1d = PreFunc.glVertexAttribL1d.value
-inline def glVertexAttribL1dv = PreFunc.glVertexAttribL1dv.value
-inline def glVertexAttribL2d = PreFunc.glVertexAttribL2d.value
-inline def glVertexAttribL2dv = PreFunc.glVertexAttribL2dv.value
-inline def glVertexAttribL3d = PreFunc.glVertexAttribL3d.value
-inline def glVertexAttribL3dv = PreFunc.glVertexAttribL3dv.value
-inline def glVertexAttribL4d = PreFunc.glVertexAttribL4d.value
-inline def glVertexAttribL4dv = PreFunc.glVertexAttribL4dv.value
-inline def glVertexAttribLFormat = PreFunc.glVertexAttribLFormat.value
-inline def glVertexAttribLPointer = PreFunc.glVertexAttribLPointer.value
-inline def glVertexAttribP1ui = PreFunc.glVertexAttribP1ui.value
-inline def glVertexAttribP1uiv = PreFunc.glVertexAttribP1uiv.value
-inline def glVertexAttribP2ui = PreFunc.glVertexAttribP2ui.value
-inline def glVertexAttribP2uiv = PreFunc.glVertexAttribP2uiv.value
-inline def glVertexAttribP3ui = PreFunc.glVertexAttribP3ui.value
-inline def glVertexAttribP3uiv = PreFunc.glVertexAttribP3uiv.value
-inline def glVertexAttribP4ui = PreFunc.glVertexAttribP4ui.value
-inline def glVertexAttribP4uiv = PreFunc.glVertexAttribP4uiv.value
-inline def glVertexAttribPointer = PreFunc.glVertexAttribPointer.value
-inline def glVertexBindingDivisor = PreFunc.glVertexBindingDivisor.value
-inline def glVertexP2ui = PreFunc.glVertexP2ui.value
-inline def glVertexP2uiv = PreFunc.glVertexP2uiv.value
-inline def glVertexP3ui = PreFunc.glVertexP3ui.value
-inline def glVertexP3uiv = PreFunc.glVertexP3uiv.value
-inline def glVertexP4ui = PreFunc.glVertexP4ui.value
-inline def glVertexP4uiv = PreFunc.glVertexP4uiv.value
-inline def glVertexPointer = PreFunc.glVertexPointer.value
-inline def glViewport = PreFunc.glViewport.value
-inline def glViewportArrayv = PreFunc.glViewportArrayv.value
-inline def glViewportIndexedf = PreFunc.glViewportIndexedf.value
-inline def glViewportIndexedfv = PreFunc.glViewportIndexedfv.value
-inline def glWaitSync = PreFunc.glWaitSync.value
-inline def glWindowPos2d = PreFunc.glWindowPos2d.value
-inline def glWindowPos2dv = PreFunc.glWindowPos2dv.value
-inline def glWindowPos2f = PreFunc.glWindowPos2f.value
-inline def glWindowPos2fv = PreFunc.glWindowPos2fv.value
-inline def glWindowPos2i = PreFunc.glWindowPos2i.value
-inline def glWindowPos2iv = PreFunc.glWindowPos2iv.value
-inline def glWindowPos2s = PreFunc.glWindowPos2s.value
-inline def glWindowPos2sv = PreFunc.glWindowPos2sv.value
-inline def glWindowPos3d = PreFunc.glWindowPos3d.value
-inline def glWindowPos3dv = PreFunc.glWindowPos3dv.value
-inline def glWindowPos3f = PreFunc.glWindowPos3f.value
-inline def glWindowPos3fv = PreFunc.glWindowPos3fv.value
-inline def glWindowPos3i = PreFunc.glWindowPos3i.value
-inline def glWindowPos3iv = PreFunc.glWindowPos3iv.value
-inline def glWindowPos3s = PreFunc.glWindowPos3s.value
-inline def glWindowPos3sv = PreFunc.glWindowPos3sv.value
+/**
+ * Functions used to expose #defined instantiated C function pointers
+ */
+
+@name("func_glAccum") @extern def glAccum: PFNGLACCUMPROC = extern
+
+@name("func_glActiveShaderProgram") @extern def glActiveShaderProgram: PFNGLACTIVESHADERPROGRAMPROC = extern
+
+@name("func_glActiveTexture") @extern def glActiveTexture: PFNGLACTIVETEXTUREPROC = extern
+
+@name("func_glAlphaFunc") @extern def glAlphaFunc: PFNGLALPHAFUNCPROC = extern
+
+@name("func_glAreTexturesResident") @extern def glAreTexturesResident: PFNGLARETEXTURESRESIDENTPROC = extern
+
+@name("func_glArrayElement") @extern def glArrayElement: PFNGLARRAYELEMENTPROC = extern
+
+@name("func_glAttachShader") @extern def glAttachShader: PFNGLATTACHSHADERPROC = extern
+
+@name("func_glBegin") @extern def glBegin: PFNGLBEGINPROC = extern
+
+@name("func_glBeginConditionalRender") @extern def glBeginConditionalRender: PFNGLBEGINCONDITIONALRENDERPROC = extern
+
+@name("func_glBeginQuery") @extern def glBeginQuery: PFNGLBEGINQUERYPROC = extern
+
+@name("func_glBeginQueryIndexed") @extern def glBeginQueryIndexed: PFNGLBEGINQUERYINDEXEDPROC = extern
+
+@name("func_glBeginTransformFeedback") @extern def glBeginTransformFeedback: PFNGLBEGINTRANSFORMFEEDBACKPROC = extern
+
+@name("func_glBindAttribLocation") @extern def glBindAttribLocation: PFNGLBINDATTRIBLOCATIONPROC = extern
+
+@name("func_glBindBuffer") @extern def glBindBuffer: PFNGLBINDBUFFERPROC = extern
+
+@name("func_glBindBufferBase") @extern def glBindBufferBase: PFNGLBINDBUFFERBASEPROC = extern
+
+@name("func_glBindBufferRange") @extern def glBindBufferRange: PFNGLBINDBUFFERRANGEPROC = extern
+
+@name("func_glBindBuffersBase") @extern def glBindBuffersBase: PFNGLBINDBUFFERSBASEPROC = extern
+
+@name("func_glBindBuffersRange") @extern def glBindBuffersRange: PFNGLBINDBUFFERSRANGEPROC = extern
+
+@name("func_glBindFragDataLocation") @extern def glBindFragDataLocation: PFNGLBINDFRAGDATALOCATIONPROC = extern
+
+@name("func_glBindFragDataLocationIndexed") @extern def glBindFragDataLocationIndexed: PFNGLBINDFRAGDATALOCATIONINDEXEDPROC = extern
+
+@name("func_glBindFramebuffer") @extern def glBindFramebuffer: PFNGLBINDFRAMEBUFFERPROC = extern
+
+@name("func_glBindImageTexture") @extern def glBindImageTexture: PFNGLBINDIMAGETEXTUREPROC = extern
+
+@name("func_glBindImageTextures") @extern def glBindImageTextures: PFNGLBINDIMAGETEXTURESPROC = extern
+
+@name("func_glBindProgramPipeline") @extern def glBindProgramPipeline: PFNGLBINDPROGRAMPIPELINEPROC = extern
+
+@name("func_glBindRenderbuffer") @extern def glBindRenderbuffer: PFNGLBINDRENDERBUFFERPROC = extern
+
+@name("func_glBindSampler") @extern def glBindSampler: PFNGLBINDSAMPLERPROC = extern
+
+@name("func_glBindSamplers") @extern def glBindSamplers: PFNGLBINDSAMPLERSPROC = extern
+
+@name("func_glBindTexture") @extern def glBindTexture: PFNGLBINDTEXTUREPROC = extern
+
+@name("func_glBindTextureUnit") @extern def glBindTextureUnit: PFNGLBINDTEXTUREUNITPROC = extern
+
+@name("func_glBindTextures") @extern def glBindTextures: PFNGLBINDTEXTURESPROC = extern
+
+@name("func_glBindTransformFeedback") @extern def glBindTransformFeedback: PFNGLBINDTRANSFORMFEEDBACKPROC = extern
+
+@name("func_glBindVertexArray") @extern def glBindVertexArray: PFNGLBINDVERTEXARRAYPROC = extern
+
+@name("func_glBindVertexBuffer") @extern def glBindVertexBuffer: PFNGLBINDVERTEXBUFFERPROC = extern
+
+@name("func_glBindVertexBuffers") @extern def glBindVertexBuffers: PFNGLBINDVERTEXBUFFERSPROC = extern
+
+@name("func_glBitmap") @extern def glBitmap: PFNGLBITMAPPROC = extern
+
+@name("func_glBlendColor") @extern def glBlendColor: PFNGLBLENDCOLORPROC = extern
+
+@name("func_glBlendEquation") @extern def glBlendEquation: PFNGLBLENDEQUATIONPROC = extern
+
+@name("func_glBlendEquationSeparate") @extern def glBlendEquationSeparate: PFNGLBLENDEQUATIONSEPARATEPROC = extern
+
+@name("func_glBlendEquationSeparatei") @extern def glBlendEquationSeparatei: PFNGLBLENDEQUATIONSEPARATEIPROC = extern
+
+@name("func_glBlendEquationi") @extern def glBlendEquationi: PFNGLBLENDEQUATIONIPROC = extern
+
+@name("func_glBlendFunc") @extern def glBlendFunc: PFNGLBLENDFUNCPROC = extern
+
+@name("func_glBlendFuncSeparate") @extern def glBlendFuncSeparate: PFNGLBLENDFUNCSEPARATEPROC = extern
+
+@name("func_glBlendFuncSeparatei") @extern def glBlendFuncSeparatei: PFNGLBLENDFUNCSEPARATEIPROC = extern
+
+@name("func_glBlendFunci") @extern def glBlendFunci: PFNGLBLENDFUNCIPROC = extern
+
+@name("func_glBlitFramebuffer") @extern def glBlitFramebuffer: PFNGLBLITFRAMEBUFFERPROC = extern
+
+@name("func_glBlitNamedFramebuffer") @extern def glBlitNamedFramebuffer: PFNGLBLITNAMEDFRAMEBUFFERPROC = extern
+
+@name("func_glBufferData") @extern def glBufferData: PFNGLBUFFERDATAPROC = extern
+
+@name("func_glBufferStorage") @extern def glBufferStorage: PFNGLBUFFERSTORAGEPROC = extern
+
+@name("func_glBufferSubData") @extern def glBufferSubData: PFNGLBUFFERSUBDATAPROC = extern
+
+@name("func_glCallList") @extern def glCallList: PFNGLCALLLISTPROC = extern
+
+@name("func_glCallLists") @extern def glCallLists: PFNGLCALLLISTSPROC = extern
+
+@name("func_glCheckFramebufferStatus") @extern def glCheckFramebufferStatus: PFNGLCHECKFRAMEBUFFERSTATUSPROC = extern
+
+@name("func_glCheckNamedFramebufferStatus") @extern def glCheckNamedFramebufferStatus: PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC = extern
+
+@name("func_glClampColor") @extern def glClampColor: PFNGLCLAMPCOLORPROC = extern
+
+@name("func_glClear") @extern def glClear: PFNGLCLEARPROC = extern
+
+@name("func_glClearAccum") @extern def glClearAccum: PFNGLCLEARACCUMPROC = extern
+
+@name("func_glClearBufferData") @extern def glClearBufferData: PFNGLCLEARBUFFERDATAPROC = extern
+
+@name("func_glClearBufferSubData") @extern def glClearBufferSubData: PFNGLCLEARBUFFERSUBDATAPROC = extern
+
+@name("func_glClearBufferfi") @extern def glClearBufferfi: PFNGLCLEARBUFFERFIPROC = extern
+
+@name("func_glClearBufferfv") @extern def glClearBufferfv: PFNGLCLEARBUFFERFVPROC = extern
+
+@name("func_glClearBufferiv") @extern def glClearBufferiv: PFNGLCLEARBUFFERIVPROC = extern
+
+@name("func_glClearBufferuiv") @extern def glClearBufferuiv: PFNGLCLEARBUFFERUIVPROC = extern
+
+@name("func_glClearColor") @extern def glClearColor: PFNGLCLEARCOLORPROC = extern
+
+@name("func_glClearDepth") @extern def glClearDepth: PFNGLCLEARDEPTHPROC = extern
+
+@name("func_glClearDepthf") @extern def glClearDepthf: PFNGLCLEARDEPTHFPROC = extern
+
+@name("func_glClearIndex") @extern def glClearIndex: PFNGLCLEARINDEXPROC = extern
+
+@name("func_glClearNamedBufferData") @extern def glClearNamedBufferData: PFNGLCLEARNAMEDBUFFERDATAPROC = extern
+
+@name("func_glClearNamedBufferSubData") @extern def glClearNamedBufferSubData: PFNGLCLEARNAMEDBUFFERSUBDATAPROC = extern
+
+@name("func_glClearNamedFramebufferfi") @extern def glClearNamedFramebufferfi: PFNGLCLEARNAMEDFRAMEBUFFERFIPROC = extern
+
+@name("func_glClearNamedFramebufferfv") @extern def glClearNamedFramebufferfv: PFNGLCLEARNAMEDFRAMEBUFFERFVPROC = extern
+
+@name("func_glClearNamedFramebufferiv") @extern def glClearNamedFramebufferiv: PFNGLCLEARNAMEDFRAMEBUFFERIVPROC = extern
+
+@name("func_glClearNamedFramebufferuiv") @extern def glClearNamedFramebufferuiv: PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC = extern
+
+@name("func_glClearStencil") @extern def glClearStencil: PFNGLCLEARSTENCILPROC = extern
+
+@name("func_glClearTexImage") @extern def glClearTexImage: PFNGLCLEARTEXIMAGEPROC = extern
+
+@name("func_glClearTexSubImage") @extern def glClearTexSubImage: PFNGLCLEARTEXSUBIMAGEPROC = extern
+
+@name("func_glClientActiveTexture") @extern def glClientActiveTexture: PFNGLCLIENTACTIVETEXTUREPROC = extern
+
+@name("func_glClientWaitSync") @extern def glClientWaitSync: PFNGLCLIENTWAITSYNCPROC = extern
+
+@name("func_glClipControl") @extern def glClipControl: PFNGLCLIPCONTROLPROC = extern
+
+@name("func_glClipPlane") @extern def glClipPlane: PFNGLCLIPPLANEPROC = extern
+
+@name("func_glColor3b") @extern def glColor3b: PFNGLCOLOR3BPROC = extern
+
+@name("func_glColor3bv") @extern def glColor3bv: PFNGLCOLOR3BVPROC = extern
+
+@name("func_glColor3d") @extern def glColor3d: PFNGLCOLOR3DPROC = extern
+
+@name("func_glColor3dv") @extern def glColor3dv: PFNGLCOLOR3DVPROC = extern
+
+@name("func_glColor3f") @extern def glColor3f: PFNGLCOLOR3FPROC = extern
+
+@name("func_glColor3fv") @extern def glColor3fv: PFNGLCOLOR3FVPROC = extern
+
+@name("func_glColor3i") @extern def glColor3i: PFNGLCOLOR3IPROC = extern
+
+@name("func_glColor3iv") @extern def glColor3iv: PFNGLCOLOR3IVPROC = extern
+
+@name("func_glColor3s") @extern def glColor3s: PFNGLCOLOR3SPROC = extern
+
+@name("func_glColor3sv") @extern def glColor3sv: PFNGLCOLOR3SVPROC = extern
+
+@name("func_glColor3ub") @extern def glColor3ub: PFNGLCOLOR3UBPROC = extern
+
+@name("func_glColor3ubv") @extern def glColor3ubv: PFNGLCOLOR3UBVPROC = extern
+
+@name("func_glColor3ui") @extern def glColor3ui: PFNGLCOLOR3UIPROC = extern
+
+@name("func_glColor3uiv") @extern def glColor3uiv: PFNGLCOLOR3UIVPROC = extern
+
+@name("func_glColor3us") @extern def glColor3us: PFNGLCOLOR3USPROC = extern
+
+@name("func_glColor3usv") @extern def glColor3usv: PFNGLCOLOR3USVPROC = extern
+
+@name("func_glColor4b") @extern def glColor4b: PFNGLCOLOR4BPROC = extern
+
+@name("func_glColor4bv") @extern def glColor4bv: PFNGLCOLOR4BVPROC = extern
+
+@name("func_glColor4d") @extern def glColor4d: PFNGLCOLOR4DPROC = extern
+
+@name("func_glColor4dv") @extern def glColor4dv: PFNGLCOLOR4DVPROC = extern
+
+@name("func_glColor4f") @extern def glColor4f: PFNGLCOLOR4FPROC = extern
+
+@name("func_glColor4fv") @extern def glColor4fv: PFNGLCOLOR4FVPROC = extern
+
+@name("func_glColor4i") @extern def glColor4i: PFNGLCOLOR4IPROC = extern
+
+@name("func_glColor4iv") @extern def glColor4iv: PFNGLCOLOR4IVPROC = extern
+
+@name("func_glColor4s") @extern def glColor4s: PFNGLCOLOR4SPROC = extern
+
+@name("func_glColor4sv") @extern def glColor4sv: PFNGLCOLOR4SVPROC = extern
+
+@name("func_glColor4ub") @extern def glColor4ub: PFNGLCOLOR4UBPROC = extern
+
+@name("func_glColor4ubv") @extern def glColor4ubv: PFNGLCOLOR4UBVPROC = extern
+
+@name("func_glColor4ui") @extern def glColor4ui: PFNGLCOLOR4UIPROC = extern
+
+@name("func_glColor4uiv") @extern def glColor4uiv: PFNGLCOLOR4UIVPROC = extern
+
+@name("func_glColor4us") @extern def glColor4us: PFNGLCOLOR4USPROC = extern
+
+@name("func_glColor4usv") @extern def glColor4usv: PFNGLCOLOR4USVPROC = extern
+
+@name("func_glColorMask") @extern def glColorMask: PFNGLCOLORMASKPROC = extern
+
+@name("func_glColorMaski") @extern def glColorMaski: PFNGLCOLORMASKIPROC = extern
+
+@name("func_glColorMaterial") @extern def glColorMaterial: PFNGLCOLORMATERIALPROC = extern
+
+@name("func_glColorP3ui") @extern def glColorP3ui: PFNGLCOLORP3UIPROC = extern
+
+@name("func_glColorP3uiv") @extern def glColorP3uiv: PFNGLCOLORP3UIVPROC = extern
+
+@name("func_glColorP4ui") @extern def glColorP4ui: PFNGLCOLORP4UIPROC = extern
+
+@name("func_glColorP4uiv") @extern def glColorP4uiv: PFNGLCOLORP4UIVPROC = extern
+
+@name("func_glColorPointer") @extern def glColorPointer: PFNGLCOLORPOINTERPROC = extern
+
+@name("func_glCompileShader") @extern def glCompileShader: PFNGLCOMPILESHADERPROC = extern
+
+@name("func_glCompressedTexImage1D") @extern def glCompressedTexImage1D: PFNGLCOMPRESSEDTEXIMAGE1DPROC = extern
+
+@name("func_glCompressedTexImage2D") @extern def glCompressedTexImage2D: PFNGLCOMPRESSEDTEXIMAGE2DPROC = extern
+
+@name("func_glCompressedTexImage3D") @extern def glCompressedTexImage3D: PFNGLCOMPRESSEDTEXIMAGE3DPROC = extern
+
+@name("func_glCompressedTexSubImage1D") @extern def glCompressedTexSubImage1D: PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC = extern
+
+@name("func_glCompressedTexSubImage2D") @extern def glCompressedTexSubImage2D: PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC = extern
+
+@name("func_glCompressedTexSubImage3D") @extern def glCompressedTexSubImage3D: PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC = extern
+
+@name("func_glCompressedTextureSubImage1D") @extern def glCompressedTextureSubImage1D: PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC = extern
+
+@name("func_glCompressedTextureSubImage2D") @extern def glCompressedTextureSubImage2D: PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC = extern
+
+@name("func_glCompressedTextureSubImage3D") @extern def glCompressedTextureSubImage3D: PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC = extern
+
+@name("func_glCopyBufferSubData") @extern def glCopyBufferSubData: PFNGLCOPYBUFFERSUBDATAPROC = extern
+
+@name("func_glCopyImageSubData") @extern def glCopyImageSubData: PFNGLCOPYIMAGESUBDATAPROC = extern
+
+@name("func_glCopyNamedBufferSubData") @extern def glCopyNamedBufferSubData: PFNGLCOPYNAMEDBUFFERSUBDATAPROC = extern
+
+@name("func_glCopyPixels") @extern def glCopyPixels: PFNGLCOPYPIXELSPROC = extern
+
+@name("func_glCopyTexImage1D") @extern def glCopyTexImage1D: PFNGLCOPYTEXIMAGE1DPROC = extern
+
+@name("func_glCopyTexImage2D") @extern def glCopyTexImage2D: PFNGLCOPYTEXIMAGE2DPROC = extern
+
+@name("func_glCopyTexSubImage1D") @extern def glCopyTexSubImage1D: PFNGLCOPYTEXSUBIMAGE1DPROC = extern
+
+@name("func_glCopyTexSubImage2D") @extern def glCopyTexSubImage2D: PFNGLCOPYTEXSUBIMAGE2DPROC = extern
+
+@name("func_glCopyTexSubImage3D") @extern def glCopyTexSubImage3D: PFNGLCOPYTEXSUBIMAGE3DPROC = extern
+
+@name("func_glCopyTextureSubImage1D") @extern def glCopyTextureSubImage1D: PFNGLCOPYTEXTURESUBIMAGE1DPROC = extern
+
+@name("func_glCopyTextureSubImage2D") @extern def glCopyTextureSubImage2D: PFNGLCOPYTEXTURESUBIMAGE2DPROC = extern
+
+@name("func_glCopyTextureSubImage3D") @extern def glCopyTextureSubImage3D: PFNGLCOPYTEXTURESUBIMAGE3DPROC = extern
+
+@name("func_glCreateBuffers") @extern def glCreateBuffers: PFNGLCREATEBUFFERSPROC = extern
+
+@name("func_glCreateFramebuffers") @extern def glCreateFramebuffers: PFNGLCREATEFRAMEBUFFERSPROC = extern
+
+@name("func_glCreateProgram") @extern def glCreateProgram: PFNGLCREATEPROGRAMPROC = extern
+
+@name("func_glCreateProgramPipelines") @extern def glCreateProgramPipelines: PFNGLCREATEPROGRAMPIPELINESPROC = extern
+
+@name("func_glCreateQueries") @extern def glCreateQueries: PFNGLCREATEQUERIESPROC = extern
+
+@name("func_glCreateRenderbuffers") @extern def glCreateRenderbuffers: PFNGLCREATERENDERBUFFERSPROC = extern
+
+@name("func_glCreateSamplers") @extern def glCreateSamplers: PFNGLCREATESAMPLERSPROC = extern
+
+@name("func_glCreateShader") @extern def glCreateShader: PFNGLCREATESHADERPROC = extern
+
+@name("func_glCreateShaderProgramv") @extern def glCreateShaderProgramv: PFNGLCREATESHADERPROGRAMVPROC = extern
+
+@name("func_glCreateTextures") @extern def glCreateTextures: PFNGLCREATETEXTURESPROC = extern
+
+@name("func_glCreateTransformFeedbacks") @extern def glCreateTransformFeedbacks: PFNGLCREATETRANSFORMFEEDBACKSPROC = extern
+
+@name("func_glCreateVertexArrays") @extern def glCreateVertexArrays: PFNGLCREATEVERTEXARRAYSPROC = extern
+
+@name("func_glCullFace") @extern def glCullFace: PFNGLCULLFACEPROC = extern
+
+@name("func_glDebugMessageCallback") @extern def glDebugMessageCallback: PFNGLDEBUGMESSAGECALLBACKPROC = extern
+
+@name("func_glDebugMessageControl") @extern def glDebugMessageControl: PFNGLDEBUGMESSAGECONTROLPROC = extern
+
+@name("func_glDebugMessageInsert") @extern def glDebugMessageInsert: PFNGLDEBUGMESSAGEINSERTPROC = extern
+
+@name("func_glDeleteBuffers") @extern def glDeleteBuffers: PFNGLDELETEBUFFERSPROC = extern
+
+@name("func_glDeleteFramebuffers") @extern def glDeleteFramebuffers: PFNGLDELETEFRAMEBUFFERSPROC = extern
+
+@name("func_glDeleteLists") @extern def glDeleteLists: PFNGLDELETELISTSPROC = extern
+
+@name("func_glDeleteProgram") @extern def glDeleteProgram: PFNGLDELETEPROGRAMPROC = extern
+
+@name("func_glDeleteProgramPipelines") @extern def glDeleteProgramPipelines: PFNGLDELETEPROGRAMPIPELINESPROC = extern
+
+@name("func_glDeleteQueries") @extern def glDeleteQueries: PFNGLDELETEQUERIESPROC = extern
+
+@name("func_glDeleteRenderbuffers") @extern def glDeleteRenderbuffers: PFNGLDELETERENDERBUFFERSPROC = extern
+
+@name("func_glDeleteSamplers") @extern def glDeleteSamplers: PFNGLDELETESAMPLERSPROC = extern
+
+@name("func_glDeleteShader") @extern def glDeleteShader: PFNGLDELETESHADERPROC = extern
+
+@name("func_glDeleteSync") @extern def glDeleteSync: PFNGLDELETESYNCPROC = extern
+
+@name("func_glDeleteTextures") @extern def glDeleteTextures: PFNGLDELETETEXTURESPROC = extern
+
+@name("func_glDeleteTransformFeedbacks") @extern def glDeleteTransformFeedbacks: PFNGLDELETETRANSFORMFEEDBACKSPROC = extern
+
+@name("func_glDeleteVertexArrays") @extern def glDeleteVertexArrays: PFNGLDELETEVERTEXARRAYSPROC = extern
+
+@name("func_glDepthFunc") @extern def glDepthFunc: PFNGLDEPTHFUNCPROC = extern
+
+@name("func_glDepthMask") @extern def glDepthMask: PFNGLDEPTHMASKPROC = extern
+
+@name("func_glDepthRange") @extern def glDepthRange: PFNGLDEPTHRANGEPROC = extern
+
+@name("func_glDepthRangeArrayv") @extern def glDepthRangeArrayv: PFNGLDEPTHRANGEARRAYVPROC = extern
+
+@name("func_glDepthRangeIndexed") @extern def glDepthRangeIndexed: PFNGLDEPTHRANGEINDEXEDPROC = extern
+
+@name("func_glDepthRangef") @extern def glDepthRangef: PFNGLDEPTHRANGEFPROC = extern
+
+@name("func_glDetachShader") @extern def glDetachShader: PFNGLDETACHSHADERPROC = extern
+
+@name("func_glDisable") @extern def glDisable: PFNGLDISABLEPROC = extern
+
+@name("func_glDisableClientState") @extern def glDisableClientState: PFNGLDISABLECLIENTSTATEPROC = extern
+
+@name("func_glDisableVertexArrayAttrib") @extern def glDisableVertexArrayAttrib: PFNGLDISABLEVERTEXARRAYATTRIBPROC = extern
+
+@name("func_glDisableVertexAttribArray") @extern def glDisableVertexAttribArray: PFNGLDISABLEVERTEXATTRIBARRAYPROC = extern
+
+@name("func_glDisablei") @extern def glDisablei: PFNGLDISABLEIPROC = extern
+
+@name("func_glDispatchCompute") @extern def glDispatchCompute: PFNGLDISPATCHCOMPUTEPROC = extern
+
+@name("func_glDispatchComputeIndirect") @extern def glDispatchComputeIndirect: PFNGLDISPATCHCOMPUTEINDIRECTPROC = extern
+
+@name("func_glDrawArrays") @extern def glDrawArrays: PFNGLDRAWARRAYSPROC = extern
+
+@name("func_glDrawArraysIndirect") @extern def glDrawArraysIndirect: PFNGLDRAWARRAYSINDIRECTPROC = extern
+
+@name("func_glDrawArraysInstanced") @extern def glDrawArraysInstanced: PFNGLDRAWARRAYSINSTANCEDPROC = extern
+
+@name("func_glDrawArraysInstancedBaseInstance") @extern def glDrawArraysInstancedBaseInstance: PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC = extern
+
+@name("func_glDrawBuffer") @extern def glDrawBuffer: PFNGLDRAWBUFFERPROC = extern
+
+@name("func_glDrawBuffers") @extern def glDrawBuffers: PFNGLDRAWBUFFERSPROC = extern
+
+@name("func_glDrawElements") @extern def glDrawElements: PFNGLDRAWELEMENTSPROC = extern
+
+@name("func_glDrawElementsBaseVertex") @extern def glDrawElementsBaseVertex: PFNGLDRAWELEMENTSBASEVERTEXPROC = extern
+
+@name("func_glDrawElementsIndirect") @extern def glDrawElementsIndirect: PFNGLDRAWELEMENTSINDIRECTPROC = extern
+
+@name("func_glDrawElementsInstanced") @extern def glDrawElementsInstanced: PFNGLDRAWELEMENTSINSTANCEDPROC = extern
+
+@name("func_glDrawElementsInstancedBaseInstance") @extern def glDrawElementsInstancedBaseInstance: PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC = extern
+
+@name("func_glDrawElementsInstancedBaseVertex") @extern def glDrawElementsInstancedBaseVertex: PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC = extern
+
+@name("func_glDrawElementsInstancedBaseVertexBaseInstance") @extern def glDrawElementsInstancedBaseVertexBaseInstance: PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC = extern
+
+@name("func_glDrawPixels") @extern def glDrawPixels: PFNGLDRAWPIXELSPROC = extern
+
+@name("func_glDrawRangeElements") @extern def glDrawRangeElements: PFNGLDRAWRANGEELEMENTSPROC = extern
+
+@name("func_glDrawRangeElementsBaseVertex") @extern def glDrawRangeElementsBaseVertex: PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC = extern
+
+@name("func_glDrawTransformFeedback") @extern def glDrawTransformFeedback: PFNGLDRAWTRANSFORMFEEDBACKPROC = extern
+
+@name("func_glDrawTransformFeedbackInstanced") @extern def glDrawTransformFeedbackInstanced: PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC = extern
+
+@name("func_glDrawTransformFeedbackStream") @extern def glDrawTransformFeedbackStream: PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC = extern
+
+@name("func_glDrawTransformFeedbackStreamInstanced") @extern def glDrawTransformFeedbackStreamInstanced: PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC = extern
+
+@name("func_glEdgeFlag") @extern def glEdgeFlag: PFNGLEDGEFLAGPROC = extern
+
+@name("func_glEdgeFlagPointer") @extern def glEdgeFlagPointer: PFNGLEDGEFLAGPOINTERPROC = extern
+
+@name("func_glEdgeFlagv") @extern def glEdgeFlagv: PFNGLEDGEFLAGVPROC = extern
+
+@name("func_glEnable") @extern def glEnable: PFNGLENABLEPROC = extern
+
+@name("func_glEnableClientState") @extern def glEnableClientState: PFNGLENABLECLIENTSTATEPROC = extern
+
+@name("func_glEnableVertexArrayAttrib") @extern def glEnableVertexArrayAttrib: PFNGLENABLEVERTEXARRAYATTRIBPROC = extern
+
+@name("func_glEnableVertexAttribArray") @extern def glEnableVertexAttribArray: PFNGLENABLEVERTEXATTRIBARRAYPROC = extern
+
+@name("func_glEnablei") @extern def glEnablei: PFNGLENABLEIPROC = extern
+
+@name("func_glEnd") @extern def glEnd: PFNGLENDPROC = extern
+
+@name("func_glEndConditionalRender") @extern def glEndConditionalRender: PFNGLENDCONDITIONALRENDERPROC = extern
+
+@name("func_glEndList") @extern def glEndList: PFNGLENDLISTPROC = extern
+
+@name("func_glEndQuery") @extern def glEndQuery: PFNGLENDQUERYPROC = extern
+
+@name("func_glEndQueryIndexed") @extern def glEndQueryIndexed: PFNGLENDQUERYINDEXEDPROC = extern
+
+@name("func_glEndTransformFeedback") @extern def glEndTransformFeedback: PFNGLENDTRANSFORMFEEDBACKPROC = extern
+
+@name("func_glEvalCoord1d") @extern def glEvalCoord1d: PFNGLEVALCOORD1DPROC = extern
+
+@name("func_glEvalCoord1dv") @extern def glEvalCoord1dv: PFNGLEVALCOORD1DVPROC = extern
+
+@name("func_glEvalCoord1f") @extern def glEvalCoord1f: PFNGLEVALCOORD1FPROC = extern
+
+@name("func_glEvalCoord1fv") @extern def glEvalCoord1fv: PFNGLEVALCOORD1FVPROC = extern
+
+@name("func_glEvalCoord2d") @extern def glEvalCoord2d: PFNGLEVALCOORD2DPROC = extern
+
+@name("func_glEvalCoord2dv") @extern def glEvalCoord2dv: PFNGLEVALCOORD2DVPROC = extern
+
+@name("func_glEvalCoord2f") @extern def glEvalCoord2f: PFNGLEVALCOORD2FPROC = extern
+
+@name("func_glEvalCoord2fv") @extern def glEvalCoord2fv: PFNGLEVALCOORD2FVPROC = extern
+
+@name("func_glEvalMesh1") @extern def glEvalMesh1: PFNGLEVALMESH1PROC = extern
+
+@name("func_glEvalMesh2") @extern def glEvalMesh2: PFNGLEVALMESH2PROC = extern
+
+@name("func_glEvalPoint1") @extern def glEvalPoint1: PFNGLEVALPOINT1PROC = extern
+
+@name("func_glEvalPoint2") @extern def glEvalPoint2: PFNGLEVALPOINT2PROC = extern
+
+@name("func_glFeedbackBuffer") @extern def glFeedbackBuffer: PFNGLFEEDBACKBUFFERPROC = extern
+
+@name("func_glFenceSync") @extern def glFenceSync: PFNGLFENCESYNCPROC = extern
+
+@name("func_glFinish") @extern def glFinish: PFNGLFINISHPROC = extern
+
+@name("func_glFlush") @extern def glFlush: PFNGLFLUSHPROC = extern
+
+@name("func_glFlushMappedBufferRange") @extern def glFlushMappedBufferRange: PFNGLFLUSHMAPPEDBUFFERRANGEPROC = extern
+
+@name("func_glFlushMappedNamedBufferRange") @extern def glFlushMappedNamedBufferRange: PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC = extern
+
+@name("func_glFogCoordPointer") @extern def glFogCoordPointer: PFNGLFOGCOORDPOINTERPROC = extern
+
+@name("func_glFogCoordd") @extern def glFogCoordd: PFNGLFOGCOORDDPROC = extern
+
+@name("func_glFogCoorddv") @extern def glFogCoorddv: PFNGLFOGCOORDDVPROC = extern
+
+@name("func_glFogCoordf") @extern def glFogCoordf: PFNGLFOGCOORDFPROC = extern
+
+@name("func_glFogCoordfv") @extern def glFogCoordfv: PFNGLFOGCOORDFVPROC = extern
+
+@name("func_glFogf") @extern def glFogf: PFNGLFOGFPROC = extern
+
+@name("func_glFogfv") @extern def glFogfv: PFNGLFOGFVPROC = extern
+
+@name("func_glFogi") @extern def glFogi: PFNGLFOGIPROC = extern
+
+@name("func_glFogiv") @extern def glFogiv: PFNGLFOGIVPROC = extern
+
+@name("func_glFramebufferParameteri") @extern def glFramebufferParameteri: PFNGLFRAMEBUFFERPARAMETERIPROC = extern
+
+@name("func_glFramebufferRenderbuffer") @extern def glFramebufferRenderbuffer: PFNGLFRAMEBUFFERRENDERBUFFERPROC = extern
+
+@name("func_glFramebufferTexture") @extern def glFramebufferTexture: PFNGLFRAMEBUFFERTEXTUREPROC = extern
+
+@name("func_glFramebufferTexture1D") @extern def glFramebufferTexture1D: PFNGLFRAMEBUFFERTEXTURE1DPROC = extern
+
+@name("func_glFramebufferTexture2D") @extern def glFramebufferTexture2D: PFNGLFRAMEBUFFERTEXTURE2DPROC = extern
+
+@name("func_glFramebufferTexture3D") @extern def glFramebufferTexture3D: PFNGLFRAMEBUFFERTEXTURE3DPROC = extern
+
+@name("func_glFramebufferTextureLayer") @extern def glFramebufferTextureLayer: PFNGLFRAMEBUFFERTEXTURELAYERPROC = extern
+
+@name("func_glFrontFace") @extern def glFrontFace: PFNGLFRONTFACEPROC = extern
+
+@name("func_glFrustum") @extern def glFrustum: PFNGLFRUSTUMPROC = extern
+
+@name("func_glGenBuffers") @extern def glGenBuffers: PFNGLGENBUFFERSPROC = extern
+
+@name("func_glGenFramebuffers") @extern def glGenFramebuffers: PFNGLGENFRAMEBUFFERSPROC = extern
+
+@name("func_glGenLists") @extern def glGenLists: PFNGLGENLISTSPROC = extern
+
+@name("func_glGenProgramPipelines") @extern def glGenProgramPipelines: PFNGLGENPROGRAMPIPELINESPROC = extern
+
+@name("func_glGenQueries") @extern def glGenQueries: PFNGLGENQUERIESPROC = extern
+
+@name("func_glGenRenderbuffers") @extern def glGenRenderbuffers: PFNGLGENRENDERBUFFERSPROC = extern
+
+@name("func_glGenSamplers") @extern def glGenSamplers: PFNGLGENSAMPLERSPROC = extern
+
+@name("func_glGenTextures") @extern def glGenTextures: PFNGLGENTEXTURESPROC = extern
+
+@name("func_glGenTransformFeedbacks") @extern def glGenTransformFeedbacks: PFNGLGENTRANSFORMFEEDBACKSPROC = extern
+
+@name("func_glGenVertexArrays") @extern def glGenVertexArrays: PFNGLGENVERTEXARRAYSPROC = extern
+
+@name("func_glGenerateMipmap") @extern def glGenerateMipmap: PFNGLGENERATEMIPMAPPROC = extern
+
+@name("func_glGenerateTextureMipmap") @extern def glGenerateTextureMipmap: PFNGLGENERATETEXTUREMIPMAPPROC = extern
+
+@name("func_glGetActiveAtomicCounterBufferiv") @extern def glGetActiveAtomicCounterBufferiv: PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC = extern
+
+@name("func_glGetActiveAttrib") @extern def glGetActiveAttrib: PFNGLGETACTIVEATTRIBPROC = extern
+
+@name("func_glGetActiveSubroutineName") @extern def glGetActiveSubroutineName: PFNGLGETACTIVESUBROUTINENAMEPROC = extern
+
+@name("func_glGetActiveSubroutineUniformName") @extern def glGetActiveSubroutineUniformName: PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC = extern
+
+@name("func_glGetActiveSubroutineUniformiv") @extern def glGetActiveSubroutineUniformiv: PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC = extern
+
+@name("func_glGetActiveUniform") @extern def glGetActiveUniform: PFNGLGETACTIVEUNIFORMPROC = extern
+
+@name("func_glGetActiveUniformBlockName") @extern def glGetActiveUniformBlockName: PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC = extern
+
+@name("func_glGetActiveUniformBlockiv") @extern def glGetActiveUniformBlockiv: PFNGLGETACTIVEUNIFORMBLOCKIVPROC = extern
+
+@name("func_glGetActiveUniformName") @extern def glGetActiveUniformName: PFNGLGETACTIVEUNIFORMNAMEPROC = extern
+
+@name("func_glGetActiveUniformsiv") @extern def glGetActiveUniformsiv: PFNGLGETACTIVEUNIFORMSIVPROC = extern
+
+@name("func_glGetAttachedShaders") @extern def glGetAttachedShaders: PFNGLGETATTACHEDSHADERSPROC = extern
+
+@name("func_glGetAttribLocation") @extern def glGetAttribLocation: PFNGLGETATTRIBLOCATIONPROC = extern
+
+@name("func_glGetBooleani_v") @extern def glGetBooleani_v: PFNGLGETBOOLEANI_VPROC = extern
+
+@name("func_glGetBooleanv") @extern def glGetBooleanv: PFNGLGETBOOLEANVPROC = extern
+
+@name("func_glGetBufferParameteri64v") @extern def glGetBufferParameteri64v: PFNGLGETBUFFERPARAMETERI64VPROC = extern
+
+@name("func_glGetBufferParameteriv") @extern def glGetBufferParameteriv: PFNGLGETBUFFERPARAMETERIVPROC = extern
+
+@name("func_glGetBufferPointerv") @extern def glGetBufferPointerv: PFNGLGETBUFFERPOINTERVPROC = extern
+
+@name("func_glGetBufferSubData") @extern def glGetBufferSubData: PFNGLGETBUFFERSUBDATAPROC = extern
+
+@name("func_glGetClipPlane") @extern def glGetClipPlane: PFNGLGETCLIPPLANEPROC = extern
+
+@name("func_glGetCompressedTexImage") @extern def glGetCompressedTexImage: PFNGLGETCOMPRESSEDTEXIMAGEPROC = extern
+
+@name("func_glGetCompressedTextureImage") @extern def glGetCompressedTextureImage: PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC = extern
+
+@name("func_glGetCompressedTextureSubImage") @extern def glGetCompressedTextureSubImage: PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC = extern
+
+@name("func_glGetDebugMessageLog") @extern def glGetDebugMessageLog: PFNGLGETDEBUGMESSAGELOGPROC = extern
+
+@name("func_glGetDoublei_v") @extern def glGetDoublei_v: PFNGLGETDOUBLEI_VPROC = extern
+
+@name("func_glGetDoublev") @extern def glGetDoublev: PFNGLGETDOUBLEVPROC = extern
+
+@name("func_glGetError") @extern def glGetError: PFNGLGETERRORPROC = extern
+
+@name("func_glGetFloati_v") @extern def glGetFloati_v: PFNGLGETFLOATI_VPROC = extern
+
+@name("func_glGetFloatv") @extern def glGetFloatv: PFNGLGETFLOATVPROC = extern
+
+@name("func_glGetFragDataIndex") @extern def glGetFragDataIndex: PFNGLGETFRAGDATAINDEXPROC = extern
+
+@name("func_glGetFragDataLocation") @extern def glGetFragDataLocation: PFNGLGETFRAGDATALOCATIONPROC = extern
+
+@name("func_glGetFramebufferAttachmentParameteriv") @extern def glGetFramebufferAttachmentParameteriv: PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC = extern
+
+@name("func_glGetFramebufferParameteriv") @extern def glGetFramebufferParameteriv: PFNGLGETFRAMEBUFFERPARAMETERIVPROC = extern
+
+@name("func_glGetGraphicsResetStatus") @extern def glGetGraphicsResetStatus: PFNGLGETGRAPHICSRESETSTATUSPROC = extern
+
+@name("func_glGetInteger64i_v") @extern def glGetInteger64i_v: PFNGLGETINTEGER64I_VPROC = extern
+
+@name("func_glGetInteger64v") @extern def glGetInteger64v: PFNGLGETINTEGER64VPROC = extern
+
+@name("func_glGetIntegeri_v") @extern def glGetIntegeri_v: PFNGLGETINTEGERI_VPROC = extern
+
+@name("func_glGetIntegerv") @extern def glGetIntegerv: PFNGLGETINTEGERVPROC = extern
+
+@name("func_glGetInternalformati64v") @extern def glGetInternalformati64v: PFNGLGETINTERNALFORMATI64VPROC = extern
+
+@name("func_glGetInternalformativ") @extern def glGetInternalformativ: PFNGLGETINTERNALFORMATIVPROC = extern
+
+@name("func_glGetLightfv") @extern def glGetLightfv: PFNGLGETLIGHTFVPROC = extern
+
+@name("func_glGetLightiv") @extern def glGetLightiv: PFNGLGETLIGHTIVPROC = extern
+
+@name("func_glGetMapdv") @extern def glGetMapdv: PFNGLGETMAPDVPROC = extern
+
+@name("func_glGetMapfv") @extern def glGetMapfv: PFNGLGETMAPFVPROC = extern
+
+@name("func_glGetMapiv") @extern def glGetMapiv: PFNGLGETMAPIVPROC = extern
+
+@name("func_glGetMaterialfv") @extern def glGetMaterialfv: PFNGLGETMATERIALFVPROC = extern
+
+@name("func_glGetMaterialiv") @extern def glGetMaterialiv: PFNGLGETMATERIALIVPROC = extern
+
+@name("func_glGetMultisamplefv") @extern def glGetMultisamplefv: PFNGLGETMULTISAMPLEFVPROC = extern
+
+@name("func_glGetNamedBufferParameteri64v") @extern def glGetNamedBufferParameteri64v: PFNGLGETNAMEDBUFFERPARAMETERI64VPROC = extern
+
+@name("func_glGetNamedBufferParameteriv") @extern def glGetNamedBufferParameteriv: PFNGLGETNAMEDBUFFERPARAMETERIVPROC = extern
+
+@name("func_glGetNamedBufferPointerv") @extern def glGetNamedBufferPointerv: PFNGLGETNAMEDBUFFERPOINTERVPROC = extern
+
+@name("func_glGetNamedBufferSubData") @extern def glGetNamedBufferSubData: PFNGLGETNAMEDBUFFERSUBDATAPROC = extern
+
+@name("func_glGetNamedFramebufferAttachmentParameteriv") @extern def glGetNamedFramebufferAttachmentParameteriv: PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC = extern
+
+@name("func_glGetNamedFramebufferParameteriv") @extern def glGetNamedFramebufferParameteriv: PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC = extern
+
+@name("func_glGetNamedRenderbufferParameteriv") @extern def glGetNamedRenderbufferParameteriv: PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC = extern
+
+@name("func_glGetObjectLabel") @extern def glGetObjectLabel: PFNGLGETOBJECTLABELPROC = extern
+
+@name("func_glGetObjectPtrLabel") @extern def glGetObjectPtrLabel: PFNGLGETOBJECTPTRLABELPROC = extern
+
+@name("func_glGetPixelMapfv") @extern def glGetPixelMapfv: PFNGLGETPIXELMAPFVPROC = extern
+
+@name("func_glGetPixelMapuiv") @extern def glGetPixelMapuiv: PFNGLGETPIXELMAPUIVPROC = extern
+
+@name("func_glGetPixelMapusv") @extern def glGetPixelMapusv: PFNGLGETPIXELMAPUSVPROC = extern
+
+@name("func_glGetPointerv") @extern def glGetPointerv: PFNGLGETPOINTERVPROC = extern
+
+@name("func_glGetPolygonStipple") @extern def glGetPolygonStipple: PFNGLGETPOLYGONSTIPPLEPROC = extern
+
+@name("func_glGetProgramBinary") @extern def glGetProgramBinary: PFNGLGETPROGRAMBINARYPROC = extern
+
+@name("func_glGetProgramInfoLog") @extern def glGetProgramInfoLog: PFNGLGETPROGRAMINFOLOGPROC = extern
+
+@name("func_glGetProgramInterfaceiv") @extern def glGetProgramInterfaceiv: PFNGLGETPROGRAMINTERFACEIVPROC = extern
+
+@name("func_glGetProgramPipelineInfoLog") @extern def glGetProgramPipelineInfoLog: PFNGLGETPROGRAMPIPELINEINFOLOGPROC = extern
+
+@name("func_glGetProgramPipelineiv") @extern def glGetProgramPipelineiv: PFNGLGETPROGRAMPIPELINEIVPROC = extern
+
+@name("func_glGetProgramResourceIndex") @extern def glGetProgramResourceIndex: PFNGLGETPROGRAMRESOURCEINDEXPROC = extern
+
+@name("func_glGetProgramResourceLocation") @extern def glGetProgramResourceLocation: PFNGLGETPROGRAMRESOURCELOCATIONPROC = extern
+
+@name("func_glGetProgramResourceLocationIndex") @extern def glGetProgramResourceLocationIndex: PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC = extern
+
+@name("func_glGetProgramResourceName") @extern def glGetProgramResourceName: PFNGLGETPROGRAMRESOURCENAMEPROC = extern
+
+@name("func_glGetProgramResourceiv") @extern def glGetProgramResourceiv: PFNGLGETPROGRAMRESOURCEIVPROC = extern
+
+@name("func_glGetProgramStageiv") @extern def glGetProgramStageiv: PFNGLGETPROGRAMSTAGEIVPROC = extern
+
+@name("func_glGetProgramiv") @extern def glGetProgramiv: PFNGLGETPROGRAMIVPROC = extern
+
+@name("func_glGetQueryBufferObjecti64v") @extern def glGetQueryBufferObjecti64v: PFNGLGETQUERYBUFFEROBJECTI64VPROC = extern
+
+@name("func_glGetQueryBufferObjectiv") @extern def glGetQueryBufferObjectiv: PFNGLGETQUERYBUFFEROBJECTIVPROC = extern
+
+@name("func_glGetQueryBufferObjectui64v") @extern def glGetQueryBufferObjectui64v: PFNGLGETQUERYBUFFEROBJECTUI64VPROC = extern
+
+@name("func_glGetQueryBufferObjectuiv") @extern def glGetQueryBufferObjectuiv: PFNGLGETQUERYBUFFEROBJECTUIVPROC = extern
+
+@name("func_glGetQueryIndexediv") @extern def glGetQueryIndexediv: PFNGLGETQUERYINDEXEDIVPROC = extern
+
+@name("func_glGetQueryObjecti64v") @extern def glGetQueryObjecti64v: PFNGLGETQUERYOBJECTI64VPROC = extern
+
+@name("func_glGetQueryObjectiv") @extern def glGetQueryObjectiv: PFNGLGETQUERYOBJECTIVPROC = extern
+
+@name("func_glGetQueryObjectui64v") @extern def glGetQueryObjectui64v: PFNGLGETQUERYOBJECTUI64VPROC = extern
+
+@name("func_glGetQueryObjectuiv") @extern def glGetQueryObjectuiv: PFNGLGETQUERYOBJECTUIVPROC = extern
+
+@name("func_glGetQueryiv") @extern def glGetQueryiv: PFNGLGETQUERYIVPROC = extern
+
+@name("func_glGetRenderbufferParameteriv") @extern def glGetRenderbufferParameteriv: PFNGLGETRENDERBUFFERPARAMETERIVPROC = extern
+
+@name("func_glGetSamplerParameterIiv") @extern def glGetSamplerParameterIiv: PFNGLGETSAMPLERPARAMETERIIVPROC = extern
+
+@name("func_glGetSamplerParameterIuiv") @extern def glGetSamplerParameterIuiv: PFNGLGETSAMPLERPARAMETERIUIVPROC = extern
+
+@name("func_glGetSamplerParameterfv") @extern def glGetSamplerParameterfv: PFNGLGETSAMPLERPARAMETERFVPROC = extern
+
+@name("func_glGetSamplerParameteriv") @extern def glGetSamplerParameteriv: PFNGLGETSAMPLERPARAMETERIVPROC = extern
+
+@name("func_glGetShaderInfoLog") @extern def glGetShaderInfoLog: PFNGLGETSHADERINFOLOGPROC = extern
+
+@name("func_glGetShaderPrecisionFormat") @extern def glGetShaderPrecisionFormat: PFNGLGETSHADERPRECISIONFORMATPROC = extern
+
+@name("func_glGetShaderSource") @extern def glGetShaderSource: PFNGLGETSHADERSOURCEPROC = extern
+
+@name("func_glGetShaderiv") @extern def glGetShaderiv: PFNGLGETSHADERIVPROC = extern
+
+@name("func_glGetString") @extern def glGetString: PFNGLGETSTRINGPROC = extern
+
+@name("func_glGetStringi") @extern def glGetStringi: PFNGLGETSTRINGIPROC = extern
+
+@name("func_glGetSubroutineIndex") @extern def glGetSubroutineIndex: PFNGLGETSUBROUTINEINDEXPROC = extern
+
+@name("func_glGetSubroutineUniformLocation") @extern def glGetSubroutineUniformLocation: PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC = extern
+
+@name("func_glGetSynciv") @extern def glGetSynciv: PFNGLGETSYNCIVPROC = extern
+
+@name("func_glGetTexEnvfv") @extern def glGetTexEnvfv: PFNGLGETTEXENVFVPROC = extern
+
+@name("func_glGetTexEnviv") @extern def glGetTexEnviv: PFNGLGETTEXENVIVPROC = extern
+
+@name("func_glGetTexGendv") @extern def glGetTexGendv: PFNGLGETTEXGENDVPROC = extern
+
+@name("func_glGetTexGenfv") @extern def glGetTexGenfv: PFNGLGETTEXGENFVPROC = extern
+
+@name("func_glGetTexGeniv") @extern def glGetTexGeniv: PFNGLGETTEXGENIVPROC = extern
+
+@name("func_glGetTexImage") @extern def glGetTexImage: PFNGLGETTEXIMAGEPROC = extern
+
+@name("func_glGetTexLevelParameterfv") @extern def glGetTexLevelParameterfv: PFNGLGETTEXLEVELPARAMETERFVPROC = extern
+
+@name("func_glGetTexLevelParameteriv") @extern def glGetTexLevelParameteriv: PFNGLGETTEXLEVELPARAMETERIVPROC = extern
+
+@name("func_glGetTexParameterIiv") @extern def glGetTexParameterIiv: PFNGLGETTEXPARAMETERIIVPROC = extern
+
+@name("func_glGetTexParameterIuiv") @extern def glGetTexParameterIuiv: PFNGLGETTEXPARAMETERIUIVPROC = extern
+
+@name("func_glGetTexParameterfv") @extern def glGetTexParameterfv: PFNGLGETTEXPARAMETERFVPROC = extern
+
+@name("func_glGetTexParameteriv") @extern def glGetTexParameteriv: PFNGLGETTEXPARAMETERIVPROC = extern
+
+@name("func_glGetTextureImage") @extern def glGetTextureImage: PFNGLGETTEXTUREIMAGEPROC = extern
+
+@name("func_glGetTextureLevelParameterfv") @extern def glGetTextureLevelParameterfv: PFNGLGETTEXTURELEVELPARAMETERFVPROC = extern
+
+@name("func_glGetTextureLevelParameteriv") @extern def glGetTextureLevelParameteriv: PFNGLGETTEXTURELEVELPARAMETERIVPROC = extern
+
+@name("func_glGetTextureParameterIiv") @extern def glGetTextureParameterIiv: PFNGLGETTEXTUREPARAMETERIIVPROC = extern
+
+@name("func_glGetTextureParameterIuiv") @extern def glGetTextureParameterIuiv: PFNGLGETTEXTUREPARAMETERIUIVPROC = extern
+
+@name("func_glGetTextureParameterfv") @extern def glGetTextureParameterfv: PFNGLGETTEXTUREPARAMETERFVPROC = extern
+
+@name("func_glGetTextureParameteriv") @extern def glGetTextureParameteriv: PFNGLGETTEXTUREPARAMETERIVPROC = extern
+
+@name("func_glGetTextureSubImage") @extern def glGetTextureSubImage: PFNGLGETTEXTURESUBIMAGEPROC = extern
+
+@name("func_glGetTransformFeedbackVarying") @extern def glGetTransformFeedbackVarying: PFNGLGETTRANSFORMFEEDBACKVARYINGPROC = extern
+
+@name("func_glGetTransformFeedbacki64_v") @extern def glGetTransformFeedbacki64_v: PFNGLGETTRANSFORMFEEDBACKI64_VPROC = extern
+
+@name("func_glGetTransformFeedbacki_v") @extern def glGetTransformFeedbacki_v: PFNGLGETTRANSFORMFEEDBACKI_VPROC = extern
+
+@name("func_glGetTransformFeedbackiv") @extern def glGetTransformFeedbackiv: PFNGLGETTRANSFORMFEEDBACKIVPROC = extern
+
+@name("func_glGetUniformBlockIndex") @extern def glGetUniformBlockIndex: PFNGLGETUNIFORMBLOCKINDEXPROC = extern
+
+@name("func_glGetUniformIndices") @extern def glGetUniformIndices: PFNGLGETUNIFORMINDICESPROC = extern
+
+@name("func_glGetUniformLocation") @extern def glGetUniformLocation: PFNGLGETUNIFORMLOCATIONPROC = extern
+
+@name("func_glGetUniformSubroutineuiv") @extern def glGetUniformSubroutineuiv: PFNGLGETUNIFORMSUBROUTINEUIVPROC = extern
+
+@name("func_glGetUniformdv") @extern def glGetUniformdv: PFNGLGETUNIFORMDVPROC = extern
+
+@name("func_glGetUniformfv") @extern def glGetUniformfv: PFNGLGETUNIFORMFVPROC = extern
+
+@name("func_glGetUniformiv") @extern def glGetUniformiv: PFNGLGETUNIFORMIVPROC = extern
+
+@name("func_glGetUniformuiv") @extern def glGetUniformuiv: PFNGLGETUNIFORMUIVPROC = extern
+
+@name("func_glGetVertexArrayIndexed64iv") @extern def glGetVertexArrayIndexed64iv: PFNGLGETVERTEXARRAYINDEXED64IVPROC = extern
+
+@name("func_glGetVertexArrayIndexediv") @extern def glGetVertexArrayIndexediv: PFNGLGETVERTEXARRAYINDEXEDIVPROC = extern
+
+@name("func_glGetVertexArrayiv") @extern def glGetVertexArrayiv: PFNGLGETVERTEXARRAYIVPROC = extern
+
+@name("func_glGetVertexAttribIiv") @extern def glGetVertexAttribIiv: PFNGLGETVERTEXATTRIBIIVPROC = extern
+
+@name("func_glGetVertexAttribIuiv") @extern def glGetVertexAttribIuiv: PFNGLGETVERTEXATTRIBIUIVPROC = extern
+
+@name("func_glGetVertexAttribLdv") @extern def glGetVertexAttribLdv: PFNGLGETVERTEXATTRIBLDVPROC = extern
+
+@name("func_glGetVertexAttribPointerv") @extern def glGetVertexAttribPointerv: PFNGLGETVERTEXATTRIBPOINTERVPROC = extern
+
+@name("func_glGetVertexAttribdv") @extern def glGetVertexAttribdv: PFNGLGETVERTEXATTRIBDVPROC = extern
+
+@name("func_glGetVertexAttribfv") @extern def glGetVertexAttribfv: PFNGLGETVERTEXATTRIBFVPROC = extern
+
+@name("func_glGetVertexAttribiv") @extern def glGetVertexAttribiv: PFNGLGETVERTEXATTRIBIVPROC = extern
+
+@name("func_glGetnColorTable") @extern def glGetnColorTable: PFNGLGETNCOLORTABLEPROC = extern
+
+@name("func_glGetnCompressedTexImage") @extern def glGetnCompressedTexImage: PFNGLGETNCOMPRESSEDTEXIMAGEPROC = extern
+
+@name("func_glGetnConvolutionFilter") @extern def glGetnConvolutionFilter: PFNGLGETNCONVOLUTIONFILTERPROC = extern
+
+@name("func_glGetnHistogram") @extern def glGetnHistogram: PFNGLGETNHISTOGRAMPROC = extern
+
+@name("func_glGetnMapdv") @extern def glGetnMapdv: PFNGLGETNMAPDVPROC = extern
+
+@name("func_glGetnMapfv") @extern def glGetnMapfv: PFNGLGETNMAPFVPROC = extern
+
+@name("func_glGetnMapiv") @extern def glGetnMapiv: PFNGLGETNMAPIVPROC = extern
+
+@name("func_glGetnMinmax") @extern def glGetnMinmax: PFNGLGETNMINMAXPROC = extern
+
+@name("func_glGetnPixelMapfv") @extern def glGetnPixelMapfv: PFNGLGETNPIXELMAPFVPROC = extern
+
+@name("func_glGetnPixelMapuiv") @extern def glGetnPixelMapuiv: PFNGLGETNPIXELMAPUIVPROC = extern
+
+@name("func_glGetnPixelMapusv") @extern def glGetnPixelMapusv: PFNGLGETNPIXELMAPUSVPROC = extern
+
+@name("func_glGetnPolygonStipple") @extern def glGetnPolygonStipple: PFNGLGETNPOLYGONSTIPPLEPROC = extern
+
+@name("func_glGetnSeparableFilter") @extern def glGetnSeparableFilter: PFNGLGETNSEPARABLEFILTERPROC = extern
+
+@name("func_glGetnTexImage") @extern def glGetnTexImage: PFNGLGETNTEXIMAGEPROC = extern
+
+@name("func_glGetnUniformdv") @extern def glGetnUniformdv: PFNGLGETNUNIFORMDVPROC = extern
+
+@name("func_glGetnUniformfv") @extern def glGetnUniformfv: PFNGLGETNUNIFORMFVPROC = extern
+
+@name("func_glGetnUniformiv") @extern def glGetnUniformiv: PFNGLGETNUNIFORMIVPROC = extern
+
+@name("func_glGetnUniformuiv") @extern def glGetnUniformuiv: PFNGLGETNUNIFORMUIVPROC = extern
+
+@name("func_glHint") @extern def glHint: PFNGLHINTPROC = extern
+
+@name("func_glIndexMask") @extern def glIndexMask: PFNGLINDEXMASKPROC = extern
+
+@name("func_glIndexPointer") @extern def glIndexPointer: PFNGLINDEXPOINTERPROC = extern
+
+@name("func_glIndexd") @extern def glIndexd: PFNGLINDEXDPROC = extern
+
+@name("func_glIndexdv") @extern def glIndexdv: PFNGLINDEXDVPROC = extern
+
+@name("func_glIndexf") @extern def glIndexf: PFNGLINDEXFPROC = extern
+
+@name("func_glIndexfv") @extern def glIndexfv: PFNGLINDEXFVPROC = extern
+
+@name("func_glIndexi") @extern def glIndexi: PFNGLINDEXIPROC = extern
+
+@name("func_glIndexiv") @extern def glIndexiv: PFNGLINDEXIVPROC = extern
+
+@name("func_glIndexs") @extern def glIndexs: PFNGLINDEXSPROC = extern
+
+@name("func_glIndexsv") @extern def glIndexsv: PFNGLINDEXSVPROC = extern
+
+@name("func_glIndexub") @extern def glIndexub: PFNGLINDEXUBPROC = extern
+
+@name("func_glIndexubv") @extern def glIndexubv: PFNGLINDEXUBVPROC = extern
+
+@name("func_glInitNames") @extern def glInitNames: PFNGLINITNAMESPROC = extern
+
+@name("func_glInterleavedArrays") @extern def glInterleavedArrays: PFNGLINTERLEAVEDARRAYSPROC = extern
+
+@name("func_glInvalidateBufferData") @extern def glInvalidateBufferData: PFNGLINVALIDATEBUFFERDATAPROC = extern
+
+@name("func_glInvalidateBufferSubData") @extern def glInvalidateBufferSubData: PFNGLINVALIDATEBUFFERSUBDATAPROC = extern
+
+@name("func_glInvalidateFramebuffer") @extern def glInvalidateFramebuffer: PFNGLINVALIDATEFRAMEBUFFERPROC = extern
+
+@name("func_glInvalidateNamedFramebufferData") @extern def glInvalidateNamedFramebufferData: PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC = extern
+
+@name("func_glInvalidateNamedFramebufferSubData") @extern def glInvalidateNamedFramebufferSubData: PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC = extern
+
+@name("func_glInvalidateSubFramebuffer") @extern def glInvalidateSubFramebuffer: PFNGLINVALIDATESUBFRAMEBUFFERPROC = extern
+
+@name("func_glInvalidateTexImage") @extern def glInvalidateTexImage: PFNGLINVALIDATETEXIMAGEPROC = extern
+
+@name("func_glInvalidateTexSubImage") @extern def glInvalidateTexSubImage: PFNGLINVALIDATETEXSUBIMAGEPROC = extern
+
+@name("func_glIsBuffer") @extern def glIsBuffer: PFNGLISBUFFERPROC = extern
+
+@name("func_glIsEnabled") @extern def glIsEnabled: PFNGLISENABLEDPROC = extern
+
+@name("func_glIsEnabledi") @extern def glIsEnabledi: PFNGLISENABLEDIPROC = extern
+
+@name("func_glIsFramebuffer") @extern def glIsFramebuffer: PFNGLISFRAMEBUFFERPROC = extern
+
+@name("func_glIsList") @extern def glIsList: PFNGLISLISTPROC = extern
+
+@name("func_glIsProgram") @extern def glIsProgram: PFNGLISPROGRAMPROC = extern
+
+@name("func_glIsProgramPipeline") @extern def glIsProgramPipeline: PFNGLISPROGRAMPIPELINEPROC = extern
+
+@name("func_glIsQuery") @extern def glIsQuery: PFNGLISQUERYPROC = extern
+
+@name("func_glIsRenderbuffer") @extern def glIsRenderbuffer: PFNGLISRENDERBUFFERPROC = extern
+
+@name("func_glIsSampler") @extern def glIsSampler: PFNGLISSAMPLERPROC = extern
+
+@name("func_glIsShader") @extern def glIsShader: PFNGLISSHADERPROC = extern
+
+@name("func_glIsSync") @extern def glIsSync: PFNGLISSYNCPROC = extern
+
+@name("func_glIsTexture") @extern def glIsTexture: PFNGLISTEXTUREPROC = extern
+
+@name("func_glIsTransformFeedback") @extern def glIsTransformFeedback: PFNGLISTRANSFORMFEEDBACKPROC = extern
+
+@name("func_glIsVertexArray") @extern def glIsVertexArray: PFNGLISVERTEXARRAYPROC = extern
+
+@name("func_glLightModelf") @extern def glLightModelf: PFNGLLIGHTMODELFPROC = extern
+
+@name("func_glLightModelfv") @extern def glLightModelfv: PFNGLLIGHTMODELFVPROC = extern
+
+@name("func_glLightModeli") @extern def glLightModeli: PFNGLLIGHTMODELIPROC = extern
+
+@name("func_glLightModeliv") @extern def glLightModeliv: PFNGLLIGHTMODELIVPROC = extern
+
+@name("func_glLightf") @extern def glLightf: PFNGLLIGHTFPROC = extern
+
+@name("func_glLightfv") @extern def glLightfv: PFNGLLIGHTFVPROC = extern
+
+@name("func_glLighti") @extern def glLighti: PFNGLLIGHTIPROC = extern
+
+@name("func_glLightiv") @extern def glLightiv: PFNGLLIGHTIVPROC = extern
+
+@name("func_glLineStipple") @extern def glLineStipple: PFNGLLINESTIPPLEPROC = extern
+
+@name("func_glLineWidth") @extern def glLineWidth: PFNGLLINEWIDTHPROC = extern
+
+@name("func_glLinkProgram") @extern def glLinkProgram: PFNGLLINKPROGRAMPROC = extern
+
+@name("func_glListBase") @extern def glListBase: PFNGLLISTBASEPROC = extern
+
+@name("func_glLoadIdentity") @extern def glLoadIdentity: PFNGLLOADIDENTITYPROC = extern
+
+@name("func_glLoadMatrixd") @extern def glLoadMatrixd: PFNGLLOADMATRIXDPROC = extern
+
+@name("func_glLoadMatrixf") @extern def glLoadMatrixf: PFNGLLOADMATRIXFPROC = extern
+
+@name("func_glLoadName") @extern def glLoadName: PFNGLLOADNAMEPROC = extern
+
+@name("func_glLoadTransposeMatrixd") @extern def glLoadTransposeMatrixd: PFNGLLOADTRANSPOSEMATRIXDPROC = extern
+
+@name("func_glLoadTransposeMatrixf") @extern def glLoadTransposeMatrixf: PFNGLLOADTRANSPOSEMATRIXFPROC = extern
+
+@name("func_glLogicOp") @extern def glLogicOp: PFNGLLOGICOPPROC = extern
+
+@name("func_glMap1d") @extern def glMap1d: PFNGLMAP1DPROC = extern
+
+@name("func_glMap1f") @extern def glMap1f: PFNGLMAP1FPROC = extern
+
+@name("func_glMap2d") @extern def glMap2d: PFNGLMAP2DPROC = extern
+
+@name("func_glMap2f") @extern def glMap2f: PFNGLMAP2FPROC = extern
+
+@name("func_glMapBuffer") @extern def glMapBuffer: PFNGLMAPBUFFERPROC = extern
+
+@name("func_glMapBufferRange") @extern def glMapBufferRange: PFNGLMAPBUFFERRANGEPROC = extern
+
+@name("func_glMapGrid1d") @extern def glMapGrid1d: PFNGLMAPGRID1DPROC = extern
+
+@name("func_glMapGrid1f") @extern def glMapGrid1f: PFNGLMAPGRID1FPROC = extern
+
+@name("func_glMapGrid2d") @extern def glMapGrid2d: PFNGLMAPGRID2DPROC = extern
+
+@name("func_glMapGrid2f") @extern def glMapGrid2f: PFNGLMAPGRID2FPROC = extern
+
+@name("func_glMapNamedBuffer") @extern def glMapNamedBuffer: PFNGLMAPNAMEDBUFFERPROC = extern
+
+@name("func_glMapNamedBufferRange") @extern def glMapNamedBufferRange: PFNGLMAPNAMEDBUFFERRANGEPROC = extern
+
+@name("func_glMaterialf") @extern def glMaterialf: PFNGLMATERIALFPROC = extern
+
+@name("func_glMaterialfv") @extern def glMaterialfv: PFNGLMATERIALFVPROC = extern
+
+@name("func_glMateriali") @extern def glMateriali: PFNGLMATERIALIPROC = extern
+
+@name("func_glMaterialiv") @extern def glMaterialiv: PFNGLMATERIALIVPROC = extern
+
+@name("func_glMatrixMode") @extern def glMatrixMode: PFNGLMATRIXMODEPROC = extern
+
+@name("func_glMemoryBarrier") @extern def glMemoryBarrier: PFNGLMEMORYBARRIERPROC = extern
+
+@name("func_glMemoryBarrierByRegion") @extern def glMemoryBarrierByRegion: PFNGLMEMORYBARRIERBYREGIONPROC = extern
+
+@name("func_glMinSampleShading") @extern def glMinSampleShading: PFNGLMINSAMPLESHADINGPROC = extern
+
+@name("func_glMultMatrixd") @extern def glMultMatrixd: PFNGLMULTMATRIXDPROC = extern
+
+@name("func_glMultMatrixf") @extern def glMultMatrixf: PFNGLMULTMATRIXFPROC = extern
+
+@name("func_glMultTransposeMatrixd") @extern def glMultTransposeMatrixd: PFNGLMULTTRANSPOSEMATRIXDPROC = extern
+
+@name("func_glMultTransposeMatrixf") @extern def glMultTransposeMatrixf: PFNGLMULTTRANSPOSEMATRIXFPROC = extern
+
+@name("func_glMultiDrawArrays") @extern def glMultiDrawArrays: PFNGLMULTIDRAWARRAYSPROC = extern
+
+@name("func_glMultiDrawArraysIndirect") @extern def glMultiDrawArraysIndirect: PFNGLMULTIDRAWARRAYSINDIRECTPROC = extern
+
+@name("func_glMultiDrawArraysIndirectCount") @extern def glMultiDrawArraysIndirectCount: PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC = extern
+
+@name("func_glMultiDrawElements") @extern def glMultiDrawElements: PFNGLMULTIDRAWELEMENTSPROC = extern
+
+@name("func_glMultiDrawElementsBaseVertex") @extern def glMultiDrawElementsBaseVertex: PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC = extern
+
+@name("func_glMultiDrawElementsIndirect") @extern def glMultiDrawElementsIndirect: PFNGLMULTIDRAWELEMENTSINDIRECTPROC = extern
+
+@name("func_glMultiDrawElementsIndirectCount") @extern def glMultiDrawElementsIndirectCount: PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC = extern
+
+@name("func_glMultiTexCoord1d") @extern def glMultiTexCoord1d: PFNGLMULTITEXCOORD1DPROC = extern
+
+@name("func_glMultiTexCoord1dv") @extern def glMultiTexCoord1dv: PFNGLMULTITEXCOORD1DVPROC = extern
+
+@name("func_glMultiTexCoord1f") @extern def glMultiTexCoord1f: PFNGLMULTITEXCOORD1FPROC = extern
+
+@name("func_glMultiTexCoord1fv") @extern def glMultiTexCoord1fv: PFNGLMULTITEXCOORD1FVPROC = extern
+
+@name("func_glMultiTexCoord1i") @extern def glMultiTexCoord1i: PFNGLMULTITEXCOORD1IPROC = extern
+
+@name("func_glMultiTexCoord1iv") @extern def glMultiTexCoord1iv: PFNGLMULTITEXCOORD1IVPROC = extern
+
+@name("func_glMultiTexCoord1s") @extern def glMultiTexCoord1s: PFNGLMULTITEXCOORD1SPROC = extern
+
+@name("func_glMultiTexCoord1sv") @extern def glMultiTexCoord1sv: PFNGLMULTITEXCOORD1SVPROC = extern
+
+@name("func_glMultiTexCoord2d") @extern def glMultiTexCoord2d: PFNGLMULTITEXCOORD2DPROC = extern
+
+@name("func_glMultiTexCoord2dv") @extern def glMultiTexCoord2dv: PFNGLMULTITEXCOORD2DVPROC = extern
+
+@name("func_glMultiTexCoord2f") @extern def glMultiTexCoord2f: PFNGLMULTITEXCOORD2FPROC = extern
+
+@name("func_glMultiTexCoord2fv") @extern def glMultiTexCoord2fv: PFNGLMULTITEXCOORD2FVPROC = extern
+
+@name("func_glMultiTexCoord2i") @extern def glMultiTexCoord2i: PFNGLMULTITEXCOORD2IPROC = extern
+
+@name("func_glMultiTexCoord2iv") @extern def glMultiTexCoord2iv: PFNGLMULTITEXCOORD2IVPROC = extern
+
+@name("func_glMultiTexCoord2s") @extern def glMultiTexCoord2s: PFNGLMULTITEXCOORD2SPROC = extern
+
+@name("func_glMultiTexCoord2sv") @extern def glMultiTexCoord2sv: PFNGLMULTITEXCOORD2SVPROC = extern
+
+@name("func_glMultiTexCoord3d") @extern def glMultiTexCoord3d: PFNGLMULTITEXCOORD3DPROC = extern
+
+@name("func_glMultiTexCoord3dv") @extern def glMultiTexCoord3dv: PFNGLMULTITEXCOORD3DVPROC = extern
+
+@name("func_glMultiTexCoord3f") @extern def glMultiTexCoord3f: PFNGLMULTITEXCOORD3FPROC = extern
+
+@name("func_glMultiTexCoord3fv") @extern def glMultiTexCoord3fv: PFNGLMULTITEXCOORD3FVPROC = extern
+
+@name("func_glMultiTexCoord3i") @extern def glMultiTexCoord3i: PFNGLMULTITEXCOORD3IPROC = extern
+
+@name("func_glMultiTexCoord3iv") @extern def glMultiTexCoord3iv: PFNGLMULTITEXCOORD3IVPROC = extern
+
+@name("func_glMultiTexCoord3s") @extern def glMultiTexCoord3s: PFNGLMULTITEXCOORD3SPROC = extern
+
+@name("func_glMultiTexCoord3sv") @extern def glMultiTexCoord3sv: PFNGLMULTITEXCOORD3SVPROC = extern
+
+@name("func_glMultiTexCoord4d") @extern def glMultiTexCoord4d: PFNGLMULTITEXCOORD4DPROC = extern
+
+@name("func_glMultiTexCoord4dv") @extern def glMultiTexCoord4dv: PFNGLMULTITEXCOORD4DVPROC = extern
+
+@name("func_glMultiTexCoord4f") @extern def glMultiTexCoord4f: PFNGLMULTITEXCOORD4FPROC = extern
+
+@name("func_glMultiTexCoord4fv") @extern def glMultiTexCoord4fv: PFNGLMULTITEXCOORD4FVPROC = extern
+
+@name("func_glMultiTexCoord4i") @extern def glMultiTexCoord4i: PFNGLMULTITEXCOORD4IPROC = extern
+
+@name("func_glMultiTexCoord4iv") @extern def glMultiTexCoord4iv: PFNGLMULTITEXCOORD4IVPROC = extern
+
+@name("func_glMultiTexCoord4s") @extern def glMultiTexCoord4s: PFNGLMULTITEXCOORD4SPROC = extern
+
+@name("func_glMultiTexCoord4sv") @extern def glMultiTexCoord4sv: PFNGLMULTITEXCOORD4SVPROC = extern
+
+@name("func_glMultiTexCoordP1ui") @extern def glMultiTexCoordP1ui: PFNGLMULTITEXCOORDP1UIPROC = extern
+
+@name("func_glMultiTexCoordP1uiv") @extern def glMultiTexCoordP1uiv: PFNGLMULTITEXCOORDP1UIVPROC = extern
+
+@name("func_glMultiTexCoordP2ui") @extern def glMultiTexCoordP2ui: PFNGLMULTITEXCOORDP2UIPROC = extern
+
+@name("func_glMultiTexCoordP2uiv") @extern def glMultiTexCoordP2uiv: PFNGLMULTITEXCOORDP2UIVPROC = extern
+
+@name("func_glMultiTexCoordP3ui") @extern def glMultiTexCoordP3ui: PFNGLMULTITEXCOORDP3UIPROC = extern
+
+@name("func_glMultiTexCoordP3uiv") @extern def glMultiTexCoordP3uiv: PFNGLMULTITEXCOORDP3UIVPROC = extern
+
+@name("func_glMultiTexCoordP4ui") @extern def glMultiTexCoordP4ui: PFNGLMULTITEXCOORDP4UIPROC = extern
+
+@name("func_glMultiTexCoordP4uiv") @extern def glMultiTexCoordP4uiv: PFNGLMULTITEXCOORDP4UIVPROC = extern
+
+@name("func_glNamedBufferData") @extern def glNamedBufferData: PFNGLNAMEDBUFFERDATAPROC = extern
+
+@name("func_glNamedBufferStorage") @extern def glNamedBufferStorage: PFNGLNAMEDBUFFERSTORAGEPROC = extern
+
+@name("func_glNamedBufferSubData") @extern def glNamedBufferSubData: PFNGLNAMEDBUFFERSUBDATAPROC = extern
+
+@name("func_glNamedFramebufferDrawBuffer") @extern def glNamedFramebufferDrawBuffer: PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC = extern
+
+@name("func_glNamedFramebufferDrawBuffers") @extern def glNamedFramebufferDrawBuffers: PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC = extern
+
+@name("func_glNamedFramebufferParameteri") @extern def glNamedFramebufferParameteri: PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC = extern
+
+@name("func_glNamedFramebufferReadBuffer") @extern def glNamedFramebufferReadBuffer: PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC = extern
+
+@name("func_glNamedFramebufferRenderbuffer") @extern def glNamedFramebufferRenderbuffer: PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC = extern
+
+@name("func_glNamedFramebufferTexture") @extern def glNamedFramebufferTexture: PFNGLNAMEDFRAMEBUFFERTEXTUREPROC = extern
+
+@name("func_glNamedFramebufferTextureLayer") @extern def glNamedFramebufferTextureLayer: PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC = extern
+
+@name("func_glNamedRenderbufferStorage") @extern def glNamedRenderbufferStorage: PFNGLNAMEDRENDERBUFFERSTORAGEPROC = extern
+
+@name("func_glNamedRenderbufferStorageMultisample") @extern def glNamedRenderbufferStorageMultisample: PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC = extern
+
+@name("func_glNewList") @extern def glNewList: PFNGLNEWLISTPROC = extern
+
+@name("func_glNormal3b") @extern def glNormal3b: PFNGLNORMAL3BPROC = extern
+
+@name("func_glNormal3bv") @extern def glNormal3bv: PFNGLNORMAL3BVPROC = extern
+
+@name("func_glNormal3d") @extern def glNormal3d: PFNGLNORMAL3DPROC = extern
+
+@name("func_glNormal3dv") @extern def glNormal3dv: PFNGLNORMAL3DVPROC = extern
+
+@name("func_glNormal3f") @extern def glNormal3f: PFNGLNORMAL3FPROC = extern
+
+@name("func_glNormal3fv") @extern def glNormal3fv: PFNGLNORMAL3FVPROC = extern
+
+@name("func_glNormal3i") @extern def glNormal3i: PFNGLNORMAL3IPROC = extern
+
+@name("func_glNormal3iv") @extern def glNormal3iv: PFNGLNORMAL3IVPROC = extern
+
+@name("func_glNormal3s") @extern def glNormal3s: PFNGLNORMAL3SPROC = extern
+
+@name("func_glNormal3sv") @extern def glNormal3sv: PFNGLNORMAL3SVPROC = extern
+
+@name("func_glNormalP3ui") @extern def glNormalP3ui: PFNGLNORMALP3UIPROC = extern
+
+@name("func_glNormalP3uiv") @extern def glNormalP3uiv: PFNGLNORMALP3UIVPROC = extern
+
+@name("func_glNormalPointer") @extern def glNormalPointer: PFNGLNORMALPOINTERPROC = extern
+
+@name("func_glObjectLabel") @extern def glObjectLabel: PFNGLOBJECTLABELPROC = extern
+
+@name("func_glObjectPtrLabel") @extern def glObjectPtrLabel: PFNGLOBJECTPTRLABELPROC = extern
+
+@name("func_glOrtho") @extern def glOrtho: PFNGLORTHOPROC = extern
+
+@name("func_glPassThrough") @extern def glPassThrough: PFNGLPASSTHROUGHPROC = extern
+
+@name("func_glPatchParameterfv") @extern def glPatchParameterfv: PFNGLPATCHPARAMETERFVPROC = extern
+
+@name("func_glPatchParameteri") @extern def glPatchParameteri: PFNGLPATCHPARAMETERIPROC = extern
+
+@name("func_glPauseTransformFeedback") @extern def glPauseTransformFeedback: PFNGLPAUSETRANSFORMFEEDBACKPROC = extern
+
+@name("func_glPixelMapfv") @extern def glPixelMapfv: PFNGLPIXELMAPFVPROC = extern
+
+@name("func_glPixelMapuiv") @extern def glPixelMapuiv: PFNGLPIXELMAPUIVPROC = extern
+
+@name("func_glPixelMapusv") @extern def glPixelMapusv: PFNGLPIXELMAPUSVPROC = extern
+
+@name("func_glPixelStoref") @extern def glPixelStoref: PFNGLPIXELSTOREFPROC = extern
+
+@name("func_glPixelStorei") @extern def glPixelStorei: PFNGLPIXELSTOREIPROC = extern
+
+@name("func_glPixelTransferf") @extern def glPixelTransferf: PFNGLPIXELTRANSFERFPROC = extern
+
+@name("func_glPixelTransferi") @extern def glPixelTransferi: PFNGLPIXELTRANSFERIPROC = extern
+
+@name("func_glPixelZoom") @extern def glPixelZoom: PFNGLPIXELZOOMPROC = extern
+
+@name("func_glPointParameterf") @extern def glPointParameterf: PFNGLPOINTPARAMETERFPROC = extern
+
+@name("func_glPointParameterfv") @extern def glPointParameterfv: PFNGLPOINTPARAMETERFVPROC = extern
+
+@name("func_glPointParameteri") @extern def glPointParameteri: PFNGLPOINTPARAMETERIPROC = extern
+
+@name("func_glPointParameteriv") @extern def glPointParameteriv: PFNGLPOINTPARAMETERIVPROC = extern
+
+@name("func_glPointSize") @extern def glPointSize: PFNGLPOINTSIZEPROC = extern
+
+@name("func_glPolygonMode") @extern def glPolygonMode: PFNGLPOLYGONMODEPROC = extern
+
+@name("func_glPolygonOffset") @extern def glPolygonOffset: PFNGLPOLYGONOFFSETPROC = extern
+
+@name("func_glPolygonOffsetClamp") @extern def glPolygonOffsetClamp: PFNGLPOLYGONOFFSETCLAMPPROC = extern
+
+@name("func_glPolygonStipple") @extern def glPolygonStipple: PFNGLPOLYGONSTIPPLEPROC = extern
+
+@name("func_glPopAttrib") @extern def glPopAttrib: PFNGLPOPATTRIBPROC = extern
+
+@name("func_glPopClientAttrib") @extern def glPopClientAttrib: PFNGLPOPCLIENTATTRIBPROC = extern
+
+@name("func_glPopDebugGroup") @extern def glPopDebugGroup: PFNGLPOPDEBUGGROUPPROC = extern
+
+@name("func_glPopMatrix") @extern def glPopMatrix: PFNGLPOPMATRIXPROC = extern
+
+@name("func_glPopName") @extern def glPopName: PFNGLPOPNAMEPROC = extern
+
+@name("func_glPrimitiveRestartIndex") @extern def glPrimitiveRestartIndex: PFNGLPRIMITIVERESTARTINDEXPROC = extern
+
+@name("func_glPrioritizeTextures") @extern def glPrioritizeTextures: PFNGLPRIORITIZETEXTURESPROC = extern
+
+@name("func_glProgramBinary") @extern def glProgramBinary: PFNGLPROGRAMBINARYPROC = extern
+
+@name("func_glProgramParameteri") @extern def glProgramParameteri: PFNGLPROGRAMPARAMETERIPROC = extern
+
+@name("func_glProgramUniform1d") @extern def glProgramUniform1d: PFNGLPROGRAMUNIFORM1DPROC = extern
+
+@name("func_glProgramUniform1dv") @extern def glProgramUniform1dv: PFNGLPROGRAMUNIFORM1DVPROC = extern
+
+@name("func_glProgramUniform1f") @extern def glProgramUniform1f: PFNGLPROGRAMUNIFORM1FPROC = extern
+
+@name("func_glProgramUniform1fv") @extern def glProgramUniform1fv: PFNGLPROGRAMUNIFORM1FVPROC = extern
+
+@name("func_glProgramUniform1i") @extern def glProgramUniform1i: PFNGLPROGRAMUNIFORM1IPROC = extern
+
+@name("func_glProgramUniform1iv") @extern def glProgramUniform1iv: PFNGLPROGRAMUNIFORM1IVPROC = extern
+
+@name("func_glProgramUniform1ui") @extern def glProgramUniform1ui: PFNGLPROGRAMUNIFORM1UIPROC = extern
+
+@name("func_glProgramUniform1uiv") @extern def glProgramUniform1uiv: PFNGLPROGRAMUNIFORM1UIVPROC = extern
+
+@name("func_glProgramUniform2d") @extern def glProgramUniform2d: PFNGLPROGRAMUNIFORM2DPROC = extern
+
+@name("func_glProgramUniform2dv") @extern def glProgramUniform2dv: PFNGLPROGRAMUNIFORM2DVPROC = extern
+
+@name("func_glProgramUniform2f") @extern def glProgramUniform2f: PFNGLPROGRAMUNIFORM2FPROC = extern
+
+@name("func_glProgramUniform2fv") @extern def glProgramUniform2fv: PFNGLPROGRAMUNIFORM2FVPROC = extern
+
+@name("func_glProgramUniform2i") @extern def glProgramUniform2i: PFNGLPROGRAMUNIFORM2IPROC = extern
+
+@name("func_glProgramUniform2iv") @extern def glProgramUniform2iv: PFNGLPROGRAMUNIFORM2IVPROC = extern
+
+@name("func_glProgramUniform2ui") @extern def glProgramUniform2ui: PFNGLPROGRAMUNIFORM2UIPROC = extern
+
+@name("func_glProgramUniform2uiv") @extern def glProgramUniform2uiv: PFNGLPROGRAMUNIFORM2UIVPROC = extern
+
+@name("func_glProgramUniform3d") @extern def glProgramUniform3d: PFNGLPROGRAMUNIFORM3DPROC = extern
+
+@name("func_glProgramUniform3dv") @extern def glProgramUniform3dv: PFNGLPROGRAMUNIFORM3DVPROC = extern
+
+@name("func_glProgramUniform3f") @extern def glProgramUniform3f: PFNGLPROGRAMUNIFORM3FPROC = extern
+
+@name("func_glProgramUniform3fv") @extern def glProgramUniform3fv: PFNGLPROGRAMUNIFORM3FVPROC = extern
+
+@name("func_glProgramUniform3i") @extern def glProgramUniform3i: PFNGLPROGRAMUNIFORM3IPROC = extern
+
+@name("func_glProgramUniform3iv") @extern def glProgramUniform3iv: PFNGLPROGRAMUNIFORM3IVPROC = extern
+
+@name("func_glProgramUniform3ui") @extern def glProgramUniform3ui: PFNGLPROGRAMUNIFORM3UIPROC = extern
+
+@name("func_glProgramUniform3uiv") @extern def glProgramUniform3uiv: PFNGLPROGRAMUNIFORM3UIVPROC = extern
+
+@name("func_glProgramUniform4d") @extern def glProgramUniform4d: PFNGLPROGRAMUNIFORM4DPROC = extern
+
+@name("func_glProgramUniform4dv") @extern def glProgramUniform4dv: PFNGLPROGRAMUNIFORM4DVPROC = extern
+
+@name("func_glProgramUniform4f") @extern def glProgramUniform4f: PFNGLPROGRAMUNIFORM4FPROC = extern
+
+@name("func_glProgramUniform4fv") @extern def glProgramUniform4fv: PFNGLPROGRAMUNIFORM4FVPROC = extern
+
+@name("func_glProgramUniform4i") @extern def glProgramUniform4i: PFNGLPROGRAMUNIFORM4IPROC = extern
+
+@name("func_glProgramUniform4iv") @extern def glProgramUniform4iv: PFNGLPROGRAMUNIFORM4IVPROC = extern
+
+@name("func_glProgramUniform4ui") @extern def glProgramUniform4ui: PFNGLPROGRAMUNIFORM4UIPROC = extern
+
+@name("func_glProgramUniform4uiv") @extern def glProgramUniform4uiv: PFNGLPROGRAMUNIFORM4UIVPROC = extern
+
+@name("func_glProgramUniformMatrix2dv") @extern def glProgramUniformMatrix2dv: PFNGLPROGRAMUNIFORMMATRIX2DVPROC = extern
+
+@name("func_glProgramUniformMatrix2fv") @extern def glProgramUniformMatrix2fv: PFNGLPROGRAMUNIFORMMATRIX2FVPROC = extern
+
+@name("func_glProgramUniformMatrix2x3dv") @extern def glProgramUniformMatrix2x3dv: PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC = extern
+
+@name("func_glProgramUniformMatrix2x3fv") @extern def glProgramUniformMatrix2x3fv: PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC = extern
+
+@name("func_glProgramUniformMatrix2x4dv") @extern def glProgramUniformMatrix2x4dv: PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC = extern
+
+@name("func_glProgramUniformMatrix2x4fv") @extern def glProgramUniformMatrix2x4fv: PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC = extern
+
+@name("func_glProgramUniformMatrix3dv") @extern def glProgramUniformMatrix3dv: PFNGLPROGRAMUNIFORMMATRIX3DVPROC = extern
+
+@name("func_glProgramUniformMatrix3fv") @extern def glProgramUniformMatrix3fv: PFNGLPROGRAMUNIFORMMATRIX3FVPROC = extern
+
+@name("func_glProgramUniformMatrix3x2dv") @extern def glProgramUniformMatrix3x2dv: PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC = extern
+
+@name("func_glProgramUniformMatrix3x2fv") @extern def glProgramUniformMatrix3x2fv: PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC = extern
+
+@name("func_glProgramUniformMatrix3x4dv") @extern def glProgramUniformMatrix3x4dv: PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC = extern
+
+@name("func_glProgramUniformMatrix3x4fv") @extern def glProgramUniformMatrix3x4fv: PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC = extern
+
+@name("func_glProgramUniformMatrix4dv") @extern def glProgramUniformMatrix4dv: PFNGLPROGRAMUNIFORMMATRIX4DVPROC = extern
+
+@name("func_glProgramUniformMatrix4fv") @extern def glProgramUniformMatrix4fv: PFNGLPROGRAMUNIFORMMATRIX4FVPROC = extern
+
+@name("func_glProgramUniformMatrix4x2dv") @extern def glProgramUniformMatrix4x2dv: PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC = extern
+
+@name("func_glProgramUniformMatrix4x2fv") @extern def glProgramUniformMatrix4x2fv: PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC = extern
+
+@name("func_glProgramUniformMatrix4x3dv") @extern def glProgramUniformMatrix4x3dv: PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC = extern
+
+@name("func_glProgramUniformMatrix4x3fv") @extern def glProgramUniformMatrix4x3fv: PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC = extern
+
+@name("func_glProvokingVertex") @extern def glProvokingVertex: PFNGLPROVOKINGVERTEXPROC = extern
+
+@name("func_glPushAttrib") @extern def glPushAttrib: PFNGLPUSHATTRIBPROC = extern
+
+@name("func_glPushClientAttrib") @extern def glPushClientAttrib: PFNGLPUSHCLIENTATTRIBPROC = extern
+
+@name("func_glPushDebugGroup") @extern def glPushDebugGroup: PFNGLPUSHDEBUGGROUPPROC = extern
+
+@name("func_glPushMatrix") @extern def glPushMatrix: PFNGLPUSHMATRIXPROC = extern
+
+@name("func_glPushName") @extern def glPushName: PFNGLPUSHNAMEPROC = extern
+
+@name("func_glQueryCounter") @extern def glQueryCounter: PFNGLQUERYCOUNTERPROC = extern
+
+@name("func_glRasterPos2d") @extern def glRasterPos2d: PFNGLRASTERPOS2DPROC = extern
+
+@name("func_glRasterPos2dv") @extern def glRasterPos2dv: PFNGLRASTERPOS2DVPROC = extern
+
+@name("func_glRasterPos2f") @extern def glRasterPos2f: PFNGLRASTERPOS2FPROC = extern
+
+@name("func_glRasterPos2fv") @extern def glRasterPos2fv: PFNGLRASTERPOS2FVPROC = extern
+
+@name("func_glRasterPos2i") @extern def glRasterPos2i: PFNGLRASTERPOS2IPROC = extern
+
+@name("func_glRasterPos2iv") @extern def glRasterPos2iv: PFNGLRASTERPOS2IVPROC = extern
+
+@name("func_glRasterPos2s") @extern def glRasterPos2s: PFNGLRASTERPOS2SPROC = extern
+
+@name("func_glRasterPos2sv") @extern def glRasterPos2sv: PFNGLRASTERPOS2SVPROC = extern
+
+@name("func_glRasterPos3d") @extern def glRasterPos3d: PFNGLRASTERPOS3DPROC = extern
+
+@name("func_glRasterPos3dv") @extern def glRasterPos3dv: PFNGLRASTERPOS3DVPROC = extern
+
+@name("func_glRasterPos3f") @extern def glRasterPos3f: PFNGLRASTERPOS3FPROC = extern
+
+@name("func_glRasterPos3fv") @extern def glRasterPos3fv: PFNGLRASTERPOS3FVPROC = extern
+
+@name("func_glRasterPos3i") @extern def glRasterPos3i: PFNGLRASTERPOS3IPROC = extern
+
+@name("func_glRasterPos3iv") @extern def glRasterPos3iv: PFNGLRASTERPOS3IVPROC = extern
+
+@name("func_glRasterPos3s") @extern def glRasterPos3s: PFNGLRASTERPOS3SPROC = extern
+
+@name("func_glRasterPos3sv") @extern def glRasterPos3sv: PFNGLRASTERPOS3SVPROC = extern
+
+@name("func_glRasterPos4d") @extern def glRasterPos4d: PFNGLRASTERPOS4DPROC = extern
+
+@name("func_glRasterPos4dv") @extern def glRasterPos4dv: PFNGLRASTERPOS4DVPROC = extern
+
+@name("func_glRasterPos4f") @extern def glRasterPos4f: PFNGLRASTERPOS4FPROC = extern
+
+@name("func_glRasterPos4fv") @extern def glRasterPos4fv: PFNGLRASTERPOS4FVPROC = extern
+
+@name("func_glRasterPos4i") @extern def glRasterPos4i: PFNGLRASTERPOS4IPROC = extern
+
+@name("func_glRasterPos4iv") @extern def glRasterPos4iv: PFNGLRASTERPOS4IVPROC = extern
+
+@name("func_glRasterPos4s") @extern def glRasterPos4s: PFNGLRASTERPOS4SPROC = extern
+
+@name("func_glRasterPos4sv") @extern def glRasterPos4sv: PFNGLRASTERPOS4SVPROC = extern
+
+@name("func_glReadBuffer") @extern def glReadBuffer: PFNGLREADBUFFERPROC = extern
+
+@name("func_glReadPixels") @extern def glReadPixels: PFNGLREADPIXELSPROC = extern
+
+@name("func_glReadnPixels") @extern def glReadnPixels: PFNGLREADNPIXELSPROC = extern
+
+@name("func_glRectd") @extern def glRectd: PFNGLRECTDPROC = extern
+
+@name("func_glRectdv") @extern def glRectdv: PFNGLRECTDVPROC = extern
+
+@name("func_glRectf") @extern def glRectf: PFNGLRECTFPROC = extern
+
+@name("func_glRectfv") @extern def glRectfv: PFNGLRECTFVPROC = extern
+
+@name("func_glRecti") @extern def glRecti: PFNGLRECTIPROC = extern
+
+@name("func_glRectiv") @extern def glRectiv: PFNGLRECTIVPROC = extern
+
+@name("func_glRects") @extern def glRects: PFNGLRECTSPROC = extern
+
+@name("func_glRectsv") @extern def glRectsv: PFNGLRECTSVPROC = extern
+
+@name("func_glReleaseShaderCompiler") @extern def glReleaseShaderCompiler: PFNGLRELEASESHADERCOMPILERPROC = extern
+
+@name("func_glRenderMode") @extern def glRenderMode: PFNGLRENDERMODEPROC = extern
+
+@name("func_glRenderbufferStorage") @extern def glRenderbufferStorage: PFNGLRENDERBUFFERSTORAGEPROC = extern
+
+@name("func_glRenderbufferStorageMultisample") @extern def glRenderbufferStorageMultisample: PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC = extern
+
+@name("func_glResumeTransformFeedback") @extern def glResumeTransformFeedback: PFNGLRESUMETRANSFORMFEEDBACKPROC = extern
+
+@name("func_glRotated") @extern def glRotated: PFNGLROTATEDPROC = extern
+
+@name("func_glRotatef") @extern def glRotatef: PFNGLROTATEFPROC = extern
+
+@name("func_glSampleCoverage") @extern def glSampleCoverage: PFNGLSAMPLECOVERAGEPROC = extern
+
+@name("func_glSampleMaski") @extern def glSampleMaski: PFNGLSAMPLEMASKIPROC = extern
+
+@name("func_glSamplerParameterIiv") @extern def glSamplerParameterIiv: PFNGLSAMPLERPARAMETERIIVPROC = extern
+
+@name("func_glSamplerParameterIuiv") @extern def glSamplerParameterIuiv: PFNGLSAMPLERPARAMETERIUIVPROC = extern
+
+@name("func_glSamplerParameterf") @extern def glSamplerParameterf: PFNGLSAMPLERPARAMETERFPROC = extern
+
+@name("func_glSamplerParameterfv") @extern def glSamplerParameterfv: PFNGLSAMPLERPARAMETERFVPROC = extern
+
+@name("func_glSamplerParameteri") @extern def glSamplerParameteri: PFNGLSAMPLERPARAMETERIPROC = extern
+
+@name("func_glSamplerParameteriv") @extern def glSamplerParameteriv: PFNGLSAMPLERPARAMETERIVPROC = extern
+
+@name("func_glScaled") @extern def glScaled: PFNGLSCALEDPROC = extern
+
+@name("func_glScalef") @extern def glScalef: PFNGLSCALEFPROC = extern
+
+@name("func_glScissor") @extern def glScissor: PFNGLSCISSORPROC = extern
+
+@name("func_glScissorArrayv") @extern def glScissorArrayv: PFNGLSCISSORARRAYVPROC = extern
+
+@name("func_glScissorIndexed") @extern def glScissorIndexed: PFNGLSCISSORINDEXEDPROC = extern
+
+@name("func_glScissorIndexedv") @extern def glScissorIndexedv: PFNGLSCISSORINDEXEDVPROC = extern
+
+@name("func_glSecondaryColor3b") @extern def glSecondaryColor3b: PFNGLSECONDARYCOLOR3BPROC = extern
+
+@name("func_glSecondaryColor3bv") @extern def glSecondaryColor3bv: PFNGLSECONDARYCOLOR3BVPROC = extern
+
+@name("func_glSecondaryColor3d") @extern def glSecondaryColor3d: PFNGLSECONDARYCOLOR3DPROC = extern
+
+@name("func_glSecondaryColor3dv") @extern def glSecondaryColor3dv: PFNGLSECONDARYCOLOR3DVPROC = extern
+
+@name("func_glSecondaryColor3f") @extern def glSecondaryColor3f: PFNGLSECONDARYCOLOR3FPROC = extern
+
+@name("func_glSecondaryColor3fv") @extern def glSecondaryColor3fv: PFNGLSECONDARYCOLOR3FVPROC = extern
+
+@name("func_glSecondaryColor3i") @extern def glSecondaryColor3i: PFNGLSECONDARYCOLOR3IPROC = extern
+
+@name("func_glSecondaryColor3iv") @extern def glSecondaryColor3iv: PFNGLSECONDARYCOLOR3IVPROC = extern
+
+@name("func_glSecondaryColor3s") @extern def glSecondaryColor3s: PFNGLSECONDARYCOLOR3SPROC = extern
+
+@name("func_glSecondaryColor3sv") @extern def glSecondaryColor3sv: PFNGLSECONDARYCOLOR3SVPROC = extern
+
+@name("func_glSecondaryColor3ub") @extern def glSecondaryColor3ub: PFNGLSECONDARYCOLOR3UBPROC = extern
+
+@name("func_glSecondaryColor3ubv") @extern def glSecondaryColor3ubv: PFNGLSECONDARYCOLOR3UBVPROC = extern
+
+@name("func_glSecondaryColor3ui") @extern def glSecondaryColor3ui: PFNGLSECONDARYCOLOR3UIPROC = extern
+
+@name("func_glSecondaryColor3uiv") @extern def glSecondaryColor3uiv: PFNGLSECONDARYCOLOR3UIVPROC = extern
+
+@name("func_glSecondaryColor3us") @extern def glSecondaryColor3us: PFNGLSECONDARYCOLOR3USPROC = extern
+
+@name("func_glSecondaryColor3usv") @extern def glSecondaryColor3usv: PFNGLSECONDARYCOLOR3USVPROC = extern
+
+@name("func_glSecondaryColorP3ui") @extern def glSecondaryColorP3ui: PFNGLSECONDARYCOLORP3UIPROC = extern
+
+@name("func_glSecondaryColorP3uiv") @extern def glSecondaryColorP3uiv: PFNGLSECONDARYCOLORP3UIVPROC = extern
+
+@name("func_glSecondaryColorPointer") @extern def glSecondaryColorPointer: PFNGLSECONDARYCOLORPOINTERPROC = extern
+
+@name("func_glSelectBuffer") @extern def glSelectBuffer: PFNGLSELECTBUFFERPROC = extern
+
+@name("func_glShadeModel") @extern def glShadeModel: PFNGLSHADEMODELPROC = extern
+
+@name("func_glShaderBinary") @extern def glShaderBinary: PFNGLSHADERBINARYPROC = extern
+
+@name("func_glShaderSource") @extern def glShaderSource: PFNGLSHADERSOURCEPROC = extern
+
+@name("func_glShaderStorageBlockBinding") @extern def glShaderStorageBlockBinding: PFNGLSHADERSTORAGEBLOCKBINDINGPROC = extern
+
+@name("func_glSpecializeShader") @extern def glSpecializeShader: PFNGLSPECIALIZESHADERPROC = extern
+
+@name("func_glStencilFunc") @extern def glStencilFunc: PFNGLSTENCILFUNCPROC = extern
+
+@name("func_glStencilFuncSeparate") @extern def glStencilFuncSeparate: PFNGLSTENCILFUNCSEPARATEPROC = extern
+
+@name("func_glStencilMask") @extern def glStencilMask: PFNGLSTENCILMASKPROC = extern
+
+@name("func_glStencilMaskSeparate") @extern def glStencilMaskSeparate: PFNGLSTENCILMASKSEPARATEPROC = extern
+
+@name("func_glStencilOp") @extern def glStencilOp: PFNGLSTENCILOPPROC = extern
+
+@name("func_glStencilOpSeparate") @extern def glStencilOpSeparate: PFNGLSTENCILOPSEPARATEPROC = extern
+
+@name("func_glTexBuffer") @extern def glTexBuffer: PFNGLTEXBUFFERPROC = extern
+
+@name("func_glTexBufferRange") @extern def glTexBufferRange: PFNGLTEXBUFFERRANGEPROC = extern
+
+@name("func_glTexCoord1d") @extern def glTexCoord1d: PFNGLTEXCOORD1DPROC = extern
+
+@name("func_glTexCoord1dv") @extern def glTexCoord1dv: PFNGLTEXCOORD1DVPROC = extern
+
+@name("func_glTexCoord1f") @extern def glTexCoord1f: PFNGLTEXCOORD1FPROC = extern
+
+@name("func_glTexCoord1fv") @extern def glTexCoord1fv: PFNGLTEXCOORD1FVPROC = extern
+
+@name("func_glTexCoord1i") @extern def glTexCoord1i: PFNGLTEXCOORD1IPROC = extern
+
+@name("func_glTexCoord1iv") @extern def glTexCoord1iv: PFNGLTEXCOORD1IVPROC = extern
+
+@name("func_glTexCoord1s") @extern def glTexCoord1s: PFNGLTEXCOORD1SPROC = extern
+
+@name("func_glTexCoord1sv") @extern def glTexCoord1sv: PFNGLTEXCOORD1SVPROC = extern
+
+@name("func_glTexCoord2d") @extern def glTexCoord2d: PFNGLTEXCOORD2DPROC = extern
+
+@name("func_glTexCoord2dv") @extern def glTexCoord2dv: PFNGLTEXCOORD2DVPROC = extern
+
+@name("func_glTexCoord2f") @extern def glTexCoord2f: PFNGLTEXCOORD2FPROC = extern
+
+@name("func_glTexCoord2fv") @extern def glTexCoord2fv: PFNGLTEXCOORD2FVPROC = extern
+
+@name("func_glTexCoord2i") @extern def glTexCoord2i: PFNGLTEXCOORD2IPROC = extern
+
+@name("func_glTexCoord2iv") @extern def glTexCoord2iv: PFNGLTEXCOORD2IVPROC = extern
+
+@name("func_glTexCoord2s") @extern def glTexCoord2s: PFNGLTEXCOORD2SPROC = extern
+
+@name("func_glTexCoord2sv") @extern def glTexCoord2sv: PFNGLTEXCOORD2SVPROC = extern
+
+@name("func_glTexCoord3d") @extern def glTexCoord3d: PFNGLTEXCOORD3DPROC = extern
+
+@name("func_glTexCoord3dv") @extern def glTexCoord3dv: PFNGLTEXCOORD3DVPROC = extern
+
+@name("func_glTexCoord3f") @extern def glTexCoord3f: PFNGLTEXCOORD3FPROC = extern
+
+@name("func_glTexCoord3fv") @extern def glTexCoord3fv: PFNGLTEXCOORD3FVPROC = extern
+
+@name("func_glTexCoord3i") @extern def glTexCoord3i: PFNGLTEXCOORD3IPROC = extern
+
+@name("func_glTexCoord3iv") @extern def glTexCoord3iv: PFNGLTEXCOORD3IVPROC = extern
+
+@name("func_glTexCoord3s") @extern def glTexCoord3s: PFNGLTEXCOORD3SPROC = extern
+
+@name("func_glTexCoord3sv") @extern def glTexCoord3sv: PFNGLTEXCOORD3SVPROC = extern
+
+@name("func_glTexCoord4d") @extern def glTexCoord4d: PFNGLTEXCOORD4DPROC = extern
+
+@name("func_glTexCoord4dv") @extern def glTexCoord4dv: PFNGLTEXCOORD4DVPROC = extern
+
+@name("func_glTexCoord4f") @extern def glTexCoord4f: PFNGLTEXCOORD4FPROC = extern
+
+@name("func_glTexCoord4fv") @extern def glTexCoord4fv: PFNGLTEXCOORD4FVPROC = extern
+
+@name("func_glTexCoord4i") @extern def glTexCoord4i: PFNGLTEXCOORD4IPROC = extern
+
+@name("func_glTexCoord4iv") @extern def glTexCoord4iv: PFNGLTEXCOORD4IVPROC = extern
+
+@name("func_glTexCoord4s") @extern def glTexCoord4s: PFNGLTEXCOORD4SPROC = extern
+
+@name("func_glTexCoord4sv") @extern def glTexCoord4sv: PFNGLTEXCOORD4SVPROC = extern
+
+@name("func_glTexCoordP1ui") @extern def glTexCoordP1ui: PFNGLTEXCOORDP1UIPROC = extern
+
+@name("func_glTexCoordP1uiv") @extern def glTexCoordP1uiv: PFNGLTEXCOORDP1UIVPROC = extern
+
+@name("func_glTexCoordP2ui") @extern def glTexCoordP2ui: PFNGLTEXCOORDP2UIPROC = extern
+
+@name("func_glTexCoordP2uiv") @extern def glTexCoordP2uiv: PFNGLTEXCOORDP2UIVPROC = extern
+
+@name("func_glTexCoordP3ui") @extern def glTexCoordP3ui: PFNGLTEXCOORDP3UIPROC = extern
+
+@name("func_glTexCoordP3uiv") @extern def glTexCoordP3uiv: PFNGLTEXCOORDP3UIVPROC = extern
+
+@name("func_glTexCoordP4ui") @extern def glTexCoordP4ui: PFNGLTEXCOORDP4UIPROC = extern
+
+@name("func_glTexCoordP4uiv") @extern def glTexCoordP4uiv: PFNGLTEXCOORDP4UIVPROC = extern
+
+@name("func_glTexCoordPointer") @extern def glTexCoordPointer: PFNGLTEXCOORDPOINTERPROC = extern
+
+@name("func_glTexEnvf") @extern def glTexEnvf: PFNGLTEXENVFPROC = extern
+
+@name("func_glTexEnvfv") @extern def glTexEnvfv: PFNGLTEXENVFVPROC = extern
+
+@name("func_glTexEnvi") @extern def glTexEnvi: PFNGLTEXENVIPROC = extern
+
+@name("func_glTexEnviv") @extern def glTexEnviv: PFNGLTEXENVIVPROC = extern
+
+@name("func_glTexGend") @extern def glTexGend: PFNGLTEXGENDPROC = extern
+
+@name("func_glTexGendv") @extern def glTexGendv: PFNGLTEXGENDVPROC = extern
+
+@name("func_glTexGenf") @extern def glTexGenf: PFNGLTEXGENFPROC = extern
+
+@name("func_glTexGenfv") @extern def glTexGenfv: PFNGLTEXGENFVPROC = extern
+
+@name("func_glTexGeni") @extern def glTexGeni: PFNGLTEXGENIPROC = extern
+
+@name("func_glTexGeniv") @extern def glTexGeniv: PFNGLTEXGENIVPROC = extern
+
+@name("func_glTexImage1D") @extern def glTexImage1D: PFNGLTEXIMAGE1DPROC = extern
+
+@name("func_glTexImage2D") @extern def glTexImage2D: PFNGLTEXIMAGE2DPROC = extern
+
+@name("func_glTexImage2DMultisample") @extern def glTexImage2DMultisample: PFNGLTEXIMAGE2DMULTISAMPLEPROC = extern
+
+@name("func_glTexImage3D") @extern def glTexImage3D: PFNGLTEXIMAGE3DPROC = extern
+
+@name("func_glTexImage3DMultisample") @extern def glTexImage3DMultisample: PFNGLTEXIMAGE3DMULTISAMPLEPROC = extern
+
+@name("func_glTexParameterIiv") @extern def glTexParameterIiv: PFNGLTEXPARAMETERIIVPROC = extern
+
+@name("func_glTexParameterIuiv") @extern def glTexParameterIuiv: PFNGLTEXPARAMETERIUIVPROC = extern
+
+@name("func_glTexParameterf") @extern def glTexParameterf: PFNGLTEXPARAMETERFPROC = extern
+
+@name("func_glTexParameterfv") @extern def glTexParameterfv: PFNGLTEXPARAMETERFVPROC = extern
+
+@name("func_glTexParameteri") @extern def glTexParameteri: PFNGLTEXPARAMETERIPROC = extern
+
+@name("func_glTexParameteriv") @extern def glTexParameteriv: PFNGLTEXPARAMETERIVPROC = extern
+
+@name("func_glTexStorage1D") @extern def glTexStorage1D: PFNGLTEXSTORAGE1DPROC = extern
+
+@name("func_glTexStorage2D") @extern def glTexStorage2D: PFNGLTEXSTORAGE2DPROC = extern
+
+@name("func_glTexStorage2DMultisample") @extern def glTexStorage2DMultisample: PFNGLTEXSTORAGE2DMULTISAMPLEPROC = extern
+
+@name("func_glTexStorage3D") @extern def glTexStorage3D: PFNGLTEXSTORAGE3DPROC = extern
+
+@name("func_glTexStorage3DMultisample") @extern def glTexStorage3DMultisample: PFNGLTEXSTORAGE3DMULTISAMPLEPROC = extern
+
+@name("func_glTexSubImage1D") @extern def glTexSubImage1D: PFNGLTEXSUBIMAGE1DPROC = extern
+
+@name("func_glTexSubImage2D") @extern def glTexSubImage2D: PFNGLTEXSUBIMAGE2DPROC = extern
+
+@name("func_glTexSubImage3D") @extern def glTexSubImage3D: PFNGLTEXSUBIMAGE3DPROC = extern
+
+@name("func_glTextureBarrier") @extern def glTextureBarrier: PFNGLTEXTUREBARRIERPROC = extern
+
+@name("func_glTextureBuffer") @extern def glTextureBuffer: PFNGLTEXTUREBUFFERPROC = extern
+
+@name("func_glTextureBufferRange") @extern def glTextureBufferRange: PFNGLTEXTUREBUFFERRANGEPROC = extern
+
+@name("func_glTextureParameterIiv") @extern def glTextureParameterIiv: PFNGLTEXTUREPARAMETERIIVPROC = extern
+
+@name("func_glTextureParameterIuiv") @extern def glTextureParameterIuiv: PFNGLTEXTUREPARAMETERIUIVPROC = extern
+
+@name("func_glTextureParameterf") @extern def glTextureParameterf: PFNGLTEXTUREPARAMETERFPROC = extern
+
+@name("func_glTextureParameterfv") @extern def glTextureParameterfv: PFNGLTEXTUREPARAMETERFVPROC = extern
+
+@name("func_glTextureParameteri") @extern def glTextureParameteri: PFNGLTEXTUREPARAMETERIPROC = extern
+
+@name("func_glTextureParameteriv") @extern def glTextureParameteriv: PFNGLTEXTUREPARAMETERIVPROC = extern
+
+@name("func_glTextureStorage1D") @extern def glTextureStorage1D: PFNGLTEXTURESTORAGE1DPROC = extern
+
+@name("func_glTextureStorage2D") @extern def glTextureStorage2D: PFNGLTEXTURESTORAGE2DPROC = extern
+
+@name("func_glTextureStorage2DMultisample") @extern def glTextureStorage2DMultisample: PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC = extern
+
+@name("func_glTextureStorage3D") @extern def glTextureStorage3D: PFNGLTEXTURESTORAGE3DPROC = extern
+
+@name("func_glTextureStorage3DMultisample") @extern def glTextureStorage3DMultisample: PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC = extern
+
+@name("func_glTextureSubImage1D") @extern def glTextureSubImage1D: PFNGLTEXTURESUBIMAGE1DPROC = extern
+
+@name("func_glTextureSubImage2D") @extern def glTextureSubImage2D: PFNGLTEXTURESUBIMAGE2DPROC = extern
+
+@name("func_glTextureSubImage3D") @extern def glTextureSubImage3D: PFNGLTEXTURESUBIMAGE3DPROC = extern
+
+@name("func_glTextureView") @extern def glTextureView: PFNGLTEXTUREVIEWPROC = extern
+
+@name("func_glTransformFeedbackBufferBase") @extern def glTransformFeedbackBufferBase: PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC = extern
+
+@name("func_glTransformFeedbackBufferRange") @extern def glTransformFeedbackBufferRange: PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC = extern
+
+@name("func_glTransformFeedbackVaryings") @extern def glTransformFeedbackVaryings: PFNGLTRANSFORMFEEDBACKVARYINGSPROC = extern
+
+@name("func_glTranslated") @extern def glTranslated: PFNGLTRANSLATEDPROC = extern
+
+@name("func_glTranslatef") @extern def glTranslatef: PFNGLTRANSLATEFPROC = extern
+
+@name("func_glUniform1d") @extern def glUniform1d: PFNGLUNIFORM1DPROC = extern
+
+@name("func_glUniform1dv") @extern def glUniform1dv: PFNGLUNIFORM1DVPROC = extern
+
+@name("func_glUniform1f") @extern def glUniform1f: PFNGLUNIFORM1FPROC = extern
+
+@name("func_glUniform1fv") @extern def glUniform1fv: PFNGLUNIFORM1FVPROC = extern
+
+@name("func_glUniform1i") @extern def glUniform1i: PFNGLUNIFORM1IPROC = extern
+
+@name("func_glUniform1iv") @extern def glUniform1iv: PFNGLUNIFORM1IVPROC = extern
+
+@name("func_glUniform1ui") @extern def glUniform1ui: PFNGLUNIFORM1UIPROC = extern
+
+@name("func_glUniform1uiv") @extern def glUniform1uiv: PFNGLUNIFORM1UIVPROC = extern
+
+@name("func_glUniform2d") @extern def glUniform2d: PFNGLUNIFORM2DPROC = extern
+
+@name("func_glUniform2dv") @extern def glUniform2dv: PFNGLUNIFORM2DVPROC = extern
+
+@name("func_glUniform2f") @extern def glUniform2f: PFNGLUNIFORM2FPROC = extern
+
+@name("func_glUniform2fv") @extern def glUniform2fv: PFNGLUNIFORM2FVPROC = extern
+
+@name("func_glUniform2i") @extern def glUniform2i: PFNGLUNIFORM2IPROC = extern
+
+@name("func_glUniform2iv") @extern def glUniform2iv: PFNGLUNIFORM2IVPROC = extern
+
+@name("func_glUniform2ui") @extern def glUniform2ui: PFNGLUNIFORM2UIPROC = extern
+
+@name("func_glUniform2uiv") @extern def glUniform2uiv: PFNGLUNIFORM2UIVPROC = extern
+
+@name("func_glUniform3d") @extern def glUniform3d: PFNGLUNIFORM3DPROC = extern
+
+@name("func_glUniform3dv") @extern def glUniform3dv: PFNGLUNIFORM3DVPROC = extern
+
+@name("func_glUniform3f") @extern def glUniform3f: PFNGLUNIFORM3FPROC = extern
+
+@name("func_glUniform3fv") @extern def glUniform3fv: PFNGLUNIFORM3FVPROC = extern
+
+@name("func_glUniform3i") @extern def glUniform3i: PFNGLUNIFORM3IPROC = extern
+
+@name("func_glUniform3iv") @extern def glUniform3iv: PFNGLUNIFORM3IVPROC = extern
+
+@name("func_glUniform3ui") @extern def glUniform3ui: PFNGLUNIFORM3UIPROC = extern
+
+@name("func_glUniform3uiv") @extern def glUniform3uiv: PFNGLUNIFORM3UIVPROC = extern
+
+@name("func_glUniform4d") @extern def glUniform4d: PFNGLUNIFORM4DPROC = extern
+
+@name("func_glUniform4dv") @extern def glUniform4dv: PFNGLUNIFORM4DVPROC = extern
+
+@name("func_glUniform4f") @extern def glUniform4f: PFNGLUNIFORM4FPROC = extern
+
+@name("func_glUniform4fv") @extern def glUniform4fv: PFNGLUNIFORM4FVPROC = extern
+
+@name("func_glUniform4i") @extern def glUniform4i: PFNGLUNIFORM4IPROC = extern
+
+@name("func_glUniform4iv") @extern def glUniform4iv: PFNGLUNIFORM4IVPROC = extern
+
+@name("func_glUniform4ui") @extern def glUniform4ui: PFNGLUNIFORM4UIPROC = extern
+
+@name("func_glUniform4uiv") @extern def glUniform4uiv: PFNGLUNIFORM4UIVPROC = extern
+
+@name("func_glUniformBlockBinding") @extern def glUniformBlockBinding: PFNGLUNIFORMBLOCKBINDINGPROC = extern
+
+@name("func_glUniformMatrix2dv") @extern def glUniformMatrix2dv: PFNGLUNIFORMMATRIX2DVPROC = extern
+
+@name("func_glUniformMatrix2fv") @extern def glUniformMatrix2fv: PFNGLUNIFORMMATRIX2FVPROC = extern
+
+@name("func_glUniformMatrix2x3dv") @extern def glUniformMatrix2x3dv: PFNGLUNIFORMMATRIX2X3DVPROC = extern
+
+@name("func_glUniformMatrix2x3fv") @extern def glUniformMatrix2x3fv: PFNGLUNIFORMMATRIX2X3FVPROC = extern
+
+@name("func_glUniformMatrix2x4dv") @extern def glUniformMatrix2x4dv: PFNGLUNIFORMMATRIX2X4DVPROC = extern
+
+@name("func_glUniformMatrix2x4fv") @extern def glUniformMatrix2x4fv: PFNGLUNIFORMMATRIX2X4FVPROC = extern
+
+@name("func_glUniformMatrix3dv") @extern def glUniformMatrix3dv: PFNGLUNIFORMMATRIX3DVPROC = extern
+
+@name("func_glUniformMatrix3fv") @extern def glUniformMatrix3fv: PFNGLUNIFORMMATRIX3FVPROC = extern
+
+@name("func_glUniformMatrix3x2dv") @extern def glUniformMatrix3x2dv: PFNGLUNIFORMMATRIX3X2DVPROC = extern
+
+@name("func_glUniformMatrix3x2fv") @extern def glUniformMatrix3x2fv: PFNGLUNIFORMMATRIX3X2FVPROC = extern
+
+@name("func_glUniformMatrix3x4dv") @extern def glUniformMatrix3x4dv: PFNGLUNIFORMMATRIX3X4DVPROC = extern
+
+@name("func_glUniformMatrix3x4fv") @extern def glUniformMatrix3x4fv: PFNGLUNIFORMMATRIX3X4FVPROC = extern
+
+@name("func_glUniformMatrix4dv") @extern def glUniformMatrix4dv: PFNGLUNIFORMMATRIX4DVPROC = extern
+
+@name("func_glUniformMatrix4fv") @extern def glUniformMatrix4fv: PFNGLUNIFORMMATRIX4FVPROC = extern
+
+@name("func_glUniformMatrix4x2dv") @extern def glUniformMatrix4x2dv: PFNGLUNIFORMMATRIX4X2DVPROC = extern
+
+@name("func_glUniformMatrix4x2fv") @extern def glUniformMatrix4x2fv: PFNGLUNIFORMMATRIX4X2FVPROC = extern
+
+@name("func_glUniformMatrix4x3dv") @extern def glUniformMatrix4x3dv: PFNGLUNIFORMMATRIX4X3DVPROC = extern
+
+@name("func_glUniformMatrix4x3fv") @extern def glUniformMatrix4x3fv: PFNGLUNIFORMMATRIX4X3FVPROC = extern
+
+@name("func_glUniformSubroutinesuiv") @extern def glUniformSubroutinesuiv: PFNGLUNIFORMSUBROUTINESUIVPROC = extern
+
+@name("func_glUnmapBuffer") @extern def glUnmapBuffer: PFNGLUNMAPBUFFERPROC = extern
+
+@name("func_glUnmapNamedBuffer") @extern def glUnmapNamedBuffer: PFNGLUNMAPNAMEDBUFFERPROC = extern
+
+@name("func_glUseProgram") @extern def glUseProgram: PFNGLUSEPROGRAMPROC = extern
+
+@name("func_glUseProgramStages") @extern def glUseProgramStages: PFNGLUSEPROGRAMSTAGESPROC = extern
+
+@name("func_glValidateProgram") @extern def glValidateProgram: PFNGLVALIDATEPROGRAMPROC = extern
+
+@name("func_glValidateProgramPipeline") @extern def glValidateProgramPipeline: PFNGLVALIDATEPROGRAMPIPELINEPROC = extern
+
+@name("func_glVertex2d") @extern def glVertex2d: PFNGLVERTEX2DPROC = extern
+
+@name("func_glVertex2dv") @extern def glVertex2dv: PFNGLVERTEX2DVPROC = extern
+
+@name("func_glVertex2f") @extern def glVertex2f: PFNGLVERTEX2FPROC = extern
+
+@name("func_glVertex2fv") @extern def glVertex2fv: PFNGLVERTEX2FVPROC = extern
+
+@name("func_glVertex2i") @extern def glVertex2i: PFNGLVERTEX2IPROC = extern
+
+@name("func_glVertex2iv") @extern def glVertex2iv: PFNGLVERTEX2IVPROC = extern
+
+@name("func_glVertex2s") @extern def glVertex2s: PFNGLVERTEX2SPROC = extern
+
+@name("func_glVertex2sv") @extern def glVertex2sv: PFNGLVERTEX2SVPROC = extern
+
+@name("func_glVertex3d") @extern def glVertex3d: PFNGLVERTEX3DPROC = extern
+
+@name("func_glVertex3dv") @extern def glVertex3dv: PFNGLVERTEX3DVPROC = extern
+
+@name("func_glVertex3f") @extern def glVertex3f: PFNGLVERTEX3FPROC = extern
+
+@name("func_glVertex3fv") @extern def glVertex3fv: PFNGLVERTEX3FVPROC = extern
+
+@name("func_glVertex3i") @extern def glVertex3i: PFNGLVERTEX3IPROC = extern
+
+@name("func_glVertex3iv") @extern def glVertex3iv: PFNGLVERTEX3IVPROC = extern
+
+@name("func_glVertex3s") @extern def glVertex3s: PFNGLVERTEX3SPROC = extern
+
+@name("func_glVertex3sv") @extern def glVertex3sv: PFNGLVERTEX3SVPROC = extern
+
+@name("func_glVertex4d") @extern def glVertex4d: PFNGLVERTEX4DPROC = extern
+
+@name("func_glVertex4dv") @extern def glVertex4dv: PFNGLVERTEX4DVPROC = extern
+
+@name("func_glVertex4f") @extern def glVertex4f: PFNGLVERTEX4FPROC = extern
+
+@name("func_glVertex4fv") @extern def glVertex4fv: PFNGLVERTEX4FVPROC = extern
+
+@name("func_glVertex4i") @extern def glVertex4i: PFNGLVERTEX4IPROC = extern
+
+@name("func_glVertex4iv") @extern def glVertex4iv: PFNGLVERTEX4IVPROC = extern
+
+@name("func_glVertex4s") @extern def glVertex4s: PFNGLVERTEX4SPROC = extern
+
+@name("func_glVertex4sv") @extern def glVertex4sv: PFNGLVERTEX4SVPROC = extern
+
+@name("func_glVertexArrayAttribBinding") @extern def glVertexArrayAttribBinding: PFNGLVERTEXARRAYATTRIBBINDINGPROC = extern
+
+@name("func_glVertexArrayAttribFormat") @extern def glVertexArrayAttribFormat: PFNGLVERTEXARRAYATTRIBFORMATPROC = extern
+
+@name("func_glVertexArrayAttribIFormat") @extern def glVertexArrayAttribIFormat: PFNGLVERTEXARRAYATTRIBIFORMATPROC = extern
+
+@name("func_glVertexArrayAttribLFormat") @extern def glVertexArrayAttribLFormat: PFNGLVERTEXARRAYATTRIBLFORMATPROC = extern
+
+@name("func_glVertexArrayBindingDivisor") @extern def glVertexArrayBindingDivisor: PFNGLVERTEXARRAYBINDINGDIVISORPROC = extern
+
+@name("func_glVertexArrayElementBuffer") @extern def glVertexArrayElementBuffer: PFNGLVERTEXARRAYELEMENTBUFFERPROC = extern
+
+@name("func_glVertexArrayVertexBuffer") @extern def glVertexArrayVertexBuffer: PFNGLVERTEXARRAYVERTEXBUFFERPROC = extern
+
+@name("func_glVertexArrayVertexBuffers") @extern def glVertexArrayVertexBuffers: PFNGLVERTEXARRAYVERTEXBUFFERSPROC = extern
+
+@name("func_glVertexAttrib1d") @extern def glVertexAttrib1d: PFNGLVERTEXATTRIB1DPROC = extern
+
+@name("func_glVertexAttrib1dv") @extern def glVertexAttrib1dv: PFNGLVERTEXATTRIB1DVPROC = extern
+
+@name("func_glVertexAttrib1f") @extern def glVertexAttrib1f: PFNGLVERTEXATTRIB1FPROC = extern
+
+@name("func_glVertexAttrib1fv") @extern def glVertexAttrib1fv: PFNGLVERTEXATTRIB1FVPROC = extern
+
+@name("func_glVertexAttrib1s") @extern def glVertexAttrib1s: PFNGLVERTEXATTRIB1SPROC = extern
+
+@name("func_glVertexAttrib1sv") @extern def glVertexAttrib1sv: PFNGLVERTEXATTRIB1SVPROC = extern
+
+@name("func_glVertexAttrib2d") @extern def glVertexAttrib2d: PFNGLVERTEXATTRIB2DPROC = extern
+
+@name("func_glVertexAttrib2dv") @extern def glVertexAttrib2dv: PFNGLVERTEXATTRIB2DVPROC = extern
+
+@name("func_glVertexAttrib2f") @extern def glVertexAttrib2f: PFNGLVERTEXATTRIB2FPROC = extern
+
+@name("func_glVertexAttrib2fv") @extern def glVertexAttrib2fv: PFNGLVERTEXATTRIB2FVPROC = extern
+
+@name("func_glVertexAttrib2s") @extern def glVertexAttrib2s: PFNGLVERTEXATTRIB2SPROC = extern
+
+@name("func_glVertexAttrib2sv") @extern def glVertexAttrib2sv: PFNGLVERTEXATTRIB2SVPROC = extern
+
+@name("func_glVertexAttrib3d") @extern def glVertexAttrib3d: PFNGLVERTEXATTRIB3DPROC = extern
+
+@name("func_glVertexAttrib3dv") @extern def glVertexAttrib3dv: PFNGLVERTEXATTRIB3DVPROC = extern
+
+@name("func_glVertexAttrib3f") @extern def glVertexAttrib3f: PFNGLVERTEXATTRIB3FPROC = extern
+
+@name("func_glVertexAttrib3fv") @extern def glVertexAttrib3fv: PFNGLVERTEXATTRIB3FVPROC = extern
+
+@name("func_glVertexAttrib3s") @extern def glVertexAttrib3s: PFNGLVERTEXATTRIB3SPROC = extern
+
+@name("func_glVertexAttrib3sv") @extern def glVertexAttrib3sv: PFNGLVERTEXATTRIB3SVPROC = extern
+
+@name("func_glVertexAttrib4Nbv") @extern def glVertexAttrib4Nbv: PFNGLVERTEXATTRIB4NBVPROC = extern
+
+@name("func_glVertexAttrib4Niv") @extern def glVertexAttrib4Niv: PFNGLVERTEXATTRIB4NIVPROC = extern
+
+@name("func_glVertexAttrib4Nsv") @extern def glVertexAttrib4Nsv: PFNGLVERTEXATTRIB4NSVPROC = extern
+
+@name("func_glVertexAttrib4Nub") @extern def glVertexAttrib4Nub: PFNGLVERTEXATTRIB4NUBPROC = extern
+
+@name("func_glVertexAttrib4Nubv") @extern def glVertexAttrib4Nubv: PFNGLVERTEXATTRIB4NUBVPROC = extern
+
+@name("func_glVertexAttrib4Nuiv") @extern def glVertexAttrib4Nuiv: PFNGLVERTEXATTRIB4NUIVPROC = extern
+
+@name("func_glVertexAttrib4Nusv") @extern def glVertexAttrib4Nusv: PFNGLVERTEXATTRIB4NUSVPROC = extern
+
+@name("func_glVertexAttrib4bv") @extern def glVertexAttrib4bv: PFNGLVERTEXATTRIB4BVPROC = extern
+
+@name("func_glVertexAttrib4d") @extern def glVertexAttrib4d: PFNGLVERTEXATTRIB4DPROC = extern
+
+@name("func_glVertexAttrib4dv") @extern def glVertexAttrib4dv: PFNGLVERTEXATTRIB4DVPROC = extern
+
+@name("func_glVertexAttrib4f") @extern def glVertexAttrib4f: PFNGLVERTEXATTRIB4FPROC = extern
+
+@name("func_glVertexAttrib4fv") @extern def glVertexAttrib4fv: PFNGLVERTEXATTRIB4FVPROC = extern
+
+@name("func_glVertexAttrib4iv") @extern def glVertexAttrib4iv: PFNGLVERTEXATTRIB4IVPROC = extern
+
+@name("func_glVertexAttrib4s") @extern def glVertexAttrib4s: PFNGLVERTEXATTRIB4SPROC = extern
+
+@name("func_glVertexAttrib4sv") @extern def glVertexAttrib4sv: PFNGLVERTEXATTRIB4SVPROC = extern
+
+@name("func_glVertexAttrib4ubv") @extern def glVertexAttrib4ubv: PFNGLVERTEXATTRIB4UBVPROC = extern
+
+@name("func_glVertexAttrib4uiv") @extern def glVertexAttrib4uiv: PFNGLVERTEXATTRIB4UIVPROC = extern
+
+@name("func_glVertexAttrib4usv") @extern def glVertexAttrib4usv: PFNGLVERTEXATTRIB4USVPROC = extern
+
+@name("func_glVertexAttribBinding") @extern def glVertexAttribBinding: PFNGLVERTEXATTRIBBINDINGPROC = extern
+
+@name("func_glVertexAttribDivisor") @extern def glVertexAttribDivisor: PFNGLVERTEXATTRIBDIVISORPROC = extern
+
+@name("func_glVertexAttribFormat") @extern def glVertexAttribFormat: PFNGLVERTEXATTRIBFORMATPROC = extern
+
+@name("func_glVertexAttribI1i") @extern def glVertexAttribI1i: PFNGLVERTEXATTRIBI1IPROC = extern
+
+@name("func_glVertexAttribI1iv") @extern def glVertexAttribI1iv: PFNGLVERTEXATTRIBI1IVPROC = extern
+
+@name("func_glVertexAttribI1ui") @extern def glVertexAttribI1ui: PFNGLVERTEXATTRIBI1UIPROC = extern
+
+@name("func_glVertexAttribI1uiv") @extern def glVertexAttribI1uiv: PFNGLVERTEXATTRIBI1UIVPROC = extern
+
+@name("func_glVertexAttribI2i") @extern def glVertexAttribI2i: PFNGLVERTEXATTRIBI2IPROC = extern
+
+@name("func_glVertexAttribI2iv") @extern def glVertexAttribI2iv: PFNGLVERTEXATTRIBI2IVPROC = extern
+
+@name("func_glVertexAttribI2ui") @extern def glVertexAttribI2ui: PFNGLVERTEXATTRIBI2UIPROC = extern
+
+@name("func_glVertexAttribI2uiv") @extern def glVertexAttribI2uiv: PFNGLVERTEXATTRIBI2UIVPROC = extern
+
+@name("func_glVertexAttribI3i") @extern def glVertexAttribI3i: PFNGLVERTEXATTRIBI3IPROC = extern
+
+@name("func_glVertexAttribI3iv") @extern def glVertexAttribI3iv: PFNGLVERTEXATTRIBI3IVPROC = extern
+
+@name("func_glVertexAttribI3ui") @extern def glVertexAttribI3ui: PFNGLVERTEXATTRIBI3UIPROC = extern
+
+@name("func_glVertexAttribI3uiv") @extern def glVertexAttribI3uiv: PFNGLVERTEXATTRIBI3UIVPROC = extern
+
+@name("func_glVertexAttribI4bv") @extern def glVertexAttribI4bv: PFNGLVERTEXATTRIBI4BVPROC = extern
+
+@name("func_glVertexAttribI4i") @extern def glVertexAttribI4i: PFNGLVERTEXATTRIBI4IPROC = extern
+
+@name("func_glVertexAttribI4iv") @extern def glVertexAttribI4iv: PFNGLVERTEXATTRIBI4IVPROC = extern
+
+@name("func_glVertexAttribI4sv") @extern def glVertexAttribI4sv: PFNGLVERTEXATTRIBI4SVPROC = extern
+
+@name("func_glVertexAttribI4ubv") @extern def glVertexAttribI4ubv: PFNGLVERTEXATTRIBI4UBVPROC = extern
+
+@name("func_glVertexAttribI4ui") @extern def glVertexAttribI4ui: PFNGLVERTEXATTRIBI4UIPROC = extern
+
+@name("func_glVertexAttribI4uiv") @extern def glVertexAttribI4uiv: PFNGLVERTEXATTRIBI4UIVPROC = extern
+
+@name("func_glVertexAttribI4usv") @extern def glVertexAttribI4usv: PFNGLVERTEXATTRIBI4USVPROC = extern
+
+@name("func_glVertexAttribIFormat") @extern def glVertexAttribIFormat: PFNGLVERTEXATTRIBIFORMATPROC = extern
+
+@name("func_glVertexAttribIPointer") @extern def glVertexAttribIPointer: PFNGLVERTEXATTRIBIPOINTERPROC = extern
+
+@name("func_glVertexAttribL1d") @extern def glVertexAttribL1d: PFNGLVERTEXATTRIBL1DPROC = extern
+
+@name("func_glVertexAttribL1dv") @extern def glVertexAttribL1dv: PFNGLVERTEXATTRIBL1DVPROC = extern
+
+@name("func_glVertexAttribL2d") @extern def glVertexAttribL2d: PFNGLVERTEXATTRIBL2DPROC = extern
+
+@name("func_glVertexAttribL2dv") @extern def glVertexAttribL2dv: PFNGLVERTEXATTRIBL2DVPROC = extern
+
+@name("func_glVertexAttribL3d") @extern def glVertexAttribL3d: PFNGLVERTEXATTRIBL3DPROC = extern
+
+@name("func_glVertexAttribL3dv") @extern def glVertexAttribL3dv: PFNGLVERTEXATTRIBL3DVPROC = extern
+
+@name("func_glVertexAttribL4d") @extern def glVertexAttribL4d: PFNGLVERTEXATTRIBL4DPROC = extern
+
+@name("func_glVertexAttribL4dv") @extern def glVertexAttribL4dv: PFNGLVERTEXATTRIBL4DVPROC = extern
+
+@name("func_glVertexAttribLFormat") @extern def glVertexAttribLFormat: PFNGLVERTEXATTRIBLFORMATPROC = extern
+
+@name("func_glVertexAttribLPointer") @extern def glVertexAttribLPointer: PFNGLVERTEXATTRIBLPOINTERPROC = extern
+
+@name("func_glVertexAttribP1ui") @extern def glVertexAttribP1ui: PFNGLVERTEXATTRIBP1UIPROC = extern
+
+@name("func_glVertexAttribP1uiv") @extern def glVertexAttribP1uiv: PFNGLVERTEXATTRIBP1UIVPROC = extern
+
+@name("func_glVertexAttribP2ui") @extern def glVertexAttribP2ui: PFNGLVERTEXATTRIBP2UIPROC = extern
+
+@name("func_glVertexAttribP2uiv") @extern def glVertexAttribP2uiv: PFNGLVERTEXATTRIBP2UIVPROC = extern
+
+@name("func_glVertexAttribP3ui") @extern def glVertexAttribP3ui: PFNGLVERTEXATTRIBP3UIPROC = extern
+
+@name("func_glVertexAttribP3uiv") @extern def glVertexAttribP3uiv: PFNGLVERTEXATTRIBP3UIVPROC = extern
+
+@name("func_glVertexAttribP4ui") @extern def glVertexAttribP4ui: PFNGLVERTEXATTRIBP4UIPROC = extern
+
+@name("func_glVertexAttribP4uiv") @extern def glVertexAttribP4uiv: PFNGLVERTEXATTRIBP4UIVPROC = extern
+
+@name("func_glVertexAttribPointer") @extern def glVertexAttribPointer: PFNGLVERTEXATTRIBPOINTERPROC = extern
+
+@name("func_glVertexBindingDivisor") @extern def glVertexBindingDivisor: PFNGLVERTEXBINDINGDIVISORPROC = extern
+
+@name("func_glVertexP2ui") @extern def glVertexP2ui: PFNGLVERTEXP2UIPROC = extern
+
+@name("func_glVertexP2uiv") @extern def glVertexP2uiv: PFNGLVERTEXP2UIVPROC = extern
+
+@name("func_glVertexP3ui") @extern def glVertexP3ui: PFNGLVERTEXP3UIPROC = extern
+
+@name("func_glVertexP3uiv") @extern def glVertexP3uiv: PFNGLVERTEXP3UIVPROC = extern
+
+@name("func_glVertexP4ui") @extern def glVertexP4ui: PFNGLVERTEXP4UIPROC = extern
+
+@name("func_glVertexP4uiv") @extern def glVertexP4uiv: PFNGLVERTEXP4UIVPROC = extern
+
+@name("func_glVertexPointer") @extern def glVertexPointer: PFNGLVERTEXPOINTERPROC = extern
+
+@name("func_glViewport") @extern def glViewport: PFNGLVIEWPORTPROC = extern
+
+@name("func_glViewportArrayv") @extern def glViewportArrayv: PFNGLVIEWPORTARRAYVPROC = extern
+
+@name("func_glViewportIndexedf") @extern def glViewportIndexedf: PFNGLVIEWPORTINDEXEDFPROC = extern
+
+@name("func_glViewportIndexedfv") @extern def glViewportIndexedfv: PFNGLVIEWPORTINDEXEDFVPROC = extern
+
+@name("func_glWaitSync") @extern def glWaitSync: PFNGLWAITSYNCPROC = extern
+
+@name("func_glWindowPos2d") @extern def glWindowPos2d: PFNGLWINDOWPOS2DPROC = extern
+
+@name("func_glWindowPos2dv") @extern def glWindowPos2dv: PFNGLWINDOWPOS2DVPROC = extern
+
+@name("func_glWindowPos2f") @extern def glWindowPos2f: PFNGLWINDOWPOS2FPROC = extern
+
+@name("func_glWindowPos2fv") @extern def glWindowPos2fv: PFNGLWINDOWPOS2FVPROC = extern
+
+@name("func_glWindowPos2i") @extern def glWindowPos2i: PFNGLWINDOWPOS2IPROC = extern
+
+@name("func_glWindowPos2iv") @extern def glWindowPos2iv: PFNGLWINDOWPOS2IVPROC = extern
+
+@name("func_glWindowPos2s") @extern def glWindowPos2s: PFNGLWINDOWPOS2SPROC = extern
+
+@name("func_glWindowPos2sv") @extern def glWindowPos2sv: PFNGLWINDOWPOS2SVPROC = extern
+
+@name("func_glWindowPos3d") @extern def glWindowPos3d: PFNGLWINDOWPOS3DPROC = extern
+
+@name("func_glWindowPos3dv") @extern def glWindowPos3dv: PFNGLWINDOWPOS3DVPROC = extern
+
+@name("func_glWindowPos3f") @extern def glWindowPos3f: PFNGLWINDOWPOS3FPROC = extern
+
+@name("func_glWindowPos3fv") @extern def glWindowPos3fv: PFNGLWINDOWPOS3FVPROC = extern
+
+@name("func_glWindowPos3i") @extern def glWindowPos3i: PFNGLWINDOWPOS3IPROC = extern
+
+@name("func_glWindowPos3iv") @extern def glWindowPos3iv: PFNGLWINDOWPOS3IVPROC = extern
+
+@name("func_glWindowPos3s") @extern def glWindowPos3s: PFNGLWINDOWPOS3SPROC = extern
+
+@name("func_glWindowPos3sv") @extern def glWindowPos3sv: PFNGLWINDOWPOS3SVPROC = extern
