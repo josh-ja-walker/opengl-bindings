@@ -1,9 +1,7 @@
 import scalanative.unsafe.*
 import scalanative.unsigned.*
-import scala.scalanative.unsafe.Size.*
-import scala.scalanative.unsafe.Nat.*
-import scala.scalanative.libc.string
-import scala.scalanative.libc.stdio
+
+import conversions.UBytePtr.*
 
 import glfw.*
 import glad.*
@@ -40,9 +38,10 @@ import glad.*
     }
 
     // Print versions used by OpenGL instance
-    println(s"Renderer: ${fromCString(glGetString(GL_RENDERER).asInstanceOf[Ptr[CChar]])}")
-    println(s"OpenGL version supported: ${fromCString(glGetString(GL_VERSION).asInstanceOf[Ptr[CChar]])}")
+    println(s"Renderer: ${fromCString(glGetString(GL_RENDERER).toCharPtr)}")
+    println(s"OpenGL version supported: ${fromCString(glGetString(GL_VERSION).toCharPtr)}")
     
+
     Zone {
         // Define vertex shader - set rgb values at vertices
         val vertex_shader: String = """
@@ -74,12 +73,12 @@ import glad.*
             |#version 410 core
             |in vec4 vertex_color;
             |out vec4 frag_color;
-            |void main() {;
+            |void main() {
             |  frag_color = vertex_color;
             |}""".stripMargin
         
         val fsPtr: Ptr[CString] = alloc[CString](sizeOf[CString])
-        !fsPtr = toCString(fragment_shader)
+        !fsPtr = toCString(fragment_shader: String)
 
         // Link and compile fragment shader
         val fs: UInt = glCreateShader(GL_FRAGMENT_SHADER)
