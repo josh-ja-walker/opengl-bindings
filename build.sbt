@@ -44,14 +44,14 @@ lazy val `opengl-bindings` = project
 
         nativeConfig := {
             val gladBase = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad"
-            val pkgs = Seq("glfw3")
-            val pkgConfig = vcpkgConfigurator.value.pkgConfig
+            val gladCompFlags = List("-I" + (gladBase / "include").toString)
+            val gladLinkFlags = List("-L" + (gladBase.toString))
 
-            val compflags = pkgs.flatMap(pkg => pkgConfig.compilationFlags(pkg)) ++ List("-D GLFW_DLL", ("-I" + (gladBase / "include").toString), "-L" + gladBase.toString)
-            val linkflags = pkgs.flatMap(pkg => pkgConfig.linkingFlags(pkg)) ++ List("-lshell32", "-lopengl32",  "-L" + (gladBase.toString))
-
+            val glfwCompFlags = vcpkgConfigurator.value.pkgConfig.compilationFlags("glfw3")
+            val glfwLinkFlags = "-lshell32" +: vcpkgConfigurator.value.pkgConfig.linkingFlags("glfw3")
+            
             nativeConfig.value
-                .withCompileOptions(_ ++ compflags)
-                .withLinkingOptions(_ ++ linkflags)
+                .withCompileOptions(_ ++ gladCompFlags ++ glfwCompFlags)
+                .withLinkingOptions(_ ++ gladLinkFlags ++ glfwLinkFlags)
         },
     )
