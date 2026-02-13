@@ -10,34 +10,14 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 ThisBuild / resolvers += Resolver.sonatypeCentralSnapshots
 
-lazy val Versions = new {
-    val OpenGLBindings = "0.1.0"
-    // val GLAD = "0.7.0" 
-    // val GLFW3 = "0.7.0"
-    val Scala = "3.8.1"
-}
-
 /* Global project settings */
-inThisBuild(List(
-    scalaVersion := Versions.Scala,
-    version := Versions.OpenGLBindings,
-    versionScheme := Some("early-semver"),
-    organization := "com.github.josh-ja-walker",
-    organizationName := "Josh Walker",
-    startYear := Some(2026),
-    developers := List(
-        Developer("josh-ja-walker", "Josh Walker", "", url("https://github.com/josh-ja-walker")),
-    ),
-    licenses := List("BSD-3-Clause" -> url("https://opensource.org/licenses/BSD-3-Clause")),
-))
+ThisBuild / scalaVersion := "3.8.1"
 
 
-lazy val openglBindings = project
+lazy val `opengl-bindings` = project
     .in(file("."))
     .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
     .settings(
-        name := "opengl-bindings",
-
         bindgenBindings += {
             val include = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include"
             Binding(include / "glad" / "gl.h", "glad")
