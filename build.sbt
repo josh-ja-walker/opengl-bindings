@@ -39,7 +39,7 @@ lazy val openglBindings = project
         name := "opengl-bindings",
 
         bindgenBindings += {
-            val include = (Compile / resourceDirectory).value / "scala-native" / "glad" / "include"
+            val include = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include"
             Binding(include / "glad" / "gl.h", "glad")
                 .withCImports(List("gl.h", "khrplatform.h"))
                 .withClangFlags(List("-I" + include))
@@ -63,8 +63,7 @@ lazy val openglBindings = project
         ),
 
         nativeConfig := {
-            val gladBase = (Compile / resourceDirectory).value / "scala-native" / "glad"
-
+            val gladBase = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad"
             val pkgs = Seq("glfw3")
             val pkgConfig = vcpkgConfigurator.value.pkgConfig
 

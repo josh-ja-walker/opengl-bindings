@@ -1,4 +1,6 @@
-#include "glad/gl.h"
+#include <glad/gl.h>
+
+/* Define forwarder functions for #defined GLAD OpenGL constants */
 
 GLenum CONST_GL_RENDERER() { return GL_RENDERER; }
 GLenum CONST_GL_VERSION() { return GL_VERSION; }
@@ -11,5 +13,6 @@ GLenum CONST_GL_DEPTH_BUFFER_BIT() { return GL_DEPTH_BUFFER_BIT; }
 GLenum CONST_GL_COLOR_BUFFER_BIT() { return GL_COLOR_BUFFER_BIT; }
 GLenum CONST_GL_TRIANGLES() { return GL_TRIANGLES; }
 
+/* Name as _GL_ to avoid clashes with CONST_GLFW_ from glfw_const.c */
 GLboolean CONST_GL_TRUE() { return GL_TRUE; }
 GLboolean CONST_GL_FALSE() { return GL_FALSE; }

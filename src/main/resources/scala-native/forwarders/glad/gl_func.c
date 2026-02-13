@@ -1,4 +1,6 @@
-#include "glad/gl.h"
+#include <glad/gl.h>
+
+/* Define forwarder functions for #defined GLAD OpenGL function pointers */
 
 PFNGLACCUMPROC func_glAccum() { return glAccum; }
 PFNGLACTIVESHADERPROGRAMPROC func_glActiveShaderProgram() { return glActiveShaderProgram; }

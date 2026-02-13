@@ -1,4 +1,6 @@
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
+
+/* Define forwarder functions for #defined GLFW OpenGL constants */
 
 int CONST_GLFW_CONTEXT_VERSION_MAJOR() { return GLFW_CONTEXT_VERSION_MAJOR; }
 int CONST_GLFW_CONTEXT_VERSION_MINOR() { return GLFW_CONTEXT_VERSION_MINOR; }
@@ -6,6 +8,6 @@ int CONST_GLFW_OPENGL_FORWARD_COMPAT() { return GLFW_OPENGL_FORWARD_COMPAT; }
 int CONST_GLFW_OPENGL_PROFILE() { return GLFW_OPENGL_PROFILE; }
 int CONST_GLFW_OPENGL_CORE_PROFILE() { return GLFW_OPENGL_CORE_PROFILE; }
 
-// Name as _GFLW_ to avoid clashes with CONST_GL_ from gl_const.c
+/* Name as _GFLW_ to avoid clashes with CONST_GL_ from gl_const.c */
 int CONST_GLFW_TRUE() { return GL_TRUE; }
 int CONST_GLFW_FALSE() { return GL_FALSE; }

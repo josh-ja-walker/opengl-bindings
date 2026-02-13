@@ -1,10 +1,9 @@
 import scalanative.unsafe.*
 import scalanative.unsigned.*
 
-import conversions.UBytePtr.*
-
 import glfw.*
 import glad.*
+import conversions.UBytePtr.*
 
 
 @main def main: Int = {
@@ -101,7 +100,7 @@ import glad.*
 
 
         // Initialise vertex buffer
-        val vbo: Ptr[UInt] = alloc[UInt]()
+        val vbo: Ptr[UInt] = alloc[UInt]()  
         !vbo = 0.toUInt
 
         glGenBuffers(1, vbo)
