@@ -13,6 +13,18 @@ ThisBuild / resolvers += Resolver.sonatypeCentralSnapshots
 /* Global project settings */
 ThisBuild / scalaVersion := "3.8.1"
 
+lazy val genBindings = taskKey[Seq[File]]("Generate OpenGL bindings")
+genBindings := (Compile / bindgenGenerateScalaSources).value
+    .map(binding => {
+        if (binding.name == "aliases.scala") {
+            val content: String = IO.read(binding)
+            // Remove opaque modifier from file 
+            IO.write(binding, content.replace("opaque ", new String()))
+        }
+
+        binding
+    })
+
 
 lazy val `opengl-bindings` = project
     .in(file("."))
