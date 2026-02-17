@@ -1,7 +1,7 @@
 ThisBuild / description := "Scala-Native bindings for OpenGL using GLAD and GLFW3"
 ThisBuild / homepage := Some(url("https://github.com/josh-ja-walker/opengl-bindings"))
 
-ThisBuild / version := "0.1.3-SNAPSHOT"
+ThisBuild / version := "0.1.4"
 ThisBuild / versionScheme := Some(VersionScheme.EarlySemVer)
 
 ThisBuild / organization := "io.github.josh-ja-walker"
