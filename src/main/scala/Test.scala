@@ -16,7 +16,7 @@ import conversions.UBytePtr.*
     // Request an OpenGL 4.6, core, context from GLFW.
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6)
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, glfw.GL_TRUE)
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE)
     
     // Create window
@@ -116,14 +116,14 @@ import conversions.UBytePtr.*
         glBindVertexArray(!vao)
         glEnableVertexAttribArray(0.toUInt)
         glBindBuffer(GL_ARRAY_BUFFER, !vbo)
-        glVertexAttribPointer(0.toUInt, 3, GL_FLOAT, glad.GL_FALSE, 0, null)
+        glVertexAttribPointer(0.toUInt, 3, GL_FLOAT, GL_FALSE, 0, null)
 
 
         // Set background colour to black rgba(0, 0, 0, 1)
         glClearColor(0f, 0f, 0f, 1.0f)
 
         // Until window closed by user input
-        while (glfwWindowShouldClose(window) == glfw.GL_FALSE) {
+        while (glfwWindowShouldClose(window) == GLFW_FALSE) {
             // Update window events
             glfwPollEvents()
 

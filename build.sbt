@@ -14,17 +14,37 @@ ThisBuild / resolvers += Resolver.sonatypeCentralSnapshots
 /* Global project settings */
 ThisBuild / scalaVersion := "3.8.1"
 
+
+lazy val `opengl-bindings` = project
+    .in(file("."))
+    .aggregate(glad, glfw)  
+    .dependsOn(glad, glfw)
+    .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
+    .settings(
+        nativeConfig := nativeConfig.value
+            .withCompileOptions(_ ++ vcpkgConfigurator.value.pkgConfig.compilationFlags("glfw3"))
+            .withLinkingOptions(_ ++ vcpkgConfigurator.value.pkgConfig.linkingFlags("glfw3"))
+            .withLinkingOptions(_ :+ "-lshell32")
+    )
+    
+    
+lazy val bindgenSettings = Seq(
+    bindgenBindings := {
+        bindgenBindings.value.map(_.withNoLocation(true).withMultiFile(true)) 
+    },
+    bindgenMode := BindgenMode.Manual(
+        scalaDir = (Compile / sourceDirectory).value / "scala" / "generated" / "libraries",
+        cDir = (Compile / resourceDirectory).value / "scala-native" / "generated" / "libraries"
+    ),
+)
+
+
+//TODO:
 lazy val gen = taskKey[Seq[File]]("Generate OpenGL bindings and forwarders")
-gen := {
-    genBindings.value
-    (glad / genForwarders).value
-    (glfw / genForwarders).value
-}
 
 
-lazy val genBindings = taskKey[Seq[File]]("Generate OpenGL bindings")
-genBindings := (Compile / bindgenGenerateScalaSources).value
-    .map(binding => {
+def removeOpaqueness(bindings: Seq[File]) = {
+    bindings.map(binding => {
         if (binding.name == "aliases.scala") {
             val content: String = IO.read(binding)
             // Remove opaque modifier from file 
@@ -33,14 +53,44 @@ genBindings := (Compile / bindgenGenerateScalaSources).value
 
         binding
     })
+}
 
+
+//TODO: Neaten?
+lazy val genBindings = taskKey[Seq[File]]("Generate OpenGL bindings")
+glad / genBindings := removeOpaqueness((glad / Compile / bindgenGenerateScalaSources).value)
+glfw / genBindings := removeOpaqueness((glfw / Compile / bindgenGenerateScalaSources).value)
 
 
 lazy val genForwarders = taskKey[Seq[File]]("Generate C and Scala forwarders for C preprocessor constants")
 lazy val genCForwarders = taskKey[Seq[File]]("Generate C forwarders for C preprocessor constants")
 lazy val genScalaForwarders = taskKey[Seq[File]]("Generate Scala forwarders for C preprocessor constants")
 
-lazy val glad = project.in(file("glad"))
+//TODO: move into separate build file
+lazy val glad = project
+    .in(file("glad"))
+    .enablePlugins(ScalaNativePlugin, BindgenPlugin)
+    .settings(
+        bindgenBindings += {
+            // TODO: needs glad / Compile / ...?
+            val include = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include"
+            Binding(include / "glad" / "gl.h", "glad")
+                .withCImports(List("gl.h", "khrplatform.h"))
+                .withClangFlags(List("-I" + include))
+        },
+        
+        nativeConfig := {
+            //TODO: needs glad / Compile / ...??
+            val gladBase = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad"
+            val compFlags = List(s"-I${gladBase / "include"}")
+            val linkFlags = List(s"-L$gladBase")
+            
+            nativeConfig.value
+                .withCompileOptions(_ ++ compFlags)
+                .withLinkingOptions(_ ++ linkFlags)
+        }
+    )
+    .settings(bindgenSettings)
 
 glad / genForwarders := {
     val cFiles = (glad / genCForwarders).value    
@@ -52,11 +102,12 @@ glad / genCForwarders := {
     val headerFile =  (glad / Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include" / "glad" / "gl.h"
     val headerContents = IO.read(headerFile)
 
-    val constRegex: Regex = raw"#define (GL(_[A-Z0-9]*)+)".r
+    val constRegex: Regex = raw"#define (GL(_[a-zA-Z0-9]*)+)\s+\S+\n".r
     val constForwarders = constRegex.findAllMatchIn(headerContents)
         .map(regexMatch => {
             val const = regexMatch.group(1)
-            s"unsigned int CONST_$const() { return $const; }"
+            val value = regexMatch.group(3)
+            s"unsigned int CONST_$const() { return $const; } // defined as $value"
         })
         .mkString("\n")
 
@@ -93,11 +144,12 @@ glad / genScalaForwarders := {
         |""".stripMargin
 
 
-    val constRegex: Regex = raw"#define (GL(_[A-Z0-9]*)+)".r
+    val constRegex: Regex = raw"#define (GL(_[a-zA-Z0-9]*)+)\s+(\S+)\n".r
     val constForwarders = constRegex.findAllMatchIn(headerContents)
         .map(regexMatch => {
             val const = regexMatch.group(1)
-            s"""@name("CONST_$const") @extern val $const: UInt = extern"""
+            val value = regexMatch.group(3)
+            s"""@name("CONST_$const") @extern def $const: UInt = extern // defined as $value"""
         })
         .mkString("\n")
 
@@ -113,18 +165,36 @@ glad / genScalaForwarders := {
 
     val gladDir = (glad / Compile / sourceDirectory).value / "scala" / "generated" / "forwarders" / "glad"
     IO.write(gladDir / "constants.scala", packageName ++ imports ++ constForwarders)
-    IO.write(gladDir / "functions.scala", packageName ++ imports ++ funcForwarders)
+    IO.write(gladDir / "glfunctions.scala", packageName ++ imports ++ funcForwarders)
 
-    Seq(gladDir / "constants.scala", gladDir / "functions.scala")
+    Seq(gladDir / "constants.scala", gladDir / "glfunctions.scala")
 }
 
 
+//TODO: move into separate build file
 lazy val glfw = project
     .in(file("glfw"))
-    .enablePlugins(VcpkgNativePlugin)
-    .settings(Seq(
-        vcpkgDependencies := VcpkgDependencies("glfw3")
-    ))
+    .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
+    .settings(
+        vcpkgDependencies := VcpkgDependencies("glfw3"),
+
+        bindgenBindings += {
+            val include = vcpkgConfigurator.value.includes("glfw3")
+            Binding(include / "GLFW" / "glfw3.h", "glfw")
+                .withCImports(List("glfw3.h", "glfw3native.h"))
+                .withClangFlags(List("-I" + include))
+        },
+
+        nativeConfig := {
+            val compFlags = vcpkgConfigurator.value.pkgConfig.compilationFlags("glfw3")
+            val linkFlags = "-lshell32" +: vcpkgConfigurator.value.pkgConfig.linkingFlags("glfw3")
+            
+            nativeConfig.value
+                .withCompileOptions(_ ++ compFlags)
+                .withLinkingOptions(_ ++ linkFlags)
+        }
+    )
+    .settings(bindgenSettings)
 
 glfw / genForwarders := {
     val cFiles = (glfw / genCForwarders).value    
@@ -133,14 +203,15 @@ glfw / genForwarders := {
 }
 
 glfw / genCForwarders := {
-    val headerFile = vcpkgConfigurator.value.includes("glfw3") / "GLFW" / "glfw3.h"
+    val headerFile = (glfw / vcpkgConfigurator).value.includes("glfw3") / "GLFW" / "glfw3.h"
     val headerContents = IO.read(headerFile)
 
-    val constRegex: Regex = raw"#define (GLFW(_[A-Z0-9]*)+)\s+\S+\n".r
+    val constRegex: Regex = raw"#define (GLFW(_[A-Z0-9]*)+)\s+([^#]\S+)".r
     val constForwarders = constRegex.findAllMatchIn(headerContents)
         .map(regexMatch => {
             val const = regexMatch.group(1)
-            s"unsigned int CONST_$const() { return $const; }"
+            val value = regexMatch.group(3)
+            s"int CONST_$const() { return $const; } // defined as $value"
         })
         .mkString("\n")
 
@@ -153,7 +224,7 @@ glfw / genCForwarders := {
 }
 
 glfw / genScalaForwarders := {
-    val headerFile = vcpkgConfigurator.value.includes("glfw3") / "GLFW" / "glfw3.h"
+    val headerFile = (glfw / vcpkgConfigurator).value.includes("glfw3") / "GLFW" / "glfw3.h"
     val headerContents = IO.read(headerFile)
 
     val packageName = "package glfw"
@@ -166,11 +237,12 @@ glfw / genScalaForwarders := {
         |""".stripMargin
 
 
-    val constRegex: Regex = raw"#define (GLFW(_[A-Z0-9]*)+)\s+\S+\n".r
+    val constRegex: Regex = raw"#define (GLFW(_[A-Z0-9]*)+)\s+([^#]\S+)".r
     val constForwarders = constRegex.findAllMatchIn(headerContents)
         .map(regexMatch => {
             val const = regexMatch.group(1)
-            s"""@name("CONST_$const") @extern val $const: UInt = extern"""
+            val value = regexMatch.group(3)
+            s"""@name("CONST_$const") @extern def $const: Int = extern // defined as $value"""
         })
         .mkString("\n")
 
@@ -180,46 +252,3 @@ glfw / genScalaForwarders := {
     Seq(glfwDir / "constants.scala")
 }
 
-
-lazy val `opengl-bindings` = project
-    .in(file("."))
-    .aggregate(glad, glfw)
-    .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
-    .settings(
-        bindgenBindings += {
-            val include = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include"
-            Binding(include / "glad" / "gl.h", "glad")
-                .withCImports(List("gl.h", "khrplatform.h"))
-                .withClangFlags(List("-I" + include))
-        },
-
-        vcpkgDependencies := VcpkgDependencies("glfw3"),
-        bindgenBindings += {
-            val include = vcpkgConfigurator.value.includes("glfw3")
-            Binding(include / "GLFW" / "glfw3.h", "glfw")
-                .withCImports(List("glfw3.h", "glfw3native.h"))
-                .withClangFlags(List("-I" + include))
-        },
-
-        bindgenBindings := {
-            bindgenBindings.value.map(_.withNoLocation(true).withMultiFile(true)) 
-        },
-
-        bindgenMode := BindgenMode.Manual(
-            scalaDir = (Compile / sourceDirectory).value / "scala" / "generated" / "libraries",
-            cDir = (Compile / resourceDirectory).value / "scala-native" / "generated" / "libraries"
-        ),
-
-        nativeConfig := {
-            val gladBase = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad"
-            val gladCompFlags = List("-I" + (gladBase / "include").toString)
-            val gladLinkFlags = List("-L" + (gladBase.toString))
-
-            val glfwCompFlags = vcpkgConfigurator.value.pkgConfig.compilationFlags("glfw3")
-            val glfwLinkFlags = "-lshell32" +: vcpkgConfigurator.value.pkgConfig.linkingFlags("glfw3")
-            
-            nativeConfig.value
-                .withCompileOptions(_ ++ gladCompFlags ++ glfwCompFlags)
-                .withLinkingOptions(_ ++ gladLinkFlags ++ glfwLinkFlags)
-        },
-    )
