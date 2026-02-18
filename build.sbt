@@ -35,13 +35,27 @@ lazy val bindgenSettings = Seq(
     bindgenMode := BindgenMode.Manual(
         scalaDir = (Compile / sourceDirectory).value / "scala" / "generated" / "libraries",
         cDir = (Compile / resourceDirectory).value / "scala-native" / "generated" / "libraries"
-    ),
+    )
 )
 
 
 //TODO:
 lazy val gen = taskKey[Seq[File]]("Generate OpenGL bindings and forwarders")
+glad / gen := {
+    (glad / genBindings).value
+    (glad / genForwarders).value
+}
 
+glfw / gen := {
+    (glfw / genBindings).value
+    (glfw / genForwarders).value
+}
+
+
+//TODO: Neaten?
+lazy val genBindings = taskKey[Seq[File]]("Generate OpenGL bindings")
+glad / genBindings := removeOpaqueness((glad / Compile / bindgenGenerateScalaSources).value)
+glfw / genBindings := removeOpaqueness((glfw / Compile / bindgenGenerateScalaSources).value)
 
 def removeOpaqueness(bindings: Seq[File]) = {
     bindings.map(binding => {
@@ -56,15 +70,10 @@ def removeOpaqueness(bindings: Seq[File]) = {
 }
 
 
-//TODO: Neaten?
-lazy val genBindings = taskKey[Seq[File]]("Generate OpenGL bindings")
-glad / genBindings := removeOpaqueness((glad / Compile / bindgenGenerateScalaSources).value)
-glfw / genBindings := removeOpaqueness((glfw / Compile / bindgenGenerateScalaSources).value)
-
-
 lazy val genForwarders = taskKey[Seq[File]]("Generate C and Scala forwarders for C preprocessor constants")
 lazy val genCForwarders = taskKey[Seq[File]]("Generate C forwarders for C preprocessor constants")
 lazy val genScalaForwarders = taskKey[Seq[File]]("Generate Scala forwarders for C preprocessor constants")
+
 
 //TODO: move into separate build file
 lazy val glad = project
