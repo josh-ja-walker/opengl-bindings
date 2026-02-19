@@ -1,9 +1,9 @@
 import scalanative.unsafe.*
 import scalanative.unsigned.*
 
-import glfw.*
-import glad.*
-import conversions.UBytePtr.*
+import opengl.bindings.glfw.*
+import opengl.bindings.glad.*
+import opengl.conversions.UBytePtr.*
 
 
 @main def main: Int = {

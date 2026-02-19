@@ -1,4 +1,4 @@
-package conversions
+package opengl.conversions
 
 import scala.scalanative.unsafe.*
 import scala.scalanative.unsigned.*

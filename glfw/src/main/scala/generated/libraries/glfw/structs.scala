@@ -1,4 +1,4 @@
-package glfw
+package opengl.bindings.glfw
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*

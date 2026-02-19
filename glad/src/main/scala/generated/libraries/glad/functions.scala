@@ -1,4 +1,4 @@
-package glad
+package opengl.bindings.glad
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*

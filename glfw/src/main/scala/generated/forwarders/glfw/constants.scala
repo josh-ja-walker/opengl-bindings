@@ -1,8 +1,10 @@
-package glfw
+package opengl.bindings.glfw
+
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
+
 
 @name("CONST_GLFW_VERSION_MAJOR") @extern def GLFW_VERSION_MAJOR: Int = extern // defined as  3
 @name("CONST_GLFW_VERSION_MINOR") @extern def GLFW_VERSION_MINOR: Int = extern // defined as  4

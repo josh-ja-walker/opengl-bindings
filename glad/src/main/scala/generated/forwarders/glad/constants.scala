@@ -1,8 +1,10 @@
-package glad
+package opengl.bindings.glad
+
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
+
 
 @name("CONST_GL_2D") @extern def GL_2D: UInt = extern // defined as 0x0600
 @name("CONST_GL_2_BYTES") @extern def GL_2_BYTES: UInt = extern // defined as 0x1407
@@ -450,7 +452,7 @@ import _root_.scala.scalanative.*
 @name("CONST_GL_EXTENSIONS") @extern def GL_EXTENSIONS: UInt = extern // defined as 0x1F03
 @name("CONST_GL_EYE_LINEAR") @extern def GL_EYE_LINEAR: UInt = extern // defined as 0x2400
 @name("CONST_GL_EYE_PLANE") @extern def GL_EYE_PLANE: UInt = extern // defined as 0x2502
-@name("CONST_GL_FALSE") @extern def GL_FALSE: UByte = extern // defined as 0 - readjust type to UByte
+@name("CONST_GL_FALSE") @extern def GL_FALSE: UByte = extern // defined as 0 - type adjusted to UByte
 @name("CONST_GL_FASTEST") @extern def GL_FASTEST: UInt = extern // defined as 0x1101
 @name("CONST_GL_FEEDBACK") @extern def GL_FEEDBACK: UInt = extern // defined as 0x1C01
 @name("CONST_GL_FEEDBACK_BUFFER_POINTER") @extern def GL_FEEDBACK_BUFFER_POINTER: UInt = extern // defined as 0x0DF0
@@ -1618,7 +1620,7 @@ import _root_.scala.scalanative.*
 @name("CONST_GL_TEXTURE_WRAP_S") @extern def GL_TEXTURE_WRAP_S: UInt = extern // defined as 0x2802
 @name("CONST_GL_TEXTURE_WRAP_T") @extern def GL_TEXTURE_WRAP_T: UInt = extern // defined as 0x2803
 @name("CONST_GL_TIMEOUT_EXPIRED") @extern def GL_TIMEOUT_EXPIRED: UInt = extern // defined as 0x911B
-@name("CONST_GL_TIMEOUT_IGNORED") @extern def GL_TIMEOUT_IGNORED: USize = extern // defined as 0xFFFFFFFFFFFFFFFF - adjusted type from unsigned int to unsigned long long to avoid overflow error
+@name("CONST_GL_TIMEOUT_IGNORED") @extern def GL_TIMEOUT_IGNORED: ULongLong = extern // defined as 0xFFFFFFFFFFFFFFFF - type adjusted to ULongLong
 @name("CONST_GL_TIMESTAMP") @extern def GL_TIMESTAMP: UInt = extern // defined as 0x8E28
 @name("CONST_GL_TIME_ELAPSED") @extern def GL_TIME_ELAPSED: UInt = extern // defined as 0x88BF
 @name("CONST_GL_TOP_LEVEL_ARRAY_SIZE") @extern def GL_TOP_LEVEL_ARRAY_SIZE: UInt = extern // defined as 0x930C
@@ -1653,7 +1655,7 @@ import _root_.scala.scalanative.*
 @name("CONST_GL_TRIANGLE_FAN") @extern def GL_TRIANGLE_FAN: UInt = extern // defined as 0x0006
 @name("CONST_GL_TRIANGLE_STRIP") @extern def GL_TRIANGLE_STRIP: UInt = extern // defined as 0x0005
 @name("CONST_GL_TRIANGLE_STRIP_ADJACENCY") @extern def GL_TRIANGLE_STRIP_ADJACENCY: UInt = extern // defined as 0x000D
-@name("CONST_GL_TRUE") @extern def GL_TRUE: UByte = extern // defined as 1- readjust type to UByte
+@name("CONST_GL_TRUE") @extern def GL_TRUE: UByte = extern // defined as 1 - type adjusted to UByte
 @name("CONST_GL_TYPE") @extern def GL_TYPE: UInt = extern // defined as 0x92FA
 @name("CONST_GL_UNDEFINED_VERTEX") @extern def GL_UNDEFINED_VERTEX: UInt = extern // defined as 0x8260
 @name("CONST_GL_UNIFORM") @extern def GL_UNIFORM: UInt = extern // defined as 0x92E1
@@ -1808,7 +1810,7 @@ import _root_.scala.scalanative.*
 @name("CONST_GL_WEIGHT_ARRAY_BUFFER_BINDING") @extern def GL_WEIGHT_ARRAY_BUFFER_BINDING: UInt = extern // defined as 0x889E
 @name("CONST_GL_WRITE_ONLY") @extern def GL_WRITE_ONLY: UInt = extern // defined as 0x88B9
 @name("CONST_GL_XOR") @extern def GL_XOR: UInt = extern // defined as 0x1506
-@name("CONST_GL_ZERO") @extern def GL_ZERO: UByte = extern // defined as 0 - readjust type to UByte
+@name("CONST_GL_ZERO") @extern def GL_ZERO: UInt = extern // defined as 0
 @name("CONST_GL_ZERO_TO_ONE") @extern def GL_ZERO_TO_ONE: UInt = extern // defined as 0x935F
 @name("CONST_GL_ZOOM_X") @extern def GL_ZOOM_X: UInt = extern // defined as 0x0D16
 @name("CONST_GL_ZOOM_Y") @extern def GL_ZOOM_Y: UInt = extern // defined as 0x0D17
