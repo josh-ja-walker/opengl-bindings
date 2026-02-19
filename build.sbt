@@ -39,34 +39,64 @@ lazy val bindgenSettings = Seq(
 )
 
 
-//TODO:
-lazy val gen = taskKey[Seq[File]]("Generate OpenGL bindings and forwarders")
+glad / clean := {
+    val cDir = (glad / Compile / resourceDirectory).value / "scala-native" / "generated"
+    val scalaDir = (glad / Compile / sourceDirectory).value / "scala" / "generated"
+    IO.delete(cDir)
+    IO.delete(scalaDir)
+}
+
+glfw / clean := {
+    val cDir = (glfw / Compile / resourceDirectory).value / "scala-native" / "generated"
+    val scalaDir = (glfw / Compile / sourceDirectory).value / "scala" / "generated"
+    IO.delete(cDir)
+    IO.delete(scalaDir)
+}
+
+
+lazy val gen = taskKey[Unit]("Generate OpenGL bindings and forwarders")
 glad / gen := {
+    (glad / clean).value
     (glad / genBindings).value
     (glad / genForwarders).value
 }
 
 glfw / gen := {
+    (glfw / clean).value
     (glfw / genBindings).value
     (glfw / genForwarders).value
 }
 
 
 //TODO: Neaten?
-lazy val genBindings = taskKey[Seq[File]]("Generate OpenGL bindings")
-glad / genBindings := removeOpaqueness((glad / Compile / bindgenGenerateScalaSources).value)
-glfw / genBindings := removeOpaqueness((glfw / Compile / bindgenGenerateScalaSources).value)
+lazy val genBindings = taskKey[Unit]("Generate OpenGL bindings")
+glad / genBindings := {
+    val bindings = (glad / Compile / bindgenGenerateScalaSources).value
+    removeOpaqueness(bindings)
+
+    val libDir = (glad / Compile / sourceDirectory).value / "scala" / "generated" / "libraries"   
+    IO.delete(libDir / "glad")
+    IO.move(libDir / "opengl.bindings.glad", libDir / "glad")
+}
+
+glfw / genBindings := {
+    (glfw / clean).value
+
+    val bindings = (glfw / Compile / bindgenGenerateScalaSources).value
+    removeOpaqueness(bindings)
+    
+    val libDir = (glfw / Compile / sourceDirectory).value / "scala" / "generated" / "libraries"   
+    IO.delete(libDir / "glfw")
+    IO.move(libDir / "opengl.bindings.glfw", libDir / "glfw")
+}
 
 def removeOpaqueness(bindings: Seq[File]) = {
-    bindings.map(binding => {
-        if (binding.name == "aliases.scala") {
+    bindings.filter(_.name == "aliases.scala")
+        .foreach(binding => {
             val content: String = IO.read(binding)
             // Remove opaque modifier from file 
             IO.write(binding, content.replace("opaque ", new String()))
-        }
-
-        binding
-    })
+        })
 }
 
 
@@ -83,7 +113,7 @@ lazy val glad = project
         bindgenBindings += {
             // TODO: needs glad / Compile / ...?
             val include = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include"
-            Binding(include / "glad" / "gl.h", "glad")
+            Binding(include / "glad" / "gl.h", "opengl.bindings.glad")
                 .withCImports(List("gl.h", "khrplatform.h"))
                 .withClangFlags(List("-I" + include))
         },
@@ -111,7 +141,7 @@ glad / genCForwarders := {
     val headerFile =  (glad / Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include" / "glad" / "gl.h"
     val headerContents = IO.read(headerFile)
 
-    val constRegex: Regex = raw"#define (GL(_[a-zA-Z0-9]*)+)\s+\S+\n".r
+    val constRegex: Regex = raw"#define (GL(_[a-zA-Z0-9]*)+)\s+(\S+)\n".r
     val constForwarders = constRegex.findAllMatchIn(headerContents)
         .map(regexMatch => {
             val const = regexMatch.group(1)
@@ -143,12 +173,14 @@ glad / genScalaForwarders := {
     val headerFile =  (glad / Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include" / "glad" / "gl.h"
     val headerContents = IO.read(headerFile)
 
-    val packageName = "package glad"
+    val packageName = "package opengl.bindings.glad"
     val imports = """
+        |
         |import _root_.scala.scalanative.unsafe.*
         |import _root_.scala.scalanative.unsigned.*
         |import _root_.scala.scalanative.libc.*
         |import _root_.scala.scalanative.*
+        |
         |
         |""".stripMargin
 
@@ -189,7 +221,7 @@ lazy val glfw = project
 
         bindgenBindings += {
             val include = vcpkgConfigurator.value.includes("glfw3")
-            Binding(include / "GLFW" / "glfw3.h", "glfw")
+            Binding(include / "GLFW" / "glfw3.h", "opengl.bindings.glfw")
                 .withCImports(List("glfw3.h", "glfw3native.h"))
                 .withClangFlags(List("-I" + include))
         },
@@ -236,12 +268,14 @@ glfw / genScalaForwarders := {
     val headerFile = (glfw / vcpkgConfigurator).value.includes("glfw3") / "GLFW" / "glfw3.h"
     val headerContents = IO.read(headerFile)
 
-    val packageName = "package glfw"
+    val packageName = "package opengl.bindings.glfw"
     val imports = """
+        |
         |import _root_.scala.scalanative.unsafe.*
         |import _root_.scala.scalanative.unsigned.*
         |import _root_.scala.scalanative.libc.*
         |import _root_.scala.scalanative.*
+        |
         |
         |""".stripMargin
 
