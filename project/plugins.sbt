@@ -9,6 +9,8 @@ val ScalaNativeVersion =
 
 resolvers += Resolver.sonatypeCentralSnapshots
 
-addSbtPlugin("com.indoorvivants" % "bindgen-sbt-plugin" % BindgenVersion)
 addSbtPlugin("org.scala-native" % "sbt-scala-native" % ScalaNativeVersion)
+addSbtPlugin("com.indoorvivants" % "bindgen-sbt-plugin" % BindgenVersion)
 addSbtPlugin("com.indoorvivants.vcpkg" % "sbt-vcpkg-native" % VcpkgVersion)
+
+addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
