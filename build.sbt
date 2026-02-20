@@ -1,7 +1,8 @@
 import scala.util.matching.Regex
-import bindgen.plugin.BindgenMode
-import bindgen.interface.Binding
 
+import bindgen.interface.Binding
+import bindgen.plugin.BindgenMode
+ 
 //TODO: support different OSes by modifying linkflags
 import com.indoorvivants.detective.Platform
 import com.indoorvivants.detective.Platform.OS.* 
@@ -17,7 +18,7 @@ ThisBuild / scalaVersion := "3.8.1"
 
 lazy val `opengl-bindings` = project
     .in(file("."))
-    .aggregate(glad, glfw)  
+    .aggregate(glad, glfw)
     .dependsOn(glad, glfw)
     .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
     .settings(
@@ -26,8 +27,8 @@ lazy val `opengl-bindings` = project
             .withLinkingOptions(_ ++ vcpkgConfigurator.value.pkgConfig.linkingFlags("glfw3"))
             .withLinkingOptions(_ :+ "-lshell32")
     )
-    
-    
+
+
 lazy val bindgenSettings = Seq(
     bindgenBindings := {
         bindgenBindings.value.map(_.withNoLocation(true).withMultiFile(true)) 
@@ -39,79 +40,81 @@ lazy val bindgenSettings = Seq(
 )
 
 
-glad / clean := {
-    val cDir = (glad / Compile / resourceDirectory).value / "scala-native" / "generated"
-    val scalaDir = (glad / Compile / sourceDirectory).value / "scala" / "generated"
-    IO.delete(cDir)
-    IO.delete(scalaDir)
-}
+lazy val library = settingKey[String]("Name of the library")
 
-glfw / clean := {
-    val cDir = (glfw / Compile / resourceDirectory).value / "scala-native" / "generated"
-    val scalaDir = (glfw / Compile / sourceDirectory).value / "scala" / "generated"
-    IO.delete(cDir)
-    IO.delete(scalaDir)
-}
+lazy val snGenDir = settingKey[File]("Directory of generated Scala-Native files")
+lazy val scalaGenDir = settingKey[File]("Directory of generated Scala files")
 
 
-lazy val gen = taskKey[Unit]("Generate OpenGL bindings and forwarders")
-glad / gen := {
-    (glad / clean).value
-    (glad / genBindings).value
-    (glad / genForwarders).value
-}
+lazy val deleteGenerated = taskKey[Unit]("Delete generated bindings and forwarders")
+lazy val commonSettings = Seq(
+    snGenDir := (Compile / resourceDirectory).value / "scala-native" / "generated",
+    scalaGenDir := (Compile / sourceDirectory).value / "scala" / "generated",
 
-glfw / gen := {
-    (glfw / clean).value
-    (glfw / genBindings).value
-    (glfw / genForwarders).value
-}
+    deleteGenerated := {
+        IO.delete(snGenDir.value)
+        IO.delete(scalaGenDir.value)
+    }
+)
 
 
-//TODO: Neaten?
-lazy val genBindings = taskKey[Unit]("Generate OpenGL bindings")
-glad / genBindings := {
-    val bindings = (glad / Compile / bindgenGenerateScalaSources).value
-    removeOpaqueness(bindings)
+lazy val genBindings = taskKey[Seq[File]]("Generate bindings")
+lazy val deleteBindings = taskKey[Unit]("Delete generated bindings")
 
-    val libDir = (glad / Compile / sourceDirectory).value / "scala" / "generated" / "libraries"   
-    IO.delete(libDir / "glad")
-    IO.move(libDir / "opengl.bindings.glad", libDir / "glad")
-}
+lazy val bindingTasks = Seq(
+    genBindings := {
+        val bindings = (Compile / bindgenGenerateScalaSources).value
 
-glfw / genBindings := {
-    (glfw / clean).value
+        // Remove opaque modifier from aliases files 
+        bindings.filter(_.name == "aliases.scala")
+            .foreach(binding => {
+                val content: String = IO.read(binding)
+                IO.write(binding, content.replace("opaque ", new String()))
+            })
 
-    val bindings = (glfw / Compile / bindgenGenerateScalaSources).value
-    removeOpaqueness(bindings)
-    
-    val libDir = (glfw / Compile / sourceDirectory).value / "scala" / "generated" / "libraries"   
-    IO.delete(libDir / "glfw")
-    IO.move(libDir / "opengl.bindings.glfw", libDir / "glfw")
-}
+        
+        val libDir = (Compile / sourceDirectory).value / "scala" / "generated" / "libraries"   
 
-def removeOpaqueness(bindings: Seq[File]) = {
-    bindings.filter(_.name == "aliases.scala")
-        .foreach(binding => {
-            val content: String = IO.read(binding)
-            // Remove opaque modifier from file 
-            IO.write(binding, content.replace("opaque ", new String()))
-        })
-}
+        // Delete existing generated library bindings 
+        IO.delete(libDir / library.value)
+
+        // Rename opengl.bindings.lib directory to lib
+        IO.move(libDir / ("opengl.bindings." + library.value), libDir / library.value)
+
+        bindings
+    },
+
+    deleteBindings := {
+        IO.delete(snGenDir.value / "libraries")
+        IO.delete(scalaGenDir.value / "libraries")
+    }
+)
 
 
 lazy val genForwarders = taskKey[Seq[File]]("Generate C and Scala forwarders for C preprocessor constants")
+lazy val deleteForwarders = taskKey[Unit]("Delete generated forwarders")
+
 lazy val genCForwarders = taskKey[Seq[File]]("Generate C forwarders for C preprocessor constants")
 lazy val genScalaForwarders = taskKey[Seq[File]]("Generate Scala forwarders for C preprocessor constants")
 
+lazy val forwarderTasks = Seq(
+    genForwarders := genCForwarders.value ++ genScalaForwarders.value,
 
-//TODO: move into separate build file
+    deleteForwarders := {
+        IO.delete(snGenDir.value / "forwarders")
+        IO.delete(scalaGenDir.value / "forwarders")
+    }
+)
+
+
+
 lazy val glad = project
     .in(file("glad"))
     .enablePlugins(ScalaNativePlugin, BindgenPlugin)
     .settings(
+        library := "glad",
+
         bindgenBindings += {
-            // TODO: needs glad / Compile / ...?
             val include = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include"
             Binding(include / "glad" / "gl.h", "opengl.bindings.glad")
                 .withCImports(List("gl.h", "khrplatform.h"))
@@ -119,7 +122,6 @@ lazy val glad = project
         },
         
         nativeConfig := {
-            //TODO: needs glad / Compile / ...??
             val gladBase = (Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad"
             val compFlags = List(s"-I${gladBase / "include"}")
             val linkFlags = List(s"-L$gladBase")
@@ -129,13 +131,11 @@ lazy val glad = project
                 .withLinkingOptions(_ ++ linkFlags)
         }
     )
+    .settings(commonSettings)
     .settings(bindgenSettings)
+    .settings(bindingTasks)
+    .settings(forwarderTasks)
 
-glad / genForwarders := {
-    val cFiles = (glad / genCForwarders).value    
-    val scalaFiles = (glad / genScalaForwarders).value    
-    cFiles ++ scalaFiles
-}
 
 glad / genCForwarders := {
     val headerFile =  (glad / Compile / resourceDirectory).value / "scala-native" / "libraries" / "glad" / "include" / "glad" / "gl.h"
@@ -212,11 +212,12 @@ glad / genScalaForwarders := {
 }
 
 
-//TODO: move into separate build file
 lazy val glfw = project
     .in(file("glfw"))
     .enablePlugins(ScalaNativePlugin, BindgenPlugin, VcpkgNativePlugin)
     .settings(
+        library := "glfw",
+
         vcpkgDependencies := VcpkgDependencies("glfw3"),
 
         bindgenBindings += {
@@ -235,13 +236,11 @@ lazy val glfw = project
                 .withLinkingOptions(_ ++ linkFlags)
         }
     )
+    .settings(commonSettings)
     .settings(bindgenSettings)
+    .settings(bindingTasks)
+    .settings(forwarderTasks)
 
-glfw / genForwarders := {
-    val cFiles = (glfw / genCForwarders).value    
-    val scalaFiles = (glfw / genScalaForwarders).value    
-    cFiles ++ scalaFiles
-}
 
 glfw / genCForwarders := {
     val headerFile = (glfw / vcpkgConfigurator).value.includes("glfw3") / "GLFW" / "glfw3.h"
@@ -294,4 +293,3 @@ glfw / genScalaForwarders := {
 
     Seq(glfwDir / "constants.scala")
 }
-
