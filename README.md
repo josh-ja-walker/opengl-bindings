@@ -20,7 +20,7 @@ Then add the following settings to `build.sbt`:
     /* Project Definition ... */
     .enablePlugins(ScalaNativePlugin, VcpkgNativePlugin)
     .settings(
-        libraryDependencies  += "io.github.josh-ja-walker" %%% "opengl-bindings" % "CURR_VERSION",
+        libraryDependencies  += "io.github.josh-ja-walker" %%% "opengl-bindings" % "LATEST_VERSION",
 
         vcpkgDependencies := VcpkgDependencies("glfw3"),
         nativeConfig := {
@@ -32,6 +32,8 @@ Then add the following settings to `build.sbt`:
 ```
 
 This adds the required `glfw3` [vcpkg dependency](https://vcpkg.io/en/package/glfw3.html) to the ScalaNative linking configuration, in addition to the `shell32` library required on Windows.
+
+**Note:** the `LATEST_VERSION` can be found in the [GitHub releases page](https://github.com/josh-ja-walker/opengl-bindings/releases/).
 
 
 ## Forwarders
