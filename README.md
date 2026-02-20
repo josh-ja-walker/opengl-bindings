@@ -49,7 +49,7 @@ These types must be manually modified in some special cases:
 
     ```scala
         /* constants.scala */
-        @name("CONST_GL_TIMEOUT_IGNORED") @extern def GL_TIMEOUT_IGNORED: ULongLong = extern // defined as  0xFFFFFFFFFFFFFFFF - type adjusted to ULongLong
+        @name("CONST_GL_TIMEOUT_IGNORED") @extern def GL_TIMEOUT_IGNORED: CUnsignedLongLong = extern // defined as  0xFFFFFFFFFFFFFFFF - type adjusted to CUnsignedLongLong
     ```
 
 - `GL_TRUE`, `GL_FALSE` - OpenGL function calls expect true and false values to be of type `GLboolean`, an alias for `unsigned char`.

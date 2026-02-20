@@ -1620,7 +1620,7 @@ import _root_.scala.scalanative.*
 @name("CONST_GL_TEXTURE_WRAP_S") @extern def GL_TEXTURE_WRAP_S: UInt = extern // defined as 0x2802
 @name("CONST_GL_TEXTURE_WRAP_T") @extern def GL_TEXTURE_WRAP_T: UInt = extern // defined as 0x2803
 @name("CONST_GL_TIMEOUT_EXPIRED") @extern def GL_TIMEOUT_EXPIRED: UInt = extern // defined as 0x911B
-@name("CONST_GL_TIMEOUT_IGNORED") @extern def GL_TIMEOUT_IGNORED: ULongLong = extern // defined as 0xFFFFFFFFFFFFFFFF - type adjusted to ULongLong
+@name("CONST_GL_TIMEOUT_IGNORED") @extern def GL_TIMEOUT_IGNORED: CUnsignedLongLong = extern // defined as 0xFFFFFFFFFFFFFFFF - type adjusted to CUnsignedLongLong
 @name("CONST_GL_TIMESTAMP") @extern def GL_TIMESTAMP: UInt = extern // defined as 0x8E28
 @name("CONST_GL_TIME_ELAPSED") @extern def GL_TIME_ELAPSED: UInt = extern // defined as 0x88BF
 @name("CONST_GL_TOP_LEVEL_ARRAY_SIZE") @extern def GL_TOP_LEVEL_ARRAY_SIZE: UInt = extern // defined as 0x930C
